@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "me.craftymcfish.nomorehorses.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+	],
+	"client": [
+		"NoMoreHorsesMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "no-more-horses",
+	"version": "${version}",
+	"name": "No More Horses",
+	"description": "No More Horses aims to get rid of all those nasty horses, as well as adding some nice game changers.",
+	"authors": [
+		"CraftyMCFish"
+	],
+	"contact": {
+		"homepage": "https://www.youtube.com/craftymcfish",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/no-more-horses/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.craftymcfish.nomorehorses.NoMoreHorses"
+		]
+	},
+	"mixins": [
+		"no-more-horses.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "show_notification": true,
+  "ingredients": [
+    {
+      "item": "no-more-horses:pork_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "minecraft:porkchop"
+  }
+}
