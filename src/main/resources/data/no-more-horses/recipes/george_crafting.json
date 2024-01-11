@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "DCD",
+    "CSC",
+    "DCD"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "C": {
+      "item": "no-more-horses:cheese_block"
+    }
+  },
+  "result": {
+    "item": "no-more-horses:george"
+  }
+}

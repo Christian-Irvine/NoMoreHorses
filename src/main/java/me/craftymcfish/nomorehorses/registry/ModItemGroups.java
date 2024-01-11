@@ -18,9 +18,12 @@ public class ModItemGroups {
     private static final ItemGroup NMHGROUP = FabricItemGroup.builder().icon(() -> new ItemStack(Items.GOLDEN_HORSE_ARMOR)).displayName(Text.translatable("itemGroup.no-more-horses.no_more_horses"))
             .entries((context, entries) -> {
                 entries.add(ModItems.CHEESE);
+                entries.add(ModBlocks.CHEESE_BLOCK);
                 entries.add(ModItems.SALT);
                 entries.add(ModItems.MESH);
                 entries.add(ModBlocks.PORK_BLOCK);
+                entries.add(ModBlocks.PORK_ORE);
+                entries.add(ModBlocks.DEEPSLATE_PORK_ORE);
             }).build();
 
     //Vanilla Item Groups
@@ -29,6 +32,7 @@ public class ModItemGroups {
             entries.addAfter(Items.BREAD, ModItems.CHEESE);
             entries.addAfter(Items.SPIDER_EYE, ModItems.SALT);
             entries.add(ModBlocks.PORK_BLOCK);
+            entries.add(ModBlocks.CHEESE_BLOCK);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
