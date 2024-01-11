@@ -20,6 +20,9 @@ public class ModItems {
     public static final Item SALT = registerItem("salt", new SaltItem());
     public static final Item MESH = registerItem("mesh", new MeshItem());
 
+    public static final Item MONEY = registerItem("money", new Item(new Item.Settings().maxCount(64)));
+    public static final Item RAW_MONEY = registerItem("raw_money", new Item(new Item.Settings().maxCount(64)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
     }

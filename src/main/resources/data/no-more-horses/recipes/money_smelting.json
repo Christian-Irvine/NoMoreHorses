@@ -1,0 +1,10 @@
+{
+  "type": "smelting",
+  "category": "misc",
+  "show_notification": true,
+  "ingredient": {
+    "item": "no-more-horses:raw_money"
+  },
+  "result": "no-more-horses:money",
+  "experience": "2"
+}

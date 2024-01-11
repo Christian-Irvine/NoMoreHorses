@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PIP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "no-more-horses:raw_money"
+  }
+}

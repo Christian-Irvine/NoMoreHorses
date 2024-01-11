@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.registry.ModItemGroups;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +24,9 @@ public class NoMoreHorses implements ModInitializer {
 		ModBlocks.registerBlocks();
 		//Register Item Groups
 		ModItemGroups.registerItemGroups();
+
+		FuelRegistry.INSTANCE.add(ModItems.MONEY, 800);
+		LOGGER.info("Successfully Registered Fuel Items");
 
 		LOGGER.info("Successfully Removed All Horses!, No More Horses is complete");
 	}
