@@ -9,6 +9,9 @@
   "key": {
     "P": {
       "item": "minecraft:paper"
+    },
+    "I": {
+      "item": "minecraft:ink_sac"
     }
   },
   "result": {

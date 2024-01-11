@@ -24,6 +24,7 @@ public class ModItemGroups {
                 entries.add(ModBlocks.PORK_BLOCK);
                 entries.add(ModBlocks.PORK_ORE);
                 entries.add(ModBlocks.DEEPSLATE_PORK_ORE);
+                entries.add(ModItems.RAW_MONEY);
                 entries.add(ModItems.MONEY);
             }).build();
 
