@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.4,
+  "group": "money",
+  "ingredient": {
+    "item": "no-more-horses:raw_money"
+  },
+  "result": "no-more-horses:money"
+}
