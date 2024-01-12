@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"me.craftymcfish.nomorehorses.NoMoreHorses"
+		],
+		"fabric-datagen": [
+			"me.craftymcfish.nomorehorses.datagen.ModDataGeneration"
 		]
 	},
 	"mixins": [

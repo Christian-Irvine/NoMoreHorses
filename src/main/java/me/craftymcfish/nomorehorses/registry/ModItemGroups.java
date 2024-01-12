@@ -26,6 +26,7 @@ public class ModItemGroups {
                 entries.add(ModBlocks.DEEPSLATE_PORK_ORE);
                 entries.add(ModItems.RAW_MONEY);
                 entries.add(ModItems.MONEY);
+                entries.add(ModBlocks.GEORGE);
             }).build();
 
     //Vanilla Item Groups
