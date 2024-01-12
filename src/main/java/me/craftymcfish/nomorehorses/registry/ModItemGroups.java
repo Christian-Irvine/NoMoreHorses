@@ -34,6 +34,10 @@ public class ModItemGroups {
                 entries.add(ModItems.COPPER_AXE);
                 entries.add(ModItems.COPPER_SHOVEL);
                 entries.add(ModItems.COPPER_HOE);
+                entries.add(ModItems.COPPER_HELMET);
+                entries.add(ModItems.COPPER_CHESTPLATE);
+                entries.add(ModItems.COPPER_LEGGINGS);
+                entries.add(ModItems.COPPER_BOOTS);
             }).build();
 
     //Vanilla Item Groups
@@ -55,6 +59,11 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.addAfter(Items.STONE_SWORD, ModItems.COPPER_SWORD);
             entries.addAfter(Items.STONE_AXE, ModItems.COPPER_AXE);
+
+            entries.addAfter(Items.CHAINMAIL_BOOTS, ModItems.COPPER_HELMET);
+            entries.addAfter(ModItems.COPPER_HELMET, ModItems.COPPER_CHESTPLATE);
+            entries.addAfter(ModItems.COPPER_CHESTPLATE, ModItems.COPPER_LEGGINGS);
+            entries.addAfter(ModItems.COPPER_LEGGINGS, ModItems.COPPER_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

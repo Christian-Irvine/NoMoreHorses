@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "no-more-horses:copper_helmet",
+    "no-more-horses:copper_chestplate",
+    "no-more-horses:copper_leggings",
+    "no-more-horses:copper_boots"
+  ]
+}
