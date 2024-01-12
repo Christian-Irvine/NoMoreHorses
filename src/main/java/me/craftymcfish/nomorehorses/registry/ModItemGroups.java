@@ -19,6 +19,8 @@ public class ModItemGroups {
             .entries((context, entries) -> {
                 entries.add(ModItems.CHEESE);
                 entries.add(ModBlocks.CHEESE_BLOCK);
+                entries.add(ModBlocks.CHEESE_STAIRS);
+                entries.add(ModBlocks.CHEESE_SLAB);
                 entries.add(ModItems.SALT);
                 entries.add(ModItems.MESH);
                 entries.add(ModBlocks.PORK_BLOCK);
@@ -27,6 +29,11 @@ public class ModItemGroups {
                 entries.add(ModItems.RAW_MONEY);
                 entries.add(ModItems.MONEY);
                 entries.add(ModBlocks.GEORGE);
+                entries.add(ModItems.COPPER_SWORD);
+                entries.add(ModItems.COPPER_PICKAXE);
+                entries.add(ModItems.COPPER_AXE);
+                entries.add(ModItems.COPPER_SHOVEL);
+                entries.add(ModItems.COPPER_HOE);
             }).build();
 
     //Vanilla Item Groups
@@ -36,6 +43,18 @@ public class ModItemGroups {
             entries.addAfter(Items.SPIDER_EYE, ModItems.SALT);
             entries.add(ModBlocks.PORK_BLOCK);
             entries.add(ModBlocks.CHEESE_BLOCK);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.addAfter(Items.STONE_HOE, ModItems.COPPER_SHOVEL);
+            entries.addAfter(ModItems.COPPER_SHOVEL, ModItems.COPPER_PICKAXE);
+            entries.addAfter(ModItems.COPPER_PICKAXE, ModItems.COPPER_AXE);
+            entries.addAfter(ModItems.COPPER_AXE, ModItems.COPPER_HOE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.addAfter(Items.STONE_SWORD, ModItems.COPPER_SWORD);
+            entries.addAfter(Items.STONE_AXE, ModItems.COPPER_AXE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

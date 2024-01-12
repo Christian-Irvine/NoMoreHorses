@@ -5,6 +5,12 @@
   "item.no-more-horses.money": "Money",
   "item.no-more-horses.raw_money": "Raw Money",
 
+  "item.no-more-horses.copper_sword": "Copper Sword",
+  "item.no-more-horses.copper_pickaxe": "Copper Pickaxe",
+  "item.no-more-horses.copper_axe": "Copper Axe",
+  "item.no-more-horses.copper_shovel": "Copper Shovel",
+  "item.no-more-horses.copper_hoe": "Copper Hoe",
+
   "block.no-more-horses.pork_block": "Pork Block",
   "block.no-more-horses.pork_ore": "Pork Ore",
   "block.no-more-horses.deepslate_pork_ore": "Deepslate Pork Ore",

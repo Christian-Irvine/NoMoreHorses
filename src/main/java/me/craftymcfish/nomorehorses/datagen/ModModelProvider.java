@@ -25,10 +25,16 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.CHEESE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.SALT, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RAW_MONEY, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.MONEY, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_MONEY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MESH, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
     }
 }
