@@ -1,14 +1,17 @@
-// 1.20.1	2024-01-12T15:08:24.4811581	No More Horses/Recipes
+// 1.20.1	2024-01-12T17:18:38.3123465	No More Horses/Recipes
 5495c21037340ec1f4c227488f51cbfb14f49b09 data\no-more-horses\advancements\recipes\misc\cooked_porkchop_from_smelting_deepslate_pork_ore.json
+f7cfe1dc9b44e8d2042417376af1ffe47e55cae5 data\no-more-horses\advancements\recipes\building_blocks\cheese_slab_crafting.json
 413d0b93f820890c75abb9395eeefde44c8a77fd data\no-more-horses\recipes\cooked_porkchop_from_smelting_pork_ore.json
+b732761c839644b8ffb7150fcbd68567585bb565 data\no-more-horses\recipes\cheese_slab_crafting.json
 d2f25ade923bd0c87d2e419cfe505138ff34275c data\no-more-horses\recipes\cheese_block.json
 cecd5e1f642e441a60390c3b0783d579e682727f data\no-more-horses\recipes\porkchop.json
 1d6611c3ffdc22f5a4774059a1fa30416157bc64 data\no-more-horses\recipes\cheese.json
 4db38bd2efd281b7a2d3f6c5eab32cdef769ebff data\no-more-horses\recipes\cooked_porkchop_from_smelting_deepslate_pork_ore.json
 040dd636bca6bddc9944cc3b47010823ac149321 data\no-more-horses\recipes\mesh_crafting.json
 d7c87b0fe09d42ee77fa11d460d9c9db27119ce1 data\no-more-horses\advancements\recipes\food\porkchop.json
-3e9744c72f802a259fab30e437d4d1c7d75e3b2c data\no-more-horses\advancements\recipes\misc\cooked_porkchop_from_smelting_pork_ore.json
 65cfa7718cca29b647243d4d1845f2372949425d data\no-more-horses\advancements\recipes\tools\mesh_crafting.json
+3e9744c72f802a259fab30e437d4d1c7d75e3b2c data\no-more-horses\advancements\recipes\misc\cooked_porkchop_from_smelting_pork_ore.json
+cb2eb89a865ae564c213e7e7ebd7719a388aa123 data\no-more-horses\recipes\cheese_stairs_crafting.json
 7e96b79caa4a04edb38dae91790ec0d238ea3102 data\no-more-horses\recipes\cooked_porkchop_from_blasting_deepslate_pork_ore.json
 036c7f3b6376ced751098830b31e576f8414f6df data\no-more-horses\advancements\recipes\building_blocks\pork_block.json
 173a172f7b4f418298a72af30040fd9743ce77e9 data\no-more-horses\advancements\recipes\food\cheese.json
@@ -20,6 +23,7 @@ a5ecad44efd32c9c5b23ecdc0fdf54e21df46bda data\no-more-horses\recipes\pork_block.
 28f5cc331e0617dfbf1262461bc7e03d55319335 data\no-more-horses\advancements\recipes\misc\cooked_porkchop_from_blasting_pork_ore.json
 80849e8b3c51777d9e6fd9395d92fb7721ca61bc data\no-more-horses\advancements\recipes\tools\raw_money_crafting.json
 92c60a63e2a55e5532def04c9e86b28dd9761cae data\no-more-horses\advancements\recipes\tools\money_from_smelting_raw_money.json
+2d4a87216777416847266f1c9abb8c617d53ee6e data\no-more-horses\advancements\recipes\building_blocks\cheese_stairs_crafting.json
 bd0b4a946556749e78349f2ec4ddcfdb27c19377 data\no-more-horses\recipes\cooked_porkchop_from_blasting_pork_ore.json
 4819c16ee3be7352b5e167a00404c928128408af data\no-more-horses\recipes\george_crafting.json
 f03ffcabaa14e528300ac1637cbe3a681a4d68bb data\no-more-horses\recipes\cheese_crafting.json

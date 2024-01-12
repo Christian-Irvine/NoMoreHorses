@@ -30,10 +30,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GEORGE);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.CHEESE_BLOCK)
+                .add(ModBlocks.CHEESE_STAIRS)
+                .add(ModBlocks.CHEESE_SLAB)
                 .add(ModBlocks.PORK_BLOCK);
 
+
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE);
-                //.add(ModBlocks.EXAMPLE_BLOCK);
+
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
                 //.add(ModBlocks.EXAMPLE_BLOCK);

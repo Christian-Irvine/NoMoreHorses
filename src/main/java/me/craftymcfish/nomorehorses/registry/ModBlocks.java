@@ -21,7 +21,11 @@ public class ModBlocks {
     public static final Block GEORGE = registerBlock("george", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN), UniformIntProvider.create(50, 100)));
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.FROGLIGHT)));
 
+    public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",
+            new StairsBlock(ModBlocks.CHEESE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.CHEESE_BLOCK)));
 
+    public static final Block CHEESE_SLAB = registerBlock("cheese_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.CHEESE_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "no-more-horses:block/cheese_block",
+    "side": "no-more-horses:block/cheese_block",
+    "top": "no-more-horses:block/cheese_block"
+  }
+}

@@ -1,6 +1,8 @@
-// 1.20.1	2024-01-12T15:08:24.4791633	No More Horses/Block Loot Tables
-9e4708fda40e58ffe50ba3641b885dfc55d06118 data\no-more-horses\loot_tables\blocks\pork_ore.json
+// 1.20.1	2024-01-12T17:18:38.3113493	No More Horses/Block Loot Tables
 b0253bffc0125f61ccfe9da8386fbe06dd1d719b data\no-more-horses\loot_tables\blocks\cheese_block.json
+9e4708fda40e58ffe50ba3641b885dfc55d06118 data\no-more-horses\loot_tables\blocks\pork_ore.json
+45c3a4c41288fe427360b1263b4d328782cebb40 data\no-more-horses\loot_tables\blocks\cheese_slab.json
 f525b977afbca8b9df979fc2c8f28edf762f1d2f data\no-more-horses\loot_tables\blocks\deepslate_pork_ore.json
 b2f9db12376acbe57e091799bda4ec24fbbcc855 data\no-more-horses\loot_tables\blocks\george.json
+203e88bd3844803cd9b6962a495e6ef40b77bd9f data\no-more-horses\loot_tables\blocks\cheese_stairs.json
 c84900ade8bc258be998a8d409eb4f68f516446e data\no-more-horses\loot_tables\blocks\pork_block.json

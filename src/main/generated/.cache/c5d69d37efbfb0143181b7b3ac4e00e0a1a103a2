@@ -1,9 +1,9 @@
-// 1.20.1	2024-01-12T15:08:24.4831531	No More Horses/Tags for minecraft:block
+// 1.20.1	2024-01-12T17:18:38.3143413	No More Horses/Tags for minecraft:block
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\mineable\shovel.json
 38689f84925422131f079e71aaa46832fc5a0526 data\fabric\tags\blocks\needs_tool_level_4.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_iron_tool.json
+e0ed5ff72d25c04009d690b111461575f02c2007 data\minecraft\tags\blocks\mineable\axe.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\mineable\hoe.json
-a3638c4fd43db2dd22e30a6f12f3b86742bf8f76 data\minecraft\tags\blocks\mineable\axe.json
 459a49e0d6bb1abfd7cc3a00216eda16561c4aaa data\minecraft\tags\blocks\mineable\pickaxe.json
 a94a85061a436dfed9685a588399188744427e0b data\minecraft\tags\blocks\needs_stone_tool.json

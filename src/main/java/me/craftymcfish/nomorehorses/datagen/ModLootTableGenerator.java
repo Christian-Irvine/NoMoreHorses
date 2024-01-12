@@ -27,6 +27,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         //Drop Themselves
         addDrop(ModBlocks.CHEESE_BLOCK);
         addDrop(ModBlocks.PORK_BLOCK);
+        addDrop(ModBlocks.CHEESE_STAIRS);
+        addDrop(ModBlocks.CHEESE_SLAB, slabDrops(ModBlocks.CHEESE_SLAB));
         addDrop(ModBlocks.GEORGE);
 
         //Custom Drops
