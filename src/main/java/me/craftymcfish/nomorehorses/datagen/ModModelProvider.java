@@ -1,5 +1,6 @@
 package me.craftymcfish.nomorehorses.datagen;
 
+import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -22,11 +23,14 @@ public class ModModelProvider extends FabricModelProvider {
 
         cheesePool.stairs(ModBlocks.CHEESE_STAIRS);
         cheesePool.slab(ModBlocks.CHEESE_SLAB);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MONEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MONEY, Models.GENERATED);

@@ -1,0 +1,50 @@
+package me.craftymcfish.nomorehorses.util;
+
+import me.craftymcfish.nomorehorses.registry.ModItems;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.util.Identifier;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ModLootTableModifiers {
+    private static final Identifier FISHING_JUNK_ID = new Identifier("minecraft", "gameplay/fishing/junk");
+
+
+    public static void modifyLootTables() {
+        //This is the way to do it for things like mobs drops with multiple possible drops
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+//            if (FISHING_JUNK_ID.equals(id)){
+//                LootPool.Builder poolBuilder = LootPool.builder()
+//                        .rolls(ConstantLootNumberProvider.create(1.0f))
+//                        .conditionally(RandomChanceLootCondition.builder(1.0f))
+//                        .with(ItemEntry.builder(ModItems.SALT))
+//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+//                tableBuilder.pool(poolBuilder.build());
+//            }
+        });
+
+        //This is the way to do it for things like sus sand or fishing with singular drops system (sus sand has no weight)
+        LootTableEvents.REPLACE.register(((resourceManager, lootManager, id, original, source) -> {
+            if (FISHING_JUNK_ID.equals(id)){
+                List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
+                entries.add(ItemEntry.builder(ModItems.SALT).weight(20).build());
+
+                LootPool.Builder pool = LootPool.builder().with(entries);
+                return LootTable.builder().pool(pool).build();
+            }
+
+            return null;
+        }));
+    }
+
+}

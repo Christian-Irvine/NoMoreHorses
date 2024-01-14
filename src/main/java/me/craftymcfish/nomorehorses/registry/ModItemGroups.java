@@ -17,6 +17,8 @@ public class ModItemGroups {
     //Custom Item Group For NMH
     private static final ItemGroup NMHGROUP = FabricItemGroup.builder().icon(() -> new ItemStack(Items.GOLDEN_HORSE_ARMOR)).displayName(Text.translatable("itemGroup.no-more-horses.no_more_horses"))
             .entries((context, entries) -> {
+                entries.add(ModItems.STRAWBERRY);
+                entries.add(ModItems.STRAWBERRY_SEEDS);
                 entries.add(ModItems.CHEESE);
                 entries.add(ModBlocks.CHEESE_BLOCK);
                 entries.add(ModBlocks.CHEESE_STAIRS);
@@ -45,6 +47,8 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.addAfter(Items.BREAD, ModItems.CHEESE);
             entries.addAfter(Items.SPIDER_EYE, ModItems.SALT);
+            entries.addAfter(Items.CARROT, ModItems.STRAWBERRY);
+            entries.addAfter(Items.WHEAT_SEEDS, ModItems.STRAWBERRY_SEEDS);
             entries.add(ModBlocks.PORK_BLOCK);
             entries.add(ModBlocks.CHEESE_BLOCK);
         });

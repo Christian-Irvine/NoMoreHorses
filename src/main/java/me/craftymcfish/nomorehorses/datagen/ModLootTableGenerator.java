@@ -1,5 +1,6 @@
 package me.craftymcfish.nomorehorses.datagen;
 
+import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -10,12 +11,14 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     public ModLootTableGenerator(FabricDataOutput dataOutput) {
@@ -34,6 +37,10 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         //Custom Drops
         addDrop(ModBlocks.PORK_ORE, fortuneBlockDrops(ModBlocks.PORK_ORE, Items.PORKCHOP, 2, 5));
         addDrop(ModBlocks.DEEPSLATE_PORK_ORE, fortuneBlockDrops(ModBlocks.DEEPSLATE_PORK_ORE, Items.PORKCHOP, 2, 5));
+
+        BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(StrawberryCropBlock.AGE, StrawberryCropBlock.MAX_AGE));
+        addDrop(ModBlocks.STRAWBERRY_CROP, cropDrops(ModBlocks.STRAWBERRY_CROP, ModItems.STRAWBERRY, ModItems.STRAWBERRY_SEEDS, builder));
     }
 
     public LootTable.Builder fortuneBlockDrops (Block drop, Item item, float min, float max) {

@@ -1,7 +1,7 @@
-// 1.20.1	2024-01-12T20:42:27.0483095	No More Horses/Model Definitions
+// 1.20.1	2024-01-14T16:05:21.6711464	No More Horses/Model Definitions
 3333ee84dca035984ea98e6da45925d7458fbfe7 assets\no-more-horses\models\item\copper_helmet.json
-203f9d71a2e6e7db733b048c9d7d2a9bfc8a2cd4 assets\no-more-horses\models\item\copper_helmet_emerald_trim.json
 c4a8e04ef37548d0b9e5e9bc71e16fad809878bb assets\no-more-horses\models\block\cheese_slab_top.json
+203f9d71a2e6e7db733b048c9d7d2a9bfc8a2cd4 assets\no-more-horses\models\item\copper_helmet_emerald_trim.json
 2c59256b718b07c4d62394e8dbb59ee15891bac6 assets\no-more-horses\models\block\cheese_stairs_outer.json
 c35e74fd8e1003a4598d135bca14ecde4a39cfa3 assets\no-more-horses\models\item\copper_boots_lapis_trim.json
 49bf2d1494f9d6f7d00543139ad19b8df808540f assets\no-more-horses\models\item\copper_boots_netherite_trim.json
@@ -12,6 +12,7 @@ e8224c84d62e7b557110e6e11e1e5252281a4d82 assets\no-more-horses\blockstates\chees
 843a6b106c48380ae516fed143b5d94c99ddd826 assets\no-more-horses\models\item\copper_leggings_redstone_trim.json
 cb2e75aa3eb5c602ce5821758f0d401b8024a686 assets\no-more-horses\models\item\copper_helmet_gold_trim.json
 0ca0b7c55e173a48d9ed8d9e8bf83bf7172cc409 assets\no-more-horses\models\item\copper_leggings_diamond_trim.json
+d89d7350bb66f709d838cdaed40ff04fd1fc8d10 assets\no-more-horses\models\item\strawberry_seeds.json
 66bbbac6752bfea1462fadc0d89d9b847088e9ea assets\no-more-horses\blockstates\pork_ore.json
 6e9975104a73627753284bac1b297e0acbfa63fb assets\no-more-horses\models\item\copper_chestplate_redstone_trim.json
 cf532e5be7fad83702c44aadfa7ac977a22bdf8d assets\no-more-horses\models\item\copper_boots_quartz_trim.json
@@ -35,6 +36,7 @@ fd0d2e9a9bbb163ec9fb549120e67af8296e58fb assets\no-more-horses\models\item\coppe
 38d9460575a63f1e0e4081253ecbace09acf8c46 assets\no-more-horses\models\item\copper_boots_redstone_trim.json
 5cae387352c16737ed7d46cf80152f6ca7ab25b9 assets\no-more-horses\models\item\cheese_block.json
 b8bfe1ab8562ac4e3ff8b3bb4b31b3997385456d assets\no-more-horses\models\item\copper_helmet_amethyst_trim.json
+efd303c37bbe84887bb74c0bd4a09704443d3b19 assets\no-more-horses\models\item\strawberry.json
 d7214565acc064b1a1537a16c1ba88311a417dc4 assets\no-more-horses\models\item\copper_leggings_gold_trim.json
 29408f6f74f03fbaeb82a89178990a20a6a9ee4a assets\no-more-horses\models\item\pork_ore.json
 6479109eb6b2c74bf9d670dff48ca08ab7912325 assets\no-more-horses\models\item\copper_boots_emerald_trim.json
@@ -46,6 +48,7 @@ ec52129db7da2a9cbc7c12cdf225c12921ebd925 assets\no-more-horses\models\item\coppe
 20ddf4945787e5d382a032cd2469c4267aab4c72 assets\no-more-horses\models\item\copper_boots_gold_trim.json
 3e2b48c2b80f628422ca4647c6776fe71e0690c4 assets\no-more-horses\models\item\copper_leggings_netherite_trim.json
 599ecd82e6cdc55afa0cdc5cebb749c04728131e assets\no-more-horses\models\item\copper_chestplate_lapis_trim.json
+5c220bf361c667f734ad59c5a13e8e79416de1f4 assets\no-more-horses\models\block\strawberry_crop_stage1.json
 eeb63ea6ceecd6856ddafff3418c8eb30aaa086c assets\no-more-horses\models\item\cheese_stairs.json
 72a5e4e47dbabb05ac18bb2b1c1fb490fb8cb9f2 assets\no-more-horses\models\item\copper_chestplate_emerald_trim.json
 7ae540a15361e486bb23406e9a8766690e1e505e assets\no-more-horses\models\item\copper_shovel.json
@@ -55,12 +58,15 @@ cb2253b763b5055adfc3359cde4fcbfd73401452 assets\no-more-horses\models\item\coppe
 ad0e4f45fc3be6b69c9d948e675e4ca2dd5c5a67 assets\no-more-horses\models\item\money.json
 8abbd211b434c2e8966381a01ca44def0f9842bc assets\no-more-horses\models\block\cheese_slab.json
 94c7c119974db5717d01de89fce7e9286fe8a39c assets\no-more-horses\models\item\copper_helmet_diamond_trim.json
+8bbb410a11edc02111070de4816cf5f0df42b41a assets\no-more-horses\models\block\strawberry_crop_stage2.json
 3ca97e599479f68e96c315bf514ce33b5b35e908 assets\no-more-horses\models\item\copper_helmet_iron_trim.json
 1d42344d772522986449d2f9fcb08e3b27a04e33 assets\no-more-horses\models\item\copper_helmet_copper_trim.json
 8a835ec0212ff38aad81bd82a541aa22da4aa94a assets\no-more-horses\blockstates\cheese_block.json
 8d166bd2e67a1d541499c3a872b229542c19c6d8 assets\no-more-horses\models\block\cheese_stairs_inner.json
+b6bfa653050c87f86c42ced17dcd6102ef6df0b7 assets\no-more-horses\models\block\strawberry_crop_stage3.json
 0fe60367c3651499e49be799b5d20e55b493cb88 assets\no-more-horses\models\item\deepslate_pork_ore.json
 455b59d478ec07bff6c291e582c6717f5fa1cd03 assets\no-more-horses\models\item\cheese.json
+9854ad2903afe59ddd118f4e772923cb95b3fab9 assets\no-more-horses\models\block\strawberry_crop_stage0.json
 897f1d142f608a5459a6f50de7d3d0f56c1bcef1 assets\no-more-horses\models\block\cheese_block.json
 5341b772f91e1c4047ea7fb2d3d30e417ca6fc96 assets\no-more-horses\models\item\copper_hoe.json
 9a4dcb956b6abc0a9835b17067a97135d43113cc assets\no-more-horses\models\item\copper_axe.json
@@ -69,5 +75,6 @@ a2d0db4a46ed2d9a4ceb2f40ff8843488146515b assets\no-more-horses\models\item\coppe
 0d9e1d501cb1bbc8acc3d1a0b6b66c1ea952ec22 assets\no-more-horses\models\item\mesh.json
 a148bd1d2ba7eaff9e1242283c84ea64be402f51 assets\no-more-horses\models\item\copper_leggings_quartz_trim.json
 fcf07e40cede4f8b6b8dafafad88dd52ddd8c1e3 assets\no-more-horses\models\item\copper_boots.json
+a1ce92838267c4f707ac126ca98ff8cee484d100 assets\no-more-horses\blockstates\strawberry_crop.json
 112070414928ac7596ef391679879bac5ffbe8fe assets\no-more-horses\models\item\copper_chestplate_diamond_trim.json
 5440a66ea74c5f1459cd017af23a5b820dc054f2 assets\no-more-horses\models\item\copper_chestplate_quartz_trim.json

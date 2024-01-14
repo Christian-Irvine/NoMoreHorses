@@ -9,14 +9,17 @@
 	],
 	"contact": {
 		"homepage": "https://www.youtube.com/craftymcfish",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": ""
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/no-more-horses/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"me.craftymcfish.nomorehorses.NoMoreHorses"
+		],
+		"client": [
+			"me.craftymcfish.nomorehorses.NoMoreHorsesClient"
 		],
 		"fabric-datagen": [
 			"me.craftymcfish.nomorehorses.datagen.ModDataGeneration"

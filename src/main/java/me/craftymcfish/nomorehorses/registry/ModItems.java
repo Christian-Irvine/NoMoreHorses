@@ -25,6 +25,9 @@ public class ModItems {
     public static final Item MONEY = registerItem("money", new Item(new Item.Settings().maxCount(64)));
     public static final Item RAW_MONEY = registerItem("raw_money", new Item(new Item.Settings().maxCount(64)));
 
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
+            new AliasedBlockItem(ModBlocks.STRAWBERRY_CROP, new FabricItemSettings()));
 
     public static final Item COPPER_SWORD = registerItem("copper_sword", new SwordItem(ModToolMaterial.COPPER, 6, -2.4f, new FabricItemSettings()));
     public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe", new PickaxeItem(ModToolMaterial.COPPER, 2, -2.8f, new FabricItemSettings()));
