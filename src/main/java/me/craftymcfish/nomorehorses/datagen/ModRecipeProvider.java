@@ -83,6 +83,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.CHEESE_BLOCK), conditionsFromItem(ModBlocks.CHEESE_BLOCK))
                 .offerTo(exporter, new Identifier("cheese_slab_crafting"));
 
+        createStairsRecipe(ModBlocks.MARBLE_STAIRS, Ingredient.ofItems(ModBlocks.MARBLE))
+                .criterion(hasItem(ModBlocks.MARBLE), conditionsFromItem(ModBlocks.MARBLE))
+                .offerTo(exporter, new Identifier("marble_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_SLAB, Ingredient.ofItems(ModBlocks.MARBLE))
+                .criterion(hasItem(ModBlocks.MARBLE), conditionsFromItem(ModBlocks.MARBLE))
+                .offerTo(exporter, new Identifier("marble_slab_crafting"));
+
+        createCondensingRecipe(RecipeCategory.BUILDING_BLOCKS ,ModBlocks.POLISHED_MARBLE, Ingredient.ofItems(ModBlocks.MARBLE))
+                .criterion(hasItem(ModBlocks.MARBLE), conditionsFromItem(ModBlocks.MARBLE))
+                .offerTo(exporter, new Identifier("polished_marble_crafting"));
+
+        createStairsRecipe(ModBlocks.POLISHED_MARBLE_STAIRS, Ingredient.ofItems(ModBlocks.POLISHED_MARBLE))
+                .criterion(hasItem(ModBlocks.POLISHED_MARBLE), conditionsFromItem(ModBlocks.POLISHED_MARBLE))
+                .offerTo(exporter, new Identifier("polished_marble_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_SLAB, Ingredient.ofItems(ModBlocks.POLISHED_MARBLE))
+                .criterion(hasItem(ModBlocks.POLISHED_MARBLE), conditionsFromItem(ModBlocks.POLISHED_MARBLE))
+                .offerTo(exporter, new Identifier("polished_marble_slab_crafting"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HELMET, 1)
                 .pattern("CCC")
                 .pattern("C C")

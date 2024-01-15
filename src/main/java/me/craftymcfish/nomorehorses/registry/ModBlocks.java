@@ -40,6 +40,18 @@ public class ModBlocks {
     public static final Block POTTED_DAFFODIL = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_daffodil"),
             new FlowerPotBlock(DAFFODIL, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
+    public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
+    public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(MARBLE)));
+    public static final Block MARBLE_STAIRS = registerBlock("marble_stairs",
+            new StairsBlock(ModBlocks.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+    public static final Block MARBLE_SLAB = registerBlock("marble_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+    public static final Block POLISHED_MARBLE_STAIRS = registerBlock("polished_marble_stairs",
+            new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+    public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, name), block);

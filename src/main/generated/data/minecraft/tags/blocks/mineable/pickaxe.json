@@ -3,6 +3,12 @@
   "values": [
     "nomorehorses:pork_ore",
     "nomorehorses:deepslate_pork_ore",
-    "nomorehorses:george"
+    "nomorehorses:george",
+    "nomorehorses:marble",
+    "nomorehorses:marble_stairs",
+    "nomorehorses:marble_slab",
+    "nomorehorses:polished_marble",
+    "nomorehorses:polished_marble_stairs",
+    "nomorehorses:polished_marble_slab"
   ]
 }

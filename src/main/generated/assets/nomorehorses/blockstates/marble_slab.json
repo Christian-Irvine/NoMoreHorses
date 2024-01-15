@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nomorehorses:block/marble_slab"
+    },
+    "type=double": {
+      "model": "nomorehorses:block/marble"
+    },
+    "type=top": {
+      "model": "nomorehorses:block/marble_slab_top"
+    }
+  }
+}

@@ -28,11 +28,22 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         //Drop Themselves
-        addDrop(ModBlocks.CHEESE_BLOCK);
         addDrop(ModBlocks.PORK_BLOCK);
+
+        addDrop(ModBlocks.CHEESE_BLOCK);
         addDrop(ModBlocks.CHEESE_STAIRS);
         addDrop(ModBlocks.CHEESE_SLAB, slabDrops(ModBlocks.CHEESE_SLAB));
+
         addDrop(ModBlocks.GEORGE);
+
+        addDrop(ModBlocks.MARBLE);
+        addDrop(ModBlocks.MARBLE_STAIRS);
+        addDrop(ModBlocks.MARBLE_SLAB, slabDrops(ModBlocks.MARBLE_SLAB));
+
+        addDrop(ModBlocks.POLISHED_MARBLE);
+        addDrop(ModBlocks.POLISHED_MARBLE_STAIRS);
+        addDrop(ModBlocks.POLISHED_MARBLE_SLAB, slabDrops(ModBlocks.POLISHED_MARBLE_SLAB));
+
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
 

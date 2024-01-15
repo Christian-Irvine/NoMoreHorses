@@ -27,7 +27,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.PORK_ORE)
                 .add(ModBlocks.DEEPSLATE_PORK_ORE)
-                .add(ModBlocks.GEORGE);
+                .add(ModBlocks.GEORGE)
+                .add(ModBlocks.MARBLE)
+                .add(ModBlocks.MARBLE_STAIRS)
+                .add(ModBlocks.MARBLE_SLAB)
+                .add(ModBlocks.POLISHED_MARBLE)
+                .add(ModBlocks.POLISHED_MARBLE_STAIRS)
+                .add(ModBlocks.POLISHED_MARBLE_SLAB);
+
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CHEESE_BLOCK)

@@ -17,10 +17,20 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHEESE_BLOCK);
+
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_PORK_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PORK_ORE);
 
+        BlockStateModelGenerator.BlockTexturePool marblePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MARBLE);
+        marblePool.stairs(ModBlocks.MARBLE_STAIRS);
+        marblePool.slab(ModBlocks.MARBLE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool polishedMarblePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_MARBLE);
+        polishedMarblePool.stairs(ModBlocks.POLISHED_MARBLE_STAIRS);
+        polishedMarblePool.slab(ModBlocks.POLISHED_MARBLE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHEESE_BLOCK);
         cheesePool.stairs(ModBlocks.CHEESE_STAIRS);
         cheesePool.slab(ModBlocks.CHEESE_SLAB);
 
