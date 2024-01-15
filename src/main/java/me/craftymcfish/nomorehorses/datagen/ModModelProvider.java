@@ -47,5 +47,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem)ModItems.COPPER_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.COPPER_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.COPPER_BOOTS);
+
+        itemModelGenerator.register(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC, Models.GENERATED);
     }
 }

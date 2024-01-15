@@ -27,5 +27,16 @@
   "block.nomorehorses.george": "George",
   "block.nomorehorses.daffodil": "Daffodil",
 
-  "itemGroup.nomorehorses.no_more_horses": "No More Horses"
+  "itemGroup.nomorehorses.no_more_horses": "No More Horses",
+
+  "sounds.nomorehorses.george_unhappy": "Unhappy George",
+
+  "item.nomorehorses.luv_or_somethin_music_disc": "Music Disc",
+  "item.nomorehorses.luv_or_somethin_music_disc.desc": "Chrissy Fresh - Luv Or Somethin'",
+
+  "item.nomorehorses.all_i_want_for_fortmas_is_vbucks_music_disc": "Music Disc",
+  "item.nomorehorses.all_i_want_for_fortmas_is_vbucks_music_disc.desc": "Chrissy Fresh - All I Want For Fortmas Is Vbucks",
+
+  "item.nomorehorses.empty_house_with_an_open_door_music_disc": "Music Disc",
+  "item.nomorehorses.empty_house_with_an_open_door_music_disc.desc": "Chrissy Fresh - Empty House With An Open Door"
 }

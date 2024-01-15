@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nomorehorses:item/empty_house_with_an_open_door_music_disc"
+  }
+}

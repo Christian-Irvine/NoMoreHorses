@@ -1,0 +1,32 @@
+{
+  "george_unhappy" : {
+    "subtitle": "sounds.nomorehorses.george_unhappy",
+    "sounds": [
+      "nomorehorses:george_unhappy"
+    ]
+  },
+  "luv_or_somethin" : {
+    "sounds": [
+      {
+        "name": "nomorehorses:luv_or_somethin",
+        "stream": true
+      }
+    ]
+  },
+  "all_i_want_for_fortmas_is_vbucks" : {
+    "sounds": [
+      {
+        "name": "nomorehorses:all_i_want_for_fortmas_is_vbucks",
+        "stream": true
+      }
+    ]
+  },
+  "empty_house_with_an_open_door" : {
+    "sounds": [
+      {
+        "name": "nomorehorses:empty_house_with_an_open_door",
+        "stream": true
+      }
+    ]
+  }
+}

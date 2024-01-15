@@ -1,8 +1,8 @@
-// 1.20.1	2024-01-15T13:53:29.3504448	No More Horses/Recipes
+// 1.20.1	2024-01-15T15:51:06.7002425	No More Horses/Recipes
 7cb1819acea6791ae8aa01c7319c77a06a384517 data\nomorehorses\recipes\cooked_porkchop_from_smelting_deepslate_pork_ore.json
 2e4afa37ca2e0d444b189ce13a20001d633f873c data\nomorehorses\recipes\copper_boots_crafting.json
-fe925d4cab59037397909c9e8ec6b73108f95c42 data\nomorehorses\advancements\recipes\tools\copper_helmet_crafting.json
 804909a6a1276d6dcb8de1155763878660fac89a data\nomorehorses\recipes\cheese_crafting.json
+fe925d4cab59037397909c9e8ec6b73108f95c42 data\nomorehorses\advancements\recipes\tools\copper_helmet_crafting.json
 6fe22148412ac548f5e379a5a56f40343c2fb928 data\nomorehorses\recipes\george_crafting.json
 e6e12df54502d3be190ccb54a5db1ddde6d7cdb5 data\nomorehorses\recipes\raw_money_crafting.json
 84c9c688494a995cca3a1e1642e090c937ea52ee data\nomorehorses\recipes\cheese_stairs_crafting.json

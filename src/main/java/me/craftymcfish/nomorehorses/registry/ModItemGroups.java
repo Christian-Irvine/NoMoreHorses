@@ -41,6 +41,9 @@ public class ModItemGroups {
                 entries.add(ModItems.COPPER_LEGGINGS);
                 entries.add(ModItems.COPPER_BOOTS);
                 entries.add(ModBlocks.DAFFODIL);
+                entries.add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC);
+                entries.add(ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC);
+                entries.add(ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC);
             }).build();
 
     //Vanilla Item Groups

@@ -1,7 +1,9 @@
 package me.craftymcfish.nomorehorses.registry;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.blocks.GeorgeBlock;
 import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
+import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -21,7 +23,7 @@ public class ModBlocks {
     public static final Block DEEPSLATE_PORK_ORE = registerBlock("deepslate_pork_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE), UniformIntProvider.create(5, 10)));
     public static final Block PORK_ORE = registerBlock("pork_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE), UniformIntProvider.create(5, 10)));
 
-    public static final Block GEORGE = registerBlock("george", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN), UniformIntProvider.create(50, 100)));
+    public static final Block GEORGE = registerBlock("george", new GeorgeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(ModSounds.GEORGE_SOUNDS)));
 
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.FROGLIGHT)));
     public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",

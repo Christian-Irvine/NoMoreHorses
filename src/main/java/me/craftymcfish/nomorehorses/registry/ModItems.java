@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.items.MeshItem;
 import me.craftymcfish.nomorehorses.items.ModArmorMaterials;
 import me.craftymcfish.nomorehorses.items.ModToolMaterial;
 import me.craftymcfish.nomorehorses.items.SaltItem;
+import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,6 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
 
@@ -39,6 +41,10 @@ public class ModItems {
     public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item COPPER_LEGGINGS = registerItem("copper_leggings", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item COPPER_BOOTS = registerItem("copper_boots", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item LUV_OR_SOMETHIN_MUSIC_DISC = registerItem("luv_or_somethin_music_disc", new MusicDiscItem(1, ModSounds.LUV_OR_SOMETHIN, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 243));
+    public static final Item ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC = registerItem("all_i_want_for_fortmas_is_vbucks_music_disc", new MusicDiscItem(2, ModSounds.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 241));
+    public static final Item EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC = registerItem("empty_house_with_an_open_door_music_disc", new MusicDiscItem(3, ModSounds.EMPTY_HOUSE_WITH_AN_OPEN_DOOR, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 216));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
