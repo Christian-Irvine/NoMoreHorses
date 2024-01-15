@@ -1,9 +1,11 @@
-// 1.20.1	2024-01-14T16:05:21.6661596	No More Horses/Block Loot Tables
-b0253bffc0125f61ccfe9da8386fbe06dd1d719b data\no-more-horses\loot_tables\blocks\cheese_block.json
-9e4708fda40e58ffe50ba3641b885dfc55d06118 data\no-more-horses\loot_tables\blocks\pork_ore.json
-5cef7e92caa111b599481305aec19f081749b578 data\no-more-horses\loot_tables\blocks\strawberry_crop.json
-45c3a4c41288fe427360b1263b4d328782cebb40 data\no-more-horses\loot_tables\blocks\cheese_slab.json
-f525b977afbca8b9df979fc2c8f28edf762f1d2f data\no-more-horses\loot_tables\blocks\deepslate_pork_ore.json
-b2f9db12376acbe57e091799bda4ec24fbbcc855 data\no-more-horses\loot_tables\blocks\george.json
-203e88bd3844803cd9b6962a495e6ef40b77bd9f data\no-more-horses\loot_tables\blocks\cheese_stairs.json
-c84900ade8bc258be998a8d409eb4f68f516446e data\no-more-horses\loot_tables\blocks\pork_block.json
+// 1.20.1	2024-01-15T13:53:29.3474519	No More Horses/Block Loot Tables
+6fab1428e2c9890660f34da9c0b65ca1bb046d35 data\nomorehorses\loot_tables\blocks\daffodil.json
+e5eaab9d34ea1310dc8eff5602d036ed73ba4432 data\nomorehorses\loot_tables\blocks\cheese_block.json
+f96ae63f9c0453110deb307dd5416b11df7b363b data\nomorehorses\loot_tables\blocks\george.json
+2047da87bdf7a640e853efbc7fe6ba57f43a8238 data\nomorehorses\loot_tables\blocks\pork_block.json
+c514f03bbad345a0706da58b58ca724c27db463f data\nomorehorses\loot_tables\blocks\pork_ore.json
+bb686c3b0fa08e7a59449cd0ca9abd1ed2680fad data\nomorehorses\loot_tables\blocks\cheese_stairs.json
+1d4ee5aaad70e537c867c61823908cfa52d12cbf data\nomorehorses\loot_tables\blocks\potted_daffodil.json
+db9934a6926f526320f20afa7094213d1f8bc73b data\nomorehorses\loot_tables\blocks\deepslate_pork_ore.json
+a1b2905065ebc9ea24be5dfa5f1fb9488bb6a8ca data\nomorehorses\loot_tables\blocks\strawberry_crop.json
+0dc3b31ccbe71984653a73f2cce7190e0d2b2ca7 data\nomorehorses\loot_tables\blocks\cheese_slab.json

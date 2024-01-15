@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "no-more-horses:cheese_block",
-    "no-more-horses:cheese_stairs",
-    "no-more-horses:cheese_slab",
-    "no-more-horses:pork_block"
+    "nomorehorses:cheese_block",
+    "nomorehorses:cheese_stairs",
+    "nomorehorses:cheese_slab",
+    "nomorehorses:pork_block"
   ]
 }

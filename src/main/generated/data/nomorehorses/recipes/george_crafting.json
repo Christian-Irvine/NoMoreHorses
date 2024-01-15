@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "M": {
+      "item": "nomorehorses:money"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "MNM",
+    "EME",
+    "MNM"
+  ],
+  "result": {
+    "item": "nomorehorses:george"
+  },
+  "show_notification": true
+}

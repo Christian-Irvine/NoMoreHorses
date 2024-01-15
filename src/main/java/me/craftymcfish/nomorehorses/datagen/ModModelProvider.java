@@ -25,6 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
         cheesePool.slab(ModBlocks.CHEESE_SLAB);
 
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

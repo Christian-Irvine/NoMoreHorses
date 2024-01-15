@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NoMoreHorses implements ModInitializer {
-	public static final String MOD_ID = "no-more-horses";
+	public static final String MOD_ID = "nomorehorses";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	//final is a const

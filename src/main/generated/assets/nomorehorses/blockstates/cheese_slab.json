@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nomorehorses:block/cheese_slab"
+    },
+    "type=double": {
+      "model": "nomorehorses:block/cheese_block"
+    },
+    "type=top": {
+      "model": "nomorehorses:block/cheese_slab_top"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "no-more-horses",
+	"id": "nomorehorses",
 	"version": "${version}",
 	"name": "No More Horses",
 	"description": "No More Horses aims to get rid of all those nasty horses, as well as adding some nice game changers.",
@@ -26,7 +26,7 @@
 		]
 	},
 	"mixins": [
-		"no-more-horses.mixins.json"
+		"nomorehorses.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.0",

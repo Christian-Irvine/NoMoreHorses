@@ -1,0 +1,31 @@
+{
+  "item.nomorehorses.cheese": "Cheese",
+  "item.nomorehorses.salt": "Salt",
+  "item.nomorehorses.mesh": "Mesh",
+  "item.nomorehorses.money": "Money",
+  "item.nomorehorses.raw_money": "Raw Money",
+  "item.nomorehorses.strawberry": "Strawberry",
+  "item.nomorehorses.strawberry_seeds": "Strawberry Seeds",
+
+  "item.nomorehorses.copper_sword": "Copper Sword",
+  "item.nomorehorses.copper_pickaxe": "Copper Pickaxe",
+  "item.nomorehorses.copper_axe": "Copper Axe",
+  "item.nomorehorses.copper_shovel": "Copper Shovel",
+  "item.nomorehorses.copper_hoe": "Copper Hoe",
+
+  "item.nomorehorses.copper_helmet": "Copper Helmet",
+  "item.nomorehorses.copper_chestplate": "Copper Chestplate",
+  "item.nomorehorses.copper_leggings": "Copper Leggings",
+  "item.nomorehorses.copper_boots": "Copper Boots",
+
+  "block.nomorehorses.pork_block": "Pork Block",
+  "block.nomorehorses.pork_ore": "Pork Ore",
+  "block.nomorehorses.deepslate_pork_ore": "Deepslate Pork Ore",
+  "block.nomorehorses.cheese_block": "Cheese Block",
+  "block.nomorehorses.cheese_stairs": "Cheese Stairs",
+  "block.nomorehorses.cheese_slab": "Cheese Slab",
+  "block.nomorehorses.george": "George",
+  "block.nomorehorses.daffodil": "Daffodil",
+
+  "itemGroup.nomorehorses.no_more_horses": "No More Horses"
+}

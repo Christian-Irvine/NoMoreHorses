@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "no-more-horses:block/george_main"
-  }
-}

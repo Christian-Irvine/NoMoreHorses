@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -31,6 +32,11 @@ public class ModBlocks {
     public static final Block STRAWBERRY_CROP = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "strawberry_crop"),
             new StrawberryCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
+    public static final Block DAFFODIL = registerBlock("daffodil",
+            new FlowerBlock(StatusEffects.LUCK, 10, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+
+    public static final Block POTTED_DAFFODIL = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_daffodil"),
+            new FlowerPotBlock(DAFFODIL, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

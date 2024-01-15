@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "no-more-horses:block/strawberry_crop_stage0"
-  }
-}

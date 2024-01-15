@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SRS",
+    "SRS",
+    "SSS"
+  ],
+  "result": {
+    "item": "nomorehorses:mesh"
+  },
+  "show_notification": true
+}
