@@ -22,7 +22,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
                 .add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC);
-        getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
-                .add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC);
     }
 }
