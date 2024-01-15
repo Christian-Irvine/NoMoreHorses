@@ -3,6 +3,7 @@ package me.craftymcfish.nomorehorses;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItemGroups;
 import me.craftymcfish.nomorehorses.registry.ModItems;
+import me.craftymcfish.nomorehorses.util.ModCustomTrades;
 import me.craftymcfish.nomorehorses.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 
@@ -27,6 +28,7 @@ public class NoMoreHorses implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModLootTableModifiers.modifyLootTables();
+		ModCustomTrades.registerCustomTrades();
 
 		FuelRegistry.INSTANCE.add(ModItems.MONEY, 800);
 		LOGGER.info("Successfully Registered Fuel Items");
