@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-15T19:56:36.2376641	No More Horses/Model Definitions
+// 1.20.2	2024-01-15T22:42:55.215275	No More Horses/Model Definitions
 70022ab15f289cf5f06dfa58dda5aecef9be06b9 assets\nomorehorses\models\item\marble_slab.json
 b60a3a52269ca646d4c48a5e2b61e1cf1987be05 assets\nomorehorses\models\item\copper_boots_emerald_trim.json
 f14ad313ff01e07f3bfb8d5ede4f8536ce846b49 assets\nomorehorses\models\item\copper_leggings_lapis_trim.json
@@ -63,8 +63,8 @@ fbeb005c5bebf168090571259147e8c8cb36b1dd assets\nomorehorses\models\item\marble.
 b7b1912ed0adb5bbf957085e2c9996d661ba6902 assets\nomorehorses\models\item\salt.json
 c36467620705b92dff29d8af15891ada6fec5aba assets\nomorehorses\blockstates\deepslate_pork_ore.json
 6f0d46d9212fa6bbe1eab912f798cf718e6a2370 assets\nomorehorses\models\item\copper_chestplate.json
-13c4bdb162eaeaf29f154dcd19a05550aab5f1dc assets\nomorehorses\models\block\deepslate_pork_ore.json
 ef2333a7ea2949367f6a340dc1c92b15af939a51 assets\nomorehorses\models\block\strawberry_crop_stage1.json
+13c4bdb162eaeaf29f154dcd19a05550aab5f1dc assets\nomorehorses\models\block\deepslate_pork_ore.json
 6dcebdb1510460f5cd60f2a7a7a3e77d8654dbed assets\nomorehorses\models\item\cheese_stairs.json
 79814b47657bbdad9ee2e59ea9d854d317657e11 assets\nomorehorses\models\item\all_i_want_for_fortmas_is_vbucks_music_disc.json
 16969a76a718e744ee1ff23915804890f19be172 assets\nomorehorses\models\item\deepslate_pork_ore.json
@@ -73,9 +73,9 @@ ea2bc23f936d2f86c44da399e453a977a2dcfa31 assets\nomorehorses\models\item\luv_or_
 40b4567987ef45aad9334dec609859f8864ac7ba assets\nomorehorses\models\item\strawberry.json
 31f13787898502bdbda409680f0c79120a1083f1 assets\nomorehorses\models\item\copper_helmet_netherite_trim.json
 c8ecda8f874ebf991c5447eaaf1b2369cc7f01d3 assets\nomorehorses\models\item\mesh.json
+f318a1ee63eb92827c526cc55154c22cf6d89ca4 assets\nomorehorses\models\item\copper_leggings_copper_trim.json
 4c98cd7ff4e4e86121547213f3db8805c2799a81 assets\nomorehorses\models\block\marble_slab.json
 5d01a947f5bbc6a03b5f5f4bd355dff5cde25a45 assets\nomorehorses\blockstates\marble_slab.json
-f318a1ee63eb92827c526cc55154c22cf6d89ca4 assets\nomorehorses\models\item\copper_leggings_copper_trim.json
 1d7675f820b22134a2f09e073eb2107f868f4ee6 assets\nomorehorses\models\item\copper_boots_lapis_trim.json
 43a70ea40728a39d23de611513404b4700229ca9 assets\nomorehorses\models\item\polished_marble_stairs.json
 dde6d55ceca1ac0928fa0a13cfc94220e2870acd assets\nomorehorses\models\block\potted_daffodil.json

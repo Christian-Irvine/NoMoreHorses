@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_pork_ore",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_pork_ore"
     ]
   ],
   "rewards": {
