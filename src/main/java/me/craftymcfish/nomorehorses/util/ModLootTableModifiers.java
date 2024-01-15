@@ -33,15 +33,17 @@ public class ModLootTableModifiers {
 //            }
         });
 
+        //The below is broken in current version of fabric, when updating to 1.20.4 check if it works again. This is because the pools field is private in this version
+
         //This is the way to do it for things like sus sand or fishing with singular drops system (sus sand has no weight)
         LootTableEvents.REPLACE.register(((resourceManager, lootManager, id, original, source) -> {
-            if (FISHING_JUNK_ID.equals(id)){
-                List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
-                entries.add(ItemEntry.builder(ModItems.SALT).weight(20).build());
-
-                LootPool.Builder pool = LootPool.builder().with(entries);
-                return LootTable.builder().pool(pool).build();
-            }
+//            if (FISHING_JUNK_ID.equals(id)){
+//                List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
+//                entries.add(ItemEntry.builder(ModItems.SALT).weight(20).build());
+//
+//                LootPool.Builder pool = LootPool.builder().with(entries);
+//                return LootTable.builder().pool(pool).build();
+//            }
 
             return null;
         }));

@@ -44,6 +44,12 @@ public class ModItemGroups {
                 entries.add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC);
                 entries.add(ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC);
                 entries.add(ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC);
+                entries.add(ModBlocks.MARBLE);
+                entries.add(ModBlocks.MARBLE_STAIRS);
+                entries.add(ModBlocks.MARBLE_SLAB);
+                entries.add(ModBlocks.POLISHED_MARBLE);
+                entries.add(ModBlocks.POLISHED_MARBLE_STAIRS);
+                entries.add(ModBlocks.POLISHED_MARBLE_SLAB);
             }).build();
 
     //Vanilla Item Groups
