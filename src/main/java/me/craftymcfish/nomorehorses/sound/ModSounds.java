@@ -22,6 +22,8 @@ public class ModSounds {
     public static final SoundEvent ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS = registerSoundEvent("all_i_want_for_fortmas_is_vbucks");
     public static final SoundEvent EMPTY_HOUSE_WITH_AN_OPEN_DOOR = registerSoundEvent("empty_house_with_an_open_door");
 
+    public static final SoundEvent SNAIL_HURT = registerSoundEvent("snail_hurt");
+    public static final SoundEvent SNAIL_DEATH = registerSoundEvent("snail_death");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(NoMoreHorses.MOD_ID, name);

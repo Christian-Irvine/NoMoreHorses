@@ -47,5 +47,7 @@
   "item.nomorehorses.all_i_want_for_fortmas_is_vbucks_music_disc.desc": "Chrissy Fresh - All I Want For Fortmas Is Vbucks",
 
   "item.nomorehorses.empty_house_with_an_open_door_music_disc": "Music Disc",
-  "item.nomorehorses.empty_house_with_an_open_door_music_disc.desc": "Chrissy Fresh - Empty House With An Open Door"
+  "item.nomorehorses.empty_house_with_an_open_door_music_disc.desc": "Chrissy Fresh - Empty House With An Open Door",
+
+  "entity.nomorehorses.snail": "Snail"
 }

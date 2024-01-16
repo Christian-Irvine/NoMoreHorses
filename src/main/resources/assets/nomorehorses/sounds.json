@@ -5,6 +5,18 @@
       "nomorehorses:george_unhappy"
     ]
   },
+  "snail_hurt" : {
+    "subtitle": "sounds.nomorehorses.snail_hurt",
+    "sounds": [
+      "nomorehorses:snail_hurt"
+    ]
+  },
+  "snail_death" : {
+    "subtitle": "sounds.nomorehorses.snail_death",
+    "sounds": [
+      "nomorehorses:snail_death"
+    ]
+  },
   "luv_or_somethin" : {
     "sounds": [
       {
