@@ -45,7 +45,8 @@ public class MaceratorScreen extends HandledScreen<MaceratorScreenHandler> {
     }
 
     private void renderFuelBar(DrawContext context, int x, int y) {
-        context.drawTexture(TEXTURE, x + 61, y + 37, 176, 0, 6, handler.getScaledFuelProgress(), 5, 5);
+        int scaledProgress = handler.getScaledFuelProgress();
+        context.drawTexture(TEXTURE, x + 61, y + 37 + (13 - scaledProgress), 176, 13 - scaledProgress, 6, scaledProgress);
         //context.drawTexture(TEXTURE, x + 61, y + 37, 176, 0, 6, handler.getScaledFuelProgress()); //Works just backwards
     }
 

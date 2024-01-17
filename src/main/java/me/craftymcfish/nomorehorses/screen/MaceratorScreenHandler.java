@@ -56,7 +56,7 @@ public class MaceratorScreenHandler extends ScreenHandler {
     public int getScaledFuelProgress() {
         int fuel = this.propertyDelegate.get(2);
         int maxFuel = this.propertyDelegate.get(3);  // Max Fuel
-        int fuelBarSize = 13; // This is the height in pixels of the bar
+        int fuelBarSize = 13 + 1; // This is the height in pixels of the bar
 
         //return 5;
         return maxFuel != 0 && fuel != 0 ? fuel * fuelBarSize / maxFuel : 0;

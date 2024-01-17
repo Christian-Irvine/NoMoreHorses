@@ -144,6 +144,9 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
             if(this.hasRecipe()) {
                 makeStepInCraft(world, pos, state);
             }
+            else {
+                resetProgress();
+            }
         }
     }
 
