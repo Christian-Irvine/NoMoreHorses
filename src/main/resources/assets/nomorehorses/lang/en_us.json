@@ -49,5 +49,8 @@
   "item.nomorehorses.empty_house_with_an_open_door_music_disc": "Music Disc",
   "item.nomorehorses.empty_house_with_an_open_door_music_disc.desc": "Chrissy Fresh - Empty House With An Open Door",
 
-  "entity.nomorehorses.snail": "Snail"
+  "entity.nomorehorses.snail": "Snail",
+  "item.nomorehorses.snail_spawn_egg": "Snail Spawn Egg",
+
+  "block.nomorehorses.macerator": "Macerator"
 }

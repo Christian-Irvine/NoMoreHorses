@@ -1,14 +1,15 @@
 package me.craftymcfish.nomorehorses.datagen;
 
-import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
+import me.craftymcfish.nomorehorses.block.custom.StrawberryCropBlock;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -36,6 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        //blockStateModelGenerator.registerSimpleState(ModBlocks.MACERATOR); //Comment out when trying to rotate
     }
 
     @Override
@@ -61,5 +64,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

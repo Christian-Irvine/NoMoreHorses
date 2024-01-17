@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "nomorehorses:block/macerator", "uvlock": true },
+    "facing=east":  { "model": "nomorehorses:block/macerator", "y":  90, "uvlock": true },
+    "facing=south": { "model": "nomorehorses:block/macerator", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "nomorehorses:block/macerator", "y": 270, "uvlock": true }
+  }
+}

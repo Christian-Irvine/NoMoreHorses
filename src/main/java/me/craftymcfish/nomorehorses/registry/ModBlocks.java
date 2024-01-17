@@ -1,8 +1,9 @@
 package me.craftymcfish.nomorehorses.registry;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
-import me.craftymcfish.nomorehorses.blocks.GeorgeBlock;
-import me.craftymcfish.nomorehorses.blocks.StrawberryCropBlock;
+import me.craftymcfish.nomorehorses.block.custom.GeorgeBlock;
+import me.craftymcfish.nomorehorses.block.custom.MaceratorBlock;
+import me.craftymcfish.nomorehorses.block.custom.StrawberryCropBlock;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -50,6 +51,9 @@ public class ModBlocks {
             new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
     public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+
+    public static final Block MACERATOR = registerBlock("macerator",
+            new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

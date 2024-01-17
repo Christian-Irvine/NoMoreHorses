@@ -1,4 +1,4 @@
-package me.craftymcfish.nomorehorses.blocks;
+package me.craftymcfish.nomorehorses.block.custom;
 
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.minecraft.block.Block;

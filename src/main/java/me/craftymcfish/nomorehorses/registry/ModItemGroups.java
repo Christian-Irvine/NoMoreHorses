@@ -50,6 +50,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.POLISHED_MARBLE);
                 entries.add(ModBlocks.POLISHED_MARBLE_STAIRS);
                 entries.add(ModBlocks.POLISHED_MARBLE_SLAB);
+                entries.add(ModItems.SNAIL_SPAWN_EGG);
+                entries.add(ModBlocks.MACERATOR);
             }).build();
 
     //Vanilla Item Groups

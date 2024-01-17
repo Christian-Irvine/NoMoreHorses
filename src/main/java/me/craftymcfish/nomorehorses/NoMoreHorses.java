@@ -1,10 +1,12 @@
 package me.craftymcfish.nomorehorses;
 
+import me.craftymcfish.nomorehorses.block.custom.entity.ModBlockEntities;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItemGroups;
 import me.craftymcfish.nomorehorses.registry.ModItems;
+import me.craftymcfish.nomorehorses.screen.ModScreenHandlers;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import me.craftymcfish.nomorehorses.util.ModCustomTrades;
 import me.craftymcfish.nomorehorses.util.ModLootTableModifiers;
@@ -39,6 +41,9 @@ public class NoMoreHorses implements ModInitializer {
 		LOGGER.info("Successfully Registered Fuel Items");
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createSnailAttributes());
+
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
 
 		LOGGER.info("Successfully Removed All Horses!, No More Horses is complete");
 	}
