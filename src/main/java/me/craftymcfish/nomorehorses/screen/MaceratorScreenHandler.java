@@ -32,7 +32,7 @@ public class MaceratorScreenHandler extends ScreenHandler {
         this.blockEntity = ((MaceratorBlockEntity) blockEntity);
 
         this.addSlot(new Slot(inventory, 0, 56, 17));
-        this.addSlot(new Slot(inventory, 1, 116, 35));
+        this.addSlot(new Slot(inventory, 1, 116, 35)); //This one shouldn't be able to put things into it
         this.addSlot(new Slot(inventory, 2, 56, 53));
 
         addPlayerInventory(playerInventory);

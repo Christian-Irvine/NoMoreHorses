@@ -1,0 +1,11 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "nomorehorses:cheese"
+    }
+  ],
+  "output": {
+    "item": "nomorehorses:salt"
+  }
+}

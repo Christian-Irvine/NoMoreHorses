@@ -1,5 +1,7 @@
 package me.craftymcfish.nomorehorses.block.custom.entity;
 
+import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.recipe.MaceratorRecipe;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.screen.MaceratorScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
@@ -8,11 +10,13 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -21,6 +25,10 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import javax.crypto.Mac;
+import javax.swing.text.html.Option;
+import java.util.Optional;
 
 public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -172,10 +180,27 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private boolean hasRecipe() {
-        ItemStack result = new ItemStack(ModItems.SALT);
-        boolean hasInput = getStack(INPUT_SLOT).getItem() == ModItems.CHEESE;
+//        ItemStack result = new ItemStack(ModItems.SALT); //Hard Coding (lame)
+//        boolean hasInput = getStack(INPUT_SLOT).getItem() == ModItems.CHEESE;
 
-        return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
+        Optional<RecipeEntry<MaceratorRecipe>> recipe = getCurrentRecipe();
+
+        //NoMoreHorses.LOGGER.info("Hello!");
+        //NoMoreHorses.LOGGER.info(String.valueOf(recipe.get().value().getResult(null).getItem()));
+
+        //recipe.get().value().getResult(null).getItem();
+
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(recipe.get().value().getResult(null))
+                && canInsertItemIntoOutputSlot(recipe.get().value().getResult(null).getItem());
+    }
+
+    private Optional<RecipeEntry<MaceratorRecipe>> getCurrentRecipe() {
+        SimpleInventory inv = new SimpleInventory(this.size());
+        for (int i = 0; i < this.size(); i++) {
+            inv.setStack(i, this.getStack(i));
+        }
+
+        return getWorld().getRecipeManager().getFirstMatch(MaceratorRecipe.Type.INSTANCE, inv, getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -202,10 +227,15 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private void craftItem() {
-        this.removeStack(INPUT_SLOT, 1);
-        ItemStack result = new ItemStack(ModItems.SALT);
+        Optional<RecipeEntry<MaceratorRecipe>> recipe = getCurrentRecipe();
 
-        this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
+        this.removeStack(INPUT_SLOT, 1);
+
+        //ItemStack result = new ItemStack(ModItems.SALT);
+
+
+
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(), getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
     }
 
     private boolean hasCraftingFinished() {

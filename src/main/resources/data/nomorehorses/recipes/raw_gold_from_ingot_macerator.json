@@ -1,0 +1,11 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "output": {
+    "item": "minecraft:raw_gold"
+  }
+}

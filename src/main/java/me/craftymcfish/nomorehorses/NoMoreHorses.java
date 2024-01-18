@@ -3,6 +3,7 @@ package me.craftymcfish.nomorehorses;
 import me.craftymcfish.nomorehorses.block.custom.entity.ModBlockEntities;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
+import me.craftymcfish.nomorehorses.recipe.ModRecipes;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItemGroups;
 import me.craftymcfish.nomorehorses.registry.ModItems;
@@ -44,6 +45,8 @@ public class NoMoreHorses implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 
 		LOGGER.info("Successfully Removed All Horses!, No More Horses is complete");
 	}

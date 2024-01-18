@@ -1,0 +1,12 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "output": {
+    "item": "minecraft:netherite_scrap",
+    "count": 3
+  }
+}

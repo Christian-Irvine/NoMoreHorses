@@ -12,7 +12,7 @@
 		"sources": ""
 	},
 	"license": "MIT",
-	"icon": "assets/no-more-horses/icon.png",
+	"icon": "assets/nomorehorses/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -29,7 +29,7 @@
 		"nomorehorses.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.0",
+		"fabricloader": ">=0.14.4",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"

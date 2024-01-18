@@ -1,0 +1,11 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "output": {
+    "item": "minecraft:gravel"
+  }
+}

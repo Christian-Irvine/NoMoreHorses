@@ -1,0 +1,12 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "output": {
+    "item": "minecraft:coal",
+    "count": 9
+  }
+}
