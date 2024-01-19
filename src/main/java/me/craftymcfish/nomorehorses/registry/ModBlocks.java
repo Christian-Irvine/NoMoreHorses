@@ -74,10 +74,10 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
 
     public static final Block OLIVE_BUTTON = registerBlock("olive_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS), BlockSetType.OAK, 15, true));
+            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision(), BlockSetType.OAK, 15, true));
     //Blocks.createWoodenButtonBlock(BlockSetType.OAK, new FeatureFlag[0]));
     public static final Block OLIVE_PRESSURE_PLATE = registerBlock("olive_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS), BlockSetType.OAK));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision(), BlockSetType.OAK));
     public static final Block OLIVE_FENCE = registerBlock("olive_fence",
             new FenceBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
     public static final Block OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
