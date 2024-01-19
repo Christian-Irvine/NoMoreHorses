@@ -72,7 +72,6 @@ public class ModBlocks {
             new StairsBlock(ModBlocks.OLIVE_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
     public static final Block OLIVE_SLAB = registerBlock("olive_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
-
     public static final Block OLIVE_BUTTON = registerBlock("olive_button",
             new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision(), BlockSetType.OAK, 15, true));
     //Blocks.createWoodenButtonBlock(BlockSetType.OAK, new FeatureFlag[0]));
@@ -86,6 +85,9 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
     public static final Block OLIVE_TRAP_DOOR = registerBlock("olive_trap_door",
             new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
+
+    public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8), UniformIntProvider.create(5, 10)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

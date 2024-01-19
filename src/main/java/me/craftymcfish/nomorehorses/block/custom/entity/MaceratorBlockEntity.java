@@ -84,6 +84,7 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("macerator_progress", progress);
+        nbt.putInt("macerator_fuel", fuel);
     }
 
     @Override
@@ -91,6 +92,7 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
         super.readNbt(nbt);
         Inventories.readNbt(nbt, inventory);
         progress = nbt.getInt("macerator_progress");
+        fuel = nbt.getInt("macerator_fuel");
     }
 
     @Override
@@ -172,7 +174,7 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private boolean hasFuelItem() {
-        return getStack(FUEL_SLOT).getItem() == Items.AMETHYST_SHARD;
+        return getStack(FUEL_SLOT).getItem() == ModItems.VOIDFIRE_SHARD;
     }
 
     private boolean hasFuelLevel() {

@@ -49,6 +49,9 @@ public class ModItems {
 
     public static final Item SNAIL_SPAWN_EGG = registerItem("snail_spawn_egg", new SpawnEggItem(ModEntities.SNAIL, 0xcec15f, 0xa6d05d, new FabricItemSettings()));
 
+    public static final Item VOIDFIRE_ESSENCE = registerItem("voidfire_essence", new Item(new FabricItemSettings()));
+    public static final Item VOIDFIRE_SHARD = registerItem("voidfire_shard", new Item(new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
     }

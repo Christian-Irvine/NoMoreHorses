@@ -36,7 +36,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_MARBLE)
                 .add(ModBlocks.POLISHED_MARBLE_STAIRS)
                 .add(ModBlocks.POLISHED_MARBLE_SLAB)
-                .add(ModBlocks.MACERATOR);
+                .add(ModBlocks.MACERATOR)
+                .add(ModBlocks.VOIDFIRE_ORE);
 
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -61,11 +62,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
 
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.VOIDFIRE_ORE);
 
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
-        .add(ModBlocks.GEORGE);
+                .add(ModBlocks.GEORGE);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.OLIVE_LOG)

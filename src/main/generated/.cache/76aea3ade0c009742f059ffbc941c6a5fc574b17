@@ -1,7 +1,8 @@
-// 1.20.2	2024-01-19T18:12:38.8778998	No More Horses/Block Loot Tables
+// 1.20.2	2024-01-19T23:45:47.2824438	No More Horses/Block Loot Tables
 2047da87bdf7a640e853efbc7fe6ba57f43a8238 data\nomorehorses\loot_tables\blocks\pork_block.json
 a1526757af8a245afbc2377adc3b97d5809a7f64 data\nomorehorses\loot_tables\blocks\olive_fence.json
 4dd352fafa976ed00d64c402a20267273494fde8 data\nomorehorses\loot_tables\blocks\olive_planks.json
+7f9442172a397dd9227cc98179fc759c70a4e0de data\nomorehorses\loot_tables\blocks\voidfire_ore.json
 159714a096cb4bfabe24c5fc2364ee48cf953165 data\nomorehorses\loot_tables\blocks\olive_button.json
 1906e116990ab621471d43c7b1d188c389f2127a data\nomorehorses\loot_tables\blocks\olive_fence_gate.json
 55139b8611e678cd2481c9c043835ae0b25c0262 data\nomorehorses\loot_tables\blocks\olive_stairs.json

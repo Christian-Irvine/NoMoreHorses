@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:voidfire_essence_from_smelting_voidfire_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_voidfire_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:voidfire_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_voidfire_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:voidfire_essence_from_smelting_voidfire_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

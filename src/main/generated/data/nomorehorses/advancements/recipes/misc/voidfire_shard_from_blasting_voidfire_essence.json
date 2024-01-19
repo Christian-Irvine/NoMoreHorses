@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:voidfire_shard_from_blasting_voidfire_essence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_voidfire_essence": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:voidfire_essence"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_voidfire_essence"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:voidfire_shard_from_blasting_voidfire_essence"
+    ]
+  },
+  "sends_telemetry_event": false
+}

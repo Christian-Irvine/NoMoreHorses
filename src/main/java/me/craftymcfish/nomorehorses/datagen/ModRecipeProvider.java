@@ -22,6 +22,7 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> PORK_SMELTABLES = List.of(ModBlocks.PORK_ORE, ModBlocks.DEEPSLATE_PORK_ORE);
+    private static final List<ItemConvertible> VOIDFIRE_SMELTABLES = List.of(ModBlocks.VOIDFIRE_ORE);
     private static final List<ItemConvertible> MONEY_SMELTABLES = List.of(ModItems.RAW_MONEY);
 
     public ModRecipeProvider(FabricDataOutput output) {
@@ -37,6 +38,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items.PORKCHOP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PORK_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.CHEESE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHEESE_BLOCK);
+
+        offerBlasting(exporter, List.of(ModItems.VOIDFIRE_ESSENCE), RecipeCategory.MISC, ModItems.VOIDFIRE_SHARD, 0.7f, 100, "voidfire");
+        offerSmelting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 200, "voidfire_ore");
+        offerBlasting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 100, "voidfire_ore");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MESH, 1)
                 .pattern("SRS")

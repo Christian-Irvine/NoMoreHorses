@@ -68,5 +68,9 @@
   "entity.nomorehorses.snail": "Snail",
   "item.nomorehorses.snail_spawn_egg": "Snail Spawn Egg",
 
-  "block.nomorehorses.macerator": "Macerator"
+  "block.nomorehorses.macerator": "Macerator",
+
+  "item.nomorehorses.voidfire_essence": "Voidfire Essence",
+  "item.nomorehorses.voidfire_shard": "Voidfire Shard",
+  "block.nomorehorses.voidfire_ore": "Voidfire Ore"
 }
