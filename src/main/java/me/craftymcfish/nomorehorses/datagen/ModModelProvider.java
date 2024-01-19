@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.MossBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
@@ -34,6 +35,20 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHEESE_BLOCK);
         cheesePool.stairs(ModBlocks.CHEESE_STAIRS);
         cheesePool.slab(ModBlocks.CHEESE_SLAB);
+
+        blockStateModelGenerator.registerLog(ModBlocks.OLIVE_LOG).log(ModBlocks.OLIVE_LOG).wood(ModBlocks.OLIVE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_OLIVE_LOG).log(ModBlocks.STRIPPED_OLIVE_LOG).wood(ModBlocks.STRIPPED_OLIVE_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OLIVE_LEAVES);
+        BlockStateModelGenerator.BlockTexturePool olivePlankPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OLIVE_PLANKS);
+        olivePlankPool.slab(ModBlocks.OLIVE_SLAB);
+        olivePlankPool.stairs(ModBlocks.OLIVE_STAIRS);
+        olivePlankPool.fence(ModBlocks.OLIVE_FENCE);
+        olivePlankPool.fenceGate(ModBlocks.OLIVE_FENCE_GATE);
+        olivePlankPool.button(ModBlocks.OLIVE_BUTTON);
+        olivePlankPool.pressurePlate(ModBlocks.OLIVE_PRESSURE_PLATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.OLIVE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.OLIVE_TRAP_DOOR);
 
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);

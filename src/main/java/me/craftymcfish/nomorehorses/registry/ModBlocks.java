@@ -55,6 +55,37 @@ public class ModBlocks {
     public static final Block MACERATOR = registerBlock("macerator",
             new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque()));
 
+    public static final Block OLIVE_LOG = registerBlock("olive_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(3f)));
+    public static final Block OLIVE_WOOD = registerBlock("olive_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(3f)));
+    public static final Block STRIPPED_OLIVE_LOG = registerBlock("stripped_olive_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final Block STRIPPED_OLIVE_WOOD = registerBlock("stripped_olive_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+    public static final Block OLIVE_LEAVES = registerBlock("olive_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(3f).nonOpaque()));
+    public static final Block OLIVE_PLANKS = registerBlock("olive_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(3f)));
+
+    public static final Block OLIVE_STAIRS = registerBlock("olive_stairs",
+            new StairsBlock(ModBlocks.OLIVE_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
+    public static final Block OLIVE_SLAB = registerBlock("olive_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
+
+    public static final Block OLIVE_BUTTON = registerBlock("olive_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS), BlockSetType.OAK, 15, true));
+    //Blocks.createWoodenButtonBlock(BlockSetType.OAK, new FeatureFlag[0]));
+    public static final Block OLIVE_PRESSURE_PLATE = registerBlock("olive_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS), BlockSetType.OAK));
+    public static final Block OLIVE_FENCE = registerBlock("olive_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
+    public static final Block OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS), WoodType.OAK));
+    public static final Block OLIVE_DOOR = registerBlock("olive_door",
+            new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block OLIVE_TRAP_DOOR = registerBlock("olive_trap_door",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

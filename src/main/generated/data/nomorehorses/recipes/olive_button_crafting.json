@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nomorehorses:olive_planks"
+    }
+  ],
+  "result": {
+    "item": "nomorehorses:olive_button"
+  }
+}

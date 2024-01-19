@@ -113,6 +113,77 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_SLAB, ModBlocks.POLISHED_MARBLE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_STAIRS, ModBlocks.POLISHED_MARBLE);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                .input(ModBlocks.OLIVE_LOG)
+                .criterion(hasItem(ModBlocks.OLIVE_LOG), conditionsFromItem(ModBlocks.OLIVE_LOG))
+                .offerTo(exporter, new Identifier("olive_planks_crafting_from_log"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                .input(ModBlocks.OLIVE_WOOD)
+                .criterion(hasItem(ModBlocks.OLIVE_WOOD), conditionsFromItem(ModBlocks.OLIVE_WOOD))
+                .offerTo(exporter, new Identifier("olive_planks_crafting_from_wood"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_OLIVE_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_LOG), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_LOG))
+                .offerTo(exporter, new Identifier("olive_planks_crafting_from_stripped_log"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_OLIVE_WOOD)
+                .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_WOOD), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_WOOD))
+                .offerTo(exporter, new Identifier("olive_planks_crafting_from_stripped_wood"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_WOOD, 3)
+                .pattern("LL ")
+                .pattern("LL ")
+                .pattern("   ")
+                .input('L', ModBlocks.OLIVE_LOG)
+                .criterion(hasItem(ModBlocks.OLIVE_LOG), conditionsFromItem(ModBlocks.OLIVE_LOG))
+                .offerTo(exporter, new Identifier("olive_wood_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_OLIVE_WOOD, 3)
+                .pattern("LL ")
+                .pattern("LL ")
+                .pattern("   ")
+                .input('L', ModBlocks.STRIPPED_OLIVE_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_LOG), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_LOG))
+                .offerTo(exporter, new Identifier("stripped_olive_wood_crafting"));
+
+        createStairsRecipe(ModBlocks.OLIVE_STAIRS, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_SLAB, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_slab_crafting"));
+
+        createDoorRecipe(ModBlocks.OLIVE_DOOR, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_door_crafting"));
+
+        createTrapdoorRecipe(ModBlocks.OLIVE_TRAP_DOOR, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_trap_door_crafting"));
+
+        createFenceRecipe(ModBlocks.OLIVE_FENCE, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier("olive_fence_crafting"));
+
+        createFenceGateRecipe(ModBlocks.OLIVE_FENCE_GATE, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier("olive_fence_gate_crafting"));
+
+        createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.OLIVE_PRESSURE_PLATE, Ingredient.ofItems(ModBlocks.OLIVE_PLANKS))
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_pressure_plate_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_BUTTON, 1)
+                .input(ModBlocks.OLIVE_PLANKS)
+                .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
+                .offerTo(exporter, new Identifier("olive_button_crafting"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HELMET, 1)
                 .pattern("CCC")
                 .pattern("C C")

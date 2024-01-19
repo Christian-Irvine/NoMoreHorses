@@ -52,6 +52,20 @@ public class ModItemGroups {
                 entries.add(ModBlocks.POLISHED_MARBLE_SLAB);
                 entries.add(ModItems.SNAIL_SPAWN_EGG);
                 entries.add(ModBlocks.MACERATOR);
+                entries.add(ModBlocks.OLIVE_LOG);
+                entries.add(ModBlocks.OLIVE_WOOD);
+                entries.add(ModBlocks.STRIPPED_OLIVE_LOG);
+                entries.add(ModBlocks.STRIPPED_OLIVE_WOOD);
+                entries.add(ModBlocks.OLIVE_LEAVES);
+                entries.add(ModBlocks.OLIVE_PLANKS);
+                entries.add(ModBlocks.OLIVE_STAIRS);
+                entries.add(ModBlocks.OLIVE_SLAB);
+                entries.add(ModBlocks.OLIVE_TRAP_DOOR);
+                entries.add(ModBlocks.OLIVE_DOOR);
+                entries.add(ModBlocks.OLIVE_FENCE);
+                entries.add(ModBlocks.OLIVE_FENCE_GATE);
+                entries.add(ModBlocks.OLIVE_BUTTON);
+                entries.add(ModBlocks.OLIVE_PRESSURE_PLATE);
             }).build();
 
     //Vanilla Item Groups

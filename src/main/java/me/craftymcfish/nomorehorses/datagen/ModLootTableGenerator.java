@@ -44,6 +44,22 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POLISHED_MARBLE_STAIRS);
         addDrop(ModBlocks.POLISHED_MARBLE_SLAB, slabDrops(ModBlocks.POLISHED_MARBLE_SLAB));
 
+        addDrop(ModBlocks.OLIVE_LOG);
+        addDrop(ModBlocks.OLIVE_WOOD);
+        addDrop(ModBlocks.STRIPPED_OLIVE_LOG);
+        addDrop(ModBlocks.STRIPPED_OLIVE_WOOD);
+        addDrop(ModBlocks.OLIVE_PLANKS);
+        addDrop(ModBlocks.OLIVE_STAIRS);
+        addDrop(ModBlocks.OLIVE_SLAB, slabDrops(ModBlocks.OLIVE_SLAB));
+        addDrop(ModBlocks.OLIVE_DOOR, doorDrops(ModBlocks.OLIVE_DOOR));
+        addDrop(ModBlocks.OLIVE_TRAP_DOOR);
+        addDrop(ModBlocks.OLIVE_FENCE);
+        addDrop(ModBlocks.OLIVE_FENCE_GATE);
+        addDrop(ModBlocks.OLIVE_BUTTON);
+        addDrop(ModBlocks.OLIVE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.OLIVE_LEAVES, leavesDrops(ModBlocks.OLIVE_LEAVES, ModBlocks.CHEESE_BLOCK, 0.005f));
+
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
 

@@ -3,9 +3,11 @@ package me.craftymcfish.nomorehorses.datagen;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -33,7 +35,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MARBLE_SLAB)
                 .add(ModBlocks.POLISHED_MARBLE)
                 .add(ModBlocks.POLISHED_MARBLE_STAIRS)
-                .add(ModBlocks.POLISHED_MARBLE_SLAB);
+                .add(ModBlocks.POLISHED_MARBLE_SLAB)
+                .add(ModBlocks.MACERATOR);
 
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -64,5 +67,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
         .add(ModBlocks.GEORGE);
 
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.OLIVE_LOG)
+                .add(ModBlocks.OLIVE_WOOD)
+                .add(ModBlocks.STRIPPED_OLIVE_LOG)
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.OLIVE_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.OLIVE_FENCE_GATE);
     }
 }

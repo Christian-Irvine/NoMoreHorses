@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "nomorehorses:block/olive_planks",
+    "side": "nomorehorses:block/olive_planks",
+    "top": "nomorehorses:block/olive_planks"
+  }
+}

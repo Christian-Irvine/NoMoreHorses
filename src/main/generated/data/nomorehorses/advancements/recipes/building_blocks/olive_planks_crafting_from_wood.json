@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_olive_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:olive_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:olive_planks_crafting_from_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_olive_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:olive_planks_crafting_from_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}
