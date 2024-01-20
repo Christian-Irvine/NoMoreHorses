@@ -18,6 +18,8 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.StructureTags;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

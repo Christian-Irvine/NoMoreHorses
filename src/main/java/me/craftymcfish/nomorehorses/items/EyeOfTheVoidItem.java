@@ -1,14 +1,14 @@
 package me.craftymcfish.nomorehorses.items;
 
 import me.craftymcfish.nomorehorses.entity.custom.EyeOfTheVoidEntity;
+import me.craftymcfish.nomorehorses.util.ModTags;
 import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.EyeOfEnderEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.EnderEyeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.tag.StructureTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -16,13 +16,12 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.event.GameEvent;
+import net.minecraft.world.gen.structure.EndCityStructure;
+import net.minecraft.world.gen.structure.Structure;
 
 public class EyeOfTheVoidItem extends Item {
     public EyeOfTheVoidItem(Settings settings) {
@@ -35,7 +34,7 @@ public class EyeOfTheVoidItem extends Item {
         BlockPos blockPos;
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
-        if (world instanceof ServerWorld && (blockPos = (serverWorld = (ServerWorld)world).locateStructure(StructureTags.EYE_OF_ENDER_LOCATED, user.getBlockPos(), 100, false)) != null) {
+        if (world instanceof ServerWorld && (blockPos = (serverWorld = (ServerWorld)world).locateStructure(ModTags.Structures.EYE_OF_THE_VOID_LOCATABLE, user.getBlockPos(), 100, false)) != null) {
             EyeOfTheVoidEntity eyeOfTheVoidEntity = new EyeOfTheVoidEntity(world, user.getX(), user.getBodyY(0.5), user.getZ());
             eyeOfTheVoidEntity.setItem(itemStack);
             eyeOfTheVoidEntity.initTargetPos(blockPos);
