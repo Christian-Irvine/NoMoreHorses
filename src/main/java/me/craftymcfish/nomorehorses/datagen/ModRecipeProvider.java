@@ -288,5 +288,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.DAFFODIL)
                 .criterion(hasItem(ModBlocks.DAFFODIL), conditionsFromItem(ModBlocks.DAFFODIL))
                 .offerTo(exporter, new Identifier("daffodil_dye_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.EYE_OF_THE_VOID, 1)
+                .pattern(" V ")
+                .pattern("VEV")
+                .pattern(" V ")
+                .input('V', ModItems.VOIDFIRE_ESSENCE)
+                .input('E', Items.ENDER_PEARL)
+                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
+                .criterion(hasItem(ModItems.VOIDFIRE_ESSENCE), conditionsFromItem(ModItems.VOIDFIRE_ESSENCE))
+                .offerTo(exporter, new Identifier("eye_of_the_void_crafting"));
     }
 }

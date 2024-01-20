@@ -46,9 +46,9 @@ public class ModModelProvider extends FabricModelProvider {
         olivePlankPool.fenceGate(ModBlocks.OLIVE_FENCE_GATE);
         olivePlankPool.button(ModBlocks.OLIVE_BUTTON);
         olivePlankPool.pressurePlate(ModBlocks.OLIVE_PRESSURE_PLATE);
-
         blockStateModelGenerator.registerDoor(ModBlocks.OLIVE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.OLIVE_TRAP_DOOR);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.OLIVE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -82,6 +82,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.VOIDFIRE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOIDFIRE_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EYE_OF_THE_VOID, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

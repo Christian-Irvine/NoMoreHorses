@@ -1,4 +1,5 @@
-// 1.20.2	2024-01-20T13:06:58.4502607	No More Horses/Block Loot Tables
+// 1.20.2	2024-01-20T17:15:24.9277371	No More Horses/Block Loot Tables
+5f0fdb0b7e48c6f1d9f3167c83b3d4975a70f1a5 data\nomorehorses\loot_tables\blocks\olive_sapling.json
 2047da87bdf7a640e853efbc7fe6ba57f43a8238 data\nomorehorses\loot_tables\blocks\pork_block.json
 a1526757af8a245afbc2377adc3b97d5809a7f64 data\nomorehorses\loot_tables\blocks\olive_fence.json
 4dd352fafa976ed00d64c402a20267273494fde8 data\nomorehorses\loot_tables\blocks\olive_planks.json
@@ -15,6 +16,7 @@ e5eaab9d34ea1310dc8eff5602d036ed73ba4432 data\nomorehorses\loot_tables\blocks\ch
 3ecd842733448a1b7542e7a1188f8ad6fc0deca9 data\nomorehorses\loot_tables\blocks\olive_wood.json
 f96ae63f9c0453110deb307dd5416b11df7b363b data\nomorehorses\loot_tables\blocks\george.json
 ced9ef3e09c6a38fb1a4f239d18b3873b9a17dbe data\nomorehorses\loot_tables\blocks\polished_marble.json
+c942ca512cb00c56f13773f6b48683bfc1110701 data\nomorehorses\loot_tables\blocks\potted_olive_sapling.json
 5f14063957a288dde2e360d20badee792976cdaf data\nomorehorses\loot_tables\blocks\polished_marble_slab.json
 dee4d84f1258dcd918e4efa497b7c7732ff5e2f9 data\nomorehorses\loot_tables\blocks\olive_log.json
 6852ca4ee245e3b9050a10cc43f7bce148303de8 data\nomorehorses\loot_tables\blocks\marble_stairs.json
@@ -23,7 +25,7 @@ dee4d84f1258dcd918e4efa497b7c7732ff5e2f9 data\nomorehorses\loot_tables\blocks\ol
 1867dbc53650a673f1d7d085627fc7c6e7bfd292 data\nomorehorses\loot_tables\blocks\stripped_olive_wood.json
 5c511a917992698376d05ea8e92142a5831fe9ee data\nomorehorses\loot_tables\blocks\marble.json
 fec4a6878e0c9bc876432d8778b1a45bb8118e4a data\nomorehorses\loot_tables\blocks\olive_door.json
-964cb3bf54780b7f8a9073623ce515e5a9c96fbd data\nomorehorses\loot_tables\blocks\olive_leaves.json
+0f62e94bf99e7febab64beceb36d846859756f57 data\nomorehorses\loot_tables\blocks\olive_leaves.json
 cc2b6c9ec4b4d1ecd922e454fc39d08c0ff360fb data\nomorehorses\loot_tables\blocks\stripped_olive_log.json
 5ea06d77342f1b79ce0a74f5f35d06945871bb61 data\nomorehorses\loot_tables\blocks\olive_pressure_plate.json
 db9934a6926f526320f20afa7094213d1f8bc73b data\nomorehorses\loot_tables\blocks\deepslate_pork_ore.json

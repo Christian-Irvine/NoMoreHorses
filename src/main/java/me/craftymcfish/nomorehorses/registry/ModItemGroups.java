@@ -66,9 +66,11 @@ public class ModItemGroups {
                 entries.add(ModBlocks.OLIVE_FENCE_GATE);
                 entries.add(ModBlocks.OLIVE_BUTTON);
                 entries.add(ModBlocks.OLIVE_PRESSURE_PLATE);
+                entries.add(ModBlocks.OLIVE_SAPLING);
                 entries.add(ModBlocks.VOIDFIRE_ORE);
                 entries.add(ModItems.VOIDFIRE_ESSENCE);
                 entries.add(ModItems.VOIDFIRE_SHARD);
+                entries.add(ModItems.EYE_OF_THE_VOID);
             }).build();
 
     //Vanilla Item Groups

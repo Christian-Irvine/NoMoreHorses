@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "V": {
+      "item": "nomorehorses:voidfire_essence"
+    }
+  },
+  "pattern": [
+    " V ",
+    "VEV",
+    " V "
+  ],
+  "result": {
+    "item": "nomorehorses:eye_of_the_void"
+  },
+  "show_notification": true
+}

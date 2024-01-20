@@ -48,6 +48,7 @@
   "block.nomorehorses.olive_pressure_plate": "Olive Pressure Plate",
   "block.nomorehorses.olive_door": "Olive Door",
   "block.nomorehorses.olive_trap_door": "Olive Trap Door",
+  "block.nomorehorses.olive_sapling": "Olive Sapling",
 
   "block.nomorehorses.george": "George",
   "block.nomorehorses.daffodil": "Daffodil",
@@ -72,5 +73,6 @@
 
   "item.nomorehorses.voidfire_essence": "Voidfire Essence",
   "item.nomorehorses.voidfire_shard": "Voidfire Shard",
-  "block.nomorehorses.voidfire_ore": "Voidfire Ore"
+  "block.nomorehorses.voidfire_ore": "Voidfire Ore",
+  "item.nomorehorses.eye_of_the_void": "Eye Of The Void"
 }

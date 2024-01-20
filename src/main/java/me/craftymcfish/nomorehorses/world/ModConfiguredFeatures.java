@@ -12,10 +12,15 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
@@ -24,6 +29,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> PORK_ORE_KEY = registerKey("pork_ore");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MARBLE_ORE_KEY = registerKey("marble_ore");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OLIVE_TREE_KEY = registerKey("olive_tree");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -39,10 +46,21 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> overworldMarbleOres = List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.MARBLE.getDefaultState()));
 
+        //Ores
         register(context, PORK_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPorkOres, 8));
         register(context, VOIDFIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endVoidfireOres, 14));
 
+        //Underground Blocks
         register(context, MARBLE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMarbleOres, 64));
+
+        //Trees
+        register(context, OLIVE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.OLIVE_LOG),
+                new BendingTrunkPlacer(4, 2, 2, 4,ConstantIntProvider.create(2)),
+                BlockStateProvider.of(ModBlocks.OLIVE_LEAVES),
+                new AcaciaFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1)),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
 

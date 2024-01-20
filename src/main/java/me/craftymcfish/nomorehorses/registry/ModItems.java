@@ -2,10 +2,7 @@ package me.craftymcfish.nomorehorses.registry;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
-import me.craftymcfish.nomorehorses.items.MeshItem;
-import me.craftymcfish.nomorehorses.items.ModArmorMaterials;
-import me.craftymcfish.nomorehorses.items.ModToolMaterial;
-import me.craftymcfish.nomorehorses.items.SaltItem;
+import me.craftymcfish.nomorehorses.items.*;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -51,6 +48,7 @@ public class ModItems {
 
     public static final Item VOIDFIRE_ESSENCE = registerItem("voidfire_essence", new Item(new FabricItemSettings()));
     public static final Item VOIDFIRE_SHARD = registerItem("voidfire_shard", new Item(new FabricItemSettings()));
+    public static final Item EYE_OF_THE_VOID = registerItem("eye_of_the_void", new EyeOfTheVoidItem(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);

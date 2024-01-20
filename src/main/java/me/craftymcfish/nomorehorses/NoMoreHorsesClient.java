@@ -15,6 +15,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 
 public class NoMoreHorsesClient implements ClientModInitializer {
@@ -24,6 +25,7 @@ public class NoMoreHorsesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STRAWBERRY_CROP, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OLIVE_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OLIVE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OLIVE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OLIVE_TRAP_DOOR, RenderLayer.getCutout());
 
@@ -32,6 +34,8 @@ public class NoMoreHorsesClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.SNAIL, SnailRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SNAIL, SnailModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.EYE_OF_THE_VOID, FlyingItemEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.MACERATOR_SCREEN_HANDLER, MaceratorScreen::new);
     }

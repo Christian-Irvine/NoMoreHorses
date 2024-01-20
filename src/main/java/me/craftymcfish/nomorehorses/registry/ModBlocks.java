@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.block.custom.GeorgeBlock;
 import me.craftymcfish.nomorehorses.block.custom.MaceratorBlock;
 import me.craftymcfish.nomorehorses.block.custom.StrawberryCropBlock;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
+import me.craftymcfish.nomorehorses.world.tree.OliveSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -85,6 +86,12 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
     public static final Block OLIVE_TRAP_DOOR = registerBlock("olive_trap_door",
             new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).nonOpaque(), BlockSetType.OAK));
+
+    public static final Block OLIVE_SAPLING = registerBlock("olive_sapling",
+            new SaplingBlock(new OliveSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+
+    public static final Block POTTED_OLIVE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_olive_sapling"),
+            new FlowerPotBlock(OLIVE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
     public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8), UniformIntProvider.create(5, 10)));
 
