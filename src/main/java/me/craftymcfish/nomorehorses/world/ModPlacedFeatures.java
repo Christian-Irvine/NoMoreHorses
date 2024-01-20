@@ -28,11 +28,11 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(128))));
 
         register(context, VOIDFIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VOIDFIRE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(4,
+                ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(80))));
 
         register(context, MARBLE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MARBLE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5,
+                ModOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(128))));
     }
 
