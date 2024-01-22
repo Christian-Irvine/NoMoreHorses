@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "nomorehorses:voidfire_ore"
+    "nomorehorses:voidfire_ore",
+    "nomorehorses:island_heart"
   ]
 }

@@ -54,6 +54,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ISLAND_HEART);
     }
 
     @Override
@@ -83,6 +84,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VOIDFIRE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOIDFIRE_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.EYE_OF_THE_VOID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDSTONE_CORE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_CLUMP, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

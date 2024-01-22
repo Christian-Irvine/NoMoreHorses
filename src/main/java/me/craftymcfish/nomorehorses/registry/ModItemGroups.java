@@ -71,6 +71,9 @@ public class ModItemGroups {
                 entries.add(ModItems.VOIDFIRE_ESSENCE);
                 entries.add(ModItems.VOIDFIRE_SHARD);
                 entries.add(ModItems.EYE_OF_THE_VOID);
+                entries.add(ModBlocks.ISLAND_HEART);
+                entries.add(ModItems.ENDSTONE_CORE);
+                entries.add(ModItems.RIFTSTEEL_CLUMP);
             }).build();
 
     //Vanilla Item Groups

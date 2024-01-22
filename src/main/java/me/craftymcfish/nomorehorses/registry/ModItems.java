@@ -50,6 +50,9 @@ public class ModItems {
     public static final Item VOIDFIRE_SHARD = registerItem("voidfire_shard", new Item(new FabricItemSettings()));
     public static final Item EYE_OF_THE_VOID = registerItem("eye_of_the_void", new EyeOfTheVoidItem(new FabricItemSettings()));
 
+    public static final Item ENDSTONE_CORE = registerItem("endstone_core", new Item(new FabricItemSettings()));
+    public static final Item RIFTSTEEL_CLUMP = registerItem("riftsteel_clump", new Item(new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
     }

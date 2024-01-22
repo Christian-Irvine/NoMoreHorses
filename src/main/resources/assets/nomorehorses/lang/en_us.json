@@ -74,5 +74,8 @@
   "item.nomorehorses.voidfire_essence": "Voidfire Essence",
   "item.nomorehorses.voidfire_shard": "Voidfire Shard",
   "block.nomorehorses.voidfire_ore": "Voidfire Ore",
-  "item.nomorehorses.eye_of_the_void": "Eye Of The Void"
+  "item.nomorehorses.eye_of_the_void": "Eye Of The Void",
+  "block.nomorehorses.island_heart": "Island Heart",
+  "item.nomorehorses.endstone_core": "Endstone Core",
+  "item.nomorehorses.riftsteel_clump": "Riftsteel Clump"
 }

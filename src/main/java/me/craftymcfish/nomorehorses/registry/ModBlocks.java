@@ -95,6 +95,9 @@ public class ModBlocks {
 
     public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8), UniformIntProvider.create(5, 10)));
 
+    public static final Block ISLAND_HEART = registerBlock("island_heart",
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

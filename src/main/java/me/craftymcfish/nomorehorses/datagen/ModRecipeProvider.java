@@ -43,6 +43,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 200, "voidfire_ore");
         offerBlasting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 100, "voidfire_ore");
 
+        offerSmelting(exporter, List.of(ModBlocks.ISLAND_HEART), RecipeCategory.TOOLS, ModItems.ENDSTONE_CORE, 1f, 400, "island_heart");
+        offerBlasting(exporter, List.of(ModBlocks.ISLAND_HEART), RecipeCategory.TOOLS, ModItems.ENDSTONE_CORE, 1f, 200, "island_heart");
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MESH, 1)
                 .pattern("SRS")
                 .pattern("SRS")
@@ -298,5 +301,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
                 .criterion(hasItem(ModItems.VOIDFIRE_ESSENCE), conditionsFromItem(ModItems.VOIDFIRE_ESSENCE))
                 .offerTo(exporter, new Identifier("eye_of_the_void_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RIFTSTEEL_CLUMP, 1)
+                .input(ModItems.ENDSTONE_CORE)
+                .input(ModItems.ENDSTONE_CORE)
+                .input(ModItems.ENDSTONE_CORE)
+                .input(ModItems.ENDSTONE_CORE)
+                .input(ModItems.VOIDFIRE_SHARD)
+                .input(ModItems.VOIDFIRE_SHARD)
+                .input(ModItems.VOIDFIRE_SHARD)
+                .input(ModItems.VOIDFIRE_SHARD)
+                .criterion(hasItem(ModItems.VOIDFIRE_SHARD), conditionsFromItem(ModItems.VOIDFIRE_SHARD))
+                .criterion(hasItem(ModItems.ENDSTONE_CORE), conditionsFromItem(ModItems.ENDSTONE_CORE))
+                .offerTo(exporter, new Identifier("riftsteel_crafting"));
     }
 }
