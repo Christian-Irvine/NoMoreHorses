@@ -1,4 +1,4 @@
-// 1.20.2	2024-01-21T14:08:35.0332937	No More Horses/Model Definitions
+// 1.20.2	2024-01-21T17:35:10.7726121	No More Horses/Model Definitions
 70022ab15f289cf5f06dfa58dda5aecef9be06b9 assets\nomorehorses\models\item\marble_slab.json
 b60a3a52269ca646d4c48a5e2b61e1cf1987be05 assets\nomorehorses\models\item\copper_boots_emerald_trim.json
 4f1979629ab99d40a5ed4e96c2188a6cbe02e108 assets\nomorehorses\models\block\olive_stairs_inner.json
@@ -177,8 +177,8 @@ f34295e8beb38b9ef21951a3e93ec442c34963bd assets\nomorehorses\models\item\copper_
 696a5c23eceb23dad5e956d7c06e163f3293df34 assets\nomorehorses\models\block\olive_fence_gate_wall.json
 26a443c58d7c7108e65cf098b4bff6377b12c159 assets\nomorehorses\models\block\olive_trap_door_bottom.json
 b2437dd4ebeed4e4cc2519dd6bbc0cdd56fc2a43 assets\nomorehorses\blockstates\olive_wood.json
-3585e182f9e32208405ed4fae5fb95b2cd3c24f4 assets\nomorehorses\blockstates\olive_planks.json
 c21a731b4b363cdcb922dae4e1cb1290e56c551d assets\nomorehorses\blockstates\polished_marble_slab.json
+3585e182f9e32208405ed4fae5fb95b2cd3c24f4 assets\nomorehorses\blockstates\olive_planks.json
 9695e222e0ad62326b1153f8ec0fbce3851e5d27 assets\nomorehorses\models\item\money.json
 184beda83f296427881ef36209b24ff18dee183b assets\nomorehorses\models\item\copper_boots.json
 d9fd72066b4fb9ea53eb8d6f7e5f7ac32af0a67d assets\nomorehorses\models\item\olive_fence_gate.json

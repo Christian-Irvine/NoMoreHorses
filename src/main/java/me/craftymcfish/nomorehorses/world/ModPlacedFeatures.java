@@ -1,6 +1,7 @@
 package me.craftymcfish.nomorehorses.world;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -9,6 +10,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
@@ -19,6 +22,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> VOIDFIRE_ORE_PLACED_KEY = registerKey("voidfire_ore_placed");
 
     public static final RegistryKey<PlacedFeature> MARBLE_ORE_PLACED_KEY = registerKey("marble_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> OLIVE_TREE_PLACED_KEY = registerKey("olive_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -34,6 +39,10 @@ public class ModPlacedFeatures {
         register(context, MARBLE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MARBLE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(128))));
+
+        register(context, OLIVE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.OLIVE_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2, 0.1f, 2), //The extra chance has to be a number than when divided by 1 spits out an integer or it won't work
+                        ModBlocks.OLIVE_SAPLING));
     }
 
 
