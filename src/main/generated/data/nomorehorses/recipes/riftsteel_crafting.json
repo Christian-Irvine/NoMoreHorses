@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "nomorehorses:endstone_core"
+    },
+    {
+      "item": "nomorehorses:endstone_core"
+    },
+    {
+      "item": "nomorehorses:endstone_core"
+    },
+    {
+      "item": "nomorehorses:endstone_core"
+    },
+    {
+      "item": "nomorehorses:voidfire_shard"
+    },
+    {
+      "item": "nomorehorses:voidfire_shard"
+    },
+    {
+      "item": "nomorehorses:voidfire_shard"
+    },
+    {
+      "item": "nomorehorses:voidfire_shard"
+    }
+  ],
+  "result": {
+    "item": "nomorehorses:riftsteel_clump"
+  }
+}

@@ -5,16 +5,13 @@ import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.Recipe;
-import net.minecraft.recipe.SmeltingRecipe;
+import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -314,5 +311,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.VOIDFIRE_SHARD), conditionsFromItem(ModItems.VOIDFIRE_SHARD))
                 .criterion(hasItem(ModItems.ENDSTONE_CORE), conditionsFromItem(ModItems.ENDSTONE_CORE))
                 .offerTo(exporter, new Identifier("riftsteel_crafting"));
+
+        offerSmithingTemplateCopyingRecipe(exporter, ModItems.RIFTSTEEL_UPGRADE_TEMPLATE, Blocks.END_STONE);
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_SWORD), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_SWORD)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier("riftsteel_sword_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_PICKAXE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_PICKAXE)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier("riftsteel_pickaxe_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_AXE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_AXE)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier("riftsteel_axe_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_SHOVEL), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_SHOVEL)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier("riftsteel_shovel_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_HOE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_HOE)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier("riftsteel_hoe_upgrading"));
     }
 }

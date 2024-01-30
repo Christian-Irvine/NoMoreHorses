@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "nomorehorses:riftsteel_clump"
+  },
+  "base": {
+    "item": "minecraft:diamond_pickaxe"
+  },
+  "result": {
+    "item": "nomorehorses:riftsteel_pickaxe"
+  },
+  "template": {
+    "item": "nomorehorses:riftsteel_upgrade_template"
+  }
+}

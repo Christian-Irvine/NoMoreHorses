@@ -1,5 +1,6 @@
 package me.craftymcfish.nomorehorses.items;
 
+import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -8,7 +9,8 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    COPPER(MiningLevels.IRON, 181, 5.8f, -1f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT));
+    COPPER(MiningLevels.IRON, 181, 5.8f, -1f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    RIFTSTEEL(MiningLevels.NETHERITE, 2031, 9.5f, -1f, 15, () -> Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP));
     //Put other tools stuff here
 
 

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:end_stone"
+    },
+    "S": {
+      "item": "nomorehorses:riftsteel_upgrade_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "nomorehorses:riftsteel_upgrade_template"
+  },
+  "show_notification": true
+}

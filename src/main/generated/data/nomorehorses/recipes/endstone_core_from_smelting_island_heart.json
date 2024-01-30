@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "group": "island_heart",
+  "ingredient": {
+    "item": "nomorehorses:island_heart"
+  },
+  "result": "nomorehorses:endstone_core"
+}

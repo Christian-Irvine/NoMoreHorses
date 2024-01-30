@@ -86,6 +86,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.EYE_OF_THE_VOID, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDSTONE_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RIFTSTEEL_CLUMP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.RIFTSTEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RIFTSTEEL_HOE, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

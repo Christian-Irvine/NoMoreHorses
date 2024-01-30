@@ -52,6 +52,13 @@ public class ModItems {
 
     public static final Item ENDSTONE_CORE = registerItem("endstone_core", new Item(new FabricItemSettings()));
     public static final Item RIFTSTEEL_CLUMP = registerItem("riftsteel_clump", new Item(new FabricItemSettings()));
+    public static final Item RIFTSTEEL_UPGRADE_TEMPLATE = registerItem("riftsteel_upgrade_template", new Item(new FabricItemSettings()));
+
+    public static final Item RIFTSTEEL_SWORD = registerItem("riftsteel_sword", new SwordItem(ModToolMaterial.RIFTSTEEL, 7, -2.1f, new FabricItemSettings()));
+    public static final Item RIFTSTEEL_PICKAXE = registerItem("riftsteel_pickaxe", new PickaxeItem(ModToolMaterial.RIFTSTEEL, 5, -2.5f, new FabricItemSettings()));
+    public static final Item RIFTSTEEL_AXE = registerItem("riftsteel_axe", new AxeItem(ModToolMaterial.RIFTSTEEL, 9, -2.6f, new FabricItemSettings()));
+    public static final Item RIFTSTEEL_SHOVEL = registerItem("riftsteel_shovel", new ShovelItem(ModToolMaterial.RIFTSTEEL, 6f, -2.6f, new FabricItemSettings()));
+    public static final Item RIFTSTEEL_HOE = registerItem("riftsteel_hoe", new HoeItem(ModToolMaterial.RIFTSTEEL, 1, 1f, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);

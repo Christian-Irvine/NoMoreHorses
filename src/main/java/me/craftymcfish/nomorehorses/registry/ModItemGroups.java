@@ -74,6 +74,12 @@ public class ModItemGroups {
                 entries.add(ModBlocks.ISLAND_HEART);
                 entries.add(ModItems.ENDSTONE_CORE);
                 entries.add(ModItems.RIFTSTEEL_CLUMP);
+                entries.add(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE);
+                entries.add(ModItems.RIFTSTEEL_SWORD);
+                entries.add(ModItems.RIFTSTEEL_PICKAXE);
+                entries.add(ModItems.RIFTSTEEL_AXE);
+                entries.add(ModItems.RIFTSTEEL_SHOVEL);
+                entries.add(ModItems.RIFTSTEEL_HOE);
             }).build();
 
     //Vanilla Item Groups

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_island_heart": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:island_heart"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:endstone_core_from_smelting_island_heart"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_island_heart"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:endstone_core_from_smelting_island_heart"
+    ]
+  },
+  "sends_telemetry_event": false
+}

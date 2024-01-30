@@ -71,11 +71,25 @@
 
   "block.nomorehorses.macerator": "Macerator",
 
+  "item.minecraft.netherite_upgrade_smithing_template": "Netherite Smithing Template",
+
   "item.nomorehorses.voidfire_essence": "Voidfire Essence",
   "item.nomorehorses.voidfire_shard": "Voidfire Shard",
   "block.nomorehorses.voidfire_ore": "Voidfire Ore",
   "item.nomorehorses.eye_of_the_void": "Eye Of The Void",
   "block.nomorehorses.island_heart": "Island Heart",
   "item.nomorehorses.endstone_core": "Endstone Core",
-  "item.nomorehorses.riftsteel_clump": "Riftsteel Clump"
+  "item.nomorehorses.riftsteel_clump": "Riftsteel Clump",
+  "item.nomorehorses.riftsteel_upgrade_template": "Riftsteel Smithing Template",
+
+  "item.nomorehorses.riftsteel_sword": "Riftsteel Sword",
+  "item.nomorehorses.riftsteel_pickaxe": "Riftsteel Pickaxe",
+  "item.nomorehorses.riftsteel_axe": "Riftsteel Axe",
+  "item.nomorehorses.riftsteel_shovel": "Riftsteel Shovel",
+  "item.nomorehorses.riftsteel_hoe": "Riftsteel Hoe",
+
+  "item.nomorehorses.riftsteel_helmet": "Riftsteel Helmet",
+  "item.nomorehorses.riftsteel_chestplate": "Riftsteel Chestplate",
+  "item.nomorehorses.riftsteel_leggings": "Riftsteel Leggings",
+  "item.nomorehorses.riftsteel_boots": "Riftsteel Boots"
 }
