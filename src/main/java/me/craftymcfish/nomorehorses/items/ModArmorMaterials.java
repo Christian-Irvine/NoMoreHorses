@@ -1,6 +1,7 @@
 package me.craftymcfish.nomorehorses.items;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
@@ -11,7 +12,10 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 12, new int[] {2, 5, 4, 2}, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f, () -> Ingredient.ofItems(Items.COPPER_INGOT));
+    COPPER("copper", 12, new int[] {2, 5, 4, 2}, 7,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    RIFTSTEEL("riftsteel", 32, new int[] {3, 7, 5, 3}, 17,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0f, () -> Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP));
 
     private final String name;
     private final int durabilityMultiplier;

@@ -94,6 +94,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RIFTSTEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RIFTSTEEL_HOE, Models.HANDHELD);
 
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.RIFTSTEEL_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.RIFTSTEEL_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.RIFTSTEEL_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.RIFTSTEEL_BOOTS);
+
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }

@@ -4,6 +4,10 @@
     "nomorehorses:copper_helmet",
     "nomorehorses:copper_chestplate",
     "nomorehorses:copper_leggings",
-    "nomorehorses:copper_boots"
+    "nomorehorses:copper_boots",
+    "nomorehorses:riftsteel_helmet",
+    "nomorehorses:riftsteel_chestplate",
+    "nomorehorses:riftsteel_leggings",
+    "nomorehorses:riftsteel_boots"
   ]
 }

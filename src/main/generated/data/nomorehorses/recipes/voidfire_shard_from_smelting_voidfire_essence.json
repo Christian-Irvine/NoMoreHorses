@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "voidfire",
+  "ingredient": {
+    "item": "nomorehorses:voidfire_essence"
+  },
+  "result": "nomorehorses:voidfire_shard"
+}

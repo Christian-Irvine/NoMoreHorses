@@ -36,6 +36,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items.PORKCHOP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PORK_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.CHEESE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHEESE_BLOCK);
 
+        offerSmelting(exporter, List.of(ModItems.VOIDFIRE_ESSENCE), RecipeCategory.MISC, ModItems.VOIDFIRE_SHARD, 0.7f, 200, "voidfire");
         offerBlasting(exporter, List.of(ModItems.VOIDFIRE_ESSENCE), RecipeCategory.MISC, ModItems.VOIDFIRE_SHARD, 0.7f, 100, "voidfire");
         offerSmelting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 200, "voidfire_ore");
         offerBlasting(exporter, VOIDFIRE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDFIRE_ESSENCE, 0.2f, 100, "voidfire_ore");
