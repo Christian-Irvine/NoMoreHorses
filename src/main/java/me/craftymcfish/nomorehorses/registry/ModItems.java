@@ -60,7 +60,7 @@ public class ModItems {
     public static final Item RIFTSTEEL_SHOVEL = registerItem("riftsteel_shovel", new ShovelItem(ModToolMaterial.RIFTSTEEL, 6f, -2.6f, new FabricItemSettings()));
     public static final Item RIFTSTEEL_HOE = registerItem("riftsteel_hoe", new HoeItem(ModToolMaterial.RIFTSTEEL, 1, 1f, new FabricItemSettings()));
 
-    public static final Item RIFTSTEEL_HELMET = registerItem("riftsteel_helmet", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item RIFTSTEEL_HELMET = registerItem("riftsteel_helmet", new ModArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item RIFTSTEEL_CHESTPLATE = registerItem("riftsteel_chestplate", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item RIFTSTEEL_LEGGINGS = registerItem("riftsteel_leggings", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item RIFTSTEEL_BOOTS = registerItem("riftsteel_boots", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.BOOTS, new FabricItemSettings()));
