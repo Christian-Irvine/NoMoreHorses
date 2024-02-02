@@ -80,6 +80,10 @@ public class ModItemGroups {
                 entries.add(ModItems.RIFTSTEEL_AXE);
                 entries.add(ModItems.RIFTSTEEL_SHOVEL);
                 entries.add(ModItems.RIFTSTEEL_HOE);
+                entries.add(ModItems.RIFTSTEEL_HELMET);
+                entries.add(ModItems.RIFTSTEEL_CHESTPLATE);
+                entries.add(ModItems.RIFTSTEEL_LEGGINGS);
+                entries.add(ModItems.RIFTSTEEL_BOOTS);
             }).build();
 
     //Vanilla Item Groups
@@ -108,6 +112,11 @@ public class ModItemGroups {
             entries.addAfter(ModItems.COPPER_HELMET, ModItems.COPPER_CHESTPLATE);
             entries.addAfter(ModItems.COPPER_CHESTPLATE, ModItems.COPPER_LEGGINGS);
             entries.addAfter(ModItems.COPPER_LEGGINGS, ModItems.COPPER_BOOTS);
+
+            entries.addAfter(Items.NETHERITE_BOOTS, ModItems.RIFTSTEEL_HELMET);
+            entries.addAfter(ModItems.RIFTSTEEL_HELMET, ModItems.RIFTSTEEL_CHESTPLATE);
+            entries.addAfter(ModItems.RIFTSTEEL_CHESTPLATE, ModItems.RIFTSTEEL_LEGGINGS);
+            entries.addAfter(ModItems.RIFTSTEEL_LEGGINGS, ModItems.RIFTSTEEL_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
