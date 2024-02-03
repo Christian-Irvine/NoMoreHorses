@@ -44,14 +44,22 @@ public class ModBlocks {
 
     public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
     public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(MARBLE)));
+    public static final Block MARBLE_BRICKS = registerBlock("marble_bricks", new Block(FabricBlockSettings.copyOf(MARBLE)));
+
     public static final Block MARBLE_STAIRS = registerBlock("marble_stairs",
             new StairsBlock(ModBlocks.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
     public static final Block MARBLE_SLAB = registerBlock("marble_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+
     public static final Block POLISHED_MARBLE_STAIRS = registerBlock("polished_marble_stairs",
             new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
     public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+
+    public static final Block MARBLE_BRICK_STAIRS = registerBlock("marble_brick_stairs",
+            new StairsBlock(ModBlocks.MARBLE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+    public static final Block MARBLE_BRICK_SLAB = registerBlock("marble_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_BRICKS)));
 
     public static final Block MACERATOR = registerBlock("macerator",
             new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque()));

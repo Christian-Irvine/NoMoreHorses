@@ -111,13 +111,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.POLISHED_MARBLE), conditionsFromItem(ModBlocks.POLISHED_MARBLE))
                 .offerTo(exporter, new Identifier("polished_marble_slab_crafting"));
 
+        createCondensingRecipe(RecipeCategory.BUILDING_BLOCKS ,ModBlocks.MARBLE_BRICKS, Ingredient.ofItems(ModBlocks.POLISHED_MARBLE))
+                .criterion(hasItem(ModBlocks.POLISHED_MARBLE), conditionsFromItem(ModBlocks.POLISHED_MARBLE))
+                .offerTo(exporter, new Identifier("marble_bricks_crafting"));
+
+        createStairsRecipe(ModBlocks.MARBLE_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.MARBLE_BRICKS))
+                .criterion(hasItem(ModBlocks.MARBLE_BRICKS), conditionsFromItem(ModBlocks.MARBLE_BRICKS))
+                .offerTo(exporter, new Identifier("marble_brick_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_SLAB, Ingredient.ofItems(ModBlocks.MARBLE_BRICKS))
+                .criterion(hasItem(ModBlocks.MARBLE_BRICKS), conditionsFromItem(ModBlocks.MARBLE_BRICKS))
+                .offerTo(exporter, new Identifier("marble_brick_slab_crafting"));
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_SLAB, ModBlocks.MARBLE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_STAIRS, ModBlocks.MARBLE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE, ModBlocks.MARBLE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_SLAB, ModBlocks.MARBLE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_STAIRS, ModBlocks.MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICKS, ModBlocks.MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_SLAB, ModBlocks.MARBLE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_STAIRS, ModBlocks.MARBLE);
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_SLAB, ModBlocks.POLISHED_MARBLE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE_STAIRS, ModBlocks.POLISHED_MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICKS, ModBlocks.POLISHED_MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_SLAB, ModBlocks.POLISHED_MARBLE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_STAIRS, ModBlocks.POLISHED_MARBLE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_SLAB, ModBlocks.MARBLE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_STAIRS, ModBlocks.MARBLE_BRICKS);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
                 .input(ModBlocks.OLIVE_LOG)

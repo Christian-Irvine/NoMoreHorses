@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "nomorehorses:polished_marble"
+  },
+  "result": "nomorehorses:marble_brick_slab"
+}

@@ -32,6 +32,10 @@ public class ModModelProvider extends FabricModelProvider {
         polishedMarblePool.stairs(ModBlocks.POLISHED_MARBLE_STAIRS);
         polishedMarblePool.slab(ModBlocks.POLISHED_MARBLE_SLAB);
 
+        BlockStateModelGenerator.BlockTexturePool marbleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MARBLE_BRICKS);
+        marbleBricksPool.stairs(ModBlocks.MARBLE_BRICK_STAIRS);
+        marbleBricksPool.slab(ModBlocks.MARBLE_BRICK_SLAB);
+
         BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHEESE_BLOCK);
         cheesePool.stairs(ModBlocks.CHEESE_STAIRS);
         cheesePool.slab(ModBlocks.CHEESE_SLAB);

@@ -24,6 +24,7 @@ public class ModItemGroups {
                 entries.add(ModBlocks.CHEESE_STAIRS);
                 entries.add(ModBlocks.CHEESE_SLAB);
                 entries.add(ModItems.SALT);
+                entries.add(ModItems.BAGUETTE);
                 entries.add(ModItems.MESH);
                 entries.add(ModBlocks.PORK_BLOCK);
                 entries.add(ModBlocks.PORK_ORE);
@@ -50,6 +51,9 @@ public class ModItemGroups {
                 entries.add(ModBlocks.POLISHED_MARBLE);
                 entries.add(ModBlocks.POLISHED_MARBLE_STAIRS);
                 entries.add(ModBlocks.POLISHED_MARBLE_SLAB);
+                entries.add(ModBlocks.MARBLE_BRICKS);
+                entries.add(ModBlocks.MARBLE_BRICK_STAIRS);
+                entries.add(ModBlocks.MARBLE_BRICK_SLAB);
                 entries.add(ModItems.SNAIL_SPAWN_EGG);
                 entries.add(ModBlocks.MACERATOR);
                 entries.add(ModBlocks.OLIVE_LOG);

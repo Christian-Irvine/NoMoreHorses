@@ -1,4 +1,4 @@
-// 1.20.2	2024-02-03T17:22:34.3540549	No More Horses/Block Loot Tables
+// 1.20.2	2024-02-03T20:09:01.134196	No More Horses/Block Loot Tables
 5f0fdb0b7e48c6f1d9f3167c83b3d4975a70f1a5 data\nomorehorses\loot_tables\blocks\olive_sapling.json
 2047da87bdf7a640e853efbc7fe6ba57f43a8238 data\nomorehorses\loot_tables\blocks\pork_block.json
 a1526757af8a245afbc2377adc3b97d5809a7f64 data\nomorehorses\loot_tables\blocks\olive_fence.json
@@ -8,8 +8,10 @@ a1526757af8a245afbc2377adc3b97d5809a7f64 data\nomorehorses\loot_tables\blocks\ol
 1906e116990ab621471d43c7b1d188c389f2127a data\nomorehorses\loot_tables\blocks\olive_fence_gate.json
 55139b8611e678cd2481c9c043835ae0b25c0262 data\nomorehorses\loot_tables\blocks\olive_stairs.json
 c514f03bbad345a0706da58b58ca724c27db463f data\nomorehorses\loot_tables\blocks\pork_ore.json
+77b0ea17b0d53f5a88bc7eb285a4bebd27a89c61 data\nomorehorses\loot_tables\blocks\marble_bricks.json
 1d4ee5aaad70e537c867c61823908cfa52d12cbf data\nomorehorses\loot_tables\blocks\potted_daffodil.json
 bb686c3b0fa08e7a59449cd0ca9abd1ed2680fad data\nomorehorses\loot_tables\blocks\cheese_stairs.json
+d008e7304fe0b0e8186300990dfcd113ccbd93d6 data\nomorehorses\loot_tables\blocks\marble_brick_stairs.json
 9815e77dd5bc0f59fc167099eff660718919d6ed data\nomorehorses\loot_tables\blocks\olive_slab.json
 6311d736dde7783e05bb872e94fc291da051ee59 data\nomorehorses\loot_tables\blocks\marble_slab.json
 e5eaab9d34ea1310dc8eff5602d036ed73ba4432 data\nomorehorses\loot_tables\blocks\cheese_block.json
@@ -28,6 +30,7 @@ fec4a6878e0c9bc876432d8778b1a45bb8118e4a data\nomorehorses\loot_tables\blocks\ol
 0f62e94bf99e7febab64beceb36d846859756f57 data\nomorehorses\loot_tables\blocks\olive_leaves.json
 cc2b6c9ec4b4d1ecd922e454fc39d08c0ff360fb data\nomorehorses\loot_tables\blocks\stripped_olive_log.json
 5ea06d77342f1b79ce0a74f5f35d06945871bb61 data\nomorehorses\loot_tables\blocks\olive_pressure_plate.json
+ae6970b1dfe33a8e9fed6fb04f126f02a9bcd161 data\nomorehorses\loot_tables\blocks\marble_brick_slab.json
 db9934a6926f526320f20afa7094213d1f8bc73b data\nomorehorses\loot_tables\blocks\deepslate_pork_ore.json
 a1b2905065ebc9ea24be5dfa5f1fb9488bb6a8ca data\nomorehorses\loot_tables\blocks\strawberry_crop.json
 0dc3b31ccbe71984653a73f2cce7190e0d2b2ca7 data\nomorehorses\loot_tables\blocks\cheese_slab.json
