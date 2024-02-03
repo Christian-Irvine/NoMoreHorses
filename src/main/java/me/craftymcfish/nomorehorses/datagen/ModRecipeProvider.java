@@ -334,5 +334,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_HOE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_HOE)
                 .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
                 .offerTo(exporter, new Identifier("riftsteel_hoe_upgrading"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .input('B', Items.BREAD)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .offerTo(exporter, new Identifier("baguette_crafting_vertical"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
+                .pattern("   ")
+                .pattern("BBB")
+                .pattern("   ")
+                .input('B', Items.BREAD)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .offerTo(exporter, new Identifier("baguette_crafting_horizontal"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
+                .pattern("B  ")
+                .pattern(" B ")
+                .pattern("  B")
+                .input('B', Items.BREAD)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .offerTo(exporter, new Identifier("baguette_crafting_diagonal_left"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
+                .pattern("  B")
+                .pattern(" B ")
+                .pattern("B  ")
+                .input('B', Items.BREAD)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .offerTo(exporter, new Identifier("baguette_crafting_diagonal_right"));
     }
 }

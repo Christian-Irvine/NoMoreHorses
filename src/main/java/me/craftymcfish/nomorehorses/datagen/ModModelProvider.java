@@ -65,6 +65,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_MONEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MONEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MESH, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
