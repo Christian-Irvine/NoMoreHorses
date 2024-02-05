@@ -25,6 +25,7 @@ public class ModItemGroups {
                 entries.add(ModBlocks.CHEESE_SLAB);
                 entries.add(ModItems.SALT);
                 entries.add(ModItems.BAGUETTE);
+                entries.add(ModItems.BURNT_BAGUETTE);
                 entries.add(ModItems.MESH);
                 entries.add(ModBlocks.PORK_BLOCK);
                 entries.add(ModBlocks.PORK_ORE);

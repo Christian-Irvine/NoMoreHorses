@@ -1,4 +1,4 @@
-// 1.20.2	2024-02-03T20:09:01.1411786	No More Horses/Model Definitions
+// 1.20.2	2024-02-05T22:54:25.8237982	No More Horses/Model Definitions
 d83347464f9b90241a29239155e1330d6fc67a86 assets\nomorehorses\blockstates\island_heart.json
 3f8616686d451fe5857550917afd59999fec980e assets\nomorehorses\models\block\marble_brick_stairs_inner.json
 f14ad313ff01e07f3bfb8d5ede4f8536ce846b49 assets\nomorehorses\models\item\copper_leggings_lapis_trim.json
@@ -94,8 +94,8 @@ c21d60819472659a066699eaf20820a0a87ccab2 assets\nomorehorses\models\block\olive_
 31f13787898502bdbda409680f0c79120a1083f1 assets\nomorehorses\models\item\copper_helmet_netherite_trim.json
 4c98cd7ff4e4e86121547213f3db8805c2799a81 assets\nomorehorses\models\block\marble_slab.json
 5d01a947f5bbc6a03b5f5f4bd355dff5cde25a45 assets\nomorehorses\blockstates\marble_slab.json
-43a70ea40728a39d23de611513404b4700229ca9 assets\nomorehorses\models\item\polished_marble_stairs.json
 8517bfe8b58d0e2405c527817413d48b8dba40f9 assets\nomorehorses\models\item\marble_brick_stairs.json
+43a70ea40728a39d23de611513404b4700229ca9 assets\nomorehorses\models\item\polished_marble_stairs.json
 dde6d55ceca1ac0928fa0a13cfc94220e2870acd assets\nomorehorses\models\block\potted_daffodil.json
 8adc3652f039027d00b7ce8c038eccbfa22a1ce5 assets\nomorehorses\models\item\riftsteel_helmet_iron_trim.json
 33a02c952d7a533707f4333a100304d1f43df25d assets\nomorehorses\models\item\riftsteel_chestplate_netherite_trim.json
@@ -190,6 +190,7 @@ e749e04f4799c98d035ba0890dec457d6fe4fc84 assets\nomorehorses\models\item\copper_
 1f61778e4a2c466073ed528d8c63c0ccb07a17b5 assets\nomorehorses\models\item\island_heart.json
 e2f72e6130885133da962247dfcb71bec7f23a58 assets\nomorehorses\models\item\olive_leaves.json
 893b271e547df3e7d3b6a0172395f8ed1f0222c2 assets\nomorehorses\models\block\olive_sapling.json
+33feaa9ccdefe17732a182058921520552dc642b assets\nomorehorses\models\item\burnt_baguette.json
 fbeb005c5bebf168090571259147e8c8cb36b1dd assets\nomorehorses\models\item\marble.json
 8022859b2716ab3c36cb23d33b99a99be357bf6c assets\nomorehorses\models\item\riftsteel_boots_quartz_trim.json
 b7b1912ed0adb5bbf957085e2c9996d661ba6902 assets\nomorehorses\models\item\salt.json

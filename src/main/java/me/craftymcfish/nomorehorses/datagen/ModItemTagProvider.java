@@ -2,6 +2,7 @@ package me.craftymcfish.nomorehorses.datagen;
 
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
+import me.craftymcfish.nomorehorses.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
@@ -34,5 +35,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.OLIVE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_OLIVE_LOG.asItem())
                 .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.GLUTEN_FOOD)
+                .add(Items.BREAD)
+                .add(ModItems.BAGUETTE);
     }
 }

@@ -10,6 +10,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     COPPER(MiningLevels.IRON, 181, 5.8f, -1f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    BAGUETTE(MiningLevels.STONE, 251, 4.5f, -1f, 5, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     RIFTSTEEL(MiningLevels.NETHERITE, 1831, 9.5f, -1f, 17, () -> Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP));
     //Put other tools stuff here
 

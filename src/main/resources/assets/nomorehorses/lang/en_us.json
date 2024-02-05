@@ -1,6 +1,7 @@
 {
   "item.nomorehorses.cheese": "Cheese",
   "item.nomorehorses.baguette": "Baguette",
+  "item.nomorehorses.burnt_baguette": "Burnt Baguette",
   "item.nomorehorses.salt": "Salt",
   "item.nomorehorses.mesh": "Mesh",
   "item.nomorehorses.money": "Money",
@@ -96,5 +97,16 @@
   "item.nomorehorses.riftsteel_helmet": "Riftsteel Helmet",
   "item.nomorehorses.riftsteel_chestplate": "Riftsteel Chestplate",
   "item.nomorehorses.riftsteel_leggings": "Riftsteel Leggings",
-  "item.nomorehorses.riftsteel_boots": "Riftsteel Boots"
+  "item.nomorehorses.riftsteel_boots": "Riftsteel Boots",
+
+  "effect.nomorehorses.gluten_free": "Gluten Free",
+
+  "item.minecraft.potion.effect.gluten_free_potion": "Potion of Gluten Free",
+  "item.minecraft.splash_potion.effect.gluten_free_potion": "Splash Potion of Gluten Free",
+  "item.minecraft.lingering_potion.effect.gluten_free_potion": "Lingering Potion of Gluten Free",
+
+  "item.minecraft.potion.effect.gluten_free_potion_long": "Potion of Gluten Free",
+  "item.minecraft.splash_potion.effect.gluten_free_potion_long": "Splash Potion of Gluten Free",
+  "item.minecraft.lingering_potion.effect.gluten_free_potion_long": "Lingering Potion of Gluten Free"
+
 }

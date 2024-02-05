@@ -44,6 +44,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, List.of(ModBlocks.ISLAND_HEART), RecipeCategory.TOOLS, ModItems.ENDSTONE_CORE, 1f, 400, "island_heart");
         offerBlasting(exporter, List.of(ModBlocks.ISLAND_HEART), RecipeCategory.TOOLS, ModItems.ENDSTONE_CORE, 1f, 200, "island_heart");
 
+        offerSmelting(exporter, List.of(ModItems.BAGUETTE), RecipeCategory.FOOD, ModItems.BURNT_BAGUETTE, 1f, 400, "burnt_baguette");
+        offerCooking(exporter, List.of(ModItems.BAGUETTE), ModItems.BURNT_BAGUETTE, 1f, 50, 600);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MESH, 1)
                 .pattern("SRS")
                 .pattern("SRS")
@@ -388,5 +391,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.BREAD)
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .offerTo(exporter, new Identifier("baguette_crafting_diagonal_right"));
+
+    }
+
+    public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {
+        for (ItemConvertible input : inputs) {
+            RecipeProvider.offerFoodCookingRecipe(exporter, "smoker", RecipeSerializer.SMOKING, cookingTime, input, output, experience);
+            RecipeProvider.offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, campfireCookingTime, input, output, experience);
+        }
     }
 }

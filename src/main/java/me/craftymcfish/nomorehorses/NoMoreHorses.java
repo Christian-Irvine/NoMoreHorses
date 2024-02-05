@@ -1,8 +1,10 @@
 package me.craftymcfish.nomorehorses;
 
 import me.craftymcfish.nomorehorses.block.custom.entity.ModBlockEntities;
+import me.craftymcfish.nomorehorses.effect.ModEffects;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
+import me.craftymcfish.nomorehorses.potion.ModPotions;
 import me.craftymcfish.nomorehorses.recipe.ModRecipes;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItemGroups;
@@ -65,6 +67,9 @@ public class NoMoreHorses implements ModInitializer {
 		ModRecipes.registerRecipes();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		ModEffects.registerStatusEffects();
+		ModPotions.registerPotions();
 
 		LOGGER.info("Successfully Removed All Horses!, No More Horses is complete");
 	}
