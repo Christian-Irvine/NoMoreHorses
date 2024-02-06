@@ -9,13 +9,14 @@ import net.minecraft.util.Identifier;
 
 public class ModEffects {
     public static StatusEffect GLUTEN_FREE;
+    public static StatusEffect GLUTEN_DAMAGE;
 
-    public static StatusEffect registerStatusEffect(String name) {
-        return Registry.register(Registries.STATUS_EFFECT, new Identifier(NoMoreHorses.MOD_ID, name),
-                new GlutenFreeEffect(StatusEffectCategory.HARMFUL, 9326859));
+    public static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(NoMoreHorses.MOD_ID, name), statusEffect);
     }
 
     public static void registerStatusEffects() {
-        GLUTEN_FREE = registerStatusEffect("gluten_free");
+        GLUTEN_FREE = registerStatusEffect("gluten_free", new GlutenFreeEffect(StatusEffectCategory.HARMFUL, 9326859));
+        GLUTEN_DAMAGE = registerStatusEffect("gluten_damage", new GlutenDamageEffect(StatusEffectCategory.HARMFUL, 4345362));
     }
 }
