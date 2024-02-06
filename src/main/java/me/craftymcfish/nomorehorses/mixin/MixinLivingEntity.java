@@ -16,7 +16,7 @@ public class MixinLivingEntity {
 
     @Inject(method = "eatFood", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;applyFoodEffects(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)V"), cancellable = false)
     public void eatFoodInject(World world, ItemStack stack, CallbackInfoReturnable<ItemStack> cir){
-        if(stack.isIn(ModTags.Items.GLUTEN_FOOD)){
+        if(stack.isIn(ModTags.Items.GLUTEN_FOOD) && ((LivingEntity)(Object)this).hasStatusEffect(ModEffects.GLUTEN_FREE)){
             ((LivingEntity)(Object)this).addStatusEffect(new StatusEffectInstance(ModEffects.GLUTEN_DAMAGE, 80, 0));
         }
     }
