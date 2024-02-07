@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:riftsteel_crafting"
+        "recipe": "nomorehorses:riftsteel_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:riftsteel_crafting"
+      "nomorehorses:riftsteel_crafting"
     ]
   },
   "sends_telemetry_event": false

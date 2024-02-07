@@ -1,24 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_olive_planks": {
+    "has_rotten_leather": {
       "conditions": {
         "items": [
           {
             "items": [
-              "nomorehorses:olive_planks"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_stick": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:stick"
+              "nomorehorses:rotten_leather"
             ]
           }
         ]
@@ -27,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nomorehorses:olive_fence_crafting"
+        "recipe": "minecraft:leather_from_smelting_rotten_leather"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_olive_planks",
-      "has_stick"
+      "has_rotten_leather"
     ]
   ],
   "rewards": {
     "recipes": [
-      "nomorehorses:olive_fence_crafting"
+      "minecraft:leather_from_smelting_rotten_leather"
     ]
   },
   "sends_telemetry_event": false

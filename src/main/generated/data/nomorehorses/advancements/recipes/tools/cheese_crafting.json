@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cheese_crafting"
+        "recipe": "nomorehorses:cheese_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cheese_crafting"
+      "nomorehorses:cheese_crafting"
     ]
   },
   "sends_telemetry_event": false

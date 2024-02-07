@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:olive_fence_gate_crafting"
+        "recipe": "nomorehorses:olive_fence_gate_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:olive_fence_gate_crafting"
+      "nomorehorses:olive_fence_gate_crafting"
     ]
   },
   "sends_telemetry_event": false

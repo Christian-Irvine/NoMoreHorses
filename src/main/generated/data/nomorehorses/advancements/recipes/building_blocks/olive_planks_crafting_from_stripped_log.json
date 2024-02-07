@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:olive_planks_crafting_from_stripped_log"
+        "recipe": "nomorehorses:olive_planks_crafting_from_stripped_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:olive_planks_crafting_from_stripped_log"
+      "nomorehorses:olive_planks_crafting_from_stripped_log"
     ]
   },
   "sends_telemetry_event": false

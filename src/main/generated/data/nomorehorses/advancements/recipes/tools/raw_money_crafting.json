@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:raw_money_crafting"
+        "recipe": "nomorehorses:raw_money_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:raw_money_crafting"
+      "nomorehorses:raw_money_crafting"
     ]
   },
   "sends_telemetry_event": false

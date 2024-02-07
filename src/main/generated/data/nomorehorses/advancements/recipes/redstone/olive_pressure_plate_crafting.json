@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:olive_pressure_plate_crafting"
+        "recipe": "nomorehorses:olive_pressure_plate_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:olive_pressure_plate_crafting"
+      "nomorehorses:olive_pressure_plate_crafting"
     ]
   },
   "sends_telemetry_event": false

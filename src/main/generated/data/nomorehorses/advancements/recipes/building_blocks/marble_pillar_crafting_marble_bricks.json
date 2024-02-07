@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:marble_pillar_crafting_marble_bricks"
+        "recipe": "nomorehorses:marble_pillar_crafting_marble_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:marble_pillar_crafting_marble_bricks"
+      "nomorehorses:marble_pillar_crafting_marble_bricks"
     ]
   },
   "sends_telemetry_event": false

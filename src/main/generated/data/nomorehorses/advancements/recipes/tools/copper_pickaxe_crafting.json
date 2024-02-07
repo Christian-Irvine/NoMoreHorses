@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:copper_pickaxe_crafting"
+        "recipe": "nomorehorses:copper_pickaxe_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:copper_pickaxe_crafting"
+      "nomorehorses:copper_pickaxe_crafting"
     ]
   },
   "sends_telemetry_event": false

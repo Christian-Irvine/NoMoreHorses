@@ -77,6 +77,10 @@ public class ModItems {
     public static final Item RIFTSTEEL_LEGGINGS = registerItem("riftsteel_leggings", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item RIFTSTEEL_BOOTS = registerItem("riftsteel_boots", new ArmorItem(ModArmorMaterials.RIFTSTEEL, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+    public static final Item ROTTEN_LEATHER = registerItem("rotten_leather", new Item(new FabricItemSettings()));
+
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
     }

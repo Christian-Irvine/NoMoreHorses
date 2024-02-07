@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:polished_marble_slab_crafting"
+        "recipe": "nomorehorses:polished_marble_slab_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:polished_marble_slab_crafting"
+      "nomorehorses:polished_marble_slab_crafting"
     ]
   },
   "sends_telemetry_event": false

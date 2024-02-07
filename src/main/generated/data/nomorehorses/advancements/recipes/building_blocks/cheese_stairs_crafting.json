@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cheese_stairs_crafting"
+        "recipe": "nomorehorses:cheese_stairs_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cheese_stairs_crafting"
+      "nomorehorses:cheese_stairs_crafting"
     ]
   },
   "sends_telemetry_event": false

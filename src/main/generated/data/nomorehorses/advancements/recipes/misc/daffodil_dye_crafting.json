@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:daffodil_dye_crafting"
+        "recipe": "nomorehorses:daffodil_dye_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:daffodil_dye_crafting"
+      "nomorehorses:daffodil_dye_crafting"
     ]
   },
   "sends_telemetry_event": false

@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:riftsteel_hoe_upgrading"
+        "recipe": "nomorehorses:riftsteel_hoe_upgrading"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:riftsteel_hoe_upgrading"
+      "nomorehorses:riftsteel_hoe_upgrading"
     ]
   },
   "sends_telemetry_event": false

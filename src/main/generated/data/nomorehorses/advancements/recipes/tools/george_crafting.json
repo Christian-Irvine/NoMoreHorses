@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:george_crafting"
+        "recipe": "nomorehorses:george_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -54,7 +54,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:george_crafting"
+      "nomorehorses:george_crafting"
     ]
   },
   "sends_telemetry_event": false

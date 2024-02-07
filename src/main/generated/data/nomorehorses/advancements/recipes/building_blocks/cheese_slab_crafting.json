@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cheese_slab_crafting"
+        "recipe": "nomorehorses:cheese_slab_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cheese_slab_crafting"
+      "nomorehorses:cheese_slab_crafting"
     ]
   },
   "sends_telemetry_event": false

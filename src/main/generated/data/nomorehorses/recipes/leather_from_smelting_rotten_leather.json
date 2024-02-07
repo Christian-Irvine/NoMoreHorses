@@ -3,9 +3,9 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 1.0,
-  "group": "burnt_baguette",
+  "group": "leather",
   "ingredient": {
-    "item": "nomorehorses:baguette"
+    "item": "nomorehorses:rotten_leather"
   },
-  "result": "nomorehorses:burnt_baguette"
+  "result": "minecraft:leather"
 }

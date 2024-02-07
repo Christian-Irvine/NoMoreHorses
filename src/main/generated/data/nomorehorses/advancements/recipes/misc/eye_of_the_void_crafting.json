@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:eye_of_the_void_crafting"
+        "recipe": "nomorehorses:eye_of_the_void_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:eye_of_the_void_crafting"
+      "nomorehorses:eye_of_the_void_crafting"
     ]
   },
   "sends_telemetry_event": false

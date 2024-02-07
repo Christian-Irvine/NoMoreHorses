@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:mesh_crafting"
+        "recipe": "nomorehorses:mesh_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:mesh_crafting"
+      "nomorehorses:mesh_crafting"
     ]
   },
   "sends_telemetry_event": false
