@@ -45,6 +45,10 @@ public class ModBlocks {
     public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
     public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(MARBLE)));
     public static final Block MARBLE_BRICKS = registerBlock("marble_bricks", new Block(FabricBlockSettings.copyOf(MARBLE)));
+    public static final Block MARBLE_PILLAR = registerBlock("marble_pillar",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
+    public static final Block INFUSED_MARBLE_PILLAR = registerBlock("infused_marble_pillar",
+            new PillarBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_PILLAR)));
 
     public static final Block MARBLE_STAIRS = registerBlock("marble_stairs",
             new StairsBlock(ModBlocks.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));

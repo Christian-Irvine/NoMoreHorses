@@ -26,6 +26,10 @@ public class ModItems {
     public static final Item BAGUETTE = registerItem("baguette",
             new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(15).saturationModifier(1.8f).build())));
     public static final Item BURNT_BAGUETTE = registerItem("burnt_baguette", new BurntBaguetteItem(ModToolMaterial.BAGUETTE, 4, -2.4f, new FabricItemSettings()));
+    public static final Item BURNT_CROISSANT = registerItem("burnt_croissant", new BurntCroissantItem(new FabricItemSettings()));
+
+
+
     public static final Item MESH = registerItem("mesh", new MeshItem());
 
     public static final Item MONEY = registerItem("money",

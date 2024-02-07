@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nomorehorses:marble_pillar"
+    },
+    {
+      "item": "nomorehorses:voidfire_essence"
+    }
+  ],
+  "result": {
+    "item": "nomorehorses:infused_marble_pillar"
+  }
+}

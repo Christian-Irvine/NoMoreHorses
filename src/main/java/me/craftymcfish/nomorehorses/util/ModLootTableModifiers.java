@@ -4,6 +4,7 @@ import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
@@ -18,11 +19,12 @@ import java.util.List;
 
 public class ModLootTableModifiers {
     private static final Identifier FISHING_JUNK_ID = new Identifier("minecraft", "gameplay/fishing/junk");
+    private static final Identifier END_CITY_TREASURE_CHEST = new Identifier("minecraft", "chests/end_city_treasure");
 
 
     public static void modifyLootTables() {
         //This is the way to do it for things like mobs drops with multiple possible drops
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+//        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 //            if (FISHING_JUNK_ID.equals(id)){
 //                LootPool.Builder poolBuilder = LootPool.builder()
 //                        .rolls(ConstantLootNumberProvider.create(1.0f))
@@ -31,6 +33,17 @@ public class ModLootTableModifiers {
 //                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 //                tableBuilder.pool(poolBuilder.build());
 //            }
+//        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (END_CITY_TREASURE_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.025f))
+                        .with(ItemEntry.builder(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
         });
 
         //The below is broken in current version of fabric, when updating to 1.20.4 check if it works again. This is because the pools field is private in this version

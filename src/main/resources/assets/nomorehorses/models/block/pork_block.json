@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "nomorehorses:block/pork_block_end",
-    "side": "nomorehorses:block/pork_block_side"
-  }
-}

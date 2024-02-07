@@ -126,6 +126,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.MARBLE_BRICKS), conditionsFromItem(ModBlocks.MARBLE_BRICKS))
                 .offerTo(exporter, new Identifier("marble_brick_slab_crafting"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, 1)
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern("   ")
+                .input('S', ModBlocks.MARBLE_SLAB)
+                .criterion(hasItem(ModBlocks.MARBLE_SLAB), conditionsFromItem(ModBlocks.MARBLE_SLAB))
+                .offerTo(exporter, new Identifier("marble_pillar_crafting_marble"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, 1)
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern("   ")
+                .input('S', ModBlocks.POLISHED_MARBLE_SLAB)
+                .criterion(hasItem(ModBlocks.POLISHED_MARBLE_SLAB), conditionsFromItem(ModBlocks.POLISHED_MARBLE_SLAB))
+                .offerTo(exporter, new Identifier("marble_pillar_crafting_polished_marble"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, 1)
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern("   ")
+                .input('S', ModBlocks.MARBLE_BRICK_SLAB)
+                .criterion(hasItem(ModBlocks.MARBLE_BRICK_SLAB), conditionsFromItem(ModBlocks.MARBLE_BRICK_SLAB))
+                .offerTo(exporter, new Identifier("marble_pillar_crafting_marble_bricks"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INFUSED_MARBLE_PILLAR, 1)
+                .input(ModBlocks.MARBLE_PILLAR)
+                .input(ModItems.VOIDFIRE_ESSENCE)
+                .criterion(hasItem(ModBlocks.MARBLE_PILLAR), conditionsFromItem(ModBlocks.MARBLE_PILLAR))
+                .criterion(hasItem(ModItems.VOIDFIRE_ESSENCE), conditionsFromItem(ModItems.VOIDFIRE_ESSENCE))
+                .offerTo(exporter, new Identifier("infused_marble_pillar"));
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_SLAB, ModBlocks.MARBLE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_STAIRS, ModBlocks.MARBLE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_MARBLE, ModBlocks.MARBLE);
@@ -143,6 +174,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_SLAB, ModBlocks.MARBLE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICK_STAIRS, ModBlocks.MARBLE_BRICKS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, ModBlocks.MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, ModBlocks.POLISHED_MARBLE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, ModBlocks.MARBLE_BRICKS);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
                 .input(ModBlocks.OLIVE_LOG)

@@ -1,6 +1,7 @@
 package me.craftymcfish.nomorehorses.entity;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.entity.custom.BurntCroissantEntity;
 import me.craftymcfish.nomorehorses.entity.custom.EyeOfTheVoidEntity;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -20,5 +21,10 @@ public class ModEntities {
     public static EntityType<EyeOfTheVoidEntity> EYE_OF_THE_VOID = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(NoMoreHorses.MOD_ID, "eye_of_the_void_entity"),
             FabricEntityTypeBuilder.<EyeOfTheVoidEntity>create(SpawnGroup.MISC, EyeOfTheVoidEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
+    public static EntityType<BurntCroissantEntity> BURNT_CROISSANT = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(NoMoreHorses.MOD_ID, "burnt_croissant_entity"),
+            FabricEntityTypeBuilder.<BurntCroissantEntity>create(SpawnGroup.MISC, BurntCroissantEntity::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 }

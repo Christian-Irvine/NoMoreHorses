@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "nomorehorses:block/pork_block_top",
+    "side": "nomorehorses:block/pork_block"
+  }
+}
