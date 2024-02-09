@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MossBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
@@ -63,6 +64,72 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ISLAND_HEART);
+
+        BlockStateModelGenerator.BlockTexturePool whiteConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.WHITE_CONCRETE);
+        whiteConcretePool.slab(ModBlocks.WHITE_CONCRETE_SLAB);
+        whiteConcretePool.stairs(ModBlocks.WHITE_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool grayConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.GRAY_CONCRETE);
+        grayConcretePool.slab(ModBlocks.GRAY_CONCRETE_SLAB);
+        grayConcretePool.stairs(ModBlocks.GRAY_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool light_grayConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.LIGHT_GRAY_CONCRETE);
+        light_grayConcretePool.slab(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
+        light_grayConcretePool.stairs(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool blackConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BLACK_CONCRETE);
+        blackConcretePool.slab(ModBlocks.BLACK_CONCRETE_SLAB);
+        blackConcretePool.stairs(ModBlocks.BLACK_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool redConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.RED_CONCRETE);
+        redConcretePool.slab(ModBlocks.RED_CONCRETE_SLAB);
+        redConcretePool.stairs(ModBlocks.RED_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool orangeConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.ORANGE_CONCRETE);
+        orangeConcretePool.slab(ModBlocks.ORANGE_CONCRETE_SLAB);
+        orangeConcretePool.stairs(ModBlocks.ORANGE_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool yellowConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.YELLOW_CONCRETE);
+        yellowConcretePool.slab(ModBlocks.YELLOW_CONCRETE_SLAB);
+        yellowConcretePool.stairs(ModBlocks.YELLOW_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool limeConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.LIME_CONCRETE);
+        limeConcretePool.slab(ModBlocks.LIME_CONCRETE_SLAB);
+        limeConcretePool.stairs(ModBlocks.LIME_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool greenConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.GREEN_CONCRETE);
+        greenConcretePool.slab(ModBlocks.GREEN_CONCRETE_SLAB);
+        greenConcretePool.stairs(ModBlocks.GREEN_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool light_blueConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.LIGHT_BLUE_CONCRETE);
+        light_blueConcretePool.slab(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
+        light_blueConcretePool.stairs(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool cyanConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CYAN_CONCRETE);
+        cyanConcretePool.slab(ModBlocks.CYAN_CONCRETE_SLAB);
+        cyanConcretePool.stairs(ModBlocks.CYAN_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool blueConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BLUE_CONCRETE);
+        blueConcretePool.slab(ModBlocks.BLUE_CONCRETE_SLAB);
+        blueConcretePool.stairs(ModBlocks.BLUE_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool purpleConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PURPLE_CONCRETE);
+        purpleConcretePool.slab(ModBlocks.PURPLE_CONCRETE_SLAB);
+        purpleConcretePool.stairs(ModBlocks.PURPLE_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool magentaConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.MAGENTA_CONCRETE);
+        magentaConcretePool.slab(ModBlocks.MAGENTA_CONCRETE_SLAB);
+        magentaConcretePool.stairs(ModBlocks.MAGENTA_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool pinkConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PINK_CONCRETE);
+        pinkConcretePool.slab(ModBlocks.PINK_CONCRETE_SLAB);
+        pinkConcretePool.stairs(ModBlocks.PINK_CONCRETE_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool brownConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.BROWN_CONCRETE);
+        brownConcretePool.slab(ModBlocks.BROWN_CONCRETE_SLAB);
+        brownConcretePool.stairs(ModBlocks.BROWN_CONCRETE_STAIRS);
+
+
     }
 
     @Override

@@ -69,6 +69,56 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
 
+        addDrop(ModBlocks.WHITE_CONCRETE_SLAB, slabDrops(ModBlocks.WHITE_CONCRETE_SLAB));
+        addDrop(ModBlocks.WHITE_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.GRAY_CONCRETE_SLAB, slabDrops(ModBlocks.GRAY_CONCRETE_SLAB));
+        addDrop(ModBlocks.GRAY_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB));
+        addDrop(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.BLACK_CONCRETE_SLAB, slabDrops(ModBlocks.BLACK_CONCRETE_SLAB));
+        addDrop(ModBlocks.BLACK_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.RED_CONCRETE_SLAB, slabDrops(ModBlocks.RED_CONCRETE_SLAB));
+        addDrop(ModBlocks.RED_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.ORANGE_CONCRETE_SLAB, slabDrops(ModBlocks.ORANGE_CONCRETE_SLAB));
+        addDrop(ModBlocks.ORANGE_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.YELLOW_CONCRETE_SLAB, slabDrops(ModBlocks.YELLOW_CONCRETE_SLAB));
+        addDrop(ModBlocks.YELLOW_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.LIME_CONCRETE_SLAB, slabDrops(ModBlocks.LIME_CONCRETE_SLAB));
+        addDrop(ModBlocks.LIME_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.GREEN_CONCRETE_SLAB, slabDrops(ModBlocks.GREEN_CONCRETE_SLAB));
+        addDrop(ModBlocks.GREEN_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, slabDrops(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB));
+        addDrop(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.CYAN_CONCRETE_SLAB, slabDrops(ModBlocks.CYAN_CONCRETE_SLAB));
+        addDrop(ModBlocks.CYAN_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.BLUE_CONCRETE_SLAB, slabDrops(ModBlocks.BLUE_CONCRETE_SLAB));
+        addDrop(ModBlocks.BLUE_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.PURPLE_CONCRETE_SLAB, slabDrops(ModBlocks.PURPLE_CONCRETE_SLAB));
+        addDrop(ModBlocks.PURPLE_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.MAGENTA_CONCRETE_SLAB, slabDrops(ModBlocks.MAGENTA_CONCRETE_SLAB));
+        addDrop(ModBlocks.MAGENTA_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.PINK_CONCRETE_SLAB, slabDrops(ModBlocks.PINK_CONCRETE_SLAB));
+        addDrop(ModBlocks.PINK_CONCRETE_STAIRS);
+
+        addDrop(ModBlocks.BROWN_CONCRETE_SLAB, slabDrops(ModBlocks.BROWN_CONCRETE_SLAB));
+        addDrop(ModBlocks.BROWN_CONCRETE_STAIRS);
+
+
+
         //Custom Drops
         addDrop(ModBlocks.PORK_ORE, fortuneBlockDrops(ModBlocks.PORK_ORE, Items.PORKCHOP, 2, 5));
         addDrop(ModBlocks.DEEPSLATE_PORK_ORE, fortuneBlockDrops(ModBlocks.DEEPSLATE_PORK_ORE, Items.PORKCHOP, 2, 5));
@@ -78,6 +128,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(StrawberryCropBlock.AGE, StrawberryCropBlock.MAX_AGE));
         addDrop(ModBlocks.STRAWBERRY_CROP, cropDrops(ModBlocks.STRAWBERRY_CROP, ModItems.STRAWBERRY, ModItems.STRAWBERRY_SEEDS, builder));
+
+
     }
 
     public LootTable.Builder fortuneBlockDrops (Block drop, Item item, float min, float max) {

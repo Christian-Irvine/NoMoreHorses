@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_orange_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_concrete"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:orange_concrete_stairs_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_orange_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:orange_concrete_stairs_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

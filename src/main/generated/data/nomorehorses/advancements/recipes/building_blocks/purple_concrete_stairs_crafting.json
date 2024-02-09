@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:purple_concrete"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:purple_concrete_stairs_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:purple_concrete_stairs_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

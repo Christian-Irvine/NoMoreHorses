@@ -89,6 +89,42 @@ public class ModItemGroups {
                 entries.add(ModItems.RIFTSTEEL_CHESTPLATE);
                 entries.add(ModItems.RIFTSTEEL_LEGGINGS);
                 entries.add(ModItems.RIFTSTEEL_BOOTS);
+                entries.add(ModBlocks.DENSE_SPONGE);
+                entries.add(ModBlocks.DENSE_WET_SPONGE);
+
+                entries.add(ModBlocks.WHITE_CONCRETE_SLAB);
+                entries.add(ModBlocks.WHITE_CONCRETE_STAIRS);
+                entries.add(ModBlocks.GRAY_CONCRETE_SLAB);
+                entries.add(ModBlocks.GRAY_CONCRETE_STAIRS);
+                entries.add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
+                entries.add(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
+                entries.add(ModBlocks.BLACK_CONCRETE_SLAB);
+                entries.add(ModBlocks.BLACK_CONCRETE_STAIRS);
+                entries.add(ModBlocks.RED_CONCRETE_SLAB);
+                entries.add(ModBlocks.RED_CONCRETE_STAIRS);
+                entries.add(ModBlocks.ORANGE_CONCRETE_SLAB);
+                entries.add(ModBlocks.ORANGE_CONCRETE_STAIRS);
+                entries.add(ModBlocks.YELLOW_CONCRETE_SLAB);
+                entries.add(ModBlocks.YELLOW_CONCRETE_STAIRS);
+                entries.add(ModBlocks.LIME_CONCRETE_SLAB);
+                entries.add(ModBlocks.LIME_CONCRETE_STAIRS);
+                entries.add(ModBlocks.GREEN_CONCRETE_SLAB);
+                entries.add(ModBlocks.GREEN_CONCRETE_STAIRS);
+                entries.add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
+                entries.add(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
+                entries.add(ModBlocks.CYAN_CONCRETE_SLAB);
+                entries.add(ModBlocks.CYAN_CONCRETE_STAIRS);
+                entries.add(ModBlocks.BLUE_CONCRETE_SLAB);
+                entries.add(ModBlocks.BLUE_CONCRETE_STAIRS);
+                entries.add(ModBlocks.PURPLE_CONCRETE_SLAB);
+                entries.add(ModBlocks.PURPLE_CONCRETE_STAIRS);
+                entries.add(ModBlocks.MAGENTA_CONCRETE_SLAB);
+                entries.add(ModBlocks.MAGENTA_CONCRETE_STAIRS);
+                entries.add(ModBlocks.PINK_CONCRETE_SLAB);
+                entries.add(ModBlocks.PINK_CONCRETE_STAIRS);
+                entries.add(ModBlocks.BROWN_CONCRETE_SLAB);
+                entries.add(ModBlocks.BROWN_CONCRETE_STAIRS);
+
             }).build();
 
     //Vanilla Item Groups

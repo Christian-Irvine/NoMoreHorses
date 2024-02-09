@@ -50,6 +50,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmelting(exporter, List.of(ModItems.ROTTEN_LEATHER), RecipeCategory.MISC, Items.LEATHER, 1f, 200, "leather");
 
+        offerSmelting(exporter, List.of(ModBlocks.DENSE_WET_SPONGE), RecipeCategory.MISC, ModBlocks.DENSE_SPONGE, 1f, 50, "dense_sponge");
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROTTEN_LEATHER, 1)
                 .input(Items.ROTTEN_FLESH)
                 .input(Items.ROTTEN_FLESH)
@@ -190,6 +192,56 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, ModBlocks.POLISHED_MARBLE);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_PILLAR, ModBlocks.MARBLE_BRICKS);
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CONCRETE_SLAB, Blocks.WHITE_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CONCRETE_STAIRS, Blocks.WHITE_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CONCRETE_SLAB, Blocks.GRAY_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CONCRETE_STAIRS, Blocks.GRAY_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, Blocks.LIGHT_GRAY_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, Blocks.LIGHT_GRAY_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CONCRETE_SLAB, Blocks.BLACK_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CONCRETE_STAIRS, Blocks.BLACK_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CONCRETE_SLAB, Blocks.RED_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CONCRETE_STAIRS, Blocks.RED_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CONCRETE_SLAB, Blocks.ORANGE_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CONCRETE_STAIRS, Blocks.ORANGE_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CONCRETE_SLAB, Blocks.YELLOW_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CONCRETE_STAIRS, Blocks.YELLOW_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CONCRETE_SLAB, Blocks.LIME_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CONCRETE_STAIRS, Blocks.LIME_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CONCRETE_SLAB, Blocks.GREEN_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CONCRETE_STAIRS, Blocks.GREEN_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, Blocks.LIGHT_BLUE_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, Blocks.LIGHT_BLUE_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CONCRETE_SLAB, Blocks.CYAN_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CONCRETE_STAIRS, Blocks.CYAN_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CONCRETE_SLAB, Blocks.BLUE_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CONCRETE_STAIRS, Blocks.BLUE_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CONCRETE_SLAB, Blocks.PURPLE_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CONCRETE_STAIRS, Blocks.PURPLE_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CONCRETE_SLAB, Blocks.MAGENTA_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CONCRETE_STAIRS, Blocks.MAGENTA_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CONCRETE_SLAB, Blocks.PINK_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CONCRETE_STAIRS, Blocks.PINK_CONCRETE);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_SLAB, Blocks.BROWN_CONCRETE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_STAIRS, Blocks.BROWN_CONCRETE);
+
+
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
                 .input(ModBlocks.OLIVE_LOG)
                 .criterion(hasItem(ModBlocks.OLIVE_LOG), conditionsFromItem(ModBlocks.OLIVE_LOG))
@@ -298,6 +350,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" C ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_sword_crafting"));
 
@@ -306,6 +359,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_pickaxe_crafting"));
 
@@ -314,6 +368,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("CS ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_axe_crafting_left"));
 
@@ -322,6 +377,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" SC")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_axe_crafting_right"));
 
@@ -330,6 +386,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_shovel_crafting"));
 
@@ -338,6 +395,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_hoe_crafting_left"));
 
@@ -346,6 +404,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_hoe_crafting_right"));
 
@@ -430,6 +489,143 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.BREAD)
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting_diagonal_right"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DENSE_SPONGE, 1)
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("   ")
+                .input('S', Blocks.SPONGE)
+                .criterion(hasItem(Blocks.SPONGE), conditionsFromItem(Blocks.SPONGE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "dense_sponge_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CONCRETE_SLAB, Ingredient.ofItems(Blocks.WHITE_CONCRETE))
+                .criterion(hasItem(Blocks.WHITE_CONCRETE), conditionsFromItem(Blocks.WHITE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "white_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.WHITE_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.WHITE_CONCRETE))
+                .criterion(hasItem(Blocks.WHITE_CONCRETE), conditionsFromItem(Blocks.WHITE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "white_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CONCRETE_SLAB, Ingredient.ofItems(Blocks.GRAY_CONCRETE))
+                .criterion(hasItem(Blocks.GRAY_CONCRETE), conditionsFromItem(Blocks.GRAY_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "gray_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.GRAY_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.GRAY_CONCRETE))
+                .criterion(hasItem(Blocks.GRAY_CONCRETE), conditionsFromItem(Blocks.GRAY_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "gray_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, Ingredient.ofItems(Blocks.LIGHT_GRAY_CONCRETE))
+                .criterion(hasItem(Blocks.LIGHT_GRAY_CONCRETE), conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_gray_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.LIGHT_GRAY_CONCRETE))
+                .criterion(hasItem(Blocks.LIGHT_GRAY_CONCRETE), conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_gray_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CONCRETE_SLAB, Ingredient.ofItems(Blocks.BLACK_CONCRETE))
+                .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "black_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.BLACK_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.BLACK_CONCRETE))
+                .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "black_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CONCRETE_SLAB, Ingredient.ofItems(Blocks.RED_CONCRETE))
+                .criterion(hasItem(Blocks.RED_CONCRETE), conditionsFromItem(Blocks.RED_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "red_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.RED_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.RED_CONCRETE))
+                .criterion(hasItem(Blocks.RED_CONCRETE), conditionsFromItem(Blocks.RED_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "red_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CONCRETE_SLAB, Ingredient.ofItems(Blocks.ORANGE_CONCRETE))
+                .criterion(hasItem(Blocks.ORANGE_CONCRETE), conditionsFromItem(Blocks.ORANGE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "orange_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.ORANGE_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.ORANGE_CONCRETE))
+                .criterion(hasItem(Blocks.ORANGE_CONCRETE), conditionsFromItem(Blocks.ORANGE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "orange_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CONCRETE_SLAB, Ingredient.ofItems(Blocks.YELLOW_CONCRETE))
+                .criterion(hasItem(Blocks.YELLOW_CONCRETE), conditionsFromItem(Blocks.YELLOW_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "yellow_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.YELLOW_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.YELLOW_CONCRETE))
+                .criterion(hasItem(Blocks.YELLOW_CONCRETE), conditionsFromItem(Blocks.YELLOW_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "yellow_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CONCRETE_SLAB, Ingredient.ofItems(Blocks.LIME_CONCRETE))
+                .criterion(hasItem(Blocks.LIME_CONCRETE), conditionsFromItem(Blocks.LIME_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "lime_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.LIME_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.LIME_CONCRETE))
+                .criterion(hasItem(Blocks.LIME_CONCRETE), conditionsFromItem(Blocks.LIME_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "lime_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CONCRETE_SLAB, Ingredient.ofItems(Blocks.GREEN_CONCRETE))
+                .criterion(hasItem(Blocks.GREEN_CONCRETE), conditionsFromItem(Blocks.GREEN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "green_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.GREEN_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.GREEN_CONCRETE))
+                .criterion(hasItem(Blocks.GREEN_CONCRETE), conditionsFromItem(Blocks.GREEN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "green_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, Ingredient.ofItems(Blocks.LIGHT_BLUE_CONCRETE))
+                .criterion(hasItem(Blocks.LIGHT_BLUE_CONCRETE), conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_blue_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.LIGHT_BLUE_CONCRETE))
+                .criterion(hasItem(Blocks.LIGHT_BLUE_CONCRETE), conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_blue_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CONCRETE_SLAB, Ingredient.ofItems(Blocks.CYAN_CONCRETE))
+                .criterion(hasItem(Blocks.CYAN_CONCRETE), conditionsFromItem(Blocks.CYAN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "cyan_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.CYAN_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.CYAN_CONCRETE))
+                .criterion(hasItem(Blocks.CYAN_CONCRETE), conditionsFromItem(Blocks.CYAN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "cyan_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CONCRETE_SLAB, Ingredient.ofItems(Blocks.BLUE_CONCRETE))
+                .criterion(hasItem(Blocks.BLUE_CONCRETE), conditionsFromItem(Blocks.BLUE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "blue_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.BLUE_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.BLUE_CONCRETE))
+                .criterion(hasItem(Blocks.BLUE_CONCRETE), conditionsFromItem(Blocks.BLUE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "blue_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CONCRETE_SLAB, Ingredient.ofItems(Blocks.PURPLE_CONCRETE))
+                .criterion(hasItem(Blocks.PURPLE_CONCRETE), conditionsFromItem(Blocks.PURPLE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "purple_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.PURPLE_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.PURPLE_CONCRETE))
+                .criterion(hasItem(Blocks.PURPLE_CONCRETE), conditionsFromItem(Blocks.PURPLE_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "purple_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CONCRETE_SLAB, Ingredient.ofItems(Blocks.MAGENTA_CONCRETE))
+                .criterion(hasItem(Blocks.MAGENTA_CONCRETE), conditionsFromItem(Blocks.MAGENTA_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "magenta_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.MAGENTA_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.MAGENTA_CONCRETE))
+                .criterion(hasItem(Blocks.MAGENTA_CONCRETE), conditionsFromItem(Blocks.MAGENTA_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "magenta_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CONCRETE_SLAB, Ingredient.ofItems(Blocks.PINK_CONCRETE))
+                .criterion(hasItem(Blocks.PINK_CONCRETE), conditionsFromItem(Blocks.PINK_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "pink_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.PINK_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.PINK_CONCRETE))
+                .criterion(hasItem(Blocks.PINK_CONCRETE), conditionsFromItem(Blocks.PINK_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "pink_concrete_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_SLAB, Ingredient.ofItems(Blocks.BROWN_CONCRETE))
+                .criterion(hasItem(Blocks.BROWN_CONCRETE), conditionsFromItem(Blocks.BROWN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "brown_concrete_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.BROWN_CONCRETE_STAIRS, Ingredient.ofItems(Blocks.BROWN_CONCRETE))
+                .criterion(hasItem(Blocks.BROWN_CONCRETE), conditionsFromItem(Blocks.BROWN_CONCRETE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "brown_concrete_stairs_crafting"));
+
 
     }
 
