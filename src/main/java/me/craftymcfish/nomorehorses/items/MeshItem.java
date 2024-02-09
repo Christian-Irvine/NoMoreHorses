@@ -4,6 +4,8 @@ import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.LeveledCauldronBlock;
+import net.minecraft.block.PowderSnowCauldronBlock;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -27,7 +29,7 @@ public class MeshItem extends Item {
             else {
                 context.getStack().damage(1, context.getPlayer(), playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
                 context.getPlayer().giveItemStack(new ItemStack(ModItems.SALT));
-                
+                ((LeveledCauldronBlock) block).decrementFluidLevel(world.getBlockState(context.getBlockPos()), world, context.getBlockPos());
             }
 
             return ActionResult.SUCCESS;
