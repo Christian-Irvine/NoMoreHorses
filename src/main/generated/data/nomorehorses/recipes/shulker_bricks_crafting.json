@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "nomorehorses:shulker_pellet"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "SS ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "item": "nomorehorses:shulker_bricks"
+  },
+  "show_notification": true
+}

@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": {
-      "model": "nomorehorses:block/george"
+    "george_state=0": {
+      "model": "nomorehorses:block/george_happy"
+    },
+    "george_state=1": {
+      "model": "nomorehorses:block/george_mid"
+    },
+    "george_state=2": {
+      "model": "nomorehorses:block/george_unhappy"
     }
   }
 }

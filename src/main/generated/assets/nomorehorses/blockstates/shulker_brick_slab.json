@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nomorehorses:block/shulker_brick_slab"
+    },
+    "type=double": {
+      "model": "nomorehorses:block/shulker_bricks"
+    },
+    "type=top": {
+      "model": "nomorehorses:block/shulker_brick_slab_top"
+    }
+  }
+}

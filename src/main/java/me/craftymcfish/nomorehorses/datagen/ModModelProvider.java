@@ -63,7 +63,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_BLOCK);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ISLAND_HEART);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RIFTSTEEL_BLOCK);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DENSE_SPONGE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DENSE_WET_SPONGE);
 
         BlockStateModelGenerator.BlockTexturePool whiteConcretePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.WHITE_CONCRETE);
         whiteConcretePool.slab(ModBlocks.WHITE_CONCRETE_SLAB);
@@ -129,7 +135,13 @@ public class ModModelProvider extends FabricModelProvider {
         brownConcretePool.slab(ModBlocks.BROWN_CONCRETE_SLAB);
         brownConcretePool.stairs(ModBlocks.BROWN_CONCRETE_STAIRS);
 
+        BlockStateModelGenerator.BlockTexturePool shulker_bricks_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHULKER_BRICKS);
+        shulker_bricks_pool.stairs(ModBlocks.SHULKER_BRICK_STAIRS);
+        shulker_bricks_pool.slab(ModBlocks.SHULKER_BRICK_SLAB);
 
+        BlockStateModelGenerator.BlockTexturePool shulker_shingles_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHULKER_SHINGLES);
+        shulker_shingles_pool.stairs(ModBlocks.SHULKER_SHINGLE_STAIRS);
+        shulker_shingles_pool.slab(ModBlocks.SHULKER_SHINGLE_SLAB);
     }
 
     @Override
@@ -178,6 +190,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem)ModItems.RIFTSTEEL_BOOTS);
 
         itemModelGenerator.register(ModItems.ROTTEN_LEATHER, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.SHULKER_PELLET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

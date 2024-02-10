@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nomorehorses:riftsteel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "nomorehorses:riftsteel_clump"
+  }
+}

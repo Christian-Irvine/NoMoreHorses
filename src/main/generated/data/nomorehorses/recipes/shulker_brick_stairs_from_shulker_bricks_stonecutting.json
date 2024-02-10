@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "nomorehorses:shulker_bricks"
+  },
+  "result": "nomorehorses:shulker_brick_stairs"
+}

@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.ShulkerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
@@ -69,6 +71,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
 
+        addDrop(ModBlocks.DENSE_SPONGE);
+        addDrop(ModBlocks.DENSE_WET_SPONGE);
+
         addDrop(ModBlocks.WHITE_CONCRETE_SLAB, slabDrops(ModBlocks.WHITE_CONCRETE_SLAB));
         addDrop(ModBlocks.WHITE_CONCRETE_STAIRS);
 
@@ -117,7 +122,13 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BROWN_CONCRETE_SLAB, slabDrops(ModBlocks.BROWN_CONCRETE_SLAB));
         addDrop(ModBlocks.BROWN_CONCRETE_STAIRS);
 
+        addDrop(ModBlocks.SHULKER_SHINGLES);
+        addDrop(ModBlocks.SHULKER_SHINGLE_SLAB, slabDrops(ModBlocks.SHULKER_SHINGLE_SLAB));
+        addDrop(ModBlocks.SHULKER_SHINGLE_STAIRS);
 
+        addDrop(ModBlocks.SHULKER_BRICKS);
+        addDrop(ModBlocks.SHULKER_BRICK_SLAB, slabDrops(ModBlocks.SHULKER_BRICK_SLAB));
+        addDrop(ModBlocks.SHULKER_BRICK_STAIRS);
 
         //Custom Drops
         addDrop(ModBlocks.PORK_ORE, fortuneBlockDrops(ModBlocks.PORK_ORE, Items.PORKCHOP, 2, 5));

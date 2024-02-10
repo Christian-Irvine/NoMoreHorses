@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_riftsteel_clump": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:riftsteel_clump"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:riftsteel_block_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_riftsteel_clump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:riftsteel_block_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

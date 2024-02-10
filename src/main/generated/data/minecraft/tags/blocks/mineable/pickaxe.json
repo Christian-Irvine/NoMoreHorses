@@ -10,6 +10,8 @@
     "nomorehorses:polished_marble",
     "nomorehorses:polished_marble_stairs",
     "nomorehorses:polished_marble_slab",
+    "nomorehorses:marble_pillar",
+    "nomorehorses:infused_marble_pillar",
     "nomorehorses:macerator",
     "nomorehorses:voidfire_ore",
     "nomorehorses:white_concrete_slab",
@@ -43,6 +45,14 @@
     "nomorehorses:pink_concrete_slab",
     "nomorehorses:pink_concrete_stairs",
     "nomorehorses:brown_concrete_slab",
-    "nomorehorses:brown_concrete_stairs"
+    "nomorehorses:brown_concrete_stairs",
+    "nomorehorses:shulker_shingles",
+    "nomorehorses:shulker_shingle_slab",
+    "nomorehorses:shulker_shingle_stairs",
+    "nomorehorses:shulker_bricks",
+    "nomorehorses:shulker_brick_slab",
+    "nomorehorses:shulker_brick_stairs",
+    "nomorehorses:voidfire_block",
+    "nomorehorses:riftsteel_block"
   ]
 }

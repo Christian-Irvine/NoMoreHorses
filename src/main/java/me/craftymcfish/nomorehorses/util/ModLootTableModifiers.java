@@ -20,6 +20,7 @@ import java.util.List;
 public class ModLootTableModifiers {
     private static final Identifier FISHING_JUNK_ID = new Identifier("minecraft", "gameplay/fishing/junk");
     private static final Identifier END_CITY_TREASURE_CHEST = new Identifier("minecraft", "chests/end_city_treasure");
+    private static final Identifier SHULKER_ENTITY = new Identifier("minecraft", "entities/shulker");
 
 
     public static void modifyLootTables() {
@@ -42,6 +43,17 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(0.025f))
                         .with(ItemEntry.builder(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (SHULKER_ENTITY.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2.0f)) //how many times it will run this
+                        .conditionally(RandomChanceLootCondition.builder(1f)) // the chance of this roll succeeding
+                        .with(ItemEntry.builder(ModItems.SHULKER_PELLET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f)).build()); //Randomly pick how many it will drop per roll
                 tableBuilder.pool(poolBuilder.build());
             }
         });

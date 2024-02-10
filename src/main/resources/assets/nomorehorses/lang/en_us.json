@@ -163,5 +163,18 @@
   "block.nomorehorses.pink_concrete_stairs": "Pink Concrete Stairs",
 
   "block.nomorehorses.brown_concrete_slab": "Brown Concrete Slab",
-  "block.nomorehorses.brown_concrete_stairs": "Brown Concrete Stairs"
+  "block.nomorehorses.brown_concrete_stairs": "Brown Concrete Stairs",
+
+  "block.nomorehorses.shulker_bricks": "Shulker Bricks",
+  "block.nomorehorses.shulker_brick_slab": "Shulker Brick Slab",
+  "block.nomorehorses.shulker_brick_stairs": "Shulker Brick Stairs",
+
+  "block.nomorehorses.shulker_shingles": "Shulker Shingles",
+  "block.nomorehorses.shulker_shingle_slab": "Shulker Shingle Slab",
+  "block.nomorehorses.shulker_shingle_stairs": "Shulker Shingle Stairs",
+
+  "item.nomorehorses.shulker_pellet": "Shulker Pellet",
+
+  "block.nomorehorses.riftsteel_block": "Riftsteel Block",
+  "block.nomorehorses.voidfire_block": "Voidfire Block"
 }

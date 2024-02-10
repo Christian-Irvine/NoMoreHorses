@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nomorehorses:voidfire_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "nomorehorses:voidfire_shard"
+  }
+}

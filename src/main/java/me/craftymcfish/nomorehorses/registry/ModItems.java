@@ -79,6 +79,8 @@ public class ModItems {
 
     public static final Item ROTTEN_LEATHER = registerItem("rotten_leather", new Item(new FabricItemSettings()));
 
+    public static final Item SHULKER_PELLET = registerItem("shulker_pellet", new Item(new FabricItemSettings()));
+
 
 
     private static Item registerItem(String name, Item item) {

@@ -240,6 +240,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_SLAB, Blocks.BROWN_CONCRETE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CONCRETE_STAIRS, Blocks.BROWN_CONCRETE);
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_SHINGLE_SLAB, ModBlocks.SHULKER_SHINGLES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_SHINGLE_STAIRS, ModBlocks.SHULKER_SHINGLES);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_BRICK_SLAB, ModBlocks.SHULKER_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_BRICK_STAIRS, ModBlocks.SHULKER_BRICKS);
 
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
@@ -626,6 +631,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.BROWN_CONCRETE), conditionsFromItem(Blocks.BROWN_CONCRETE))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "brown_concrete_stairs_crafting"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.SHULKER_BRICKS, 4)
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("   ")
+                .input('S', ModItems.SHULKER_PELLET)
+                .criterion(hasItem(ModItems.SHULKER_PELLET), conditionsFromItem(ModItems.SHULKER_PELLET))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_bricks_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_BRICK_SLAB, Ingredient.ofItems(ModBlocks.SHULKER_BRICKS))
+                .criterion(hasItem(ModBlocks.SHULKER_BRICKS), conditionsFromItem(ModBlocks.SHULKER_BRICKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_brick_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.SHULKER_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.SHULKER_BRICKS))
+                .criterion(hasItem(ModBlocks.SHULKER_BRICKS), conditionsFromItem(ModBlocks.SHULKER_BRICKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_brick_stairs_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_SHINGLES, 8)
+                .pattern("SSS")
+                .pattern("   ")
+                .pattern("   ")
+                .input('S', ModItems.SHULKER_PELLET)
+                .criterion(hasItem(ModItems.SHULKER_PELLET), conditionsFromItem(ModItems.SHULKER_PELLET))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_shingle_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_SHINGLE_SLAB, Ingredient.ofItems(ModBlocks.SHULKER_SHINGLES))
+                .criterion(hasItem(ModBlocks.SHULKER_SHINGLES), conditionsFromItem(ModBlocks.SHULKER_SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_shingle_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.SHULKER_SHINGLE_STAIRS, Ingredient.ofItems(ModBlocks.SHULKER_SHINGLES))
+                .criterion(hasItem(ModBlocks.SHULKER_SHINGLES), conditionsFromItem(ModBlocks.SHULKER_SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_shingle_stairs_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RIFTSTEEL_BLOCK, 1)
+                .pattern("RRR")
+                .pattern("RRR")
+                .pattern("RRR")
+                .input('R', ModItems.RIFTSTEEL_CLUMP)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_block_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RIFTSTEEL_CLUMP, 9)
+                .input(ModBlocks.RIFTSTEEL_BLOCK)
+                .criterion(hasItem(ModBlocks.RIFTSTEEL_BLOCK), conditionsFromItem(ModBlocks.RIFTSTEEL_BLOCK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_from_block_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.VOIDFIRE_BLOCK, 1)
+                .pattern("VVV")
+                .pattern("VVV")
+                .pattern("VVV")
+                .input('V', ModItems.VOIDFIRE_SHARD)
+                .criterion(hasItem(ModItems.VOIDFIRE_SHARD), conditionsFromItem(ModItems.VOIDFIRE_SHARD))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "voidfire_block_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VOIDFIRE_SHARD, 9)
+                .input(ModBlocks.VOIDFIRE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOIDFIRE_BLOCK), conditionsFromItem(ModBlocks.VOIDFIRE_BLOCK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "voidfire_shard_from_block_crafting"));
 
     }
 

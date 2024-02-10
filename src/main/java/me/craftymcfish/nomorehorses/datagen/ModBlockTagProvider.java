@@ -36,6 +36,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_MARBLE)
                 .add(ModBlocks.POLISHED_MARBLE_STAIRS)
                 .add(ModBlocks.POLISHED_MARBLE_SLAB)
+                .add(ModBlocks.MARBLE_PILLAR)
+                .add(ModBlocks.INFUSED_MARBLE_PILLAR)
                 .add(ModBlocks.MACERATOR)
                 .add(ModBlocks.VOIDFIRE_ORE)
 
@@ -70,7 +72,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_CONCRETE_SLAB)
                 .add(ModBlocks.PINK_CONCRETE_STAIRS)
                 .add(ModBlocks.BROWN_CONCRETE_SLAB)
-                .add(ModBlocks.BROWN_CONCRETE_STAIRS);
+                .add(ModBlocks.BROWN_CONCRETE_STAIRS)
+
+                .add(ModBlocks.SHULKER_SHINGLES)
+                .add(ModBlocks.SHULKER_SHINGLE_SLAB)
+                .add(ModBlocks.SHULKER_SHINGLE_STAIRS)
+                .add(ModBlocks.SHULKER_BRICKS)
+                .add(ModBlocks.SHULKER_BRICK_SLAB)
+                .add(ModBlocks.SHULKER_BRICK_STAIRS)
+
+                .add(ModBlocks.VOIDFIRE_BLOCK)
+                .add(ModBlocks.RIFTSTEEL_BLOCK);
+
+
 
 
 
@@ -81,7 +95,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PORK_BLOCK);
 
 
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE);
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.DENSE_SPONGE)
+                .add(ModBlocks.DENSE_WET_SPONGE);
 
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
@@ -102,7 +118,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
-                .add(ModBlocks.GEORGE);
+                .add(ModBlocks.GEORGE)
+                .add(ModBlocks.RIFTSTEEL_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.OLIVE_LOG)

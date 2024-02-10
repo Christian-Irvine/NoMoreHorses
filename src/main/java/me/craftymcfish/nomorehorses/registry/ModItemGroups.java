@@ -55,8 +55,12 @@ public class ModItemGroups {
                 entries.add(ModBlocks.MARBLE_BRICKS);
                 entries.add(ModBlocks.MARBLE_BRICK_STAIRS);
                 entries.add(ModBlocks.MARBLE_BRICK_SLAB);
+                entries.add(ModBlocks.MARBLE_PILLAR);
+                entries.add(ModBlocks.INFUSED_MARBLE_PILLAR);
+
                 entries.add(ModItems.SNAIL_SPAWN_EGG);
                 entries.add(ModBlocks.MACERATOR);
+
                 entries.add(ModBlocks.OLIVE_LOG);
                 entries.add(ModBlocks.OLIVE_WOOD);
                 entries.add(ModBlocks.STRIPPED_OLIVE_LOG);
@@ -72,10 +76,12 @@ public class ModItemGroups {
                 entries.add(ModBlocks.OLIVE_BUTTON);
                 entries.add(ModBlocks.OLIVE_PRESSURE_PLATE);
                 entries.add(ModBlocks.OLIVE_SAPLING);
+
                 entries.add(ModBlocks.VOIDFIRE_ORE);
                 entries.add(ModItems.VOIDFIRE_ESSENCE);
                 entries.add(ModItems.VOIDFIRE_SHARD);
                 entries.add(ModItems.EYE_OF_THE_VOID);
+
                 entries.add(ModBlocks.ISLAND_HEART);
                 entries.add(ModItems.ENDSTONE_CORE);
                 entries.add(ModItems.RIFTSTEEL_CLUMP);
@@ -89,6 +95,7 @@ public class ModItemGroups {
                 entries.add(ModItems.RIFTSTEEL_CHESTPLATE);
                 entries.add(ModItems.RIFTSTEEL_LEGGINGS);
                 entries.add(ModItems.RIFTSTEEL_BOOTS);
+
                 entries.add(ModBlocks.DENSE_SPONGE);
                 entries.add(ModBlocks.DENSE_WET_SPONGE);
 
@@ -125,6 +132,15 @@ public class ModItemGroups {
                 entries.add(ModBlocks.BROWN_CONCRETE_SLAB);
                 entries.add(ModBlocks.BROWN_CONCRETE_STAIRS);
 
+                entries.add(ModItems.SHULKER_PELLET);
+
+                entries.add(ModBlocks.SHULKER_SHINGLES);
+                entries.add(ModBlocks.SHULKER_SHINGLE_SLAB);
+                entries.add(ModBlocks.SHULKER_SHINGLE_STAIRS);
+
+                entries.add(ModBlocks.SHULKER_BRICKS);
+                entries.add(ModBlocks.SHULKER_BRICK_SLAB);
+                entries.add(ModBlocks.SHULKER_BRICK_STAIRS);
             }).build();
 
     //Vanilla Item Groups

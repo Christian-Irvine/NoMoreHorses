@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "nomorehorses:dense_sponge",
+    "nomorehorses:dense_wet_sponge"
+  ]
 }

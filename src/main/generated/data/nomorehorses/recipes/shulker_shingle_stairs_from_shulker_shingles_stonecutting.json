@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "nomorehorses:shulker_shingles"
+  },
+  "result": "nomorehorses:shulker_shingle_stairs"
+}

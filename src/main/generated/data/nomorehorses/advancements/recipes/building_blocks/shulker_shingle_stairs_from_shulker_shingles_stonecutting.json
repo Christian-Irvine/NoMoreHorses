@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shulker_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:shulker_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:shulker_shingle_stairs_from_shulker_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shulker_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:shulker_shingle_stairs_from_shulker_shingles_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

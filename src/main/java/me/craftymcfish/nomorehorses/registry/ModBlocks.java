@@ -107,9 +107,13 @@ public class ModBlocks {
             new FlowerPotBlock(OLIVE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
     public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8), UniformIntProvider.create(5, 10)));
+    public static final Block VOIDFIRE_BLOCK = registerBlock("voidfire_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
 
     public static final Block ISLAND_HEART = registerBlock("island_heart",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+    public static final Block RIFTSTEEL_BLOCK = registerBlock("riftsteel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
 
     public static final Block DENSE_SPONGE = registerBlock("dense_sponge",
             new DenseSpongeBlock(FabricBlockSettings.copyOf(Blocks.SPONGE)));
@@ -197,7 +201,20 @@ public class ModBlocks {
     public static final Block BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs",
             new StairsBlock(Blocks.BROWN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE)));
 
+    public static final Block SHULKER_SHINGLES = registerBlock("shulker_shingles",
+            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS).sounds(BlockSoundGroup.DECORATED_POT)));
+    public static final Block SHULKER_SHINGLE_SLAB = registerBlock("shulker_shingle_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+    public static final Block SHULKER_SHINGLE_STAIRS = registerBlock("shulker_shingle_stairs",
+            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
 
+    public static final Block SHULKER_BRICKS = registerBlock("shulker_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS).sounds(BlockSoundGroup.DECORATED_POT)));
+
+    public static final Block SHULKER_BRICK_SLAB = registerBlock("shulker_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+    public static final Block SHULKER_BRICK_STAIRS = registerBlock("shulker_brick_stairs",
+            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "nomorehorses:george"
+    "nomorehorses:george",
+    "nomorehorses:riftsteel_block"
   ]
 }
