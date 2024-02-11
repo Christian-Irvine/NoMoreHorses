@@ -81,10 +81,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SHULKER_BRICK_SLAB)
                 .add(ModBlocks.SHULKER_BRICK_STAIRS)
 
+                .add(ModBlocks.SHINGLES)
+                .add(ModBlocks.SHINGLE_SLAB)
+                .add(ModBlocks.SHINGLE_STAIRS)
+
                 .add(ModBlocks.VOIDFIRE_BLOCK)
                 .add(ModBlocks.RIFTSTEEL_BLOCK);
-
-
 
 
 

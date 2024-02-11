@@ -142,6 +142,10 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool shulker_shingles_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHULKER_SHINGLES);
         shulker_shingles_pool.stairs(ModBlocks.SHULKER_SHINGLE_STAIRS);
         shulker_shingles_pool.slab(ModBlocks.SHULKER_SHINGLE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool shingles_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHINGLES);
+        shingles_pool.stairs(ModBlocks.SHINGLE_STAIRS);
+        shingles_pool.slab(ModBlocks.SHINGLE_SLAB);
     }
 
     @Override

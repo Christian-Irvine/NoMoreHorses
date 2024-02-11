@@ -141,6 +141,10 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHULKER_BRICKS);
                 entries.add(ModBlocks.SHULKER_BRICK_SLAB);
                 entries.add(ModBlocks.SHULKER_BRICK_STAIRS);
+
+                entries.add(ModBlocks.SHINGLES);
+                entries.add(ModBlocks.SHINGLE_SLAB);
+                entries.add(ModBlocks.SHINGLE_STAIRS);
             }).build();
 
     //Vanilla Item Groups

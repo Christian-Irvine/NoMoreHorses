@@ -209,12 +209,20 @@ public class ModBlocks {
             new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
 
     public static final Block SHULKER_BRICKS = registerBlock("shulker_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS).sounds(BlockSoundGroup.DECORATED_POT)));
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT)));
 
     public static final Block SHULKER_BRICK_SLAB = registerBlock("shulker_brick_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
     public static final Block SHULKER_BRICK_STAIRS = registerBlock("shulker_brick_stairs",
             new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+
+    public static final Block SHINGLES = registerBlock("shingles",
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT)));
+
+    public static final Block SHINGLE_SLAB = registerBlock("shingle_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
+    public static final Block SHINGLE_STAIRS = registerBlock("shingle_stairs",
+            new StairsBlock(ModBlocks.SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

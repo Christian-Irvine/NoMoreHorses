@@ -130,6 +130,10 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SHULKER_BRICK_SLAB, slabDrops(ModBlocks.SHULKER_BRICK_SLAB));
         addDrop(ModBlocks.SHULKER_BRICK_STAIRS);
 
+        addDrop(ModBlocks.SHINGLES);
+        addDrop(ModBlocks.SHINGLE_SLAB, slabDrops(ModBlocks.SHINGLE_SLAB));
+        addDrop(ModBlocks.SHINGLE_STAIRS);
+
         //Custom Drops
         addDrop(ModBlocks.PORK_ORE, fortuneBlockDrops(ModBlocks.PORK_ORE, Items.PORKCHOP, 2, 5));
         addDrop(ModBlocks.DEEPSLATE_PORK_ORE, fortuneBlockDrops(ModBlocks.DEEPSLATE_PORK_ORE, Items.PORKCHOP, 2, 5));

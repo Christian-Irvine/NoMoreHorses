@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:brick"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "item": "nomorehorses:shingles"
+  },
+  "show_notification": true
+}

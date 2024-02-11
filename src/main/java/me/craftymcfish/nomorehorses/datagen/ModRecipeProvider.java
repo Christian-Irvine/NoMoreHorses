@@ -246,6 +246,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_BRICK_SLAB, ModBlocks.SHULKER_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHULKER_BRICK_STAIRS, ModBlocks.SHULKER_BRICKS);
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLE_SLAB, ModBlocks.SHINGLES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLE_STAIRS, ModBlocks.SHINGLES);
+
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
                 .input(ModBlocks.OLIVE_LOG)
@@ -662,6 +665,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createStairsRecipe(ModBlocks.SHULKER_SHINGLE_STAIRS, Ingredient.ofItems(ModBlocks.SHULKER_SHINGLES))
                 .criterion(hasItem(ModBlocks.SHULKER_SHINGLES), conditionsFromItem(ModBlocks.SHULKER_SHINGLES))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shulker_shingle_stairs_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLES, 8)
+                .pattern("BBB")
+                .pattern("   ")
+                .pattern("   ")
+                .input('B', Items.BRICK)
+                .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shingle_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLE_SLAB, Ingredient.ofItems(ModBlocks.SHINGLES))
+                .criterion(hasItem(ModBlocks.SHINGLES), conditionsFromItem(ModBlocks.SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shingle_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.SHINGLE_STAIRS, Ingredient.ofItems(ModBlocks.SHINGLES))
+                .criterion(hasItem(ModBlocks.SHINGLES), conditionsFromItem(ModBlocks.SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "shingle_stairs_crafting"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RIFTSTEEL_BLOCK, 1)
                 .pattern("RRR")
