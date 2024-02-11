@@ -23,6 +23,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -77,6 +78,34 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     @Override
     public DefaultedList<ItemStack> getItems() {
         return inventory;
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        if (slot == 0 && side == Direction.UP) {
+            return true;
+        }
+        else if (slot == 2 && (side == Direction.NORTH || side == Direction.SOUTH || side == Direction.EAST || side == Direction.WEST)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction side) {
+        if (slot == 1 && side == Direction.DOWN) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean canPlayerUse(PlayerEntity player) {
+        return ImplementedInventory.super.canPlayerUse(player);
     }
 
     @Override

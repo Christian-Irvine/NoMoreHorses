@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.entity.client.ModModelLayers;
 import me.craftymcfish.nomorehorses.entity.client.SnailModel;
 import me.craftymcfish.nomorehorses.entity.client.SnailRenderer;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
+import me.craftymcfish.nomorehorses.screen.FisherScreen;
 import me.craftymcfish.nomorehorses.screen.MaceratorScreen;
 import me.craftymcfish.nomorehorses.screen.ModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
@@ -32,11 +33,14 @@ public class NoMoreHorsesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DAFFODIL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_DAFFODIL, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FISHER, RenderLayer.getCutout());
+
         EntityRendererRegistry.register(ModEntities.SNAIL, SnailRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SNAIL, SnailModel::getTexturedModelData);
 
         EntityRendererRegistry.register(ModEntities.EYE_OF_THE_VOID, FlyingItemEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.MACERATOR_SCREEN_HANDLER, MaceratorScreen::new);
+        HandledScreens.register(ModScreenHandlers.FISHER_SCREEN_HANDLER, FisherScreen::new);
     }
 }

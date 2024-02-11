@@ -11,7 +11,13 @@ import net.minecraft.util.Identifier;
 public class ModBlockEntities {
     public static final BlockEntityType<MaceratorBlockEntity> MACERATOR_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(NoMoreHorses.MOD_ID, "macerator_block_entity"),
-                    FabricBlockEntityTypeBuilder.create(MaceratorBlockEntity::new, ModBlocks.MACERATOR).build());
+                    FabricBlockEntityTypeBuilder.create(MaceratorBlockEntity::new,
+                            ModBlocks.MACERATOR).build());
+
+    public static final BlockEntityType<FisherBlockEntity> FISHER_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(NoMoreHorses.MOD_ID, "fisher_block_entity"),
+                    FabricBlockEntityTypeBuilder.create(FisherBlockEntity::new,
+                            ModBlocks.FISHER).build());
 
     public static void registerBlockEntities() {
         NoMoreHorses.LOGGER.info("Successfully Registered Block Entities");

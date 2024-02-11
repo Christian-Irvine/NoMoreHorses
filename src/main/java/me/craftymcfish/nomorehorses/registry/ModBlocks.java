@@ -1,10 +1,7 @@
 package me.craftymcfish.nomorehorses.registry;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
-import me.craftymcfish.nomorehorses.block.custom.DenseSpongeBlock;
-import me.craftymcfish.nomorehorses.block.custom.GeorgeBlock;
-import me.craftymcfish.nomorehorses.block.custom.MaceratorBlock;
-import me.craftymcfish.nomorehorses.block.custom.StrawberryCropBlock;
+import me.craftymcfish.nomorehorses.block.custom.*;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import me.craftymcfish.nomorehorses.world.tree.OliveSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -223,6 +220,9 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
     public static final Block SHINGLE_STAIRS = registerBlock("shingle_stairs",
             new StairsBlock(ModBlocks.SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
+
+    public static final Block FISHER = registerBlock("fisher",
+            new FisherBlock(FabricBlockSettings.copyOf(Blocks.BARREL).nonOpaque().sounds(BlockSoundGroup.BAMBOO_WOOD)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
