@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class MeshItem extends Item {
     public MeshItem() {
-        super(new Item.Settings().maxCount(1).maxDamage(16));
+        super(new Item.Settings().maxCount(1).maxDamage(64));
     }
 
     @Override
