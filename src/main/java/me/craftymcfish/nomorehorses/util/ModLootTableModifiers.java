@@ -1,5 +1,6 @@
 package me.craftymcfish.nomorehorses.util;
 
+import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
@@ -18,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ModLootTableModifiers {
-    private static final Identifier FISHING_JUNK_ID = new Identifier("minecraft", "gameplay/fishing/junk");
+    public static final Identifier FISHING_FISHER_LOOT = new Identifier(NoMoreHorses.MOD_ID, "gameplay/fishing");
     private static final Identifier END_CITY_TREASURE_CHEST = new Identifier("minecraft", "chests/end_city_treasure");
     private static final Identifier SHULKER_ENTITY = new Identifier("minecraft", "entities/shulker");
 

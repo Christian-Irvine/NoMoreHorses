@@ -147,7 +147,7 @@ public class ModModelProvider extends FabricModelProvider {
         shingles_pool.stairs(ModBlocks.SHINGLE_STAIRS);
         shingles_pool.slab(ModBlocks.SHINGLE_SLAB);
 
-        blockStateModelGenerator.registerSimpleState(ModBlocks.FISHER);
+        //blockStateModelGenerator.registerSimpleState(ModBlocks.FISHER);
     }
 
     @Override

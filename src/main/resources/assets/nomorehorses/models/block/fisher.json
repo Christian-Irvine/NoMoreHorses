@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "fisher",
+	"parent": "minecraft:block/orientable",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "nomorehorses:block/fisher",

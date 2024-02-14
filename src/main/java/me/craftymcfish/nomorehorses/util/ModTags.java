@@ -4,8 +4,10 @@ import me.craftymcfish.nomorehorses.NoMoreHorses;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.Structure;
 
 public class ModTags {
@@ -29,6 +31,14 @@ public class ModTags {
 
         private static TagKey<Structure> createTag(String name) {
             return TagKey.of(RegistryKeys.STRUCTURE, new Identifier(NoMoreHorses.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> FISHER_FISHABLE = createTag("fisher_fishable");
+
+        private static TagKey<Biome> createTag(String name) {
+            return TagKey.of(RegistryKeys.BIOME, new Identifier(NoMoreHorses.MOD_ID, name));
         }
     }
 }

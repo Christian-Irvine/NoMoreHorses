@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "nomorehorses:block/fisher" },
+    "facing=east":  { "model": "nomorehorses:block/fisher", "y":  90 },
+    "facing=south": { "model": "nomorehorses:block/fisher", "y": 180 },
+    "facing=west":  { "model": "nomorehorses:block/fisher", "y": 270 }
+  }
+}

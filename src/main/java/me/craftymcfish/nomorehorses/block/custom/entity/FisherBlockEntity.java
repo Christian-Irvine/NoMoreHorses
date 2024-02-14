@@ -1,32 +1,46 @@
 package me.craftymcfish.nomorehorses.block.custom.entity;
 
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.NoMoreHorsesClient;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.screen.FisherScreenHandler;
+import me.craftymcfish.nomorehorses.util.ModLootTableModifiers;
+import me.craftymcfish.nomorehorses.util.ModTags;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.data.server.loottable.BlockLootTableGenerator;
+import net.minecraft.data.server.loottable.LootTableGenerator;
 import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTables;
+import net.minecraft.loot.context.LootContextParameterSet;
+import net.minecraft.loot.context.LootContextParameters;
+import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Position;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeKeys;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
@@ -124,7 +138,7 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
             return;
         }
 
-        if (!hasMesh()){
+        if (!state.get(Properties.WATERLOGGED) || !hasMesh() || !this.validBiome(world, pos)) {
             resetProgress(world, pos, state);
             return;
         }
@@ -134,13 +148,19 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
             return;
         }
 
-        Item item = generateLoot();
-        OutputItem outputItem = outputSlotsAreEmptyOrReceivable(item);
+        ItemStack lootItemStack = generateLoot();
+        Item lootItem = lootItemStack.getItem();
+        if (lootItem == null) {
+            resetProgress(world, pos, state);
+            return;
+        }
+
+        OutputItem outputItem = outputSlotsAreEmptyOrReceivable(lootItemStack);
 
         if (outputItem.getReceivable()) {
             this.damageMesh(world, pos);
-            ItemStack itemStack = new ItemStack(item, getStack(outputItem.getSlot()).getCount() + 1);
-            this.placeLootInOutput(itemStack, outputItem.getSlot());
+            lootItemStack.setCount(getStack(outputItem.getSlot()).getCount() + 1);
+            this.placeLootInOutput(lootItemStack, outputItem.getSlot());
             this.resetProgress(world, pos, state);
             world.playSound(null, pos, SoundEvents.ENTITY_FISHING_BOBBER_RETRIEVE, SoundCategory.BLOCKS,0.8f, 1);
             return;
@@ -149,9 +169,14 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
         this.resetProgress(world, pos, state);
     }
 
+    private boolean validBiome(World world, BlockPos pos) {
+        if (world.getBiome(pos).isIn(ModTags.Biomes.FISHER_FISHABLE)) return true; //world.getBiome(pos) //ModTags.Biomes.FISHER_FISHABLE
+
+        return false;
+    }
+
     private void damageMesh(World world, BlockPos pos) {
         this.getStack(0).setDamage(this.getStack(0).getDamage() + 1);
-        NoMoreHorses.LOGGER.info(String.valueOf(this.getStack(0).getDamage()));
         if (this.getStack(0).getDamage() > this.getStack(0).getMaxDamage()) {
             this.setStack(0, ItemStack.EMPTY);
             world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS,1f, 1);
@@ -171,8 +196,18 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
         this.setStack(slot, item);
     }
 
-    private Item generateLoot() {
-        return ModItems.CHEESE;
+    private ItemStack generateLoot() {
+        //LootContextParameterSet lootContextParameterSet = new LootContextParameterSet.Builder((ServerWorld)this.getWorld()).add(LootContextParameters.ORIGIN, this.getPos()).add(LootContextParameters.TOOL, new ItemStack(Items.FISHING_ROD)).add(LootContextParameters.THIS_ENTITY, this).luck((float)this.luckOfTheSeaLevel + playerEntity.getLuck()).build(LootContextTypes.FISHING);
+        float luck = 3;
+        LootContextParameterSet lootContextParameterSet = new LootContextParameterSet.Builder((ServerWorld)this.getWorld()).add(LootContextParameters.TOOL, new ItemStack(Items.FISHING_ROD)).add(LootContextParameters.ORIGIN, this.getPos().toCenterPos()).luck((float)luck).build(LootContextTypes.FISHING);
+        LootTable lootTable = this.getWorld().getServer().getLootManager().getLootTable(ModLootTableModifiers.FISHING_FISHER_LOOT);
+        ObjectArrayList<ItemStack> list = lootTable.generateLoot(lootContextParameterSet);
+
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+
+        return new ItemStack(ModItems.CHEESE);
     }
 
     private void increaseProgress(World world, BlockPos pos, BlockState state) {
@@ -180,9 +215,9 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
         markDirty(world, pos, state);
     }
 
-    private OutputItem outputSlotsAreEmptyOrReceivable(Item item) {
+    private OutputItem outputSlotsAreEmptyOrReceivable(ItemStack item) {
         for (int i = 1; i <= 9; i++) {
-            if (this.getStack(i).isEmpty() || (this.getStack(i).getItem() == item && this.getStack(i).getCount() < this.getStack(i).getItem().getMaxCount())) {
+            if (this.getStack(i).isEmpty() || (this.getStack(i).getItem() == item.getItem() && this.getStack(i).getCount() < this.getStack(i).getItem().getMaxCount())) {
                 return new OutputItem(i, true);
             }
         }
