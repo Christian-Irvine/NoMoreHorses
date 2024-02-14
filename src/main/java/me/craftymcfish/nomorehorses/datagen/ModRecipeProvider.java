@@ -707,6 +707,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.VOIDFIRE_BLOCK)
                 .criterion(hasItem(ModBlocks.VOIDFIRE_BLOCK), conditionsFromItem(ModBlocks.VOIDFIRE_BLOCK))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "voidfire_shard_from_block_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.SPONGE, 1)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', ModItems.SEA_SPONGE)
+                .criterion(hasItem(ModItems.SEA_SPONGE), conditionsFromItem(ModItems.SEA_SPONGE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "sponge_block_crafting"));
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {

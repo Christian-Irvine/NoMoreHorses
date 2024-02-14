@@ -199,6 +199,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.SHULKER_PELLET, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.SEA_SPONGE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
