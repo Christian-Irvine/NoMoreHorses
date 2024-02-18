@@ -82,11 +82,13 @@ public class ModItemGroups {
                 entries.add(ModBlocks.VOIDFIRE_ORE);
                 entries.add(ModItems.VOIDFIRE_ESSENCE);
                 entries.add(ModItems.VOIDFIRE_SHARD);
+                entries.add(ModBlocks.VOIDFIRE_BLOCK);
                 entries.add(ModItems.EYE_OF_THE_VOID);
 
                 entries.add(ModBlocks.ISLAND_HEART);
                 entries.add(ModItems.ENDSTONE_CORE);
                 entries.add(ModItems.RIFTSTEEL_CLUMP);
+                entries.add(ModBlocks.RIFTSTEEL_BLOCK);
                 entries.add(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE);
                 entries.add(ModItems.RIFTSTEEL_SWORD);
                 entries.add(ModItems.RIFTSTEEL_PICKAXE);
@@ -98,6 +100,7 @@ public class ModItemGroups {
                 entries.add(ModItems.RIFTSTEEL_LEGGINGS);
                 entries.add(ModItems.RIFTSTEEL_BOOTS);
 
+                entries.add(ModItems.SEA_SPONGE);
                 entries.add(ModBlocks.DENSE_SPONGE);
                 entries.add(ModBlocks.DENSE_WET_SPONGE);
 
@@ -147,6 +150,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHINGLES);
                 entries.add(ModBlocks.SHINGLE_SLAB);
                 entries.add(ModBlocks.SHINGLE_STAIRS);
+
+                entries.add(ModBlocks.);
             }).build();
 
     //Vanilla Item Groups
