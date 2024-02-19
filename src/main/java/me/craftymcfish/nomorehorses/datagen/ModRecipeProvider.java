@@ -15,6 +15,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.util.Identifier;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -715,6 +716,184 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', ModItems.SEA_SPONGE)
                 .criterion(hasItem(ModItems.SEA_SPONGE), conditionsFromItem(ModItems.SEA_SPONGE))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "sponge_block_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.WHITE_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.WHITE_DYE), conditionsFromItem(Items.WHITE_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "white_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.GRAY_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.GRAY_DYE), conditionsFromItem(Items.GRAY_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "gray_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.LIGHT_GRAY_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.LIGHT_GRAY_DYE), conditionsFromItem(Items.LIGHT_GRAY_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_gray_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.BLACK_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "black_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.RED_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "red_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.ORANGE_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.ORANGE_DYE), conditionsFromItem(Items.ORANGE_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "orange_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.YELLOW_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.YELLOW_DYE), conditionsFromItem(Items.YELLOW_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "yellow_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.LIME_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.LIME_DYE), conditionsFromItem(Items.LIME_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "lime_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.GREEN_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.GREEN_DYE), conditionsFromItem(Items.GREEN_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "green_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.LIGHT_BLUE_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.LIGHT_BLUE_DYE), conditionsFromItem(Items.LIGHT_BLUE_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "light_blue_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.CYAN_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.CYAN_DYE), conditionsFromItem(Items.CYAN_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "cyan_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.BLUE_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.BLUE_DYE), conditionsFromItem(Items.BLUE_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "blue_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.PURPLE_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.PURPLE_DYE), conditionsFromItem(Items.PURPLE_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "purple_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.MAGENTA_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.MAGENTA_DYE), conditionsFromItem(Items.MAGENTA_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "magenta_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.PINK_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.PINK_DYE), conditionsFromItem(Items.PINK_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "pink_glowstone_lamp_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_GLOWSTONE_LAMP, 2)
+                .pattern("RGR")
+                .pattern("GDG")
+                .pattern("RGR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE_DUST)
+                .input('D', Items.BROWN_DYE)
+                .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))
+                .criterion(hasItem(Items.BROWN_DYE), conditionsFromItem(Items.BROWN_DYE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "brown_glowstone_lamp_crafting"));
+
+
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {

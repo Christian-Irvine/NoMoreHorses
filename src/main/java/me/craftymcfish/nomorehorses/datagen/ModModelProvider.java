@@ -147,7 +147,22 @@ public class ModModelProvider extends FabricModelProvider {
         shingles_pool.stairs(ModBlocks.SHINGLE_STAIRS);
         shingles_pool.slab(ModBlocks.SHINGLE_SLAB);
 
-        //blockStateModelGenerator.registerSimpleState(ModBlocks.FISHER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAY_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIGHT_GRAY_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACK_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.YELLOW_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIME_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GREEN_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIGHT_BLUE_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CYAN_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PURPLE_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MAGENTA_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_GLOWSTONE_LAMP);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_GLOWSTONE_LAMP);
     }
 
     @Override

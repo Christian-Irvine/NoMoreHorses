@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cyan_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_glowstone_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glowstone_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:cyan_glowstone_lamp_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glowstone_dust",
+      "has_cyan_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:cyan_glowstone_lamp_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

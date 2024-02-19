@@ -224,6 +224,56 @@ public class ModBlocks {
     public static final Block FISHER = registerBlock("fisher",
             new FisherBlock(FabricBlockSettings.copyOf(Blocks.BARREL).nonOpaque().sounds(BlockSoundGroup.BAMBOO_WOOD)));
 
+    public static final Block WHITE_GLOWSTONE_LAMP = registerBlock("white_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block GRAY_GLOWSTONE_LAMP = registerBlock("gray_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block LIGHT_GRAY_GLOWSTONE_LAMP = registerBlock("light_gray_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block BLACK_GLOWSTONE_LAMP = registerBlock("black_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block RED_GLOWSTONE_LAMP = registerBlock("red_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block ORANGE_GLOWSTONE_LAMP = registerBlock("orange_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block YELLOW_GLOWSTONE_LAMP = registerBlock("yellow_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block LIME_GLOWSTONE_LAMP = registerBlock("lime_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block GREEN_GLOWSTONE_LAMP = registerBlock("green_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block LIGHT_BLUE_GLOWSTONE_LAMP = registerBlock("light_blue_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block CYAN_GLOWSTONE_LAMP = registerBlock("cyan_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block BLUE_GLOWSTONE_LAMP = registerBlock("blue_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block PURPLE_GLOWSTONE_LAMP = registerBlock("purple_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block MAGENTA_GLOWSTONE_LAMP = registerBlock("magenta_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block PINK_GLOWSTONE_LAMP = registerBlock("pink_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+    public static final Block BROWN_GLOWSTONE_LAMP = registerBlock("brown_glowstone_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
+
+
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, name), block);

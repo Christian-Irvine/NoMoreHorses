@@ -122,6 +122,23 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BROWN_CONCRETE_SLAB, slabDrops(ModBlocks.BROWN_CONCRETE_SLAB));
         addDrop(ModBlocks.BROWN_CONCRETE_STAIRS);
 
+        addDrop(ModBlocks.WHITE_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.GRAY_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.LIGHT_GRAY_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.BLACK_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.RED_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.ORANGE_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.YELLOW_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.LIME_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.GREEN_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.LIGHT_BLUE_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.CYAN_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.BLUE_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.PURPLE_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.MAGENTA_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.PINK_GLOWSTONE_LAMP);
+        addDrop(ModBlocks.BROWN_GLOWSTONE_LAMP);
+
         addDrop(ModBlocks.SHULKER_SHINGLES);
         addDrop(ModBlocks.SHULKER_SHINGLE_SLAB, slabDrops(ModBlocks.SHULKER_SHINGLE_SLAB));
         addDrop(ModBlocks.SHULKER_SHINGLE_STAIRS);

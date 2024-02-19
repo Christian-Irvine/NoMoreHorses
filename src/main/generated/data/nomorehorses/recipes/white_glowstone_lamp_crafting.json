@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RGR",
+    "GDG",
+    "RGR"
+  ],
+  "result": {
+    "count": 2,
+    "item": "nomorehorses:white_glowstone_lamp"
+  },
+  "show_notification": true
+}

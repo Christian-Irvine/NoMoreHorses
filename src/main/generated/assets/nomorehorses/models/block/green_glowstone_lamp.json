@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nomorehorses:block/green_glowstone_lamp"
+  }
+}

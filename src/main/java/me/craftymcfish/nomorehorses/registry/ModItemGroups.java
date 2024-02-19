@@ -137,6 +137,23 @@ public class ModItemGroups {
                 entries.add(ModBlocks.BROWN_CONCRETE_SLAB);
                 entries.add(ModBlocks.BROWN_CONCRETE_STAIRS);
 
+                entries.add(ModBlocks.WHITE_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.GRAY_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.LIGHT_GRAY_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.BLACK_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.RED_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.ORANGE_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.YELLOW_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.LIME_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.GREEN_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.LIGHT_BLUE_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.CYAN_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.BLUE_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.PURPLE_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.MAGENTA_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.PINK_GLOWSTONE_LAMP);
+                entries.add(ModBlocks.BROWN_GLOWSTONE_LAMP);
+
                 entries.add(ModItems.SHULKER_PELLET);
 
                 entries.add(ModBlocks.SHULKER_SHINGLES);
@@ -150,8 +167,6 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHINGLES);
                 entries.add(ModBlocks.SHINGLE_SLAB);
                 entries.add(ModBlocks.SHINGLE_STAIRS);
-
-                entries.add(ModBlocks.);
             }).build();
 
     //Vanilla Item Groups
