@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "nomorehorses:block/living_gold_ore"
+  }
+}

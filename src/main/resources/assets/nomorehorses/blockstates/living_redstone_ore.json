@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "living_state=0": {
+      "model": "nomorehorses:block/exhausted_living_redstone_ore"
+    },
+    "living_state=1": {
+      "model": "nomorehorses:block/living_redstone_ore"
+    }
+  }
+}

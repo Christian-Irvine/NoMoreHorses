@@ -203,8 +203,14 @@
   "block.nomorehorses.riftsteel_block": "Riftsteel Block",
   "block.nomorehorses.voidfire_block": "Voidfire Block",
 
-
   "item.nomorehorses.chicken_nugget": "Chicken Nugget",
 
-  "block.nomorehorses.living_diamond_ore": "Living Diamond Ore"
+  "block.nomorehorses.living_diamond_ore": "Living Diamond Ore",
+  "block.nomorehorses.living_gold_ore": "Living Gold Ore",
+  "block.nomorehorses.living_iron_ore": "Living Iron Ore",
+  "block.nomorehorses.living_copper_ore": "Living Copper Ore",
+  "block.nomorehorses.living_lapis_ore": "Living Lapis Ore",
+  "block.nomorehorses.living_redstone_ore": "Living Redstone Ore",
+  "block.nomorehorses.living_coal_ore": "Living Coal Ore",
+  "block.nomorehorses.living_emerald_ore": "Living Emerald Ore"
 }

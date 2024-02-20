@@ -170,6 +170,13 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHINGLE_STAIRS);
 
                 entries.add(ModBlocks.LIVING_DIAMOND_ORE);
+                entries.add(ModBlocks.LIVING_COAL_ORE);
+                entries.add(ModBlocks.LIVING_REDSTONE_ORE);
+                entries.add(ModBlocks.LIVING_LAPIS_ORE);
+                entries.add(ModBlocks.LIVING_EMERALD_ORE);
+                entries.add(ModBlocks.LIVING_GOLD_ORE);
+                entries.add(ModBlocks.LIVING_IRON_ORE);
+                entries.add(ModBlocks.LIVING_COPPER_ORE);
             }).build();
 
     //Vanilla Item Groups

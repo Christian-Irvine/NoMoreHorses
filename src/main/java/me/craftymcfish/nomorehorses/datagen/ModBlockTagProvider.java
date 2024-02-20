@@ -42,6 +42,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VOIDFIRE_ORE)
 
                 .add(ModBlocks.LIVING_DIAMOND_ORE)
+                .add(ModBlocks.LIVING_GOLD_ORE)
+                .add(ModBlocks.LIVING_IRON_ORE)
+                .add(ModBlocks.LIVING_COPPER_ORE)
+                .add(ModBlocks.LIVING_LAPIS_ORE)
+                .add(ModBlocks.LIVING_REDSTONE_ORE)
+                .add(ModBlocks.LIVING_COAL_ORE)
+                .add(ModBlocks.LIVING_EMERALD_ORE)
 
                 .add(ModBlocks.WHITE_CONCRETE_SLAB)
                 .add(ModBlocks.WHITE_CONCRETE_STAIRS)
