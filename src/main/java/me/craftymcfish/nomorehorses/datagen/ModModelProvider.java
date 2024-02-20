@@ -164,7 +164,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_GLOWSTONE_LAMP);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_GLOWSTONE_LAMP);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIVING_DIAMOND_ORE);
+        //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIVING_DIAMOND_ORE);
     }
 
     @Override

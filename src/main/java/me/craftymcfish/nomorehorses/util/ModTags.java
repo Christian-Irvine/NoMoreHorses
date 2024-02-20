@@ -12,6 +12,8 @@ import net.minecraft.world.gen.structure.Structure;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> LIVING_ORE_REPLACEABLES = createTag("living_ore_replaceables");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(NoMoreHorses.MOD_ID, name));
         }

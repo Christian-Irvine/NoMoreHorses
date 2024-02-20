@@ -10,6 +10,7 @@ import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -274,8 +275,7 @@ public class ModBlocks {
 
 
     public static final Block LIVING_DIAMOND_ORE = registerBlock("living_diamond_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), 0.5f));
-
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.DIAMOND,0.5f, 0.1f));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

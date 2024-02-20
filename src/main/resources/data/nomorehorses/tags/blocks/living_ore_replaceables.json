@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:moss_block",
+    "minecraft:grass_block",
+    "minecraft:dirt",
+    "minecraft:stone",
+    "minecraft:andesite",
+    "minecraft:granite",
+    "minecraft:diorite",
+    "minecraft:deepslate",
+    "minecraft:tuff",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:clay",
+    "nomorehorses:marble"
+  ]
+}
