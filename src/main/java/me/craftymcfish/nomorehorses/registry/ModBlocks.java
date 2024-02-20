@@ -273,6 +273,9 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
 
 
+    public static final Block LIVING_DIAMOND_ORE = registerBlock("living_diamond_ore",
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), 0.5f));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
