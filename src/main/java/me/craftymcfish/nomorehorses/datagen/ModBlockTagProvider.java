@@ -41,6 +41,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MACERATOR)
                 .add(ModBlocks.VOIDFIRE_ORE)
 
+                .add(ModBlocks.LIVING_DIAMOND_ORE)
+
                 .add(ModBlocks.WHITE_CONCRETE_SLAB)
                 .add(ModBlocks.WHITE_CONCRETE_STAIRS)
                 .add(ModBlocks.GRAY_CONCRETE_SLAB)
@@ -87,8 +89,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(ModBlocks.VOIDFIRE_BLOCK)
                 .add(ModBlocks.RIFTSTEEL_BLOCK);
-
-
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CHEESE_BLOCK)

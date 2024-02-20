@@ -168,6 +168,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHINGLES);
                 entries.add(ModBlocks.SHINGLE_SLAB);
                 entries.add(ModBlocks.SHINGLE_STAIRS);
+
+                entries.add(ModBlocks.LIVING_DIAMOND_ORE);
             }).build();
 
     //Vanilla Item Groups

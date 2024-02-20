@@ -275,7 +275,7 @@ public class ModBlocks {
 
 
     public static final Block LIVING_DIAMOND_ORE = registerBlock("living_diamond_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.DIAMOND,0.5f, 0.1f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.DIAMOND,0.2f, 0.3f,0.1f));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
