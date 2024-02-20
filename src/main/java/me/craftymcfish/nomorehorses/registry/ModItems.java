@@ -28,6 +28,8 @@ public class ModItems {
     public static final Item BURNT_BAGUETTE = registerItem("burnt_baguette", new BurntBaguetteItem(ModToolMaterial.BAGUETTE, 4, -2.4f, new FabricItemSettings()));
     //public static final Item BURNT_CROISSANT = registerItem("burnt_croissant", new BurntCroissantItem(new FabricItemSettings()));
 
+    public static final Item CHICKEN_NUGGET = registerItem("chicken_nugget",
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().snack().hunger(1).saturationModifier(0.05f).build())));
 
     public static final Item SEA_SPONGE = registerItem("sea_sponge", new Item(new FabricItemSettings()));
 

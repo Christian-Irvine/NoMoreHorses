@@ -893,7 +893,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BROWN_DYE), conditionsFromItem(Items.BROWN_DYE))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "brown_glowstone_lamp_crafting"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Items.COOKED_CHICKEN, 1)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', ModItems.CHICKEN_NUGGET)
+                .criterion(hasItem(ModItems.CHICKEN_NUGGET), conditionsFromItem(ModItems.CHICKEN_NUGGET))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chicken_from_nugget_crafting"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_NUGGET, 9)
+                .input(Items.COOKED_CHICKEN)
+                .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chicken_nugget_crafting"));
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {
