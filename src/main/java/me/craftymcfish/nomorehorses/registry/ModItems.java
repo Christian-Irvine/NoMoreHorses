@@ -1,20 +1,13 @@
 package me.craftymcfish.nomorehorses.registry;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
-import me.craftymcfish.nomorehorses.effect.ModEffects;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.items.*;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Block;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
@@ -89,7 +82,12 @@ public class ModItems {
 
     public static final Item SHULKER_PELLET = registerItem("shulker_pellet", new Item(new FabricItemSettings()));
 
-
+    public static final Item EMPTY_BOTTOMLESS_CHALICE = registerItem("empty_bottomless_chalice", new EmptyChaliceItem(new FabricItemSettings().maxCount(1)));
+    public static final Item MILK_BOTTOMLESS_CHALICE = registerItem("milk_bottomless_chalice", new MilkChaliceItem(new FabricItemSettings().maxCount(1)));
+    public static final Item MUSHROOM_STEW_BOTTOMLESS_CHALICE = registerItem("mushroom_stew_bottomless_chalice", new DrinkableChaliceItem(new FabricItemSettings().maxCount(1).food(FoodComponents.MUSHROOM_STEW)));
+    public static final Item RABBIT_STEW_BOTTOMLESS_CHALICE = registerItem("rabbit_stew_bottomless_chalice", new DrinkableChaliceItem(new FabricItemSettings().maxCount(1).food(FoodComponents.RABBIT_STEW)));
+    public static final Item BEETROOT_SOUP_BOTTOMLESS_CHALICE = registerItem("beetroot_soup_bottomless_chalice", new DrinkableChaliceItem(new FabricItemSettings().maxCount(1).food(FoodComponents.BEETROOT_SOUP)));
+    public static final Item POTION_BOTTOMLESS_CHALICE = registerItem("potion_bottomless_chalice", new PotionChaliceItem(new FabricItemSettings().maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);

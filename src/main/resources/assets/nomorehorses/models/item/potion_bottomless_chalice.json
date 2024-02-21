@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "nomorehorses:item/potion_bottomless_chalice_overlay",
+        "layer1": "nomorehorses:item/potion_bottomless_chalice"
+    }
+}

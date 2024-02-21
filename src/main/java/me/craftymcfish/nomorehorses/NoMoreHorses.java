@@ -1,6 +1,7 @@
 package me.craftymcfish.nomorehorses;
 
 import me.craftymcfish.nomorehorses.block.custom.entity.ModBlockEntities;
+import me.craftymcfish.nomorehorses.color.ModColorProvider;
 import me.craftymcfish.nomorehorses.effect.ModEffects;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
@@ -65,6 +66,8 @@ public class NoMoreHorses implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		ModColorProvider.registerColorProviders();
 
 		ModWorldGeneration.generateModWorldGen();
 

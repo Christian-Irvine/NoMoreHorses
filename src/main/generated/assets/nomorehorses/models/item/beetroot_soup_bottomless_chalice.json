@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nomorehorses:item/beetroot_soup_bottomless_chalice"
+  }
+}

@@ -34,7 +34,7 @@ public class MixinLivingEntity {
         String montyUUID = "5e5c6f0b-1980-4f5a-a4e8-36c6585af21d";
 
         if (((LivingEntity)(Object)this).getUuid().equals(UUID.fromString(montyUUID))) {
-            ((LivingEntity)(Object)this).sendMessage(Text.of("Dropping time"));
+            ((LivingEntity)(Object)this).sendMessage(Text.of("Popped champagne"));
             ((LivingEntity)(Object)this).dropItem(ModItems.POP_CHAMPAGNE_MUSIC_DISC);
         }
     }

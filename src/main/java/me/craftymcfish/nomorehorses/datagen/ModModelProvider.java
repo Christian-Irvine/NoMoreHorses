@@ -220,6 +220,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.SEA_SPONGE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.EMPTY_BOTTOMLESS_CHALICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MILK_BOTTOMLESS_CHALICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MUSHROOM_STEW_BOTTOMLESS_CHALICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RABBIT_STEW_BOTTOMLESS_CHALICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEETROOT_SOUP_BOTTOMLESS_CHALICE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
 
