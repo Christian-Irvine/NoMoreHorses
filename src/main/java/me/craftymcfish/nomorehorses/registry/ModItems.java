@@ -29,7 +29,10 @@ public class ModItems {
     //public static final Item BURNT_CROISSANT = registerItem("burnt_croissant", new BurntCroissantItem(new FabricItemSettings()));
 
     public static final Item CHICKEN_NUGGET = registerItem("chicken_nugget",
-            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().snack().hunger(1).saturationModifier(0.05f).build())));
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().snack().hunger(1).saturationModifier(0.1f).build())));
+    public static final Item DINO_NUGGET = registerItem("dino_nugget",
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().snack().hunger(2).saturationModifier(0.2f).build())));
+
 
     public static final Item SEA_SPONGE = registerItem("sea_sponge", new Item(new FabricItemSettings()));
 
@@ -57,6 +60,8 @@ public class ModItems {
     public static final Item LUV_OR_SOMETHIN_MUSIC_DISC = registerItem("luv_or_somethin_music_disc", new MusicDiscItem(1, ModSounds.LUV_OR_SOMETHIN, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 243));
     public static final Item ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC = registerItem("all_i_want_for_fortmas_is_vbucks_music_disc", new MusicDiscItem(2, ModSounds.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 241));
     public static final Item EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC = registerItem("empty_house_with_an_open_door_music_disc", new MusicDiscItem(3, ModSounds.EMPTY_HOUSE_WITH_AN_OPEN_DOOR, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 216));
+
+    public static final Item POP_CHAMPAGNE_MUSIC_DISC = registerItem("pop_champagne_music_disc", new MusicDiscItem(14, ModSounds.POP_CHAMPAGNE, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 215));
 
     public static final Item SNAIL_SPAWN_EGG = registerItem("snail_spawn_egg", new SpawnEggItem(ModEntities.SNAIL, 0xcec15f, 0xa6d05d, new FabricItemSettings()));
 

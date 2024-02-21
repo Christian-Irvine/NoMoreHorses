@@ -25,7 +25,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RIFTSTEEL_HELMET, ModItems.RIFTSTEEL_CHESTPLATE, ModItems.RIFTSTEEL_LEGGINGS, ModItems.RIFTSTEEL_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
-                .add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC);
+                .add(ModItems.LUV_OR_SOMETHIN_MUSIC_DISC, ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC)
+                .add(ModItems.POP_CHAMPAGNE_MUSIC_DISC);
+
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.OLIVE_PLANKS.asItem());

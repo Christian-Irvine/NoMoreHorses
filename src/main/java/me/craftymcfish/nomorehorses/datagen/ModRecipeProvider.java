@@ -905,6 +905,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.COOKED_CHICKEN)
                 .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chicken_nugget_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.DINO_NUGGET, 5)
+                .pattern("C  ")
+                .pattern("CBC")
+                .pattern("C C")
+                .input('C', ModItems.CHICKEN_NUGGET)
+                .input('B', Items.BREAD)
+                .criterion(hasItem(ModItems.CHICKEN_NUGGET), conditionsFromItem(ModItems.CHICKEN_NUGGET))
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "dino_nugget_crafting"));
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {

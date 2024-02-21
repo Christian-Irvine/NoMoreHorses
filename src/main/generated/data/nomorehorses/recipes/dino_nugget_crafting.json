@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bread"
+    },
+    "C": {
+      "item": "nomorehorses:chicken_nugget"
+    }
+  },
+  "pattern": [
+    "C  ",
+    "CBC",
+    "C C"
+  ],
+  "result": {
+    "count": 5,
+    "item": "nomorehorses:dino_nugget"
+  },
+  "show_notification": true
+}

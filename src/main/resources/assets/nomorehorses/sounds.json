@@ -40,5 +40,13 @@
         "stream": true
       }
     ]
+  },
+  "pop_champagne" : {
+    "sounds": [
+      {
+        "name": "nomorehorses:pop_champagne",
+        "stream": true
+      }
+    ]
   }
 }

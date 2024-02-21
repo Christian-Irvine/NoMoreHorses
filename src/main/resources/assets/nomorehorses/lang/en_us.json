@@ -73,6 +73,9 @@
   "item.nomorehorses.empty_house_with_an_open_door_music_disc": "Music Disc",
   "item.nomorehorses.empty_house_with_an_open_door_music_disc.desc": "Chrissy Fresh - Empty House With An Open Door",
 
+  "item.nomorehorses.pop_champagne_music_disc": "Music Disc",
+  "item.nomorehorses.pop_champagne_music_disc.desc": "Jim Jones feat. Juelz Santana & Ron Brownz - Pop Champagne",
+
   "entity.nomorehorses.snail": "Snail",
   "item.nomorehorses.snail_spawn_egg": "Snail Spawn Egg",
 
@@ -204,6 +207,7 @@
   "block.nomorehorses.voidfire_block": "Voidfire Block",
 
   "item.nomorehorses.chicken_nugget": "Chicken Nugget",
+  "item.nomorehorses.dino_nugget": "Dino Nugget",
 
   "block.nomorehorses.living_diamond_ore": "Living Diamond Ore",
   "block.nomorehorses.living_gold_ore": "Living Gold Ore",

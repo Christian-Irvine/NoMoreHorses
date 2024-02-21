@@ -194,6 +194,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ALL_I_WANT_FOR_FORTMAS_IS_VBUCKS_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMPTY_HOUSE_WITH_AN_OPEN_DOOR_MUSIC_DISC, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.POP_CHAMPAGNE_MUSIC_DISC, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.VOIDFIRE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOIDFIRE_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.EYE_OF_THE_VOID, Models.GENERATED);
@@ -222,5 +224,6 @@ public class ModModelProvider extends FabricModelProvider {
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
 
         itemModelGenerator.register(ModItems.CHICKEN_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DINO_NUGGET, Models.GENERATED);
     }
 }
