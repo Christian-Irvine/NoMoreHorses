@@ -170,6 +170,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRILLED_CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MONEY, Models.GENERATED);

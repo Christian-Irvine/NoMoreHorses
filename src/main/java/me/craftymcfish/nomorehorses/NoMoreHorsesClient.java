@@ -1,5 +1,6 @@
 package me.craftymcfish.nomorehorses;
 
+import me.craftymcfish.nomorehorses.color.ModColorProvider;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.client.ModModelLayers;
 import me.craftymcfish.nomorehorses.entity.client.SnailModel;
@@ -42,5 +43,7 @@ public class NoMoreHorsesClient implements ClientModInitializer {
 
         HandledScreens.register(ModScreenHandlers.MACERATOR_SCREEN_HANDLER, MaceratorScreen::new);
         HandledScreens.register(ModScreenHandlers.FISHER_SCREEN_HANDLER, FisherScreen::new);
+
+        ModColorProvider.registerColorProviders();
     }
 }

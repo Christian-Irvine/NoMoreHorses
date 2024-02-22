@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nomorehorses:salt"
+      "item": "nomorehorses:cheese"
     },
     {
-      "item": "minecraft:milk_bucket"
+      "item": "minecraft:bread"
     }
   ],
   "result": {
-    "item": "nomorehorses:cheese"
+    "item": "nomorehorses:grilled_cheese"
   }
 }

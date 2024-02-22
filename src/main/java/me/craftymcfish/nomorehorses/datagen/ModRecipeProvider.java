@@ -1,6 +1,8 @@
 package me.craftymcfish.nomorehorses.datagen;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.recipe.BottomlessChaliceRecipe;
+import me.craftymcfish.nomorehorses.recipe.BottomlessChaliceRecipeSerializer;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -8,16 +10,12 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.util.Identifier;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> PORK_SMELTABLES = List.of(ModBlocks.PORK_ORE, ModBlocks.DEEPSLATE_PORK_ORE);
@@ -30,6 +28,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+        ComplexRecipeJsonBuilder.create(BottomlessChaliceRecipeSerializer.BOTTOMLESS_CHALICE_RECIPE).offerTo(exporter, "potion_bottomless_chalice");
+
         offerSmelting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 200, "pork");
         offerBlasting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 100, "pork");
 
@@ -93,12 +93,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.EMERALD_BLOCK), conditionsFromItem(Items.EMERALD_BLOCK))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"george_crafting"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CHEESE, 1)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE, 1)
                 .input(ModItems.SALT)
                 .input(Items.MILK_BUCKET)
                 .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
                 .criterion(hasItem(ModItems.SALT), conditionsFromItem(ModItems.SALT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"cheese_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GRILLED_CHEESE, 1)
+                .input(ModItems.CHEESE)
+                .input(Items.BREAD)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"grilled_cheese_crafting"));
 
         createStairsRecipe(ModBlocks.CHEESE_STAIRS, Ingredient.ofItems(ModBlocks.CHEESE_BLOCK))
                 .criterion(hasItem(ModBlocks.CHEESE_BLOCK), conditionsFromItem(ModBlocks.CHEESE_BLOCK))

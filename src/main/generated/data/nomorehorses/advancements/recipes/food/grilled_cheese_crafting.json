@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bread"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:grilled_cheese_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bread",
+      "has_cheese"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:grilled_cheese_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

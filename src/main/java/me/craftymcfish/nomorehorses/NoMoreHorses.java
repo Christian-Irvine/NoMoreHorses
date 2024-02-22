@@ -67,8 +67,6 @@ public class NoMoreHorses implements ModInitializer {
 
 		ModRecipes.registerRecipes();
 
-		ModColorProvider.registerColorProviders();
-
 		ModWorldGeneration.generateModWorldGen();
 
 		ModEffects.registerStatusEffects();

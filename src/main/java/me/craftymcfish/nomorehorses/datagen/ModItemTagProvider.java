@@ -40,6 +40,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ModTags.Items.GLUTEN_FOOD)
                 .add(Items.BREAD)
-                .add(ModItems.BAGUETTE);
+                .add(ModItems.BAGUETTE)
+                .add(ModItems.GRILLED_CHEESE);
     }
 }
