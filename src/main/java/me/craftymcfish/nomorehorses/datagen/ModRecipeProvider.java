@@ -28,7 +28,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        ComplexRecipeJsonBuilder.create(BottomlessChaliceRecipeSerializer.BOTTOMLESS_CHALICE_RECIPE).offerTo(exporter, "potion_bottomless_chalice");
+        //ComplexRecipeJsonBuilder.create(BottomlessChaliceRecipeSerializer.BOTTOMLESS_CHALICE_RECIPE).offerTo(exporter, "potion_bottomless_chalice");
 
         offerSmelting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 200, "pork");
         offerBlasting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 100, "pork");

@@ -113,6 +113,9 @@ public class ModBlocks {
     public static final Block RIFTSTEEL_BLOCK = registerBlock("riftsteel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
 
+    public static final Block CRACKED_END_STONE = registerBlock("cracked_end_stone",
+            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE)));
+
     public static final Block DENSE_SPONGE = registerBlock("dense_sponge",
             new DenseSpongeBlock(FabricBlockSettings.copyOf(Blocks.SPONGE)));
 

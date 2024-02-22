@@ -88,6 +88,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.VOIDFIRE_BLOCK);
                 entries.add(ModItems.EYE_OF_THE_VOID);
 
+                entries.add(ModBlocks.CRACKED_END_STONE);
+
                 entries.add(ModBlocks.ISLAND_HEART);
                 entries.add(ModItems.ENDSTONE_CORE);
                 entries.add(ModItems.RIFTSTEEL_CLUMP);

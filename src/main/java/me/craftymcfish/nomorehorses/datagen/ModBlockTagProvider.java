@@ -40,6 +40,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.INFUSED_MARBLE_PILLAR)
                 .add(ModBlocks.MACERATOR)
                 .add(ModBlocks.VOIDFIRE_ORE)
+                .add(ModBlocks.CRACKED_END_STONE)
 
                 .add(ModBlocks.LIVING_DIAMOND_ORE)
                 .add(ModBlocks.LIVING_GOLD_ORE)

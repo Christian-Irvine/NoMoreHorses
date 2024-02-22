@@ -245,5 +245,7 @@
   "item.nomorehorses.potion_bottomless_chalice.effect.turtle_master": "Bottomless Chalice of The Turtle Master",
   "item.nomorehorses.potion_bottomless_chalice.effect.water": "Bottomless Chalice of Water",
   "item.nomorehorses.potion_bottomless_chalice.effect.water_breathing": "Bottomless Chalice of Water Breathing",
-  "item.nomorehorses.potion_bottomless_chalice.effect.weakness": "Bottomless Chalice of Weakness"
+  "item.nomorehorses.potion_bottomless_chalice.effect.weakness": "Bottomless Chalice of Weakness",
+
+  "block.nomorehorses.cracked_end_stone": "Cracked End Stone"
 }
