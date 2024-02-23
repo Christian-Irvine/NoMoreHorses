@@ -300,7 +300,6 @@ public class ModBlocks {
     public static final Block LIVING_EMERALD_ORE = registerBlock("living_emerald_ore",
             new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.EMERALD,0.2f, 0.18f,0.25f));
 
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, name), block);

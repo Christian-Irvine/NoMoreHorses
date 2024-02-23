@@ -19,6 +19,11 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(FisherBlockEntity::new,
                             ModBlocks.FISHER).build());
 
+    public static final BlockEntityType<VoidfireHeaterBlockEntity> VOIDFIRE_HEATER_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(NoMoreHorses.MOD_ID, "voidfire_heater_block_entity"),
+                    FabricBlockEntityTypeBuilder.create(VoidfireHeaterBlockEntity::new,
+                            ModBlocks.VOIDFIRE_HEATER).build());
+
     public static void registerBlockEntities() {
         NoMoreHorses.LOGGER.info("Successfully Registered Block Entities");
     }

@@ -39,6 +39,7 @@ public class LivingOreBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (world.isClient()) return ActionResult.PASS;
         if (!player.isHolding(igniter) || state == getDefaultState().with(LIVING_STATE, 1)) return ActionResult.PASS;
 
         world.setBlockState(pos, state.with(LIVING_STATE, 1));
