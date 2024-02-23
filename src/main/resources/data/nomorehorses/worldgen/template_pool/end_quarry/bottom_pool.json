@@ -6,7 +6,7 @@
       "weight": 5,
       "element": {
         "location": "nomorehorses:end_quarry_pit",
-        "processors": "minecraft:empty",
+        "processors": "nomorehorses:randomize_end_stone",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
