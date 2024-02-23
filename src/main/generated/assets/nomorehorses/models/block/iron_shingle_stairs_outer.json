@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "nomorehorses:block/iron_shingles",
+    "side": "nomorehorses:block/iron_shingles",
+    "top": "nomorehorses:block/iron_shingles"
+  }
+}

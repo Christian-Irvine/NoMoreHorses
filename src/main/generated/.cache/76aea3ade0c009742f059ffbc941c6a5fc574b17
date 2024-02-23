@@ -1,4 +1,4 @@
-// 1.20.2	2024-02-23T14:51:47.1988797	No More Horses/Block Loot Tables
+// 1.20.2	2024-02-23T19:36:10.335264	No More Horses/Block Loot Tables
 f72260c938525e95d75b49acce365802468441b6 data\nomorehorses\loot_tables\blocks\living_coal_ore.json
 4711d0240e5b9f499abc4500324bccc369a999a6 data\nomorehorses\loot_tables\blocks\green_concrete_stairs.json
 0c23b6949b7ef095c9d9e2c4c5feee682538a47b data\nomorehorses\loot_tables\blocks\shulker_shingles.json
@@ -18,7 +18,9 @@ d008e7304fe0b0e8186300990dfcd113ccbd93d6 data\nomorehorses\loot_tables\blocks\ma
 7a45a9b0797b30d8a731827c60fbeba62e599c4b data\nomorehorses\loot_tables\blocks\shulker_brick_stairs.json
 6852ca4ee245e3b9050a10cc43f7bce148303de8 data\nomorehorses\loot_tables\blocks\marble_stairs.json
 d47124b2567c0d1343d7b416d81fd32eef0cf59c data\nomorehorses\loot_tables\blocks\gray_glowstone_lamp.json
+f94f40cee0c4473560a2c973977511052ef548d3 data\nomorehorses\loot_tables\blocks\iron_shingle_stairs.json
 c4c868de927ee9dfe1e27f35421c0af8beb53eca data\nomorehorses\loot_tables\blocks\cyan_concrete_slab.json
+3cfa0e2be60200aa419e13e6531e7f513506e9ce data\nomorehorses\loot_tables\blocks\iron_shingle_slab.json
 0f62e94bf99e7febab64beceb36d846859756f57 data\nomorehorses\loot_tables\blocks\olive_leaves.json
 873153eb8b9d489594f7fe3906328f2809bd0636 data\nomorehorses\loot_tables\blocks\light_gray_concrete_slab.json
 a1b2905065ebc9ea24be5dfa5f1fb9488bb6a8ca data\nomorehorses\loot_tables\blocks\strawberry_crop.json
@@ -80,6 +82,7 @@ bc57fc3392f125f60f6e957a37cc615369d504f8 data\nomorehorses\loot_tables\blocks\li
 636a5cc0e7cb4c5e103cdafa78cfd41e74e548b1 data\nomorehorses\loot_tables\blocks\shulker_bricks.json
 159714a096cb4bfabe24c5fc2364ee48cf953165 data\nomorehorses\loot_tables\blocks\olive_button.json
 1906e116990ab621471d43c7b1d188c389f2127a data\nomorehorses\loot_tables\blocks\olive_fence_gate.json
+f378f999c1f22fae60b3fee7ed7ec8f25134de7a data\nomorehorses\loot_tables\blocks\iron_shingles.json
 55139b8611e678cd2481c9c043835ae0b25c0262 data\nomorehorses\loot_tables\blocks\olive_stairs.json
 c514f03bbad345a0706da58b58ca724c27db463f data\nomorehorses\loot_tables\blocks\pork_ore.json
 7bd659343c01a517b1678cdac51430913c815e8b data\nomorehorses\loot_tables\blocks\blue_concrete_stairs.json

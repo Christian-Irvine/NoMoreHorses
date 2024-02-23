@@ -91,7 +91,7 @@
   "block.nomorehorses.voidfire_ore": "Voidfire Ore",
   "item.nomorehorses.eye_of_the_void": "Eye Of The Void",
   "block.nomorehorses.island_heart": "Island Heart",
-  "item.nomorehorses.endstone_core": "Endstone Core",
+  "item.nomorehorses.endstone_core": "End Stone Core",
   "item.nomorehorses.riftsteel_clump": "Riftsteel Clump",
   "item.nomorehorses.riftsteel_upgrade_template": "Riftsteel Smithing Template",
 
@@ -247,5 +247,10 @@
   "item.nomorehorses.potion_bottomless_chalice.effect.water_breathing": "Bottomless Chalice of Water Breathing",
   "item.nomorehorses.potion_bottomless_chalice.effect.weakness": "Bottomless Chalice of Weakness",
 
-  "block.nomorehorses.cracked_end_stone": "Cracked End Stone"
+  "block.nomorehorses.cracked_end_stone": "Cracked End Stone",
+
+
+  "block.nomorehorses.iron_shingles": "Iron Shingles",
+  "block.nomorehorses.iron_shingle_slab": "Iron Shingle Slab",
+  "block.nomorehorses.iron_shingle_stairs": "Iron Shingle Stairs"
 }

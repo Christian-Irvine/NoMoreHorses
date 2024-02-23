@@ -5,14 +5,18 @@ import me.craftymcfish.nomorehorses.recipe.BottomlessChaliceRecipe;
 import me.craftymcfish.nomorehorses.recipe.BottomlessChaliceRecipeSerializer;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
+import me.craftymcfish.nomorehorses.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -922,6 +926,46 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CHICKEN_NUGGET), conditionsFromItem(ModItems.CHICKEN_NUGGET))
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "dino_nugget_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_SHINGLES, 8)
+                .pattern("III")
+                .pattern("   ")
+                .pattern("   ")
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "iron_shingle_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_SHINGLE_SLAB, Ingredient.ofItems(ModBlocks.IRON_SHINGLES))
+                .criterion(hasItem(ModBlocks.IRON_SHINGLES), conditionsFromItem(ModBlocks.IRON_SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "iron_shingle_slab_crafting"));
+
+        createStairsRecipe(ModBlocks.IRON_SHINGLE_STAIRS, Ingredient.ofItems(ModBlocks.IRON_SHINGLES))
+                .criterion(hasItem(ModBlocks.IRON_SHINGLES), conditionsFromItem(ModBlocks.IRON_SHINGLES))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "iron_shingle_stairs_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MACERATOR, 1)
+                .pattern("CCC")
+                .pattern("CPC")
+                .pattern("CCC")
+                .input('C', ItemTags.STONE_CRAFTING_MATERIALS)
+                .input('P', Blocks.PISTON)
+                //.input('S', Blocks.SMOOTH_STONE)
+                //.criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
+                .criterion(hasItem(Blocks.COBBLESTONE), conditionsFromItem(Blocks.COBBLESTONE))
+                .criterion(hasItem(Blocks.COBBLED_DEEPSLATE), conditionsFromItem(Blocks.COBBLED_DEEPSLATE))
+                .criterion(hasItem(Blocks.PISTON), conditionsFromItem(Blocks.PISTON))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "macerator_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FISHER, 1)
+                .pattern("PPP")
+                .pattern("PMP")
+                .pattern("SSS")
+                .input('P', ItemTags.PLANKS)
+                .input('M', ModItems.MESH)
+                .input('S', Blocks.SMOOTH_STONE)
+                .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
+                .criterion(hasItem(ModItems.MESH), conditionsFromItem(ModItems.MESH))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "fisher_crafting"));
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {

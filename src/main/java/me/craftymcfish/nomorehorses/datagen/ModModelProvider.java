@@ -139,13 +139,13 @@ public class ModModelProvider extends FabricModelProvider {
         shulker_bricks_pool.stairs(ModBlocks.SHULKER_BRICK_STAIRS);
         shulker_bricks_pool.slab(ModBlocks.SHULKER_BRICK_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool shulker_shingles_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHULKER_SHINGLES);
-        shulker_shingles_pool.stairs(ModBlocks.SHULKER_SHINGLE_STAIRS);
-        shulker_shingles_pool.slab(ModBlocks.SHULKER_SHINGLE_SLAB);
+        BlockStateModelGenerator.BlockTexturePool shulkerShinglesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHULKER_SHINGLES);
+        shulkerShinglesPool.stairs(ModBlocks.SHULKER_SHINGLE_STAIRS);
+        shulkerShinglesPool.slab(ModBlocks.SHULKER_SHINGLE_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool shingles_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHINGLES);
-        shingles_pool.stairs(ModBlocks.SHINGLE_STAIRS);
-        shingles_pool.slab(ModBlocks.SHINGLE_SLAB);
+        BlockStateModelGenerator.BlockTexturePool shinglesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHINGLES);
+        shinglesPool.stairs(ModBlocks.SHINGLE_STAIRS);
+        shinglesPool.slab(ModBlocks.SHINGLE_SLAB);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WHITE_GLOWSTONE_LAMP);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAY_GLOWSTONE_LAMP);
@@ -164,8 +164,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_GLOWSTONE_LAMP);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BROWN_GLOWSTONE_LAMP);
 
-        //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIVING_DIAMOND_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_END_STONE);
+
+        BlockStateModelGenerator.BlockTexturePool ironShinglesPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.IRON_SHINGLES);
+        ironShinglesPool.stairs(ModBlocks.IRON_SHINGLE_STAIRS);
+        ironShinglesPool.slab(ModBlocks.IRON_SHINGLE_SLAB);
     }
 
     @Override

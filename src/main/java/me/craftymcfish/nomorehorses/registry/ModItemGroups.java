@@ -173,6 +173,10 @@ public class ModItemGroups {
                 entries.add(ModBlocks.SHINGLE_SLAB);
                 entries.add(ModBlocks.SHINGLE_STAIRS);
 
+                entries.add(ModBlocks.IRON_SHINGLES);
+                entries.add(ModBlocks.IRON_SHINGLE_STAIRS);
+                entries.add(ModBlocks.IRON_SHINGLE_SLAB);
+
                 entries.add(ModBlocks.LIVING_DIAMOND_ORE);
                 entries.add(ModBlocks.LIVING_COAL_ORE);
                 entries.add(ModBlocks.LIVING_REDSTONE_ORE);

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobbled_deepslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobbled_deepslate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_piston": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:macerator_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobblestone",
+      "has_cobbled_deepslate",
+      "has_piston"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:macerator_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -95,6 +95,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SHINGLE_SLAB)
                 .add(ModBlocks.SHINGLE_STAIRS)
 
+                .add(ModBlocks.IRON_SHINGLES)
+                .add(ModBlocks.IRON_SHINGLE_SLAB)
+                .add(ModBlocks.IRON_SHINGLE_STAIRS)
+
                 .add(ModBlocks.VOIDFIRE_BLOCK)
                 .add(ModBlocks.RIFTSTEEL_BLOCK);
 

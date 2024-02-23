@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:iron_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:iron_shingle_stairs_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:iron_shingle_stairs_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

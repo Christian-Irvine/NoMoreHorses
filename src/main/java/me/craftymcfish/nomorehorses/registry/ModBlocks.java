@@ -219,11 +219,17 @@ public class ModBlocks {
 
     public static final Block SHINGLES = registerBlock("shingles",
             new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT)));
-
     public static final Block SHINGLE_SLAB = registerBlock("shingle_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
     public static final Block SHINGLE_STAIRS = registerBlock("shingle_stairs",
             new StairsBlock(ModBlocks.SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
+
+    public static final Block IRON_SHINGLES = registerBlock("iron_shingles",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.METAL)));
+    public static final Block IRON_SHINGLE_SLAB = registerBlock("iron_shingle_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES)));
+    public static final Block IRON_SHINGLE_STAIRS = registerBlock("iron_shingle_stairs",
+            new StairsBlock(ModBlocks.IRON_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES)));
 
     public static final Block FISHER = registerBlock("fisher",
             new FisherBlock(FabricBlockSettings.copyOf(Blocks.BARREL).nonOpaque().sounds(BlockSoundGroup.BAMBOO_WOOD)));

@@ -64,6 +64,9 @@
     "nomorehorses:shingles",
     "nomorehorses:shingle_slab",
     "nomorehorses:shingle_stairs",
+    "nomorehorses:iron_shingles",
+    "nomorehorses:iron_shingle_slab",
+    "nomorehorses:iron_shingle_stairs",
     "nomorehorses:voidfire_block",
     "nomorehorses:riftsteel_block"
   ]
