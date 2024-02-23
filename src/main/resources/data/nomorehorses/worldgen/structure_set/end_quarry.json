@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "nomorehorses:end_quarry",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 5464623448,
+
+    "spacing": 5,
+
+    "separation": 3,
+
+    "type": "minecraft:random_spread"
+  }
+}
