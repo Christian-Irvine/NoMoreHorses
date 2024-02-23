@@ -227,7 +227,7 @@ public class ModItemGroups {
             entries.addAfter(Items.SUGAR, ModItems.SALT);
         });
 
-        Registry.register(Registries.ITEM_GROUP, new Identifier("nomorehorses", "no_more_horses"), NMHGROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(NoMoreHorses.MOD_ID, "no_more_horses"), NMHGROUP);
 
         NoMoreHorses.LOGGER.info("Successfully Registered Item Groups");
     }
