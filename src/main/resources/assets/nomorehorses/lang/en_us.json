@@ -1,4 +1,6 @@
 {
+  "gamerule.exhaustLivingOres":  "Exhausts source living ores",
+
   "item.nomorehorses.cheese": "Cheese",
   "item.nomorehorses.grilled_cheese": "Grilled Cheese",
   "item.nomorehorses.baguette": "Baguette",
@@ -218,6 +220,7 @@
   "block.nomorehorses.living_redstone_ore": "Living Redstone Ore",
   "block.nomorehorses.living_coal_ore": "Living Coal Ore",
   "block.nomorehorses.living_emerald_ore": "Living Emerald Ore",
+  "block.nomorehorses.living_spore": "Living Spore",
 
   "item.nomorehorses.empty_bottomless_chalice": "Bottomless Chalice",
   "item.nomorehorses.milk_bottomless_chalice": "Bottomless Chalice of Milk",

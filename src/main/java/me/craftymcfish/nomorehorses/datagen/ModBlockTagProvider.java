@@ -87,6 +87,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SHULKER_SHINGLES)
                 .add(ModBlocks.SHULKER_SHINGLE_SLAB)
                 .add(ModBlocks.SHULKER_SHINGLE_STAIRS)
+
                 .add(ModBlocks.SHULKER_BRICKS)
                 .add(ModBlocks.SHULKER_BRICK_SLAB)
                 .add(ModBlocks.SHULKER_BRICK_STAIRS)
@@ -100,13 +101,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.IRON_SHINGLE_STAIRS)
 
                 .add(ModBlocks.VOIDFIRE_BLOCK)
-                .add(ModBlocks.RIFTSTEEL_BLOCK);
+                .add(ModBlocks.RIFTSTEEL_BLOCK)
+
+                .add(ModBlocks.LIVING_SPORE);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CHEESE_BLOCK)
                 .add(ModBlocks.CHEESE_STAIRS)
                 .add(ModBlocks.CHEESE_SLAB)
-                .add(ModBlocks.PORK_BLOCK);
+                .add(ModBlocks.PORK_BLOCK)
+                .add(ModBlocks.FISHER);
 
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
@@ -133,7 +137,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .add(ModBlocks.GEORGE)
-                .add(ModBlocks.RIFTSTEEL_BLOCK);
+                .add(ModBlocks.RIFTSTEEL_BLOCK)
+                .add(ModBlocks.LIVING_SPORE);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.OLIVE_LOG)

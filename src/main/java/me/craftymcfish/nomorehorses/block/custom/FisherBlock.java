@@ -12,6 +12,8 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -99,6 +101,7 @@ public class FisherBlock extends BlockWithEntity implements BlockEntityProvider 
             NamedScreenHandlerFactory screenHandlerFactory = ((FisherBlockEntity) world.getBlockEntity(pos));
 
             if (screenHandlerFactory != null) {
+                world.playSound(null, pos, SoundEvents.BLOCK_BARREL_OPEN, SoundCategory.BLOCKS);
                 player.openHandledScreen(screenHandlerFactory);
             }
         }

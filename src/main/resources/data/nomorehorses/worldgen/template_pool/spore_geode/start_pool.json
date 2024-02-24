@@ -1,0 +1,20 @@
+{
+  "name": "nomorehorses:spore_geode/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "location": "nomorehorses:spore_geode",
+
+        "processors": "nomorehorses:randomize_mud",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

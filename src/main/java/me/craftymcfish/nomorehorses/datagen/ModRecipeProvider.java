@@ -966,6 +966,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
                 .criterion(hasItem(ModItems.MESH), conditionsFromItem(ModItems.MESH))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "fisher_crafting"));
+
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COAL_ORE.asItem(), ModBlocks.LIVING_COAL_ORE.asItem(), "coal");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COPPER_ORE.asItem(), ModBlocks.LIVING_COPPER_ORE.asItem(), "copper");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_IRON_ORE.asItem(), ModBlocks.LIVING_IRON_ORE.asItem(), "iron");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_GOLD_ORE.asItem(), ModBlocks.LIVING_GOLD_ORE.asItem(), "gold");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_DIAMOND_ORE.asItem(), ModBlocks.LIVING_DIAMOND_ORE.asItem(), "diamond");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_LAPIS_ORE.asItem(), ModBlocks.LIVING_LAPIS_ORE.asItem(), "lapis");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_REDSTONE_ORE.asItem(), ModBlocks.LIVING_REDSTONE_ORE.asItem(), "redstone");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_EMERALD_ORE.asItem(), ModBlocks.LIVING_EMERALD_ORE.asItem(), "emerald");
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {
@@ -973,5 +982,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             RecipeProvider.offerFoodCookingRecipe(exporter, "smoker", RecipeSerializer.SMOKING, cookingTime, input, output, experience);
             RecipeProvider.offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, campfireCookingTime, input, output, experience);
         }
+    }
+
+    public static void offerLivingRecipe(RecipeExporter exporter, RecipeCategory category, Item oreBlock, Item output, String name) {
+        ShapedRecipeJsonBuilder.create(category, output, 1)
+                .pattern("OMO")
+                .pattern("MSM")
+                .pattern("OMO")
+                .input('O', oreBlock)
+                .input('M', Blocks.MOSS_BLOCK)
+                .input('S', ModBlocks.LIVING_SPORE)
+                .criterion(hasItem(oreBlock), conditionsFromItem(oreBlock))
+                .criterion(hasItem(ModBlocks.LIVING_SPORE), conditionsFromItem(ModBlocks.LIVING_SPORE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "living_" + name + "_ore"));
     }
 }

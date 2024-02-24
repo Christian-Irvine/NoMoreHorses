@@ -21,10 +21,10 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class ModBlocks {
     public static final Block PORK_BLOCK = registerBlock("pork_block",
         new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).sounds(BlockSoundGroup.FROGLIGHT)));
-    public static final Block DEEPSLATE_PORK_ORE = registerBlock("deepslate_pork_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE), UniformIntProvider.create(5, 10)));
+    public static final Block DEEPSLATE_PORK_ORE = registerBlock("deepslate_pork_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE).requiresTool(), UniformIntProvider.create(5, 10)));
     public static final Block PORK_ORE = registerBlock("pork_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE), UniformIntProvider.create(5, 10)));
 
-    public static final Block GEORGE = registerBlock("george", new GeorgeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(ModSounds.GEORGE_SOUNDS)));
+    public static final Block GEORGE = registerBlock("george", new GeorgeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(ModSounds.GEORGE_SOUNDS).requiresTool()));
 
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.FROGLIGHT)));
     public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",
@@ -41,31 +41,31 @@ public class ModBlocks {
     public static final Block POTTED_DAFFODIL = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_daffodil"),
             new FlowerPotBlock(DAFFODIL, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
-    public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
-    public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(MARBLE)));
-    public static final Block MARBLE_BRICKS = registerBlock("marble_bricks", new Block(FabricBlockSettings.copyOf(MARBLE)));
+    public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).requiresTool()));
+    public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(MARBLE).requiresTool()));
+    public static final Block MARBLE_BRICKS = registerBlock("marble_bricks", new Block(FabricBlockSettings.copyOf(MARBLE).requiresTool()));
     public static final Block MARBLE_PILLAR = registerBlock("marble_pillar",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()));
     public static final Block INFUSED_MARBLE_PILLAR = registerBlock("infused_marble_pillar",
-            new PillarBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_PILLAR)));
+            new PillarBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_PILLAR).requiresTool()));
 
     public static final Block MARBLE_STAIRS = registerBlock("marble_stairs",
-            new StairsBlock(ModBlocks.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+            new StairsBlock(ModBlocks.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
     public static final Block MARBLE_SLAB = registerBlock("marble_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
 
     public static final Block POLISHED_MARBLE_STAIRS = registerBlock("polished_marble_stairs",
-            new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+            new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE).requiresTool()));
     public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE).requiresTool()));
 
     public static final Block MARBLE_BRICK_STAIRS = registerBlock("marble_brick_stairs",
-            new StairsBlock(ModBlocks.MARBLE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE)));
+            new StairsBlock(ModBlocks.MARBLE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
     public static final Block MARBLE_BRICK_SLAB = registerBlock("marble_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_BRICKS).requiresTool()));
 
     public static final Block MACERATOR = registerBlock("macerator",
-            new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque()));
+            new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
 
     public static final Block OLIVE_LOG = registerBlock("olive_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(3f)));
@@ -104,17 +104,17 @@ public class ModBlocks {
     public static final Block POTTED_OLIVE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_olive_sapling"),
             new FlowerPotBlock(OLIVE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
-    public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8), UniformIntProvider.create(5, 10)));
+    public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8).requiresTool(), UniformIntProvider.create(5, 10)));
     public static final Block VOIDFIRE_BLOCK = registerBlock("voidfire_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()));
 
     public static final Block ISLAND_HEART = registerBlock("island_heart",
-            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).requiresTool()));
     public static final Block RIFTSTEEL_BLOCK = registerBlock("riftsteel_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).requiresTool()));
 
     public static final Block CRACKED_END_STONE = registerBlock("cracked_end_stone",
-            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool()));
 
     public static final Block DENSE_SPONGE = registerBlock("dense_sponge",
             new DenseSpongeBlock(FabricBlockSettings.copyOf(Blocks.SPONGE)));
@@ -123,116 +123,116 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.WET_SPONGE)));
 
     public static final Block WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE).requiresTool()));
     public static final Block WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs",
-            new StairsBlock(Blocks.WHITE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+            new StairsBlock(Blocks.WHITE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE).requiresTool()));
 
     public static final Block GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE).requiresTool()));
     public static final Block GRAY_CONCRETE_STAIRS = registerBlock("gray_concrete_stairs",
-            new StairsBlock(Blocks.GRAY_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE)));
+            new StairsBlock(Blocks.GRAY_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRAY_CONCRETE).requiresTool()));
 
     public static final Block LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE).requiresTool()));
     public static final Block LIGHT_GRAY_CONCRETE_STAIRS = registerBlock("light_gray_concrete_stairs",
-            new StairsBlock(Blocks.LIGHT_GRAY_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE)));
+            new StairsBlock(Blocks.LIGHT_GRAY_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CONCRETE).requiresTool()));
 
     public static final Block BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE).requiresTool()));
     public static final Block BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs",
-            new StairsBlock(Blocks.BLACK_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
+            new StairsBlock(Blocks.BLACK_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE).requiresTool()));
 
     public static final Block RED_CONCRETE_SLAB = registerBlock("red_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.RED_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.RED_CONCRETE).requiresTool()));
     public static final Block RED_CONCRETE_STAIRS = registerBlock("red_concrete_stairs",
-            new StairsBlock(Blocks.RED_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.RED_CONCRETE)));
+            new StairsBlock(Blocks.RED_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.RED_CONCRETE).requiresTool()));
 
     public static final Block ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE).requiresTool()));
     public static final Block ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs",
-            new StairsBlock(Blocks.ORANGE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE)));
+            new StairsBlock(Blocks.ORANGE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.ORANGE_CONCRETE).requiresTool()));
 
     public static final Block YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE).requiresTool()));
     public static final Block YELLOW_CONCRETE_STAIRS = registerBlock("yellow_concrete_stairs",
-            new StairsBlock(Blocks.YELLOW_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE)));
+            new StairsBlock(Blocks.YELLOW_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.YELLOW_CONCRETE).requiresTool()));
 
     public static final Block LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE).requiresTool()));
     public static final Block LIME_CONCRETE_STAIRS = registerBlock("lime_concrete_stairs",
-            new StairsBlock(Blocks.LIME_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE)));
+            new StairsBlock(Blocks.LIME_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIME_CONCRETE).requiresTool()));
 
     public static final Block GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE).requiresTool()));
     public static final Block GREEN_CONCRETE_STAIRS = registerBlock("green_concrete_stairs",
-            new StairsBlock(Blocks.GREEN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE)));
+            new StairsBlock(Blocks.GREEN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GREEN_CONCRETE).requiresTool()));
 
     public static final Block LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE).requiresTool()));
     public static final Block LIGHT_BLUE_CONCRETE_STAIRS = registerBlock("light_blue_concrete_stairs",
-            new StairsBlock(Blocks.LIGHT_BLUE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE)));
+            new StairsBlock(Blocks.LIGHT_BLUE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CONCRETE).requiresTool()));
 
     public static final Block CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE).requiresTool()));
     public static final Block CYAN_CONCRETE_STAIRS = registerBlock("cyan_concrete_stairs",
-            new StairsBlock(Blocks.CYAN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE)));
+            new StairsBlock(Blocks.CYAN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CYAN_CONCRETE).requiresTool()));
 
     public static final Block BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE).requiresTool()));
     public static final Block BLUE_CONCRETE_STAIRS = registerBlock("blue_concrete_stairs",
-            new StairsBlock(Blocks.BLUE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE)));
+            new StairsBlock(Blocks.BLUE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE).requiresTool()));
 
     public static final Block PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE).requiresTool()));
     public static final Block PURPLE_CONCRETE_STAIRS = registerBlock("purple_concrete_stairs",
-            new StairsBlock(Blocks.PURPLE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE)));
+            new StairsBlock(Blocks.PURPLE_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PURPLE_CONCRETE).requiresTool()));
 
     public static final Block MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE).requiresTool()));
     public static final Block MAGENTA_CONCRETE_STAIRS = registerBlock("magenta_concrete_stairs",
-            new StairsBlock(Blocks.MAGENTA_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE)));
+            new StairsBlock(Blocks.MAGENTA_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MAGENTA_CONCRETE).requiresTool()));
 
     public static final Block PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE)));
     public static final Block PINK_CONCRETE_STAIRS = registerBlock("pink_concrete_stairs",
-            new StairsBlock(Blocks.PINK_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE)));
+            new StairsBlock(Blocks.PINK_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PINK_CONCRETE).requiresTool()));
 
     public static final Block BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE).requiresTool()));
     public static final Block BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs",
-            new StairsBlock(Blocks.BROWN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE)));
+            new StairsBlock(Blocks.BROWN_CONCRETE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BROWN_CONCRETE).requiresTool()));
 
     public static final Block SHULKER_SHINGLES = registerBlock("shulker_shingles",
-            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS).sounds(BlockSoundGroup.DECORATED_POT)));
+            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS).sounds(BlockSoundGroup.DECORATED_POT).requiresTool()));
     public static final Block SHULKER_SHINGLE_SLAB = registerBlock("shulker_shingle_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES).requiresTool()));
     public static final Block SHULKER_SHINGLE_STAIRS = registerBlock("shulker_shingle_stairs",
-            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES).requiresTool()));
 
     public static final Block SHULKER_BRICKS = registerBlock("shulker_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT)));
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT).requiresTool()));
 
     public static final Block SHULKER_BRICK_SLAB = registerBlock("shulker_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES).requiresTool()));
     public static final Block SHULKER_BRICK_STAIRS = registerBlock("shulker_brick_stairs",
-            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES)));
+            new StairsBlock(ModBlocks.SHULKER_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHULKER_SHINGLES).requiresTool()));
 
     public static final Block SHINGLES = registerBlock("shingles",
-            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT)));
+            new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT).requiresTool()));
     public static final Block SHINGLE_SLAB = registerBlock("shingle_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.SHINGLES).requiresTool()));
     public static final Block SHINGLE_STAIRS = registerBlock("shingle_stairs",
-            new StairsBlock(ModBlocks.SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHINGLES)));
+            new StairsBlock(ModBlocks.SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.SHINGLES).requiresTool()));
 
     public static final Block IRON_SHINGLES = registerBlock("iron_shingles",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.METAL)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.METAL).requiresTool()));
     public static final Block IRON_SHINGLE_SLAB = registerBlock("iron_shingle_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES)));
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES).requiresTool()));
     public static final Block IRON_SHINGLE_STAIRS = registerBlock("iron_shingle_stairs",
-            new StairsBlock(ModBlocks.IRON_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES)));
+            new StairsBlock(ModBlocks.IRON_SHINGLES.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.IRON_SHINGLES).requiresTool()));
 
     public static final Block FISHER = registerBlock("fisher",
-            new FisherBlock(FabricBlockSettings.copyOf(Blocks.BARREL).nonOpaque().sounds(BlockSoundGroup.BAMBOO_WOOD)));
+            new FisherBlock(FabricBlockSettings.copyOf(Blocks.BARREL).nonOpaque().sounds(BlockSoundGroup.BAMBOO_WOOD).requiresTool()));
 
     public static final Block WHITE_GLOWSTONE_LAMP = registerBlock("white_glowstone_lamp",
             new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).luminance(15).sounds(BlockSoundGroup.GLASS)));
@@ -284,21 +284,24 @@ public class ModBlocks {
 
 
     public static final Block LIVING_DIAMOND_ORE = registerBlock("living_diamond_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.DIAMOND,0.2f, 0.25f,0.2f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.DIAMOND,0.2f, 0.25f,0.2f));
     public static final Block LIVING_GOLD_ORE = registerBlock("living_gold_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.RAW_GOLD,0.35f, 0.28f,0.12f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_GOLD,0.35f, 0.28f,0.12f));
     public static final Block LIVING_IRON_ORE = registerBlock("living_iron_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.RAW_IRON,0.7f, 0.31f,0.03f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_IRON,0.7f, 0.31f,0.03f));
     public static final Block LIVING_COPPER_ORE = registerBlock("living_copper_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.RAW_COPPER,0.85f, 0.31f,0.02f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_COPPER,0.85f, 0.31f,0.02f));
     public static final Block LIVING_LAPIS_ORE = registerBlock("living_lapis_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.LAPIS_LAZULI,0.3f, 0.3f,0.08f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.LAPIS_LAZULI,0.3f, 0.3f,0.08f));
     public static final Block LIVING_REDSTONE_ORE = registerBlock("living_redstone_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.REDSTONE,0.5f, 0.33f,0.07f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.REDSTONE,0.5f, 0.33f,0.07f));
     public static final Block LIVING_COAL_ORE = registerBlock("living_coal_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.COAL,1f, 0.28f,-1.0f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.COAL,1f, 0.28f,-1.0f));
     public static final Block LIVING_EMERALD_ORE = registerBlock("living_emerald_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK), Items.EMERALD,0.2f, 0.18f,0.25f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.EMERALD,0.2f, 0.18f,0.25f));
+
+    public static final Block LIVING_SPORE = registerBlock("living_spore",
+            new LivingSporeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).ticksRandomly().luminance(8).sounds(BlockSoundGroup.FROGLIGHT).requiresTool().strength(50.0f, 1200.0f)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

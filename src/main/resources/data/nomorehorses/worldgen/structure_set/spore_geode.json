@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "nomorehorses:spore_geode",
+      "weight": 10
+    }
+  ],
+  "placement": {
+    "salt": 1642136474,
+
+    "spacing": 4,
+
+    "separation": 2,
+
+    "type": "minecraft:random_spread"
+  }
+}

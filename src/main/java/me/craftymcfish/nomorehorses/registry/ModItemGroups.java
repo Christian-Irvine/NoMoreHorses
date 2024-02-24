@@ -186,6 +186,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.LIVING_IRON_ORE);
                 entries.add(ModBlocks.LIVING_COPPER_ORE);
 
+                entries.add(ModBlocks.LIVING_SPORE);
+
                 entries.add(ModItems.EMPTY_BOTTOMLESS_CHALICE);
                 entries.add(ModItems.MILK_BOTTOMLESS_CHALICE);
                 entries.add(ModItems.MUSHROOM_STEW_BOTTOMLESS_CHALICE);

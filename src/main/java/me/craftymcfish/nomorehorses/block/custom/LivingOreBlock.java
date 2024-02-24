@@ -1,11 +1,15 @@
 package me.craftymcfish.nomorehorses.block.custom;
 
+import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.gamerule.ModGameRules;
 import me.craftymcfish.nomorehorses.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
@@ -13,6 +17,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
 public class LivingOreBlock extends Block {
@@ -59,7 +64,7 @@ public class LivingOreBlock extends Block {
         float randomNum = (float)random.nextBetween(0, 100) / 100f;
 
         if (randomNum <= spreadChance) {
-            if (shouldexhaust(random)) {
+            if (shouldExhaustSelf(random, world)) {
                 world.setBlockState(pos, this.getDefaultState());
             }
             trySpreadBlock(state, world, pos, random);
@@ -80,12 +85,13 @@ public class LivingOreBlock extends Block {
             else {
                 replaceState = this.getDefaultState();
             }
-
+            world.playSound(null, pos, SoundEvents.BLOCK_CHORUS_FLOWER_GROW, SoundCategory.BLOCKS);
             world.setBlockState(replacePos, replaceState);
         }
     }
 
-    private boolean shouldexhaust(Random random) {
+    private boolean shouldExhaustSelf(Random random, World world) {
+        //if (!world.getGameRules().getBoolean(GameRules.DO_DAYLIGHT_CYCLE)) return false;
         return (float)random.nextBetween(0, 100) / 100f <= exhaustOnSpreadChance;
     }
 
