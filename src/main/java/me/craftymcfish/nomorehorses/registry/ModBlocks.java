@@ -10,12 +10,15 @@ import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+
+import java.util.function.Predicate;
 
 
 public class ModBlocks {
@@ -284,25 +287,26 @@ public class ModBlocks {
 
 
     public static final Block LIVING_DIAMOND_ORE = registerBlock("living_diamond_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.DIAMOND,0.2f, 0.25f,0.2f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.DIAMOND),0.2f, 0.25f,0.2f));
     public static final Block LIVING_GOLD_ORE = registerBlock("living_gold_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_GOLD,0.35f, 0.28f,0.12f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.RAW_GOLD),0.35f, 0.28f,0.12f));
     public static final Block LIVING_IRON_ORE = registerBlock("living_iron_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_IRON,0.7f, 0.31f,0.03f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.RAW_IRON),0.7f, 0.31f,0.03f));
     public static final Block LIVING_COPPER_ORE = registerBlock("living_copper_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.RAW_COPPER,0.85f, 0.31f,0.02f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.RAW_COPPER),0.85f, 0.31f,0.02f));
     public static final Block LIVING_LAPIS_ORE = registerBlock("living_lapis_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.LAPIS_LAZULI,0.3f, 0.3f,0.08f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.LAPIS_LAZULI),0.3f, 0.3f,0.08f));
     public static final Block LIVING_REDSTONE_ORE = registerBlock("living_redstone_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.REDSTONE,0.5f, 0.33f,0.07f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.REDSTONE),0.5f, 0.33f,0.07f));
     public static final Block LIVING_COAL_ORE = registerBlock("living_coal_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.COAL,1f, 0.28f,-1.0f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.COAL),1f, 0.28f,-1.0f));
     public static final Block LIVING_EMERALD_ORE = registerBlock("living_emerald_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.EMERALD,0.2f, 0.18f,0.25f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.EMERALD),0.2f, 0.18f,0.25f));
     public static final Block LIVING_QUARTZ_ORE = registerBlock("living_quartz_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.NETHER_QUARTZ_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.QUARTZ,0.95f, 0.27f,-1.0f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.NETHER_QUARTZ_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == Items.QUARTZ),0.95f, 0.27f,-1.0f));
+
     public static final Block LIVING_VOIDFIRE_ORE = registerBlock("living_voidfire_ore",
-            new LivingOreBlock(FabricBlockSettings.copyOf(ModBlocks.VOIDFIRE_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), ModLivingIgniter.VOIDFIRE,0.9f, 0.26f,-1.0f));
+            new LivingOreBlock(FabricBlockSettings.copyOf(ModBlocks.VOIDFIRE_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), itemStack -> (itemStack == ModItems.VOIDFIRE_ESSENCE) ,0.9f, 0.26f,-1.0f));
 
     public static final Block LIVING_SPORE = registerBlock("living_spore",
             new LivingSporeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).ticksRandomly().luminance(8).sounds(BlockSoundGroup.FROGLIGHT).requiresTool().strength(50.0f, 1200.0f)));

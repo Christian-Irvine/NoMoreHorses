@@ -1,12 +1,12 @@
 package me.craftymcfish.nomorehorses.block.custom;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
-import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -19,32 +19,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
+import java.util.function.Predicate;
+
 public class LivingOreBlock extends Block {
     public final float spreadChance;
     public final float spreadAliveChance;
     public final float exhaustOnSpreadChance;
-    public Item igniter;
-    public ModLivingIgniter igniterEnum = null;
+    public Predicate<Item> igniterPredicate;
     public static final IntProperty LIVING_STATE = IntProperty.of("living_state",0, 1);
 
-    public LivingOreBlock(Settings settings, Item igniter, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
+    public LivingOreBlock(Settings settings, Predicate<Item> igniterPredicate, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
         super(settings);
         this.spreadChance = spreadChance;
-
-        if (igniter == null) {
-            NoMoreHorses.LOGGER.info("Item is null");
-        }
-
-        this.igniter = igniter;
-        this.exhaustOnSpreadChance = exhaustOnSpreadChance;
-        this.spreadAliveChance = spreadAliveChance;
-        setDefaultState(getDefaultState().with(LIVING_STATE, 0));
-    }
-
-    public LivingOreBlock(Settings settings, ModLivingIgniter igniter, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
-        super(settings);
-        this.spreadChance = spreadChance;
-        this.igniterEnum = igniter;
+        this.igniterPredicate = igniterPredicate;
         this.exhaustOnSpreadChance = exhaustOnSpreadChance;
         this.spreadAliveChance = spreadAliveChance;
         setDefaultState(getDefaultState().with(LIVING_STATE, 0));
@@ -59,19 +46,11 @@ public class LivingOreBlock extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient()) return ActionResult.PASS;
         if (state == getDefaultState().with(LIVING_STATE, 1)) return ActionResult.PASS;
-        //if (!player.isHolding(igniter.asItem())) return ActionResult.PASS;
 
-        if (igniter == null) {
-            switch (igniterEnum) {
-                case VOIDFIRE:
-                    this.igniter = ModItems.VOIDFIRE_ESSENCE;
-                    break;
-                default:
-                    return ActionResult.FAIL;
-            }
-        }
+        NoMoreHorses.LOGGER.info(String.valueOf(igniterPredicate.test(player.getStackInHand(hand).getItem())));
 
-        if (player.getStackInHand(hand).getItem() != igniter) {
+        if (!igniterPredicate.test(player.getStackInHand(hand).getItem())) {
+            //igniterPredicate.
             return ActionResult.PASS;
         }
 
