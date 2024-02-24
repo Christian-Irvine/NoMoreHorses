@@ -220,6 +220,8 @@
   "block.nomorehorses.living_redstone_ore": "Living Redstone Ore",
   "block.nomorehorses.living_coal_ore": "Living Coal Ore",
   "block.nomorehorses.living_emerald_ore": "Living Emerald Ore",
+  "block.nomorehorses.living_quartz_ore": "Living Quartz Ore",
+  "block.nomorehorses.living_voidfire_ore": "Living Voidfire Ore",
   "block.nomorehorses.living_spore": "Living Spore",
 
   "item.nomorehorses.empty_bottomless_chalice": "Bottomless Chalice",

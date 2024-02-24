@@ -185,6 +185,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.LIVING_GOLD_ORE);
                 entries.add(ModBlocks.LIVING_IRON_ORE);
                 entries.add(ModBlocks.LIVING_COPPER_ORE);
+                entries.add(ModBlocks.LIVING_QUARTZ_ORE);
+                entries.add(ModBlocks.LIVING_VOIDFIRE_ORE);
 
                 entries.add(ModBlocks.LIVING_SPORE);
 

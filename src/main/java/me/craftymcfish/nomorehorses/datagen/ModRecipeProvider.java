@@ -975,6 +975,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_LAPIS_ORE.asItem(), ModBlocks.LIVING_LAPIS_ORE.asItem(), "lapis");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_REDSTONE_ORE.asItem(), ModBlocks.LIVING_REDSTONE_ORE.asItem(), "redstone");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_EMERALD_ORE.asItem(), ModBlocks.LIVING_EMERALD_ORE.asItem(), "emerald");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.NETHER_QUARTZ_ORE.asItem(), ModBlocks.LIVING_QUARTZ_ORE.asItem(), "quartz");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, ModBlocks.VOIDFIRE_ORE.asItem(), ModBlocks.LIVING_VOIDFIRE_ORE.asItem(), "voidfire");
     }
 
     public static void offerCooking(RecipeExporter exporter, List<ItemConvertible> inputs, ItemConvertible output, float experience, int cookingTime, int campfireCookingTime) {

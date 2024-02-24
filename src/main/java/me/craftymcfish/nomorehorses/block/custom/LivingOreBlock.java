@@ -1,7 +1,7 @@
 package me.craftymcfish.nomorehorses.block.custom;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
-import me.craftymcfish.nomorehorses.gamerule.ModGameRules;
+import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,7 +17,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
 public class LivingOreBlock extends Block {
@@ -25,16 +24,30 @@ public class LivingOreBlock extends Block {
     public final float spreadAliveChance;
     public final float exhaustOnSpreadChance;
     public Item igniter;
+    public ModLivingIgniter igniterEnum = null;
     public static final IntProperty LIVING_STATE = IntProperty.of("living_state",0, 1);
 
     public LivingOreBlock(Settings settings, Item igniter, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
         super(settings);
         this.spreadChance = spreadChance;
+
+        if (igniter == null) {
+            NoMoreHorses.LOGGER.info("Item is null");
+        }
+
         this.igniter = igniter;
         this.exhaustOnSpreadChance = exhaustOnSpreadChance;
         this.spreadAliveChance = spreadAliveChance;
         setDefaultState(getDefaultState().with(LIVING_STATE, 0));
-        //NoMoreHorses.LOGGER.info(String.valueOf(this.chance));
+    }
+
+    public LivingOreBlock(Settings settings, ModLivingIgniter igniter, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
+        super(settings);
+        this.spreadChance = spreadChance;
+        this.igniterEnum = igniter;
+        this.exhaustOnSpreadChance = exhaustOnSpreadChance;
+        this.spreadAliveChance = spreadAliveChance;
+        setDefaultState(getDefaultState().with(LIVING_STATE, 0));
     }
 
     @Override
@@ -45,7 +58,22 @@ public class LivingOreBlock extends Block {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient()) return ActionResult.PASS;
-        if (!player.isHolding(igniter) || state == getDefaultState().with(LIVING_STATE, 1)) return ActionResult.PASS;
+        if (state == getDefaultState().with(LIVING_STATE, 1)) return ActionResult.PASS;
+        //if (!player.isHolding(igniter.asItem())) return ActionResult.PASS;
+
+        if (igniter == null) {
+            switch (igniterEnum) {
+                case VOIDFIRE:
+                    this.igniter = ModItems.VOIDFIRE_ESSENCE;
+                    break;
+                default:
+                    return ActionResult.FAIL;
+            }
+        }
+
+        if (player.getStackInHand(hand).getItem() != igniter) {
+            return ActionResult.PASS;
+        }
 
         world.setBlockState(pos, state.with(LIVING_STATE, 1));
 
@@ -53,6 +81,7 @@ public class LivingOreBlock extends Block {
             player.getStackInHand(hand).decrement(1);
         }
 
+        world.playSound(null, pos, SoundEvents.BLOCK_CHORUS_FLOWER_GROW, SoundCategory.BLOCKS, 1, 1.5f);
         return ActionResult.SUCCESS;
     }
 
@@ -85,13 +114,13 @@ public class LivingOreBlock extends Block {
             else {
                 replaceState = this.getDefaultState();
             }
-            world.playSound(null, pos, SoundEvents.BLOCK_CHORUS_FLOWER_GROW, SoundCategory.BLOCKS);
+            world.playSound(null, pos, SoundEvents.BLOCK_CHORUS_FLOWER_GROW, SoundCategory.BLOCKS, 1, 1.3f);
             world.setBlockState(replacePos, replaceState);
         }
     }
 
     private boolean shouldExhaustSelf(Random random, World world) {
-        //if (!world.getGameRules().getBoolean(GameRules.DO_DAYLIGHT_CYCLE)) return false;
+        if (!world.getGameRules().getBoolean(NoMoreHorses.EXHAUST_LIVING_ORES)) return false;
         return (float)random.nextBetween(0, 100) / 100f <= exhaustOnSpreadChance;
     }
 

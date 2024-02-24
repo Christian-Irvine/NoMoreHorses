@@ -299,6 +299,10 @@ public class ModBlocks {
             new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.COAL,1f, 0.28f,-1.0f));
     public static final Block LIVING_EMERALD_ORE = registerBlock("living_emerald_ore",
             new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.EMERALD,0.2f, 0.18f,0.25f));
+    public static final Block LIVING_QUARTZ_ORE = registerBlock("living_quartz_ore",
+            new LivingOreBlock(FabricBlockSettings.copyOf(Blocks.NETHER_QUARTZ_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), Items.QUARTZ,0.95f, 0.27f,-1.0f));
+    public static final Block LIVING_VOIDFIRE_ORE = registerBlock("living_voidfire_ore",
+            new LivingOreBlock(FabricBlockSettings.copyOf(ModBlocks.VOIDFIRE_ORE).ticksRandomly().sounds(BlockSoundGroup.MOSS_BLOCK).requiresTool(), ModLivingIgniter.VOIDFIRE,0.9f, 0.26f,-1.0f));
 
     public static final Block LIVING_SPORE = registerBlock("living_spore",
             new LivingSporeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).ticksRandomly().luminance(8).sounds(BlockSoundGroup.FROGLIGHT).requiresTool().strength(50.0f, 1200.0f)));

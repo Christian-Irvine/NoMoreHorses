@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_living_spore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:living_spore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nether_quartz_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:nether_quartz_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:living_quartz_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nether_quartz_ore",
+      "has_living_spore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:living_quartz_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

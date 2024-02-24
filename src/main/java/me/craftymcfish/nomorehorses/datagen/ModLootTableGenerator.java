@@ -183,7 +183,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LIVING_REDSTONE_ORE, livingBlockDrops(Blocks.DEEPSLATE_REDSTONE_ORE, Items.REDSTONE, 4, 5));
         addDrop(ModBlocks.LIVING_COAL_ORE, livingBlockDrops(Blocks.DEEPSLATE_COAL_ORE, Items.COAL, 1, 1));
         addDrop(ModBlocks.LIVING_EMERALD_ORE, livingBlockDrops(Blocks.DEEPSLATE_EMERALD_ORE, Items.EMERALD, 1, 1));
-
+        addDrop(ModBlocks.LIVING_QUARTZ_ORE, livingBlockDrops(Blocks.NETHER_QUARTZ_ORE, Items.QUARTZ, 1, 1));
+        addDrop(ModBlocks.LIVING_VOIDFIRE_ORE, livingBlockDrops(ModBlocks.VOIDFIRE_ORE, ModItems.VOIDFIRE_ESSENCE, 1, 6));
     }
 
     public LootTable.Builder fortuneBlockDrops (Block drop, Item item, float min, float max) {
