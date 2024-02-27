@@ -53,6 +53,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LIVING_QUARTZ_ORE)
                 .add(ModBlocks.LIVING_VOIDFIRE_ORE)
 
+                .add(ModBlocks.LIVING_SPORE)
+
                 .add(ModBlocks.WHITE_CONCRETE_SLAB)
                 .add(ModBlocks.WHITE_CONCRETE_STAIRS)
                 .add(ModBlocks.GRAY_CONCRETE_SLAB)
@@ -103,9 +105,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.IRON_SHINGLE_STAIRS)
 
                 .add(ModBlocks.VOIDFIRE_BLOCK)
-                .add(ModBlocks.RIFTSTEEL_BLOCK)
-
-                .add(ModBlocks.LIVING_SPORE);
+                .add(ModBlocks.RIFTSTEEL_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CHEESE_BLOCK)

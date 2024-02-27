@@ -2,6 +2,7 @@ package me.craftymcfish.nomorehorses.block.custom;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.util.ModTags;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,6 +17,9 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.IntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
@@ -25,15 +29,20 @@ public class LivingOreBlock extends Block {
     public final float spreadChance;
     public final float spreadAliveChance;
     public final float exhaustOnSpreadChance;
+    private final IntProvider experienceDropped;
     public Predicate<Item> igniterPredicate;
     public static final IntProperty LIVING_STATE = IntProperty.of("living_state",0, 1);
 
     public LivingOreBlock(Settings settings, Predicate<Item> igniterPredicate, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance) {
+        this(settings, igniterPredicate, spreadChance, spreadAliveChance, exhaustOnSpreadChance, ConstantIntProvider.create(0));
+    }
+    public LivingOreBlock(Settings settings, Predicate<Item> igniterPredicate, float spreadChance, float spreadAliveChance, float exhaustOnSpreadChance, IntProvider experienceDropped) {
         super(settings);
         this.spreadChance = spreadChance;
         this.igniterPredicate = igniterPredicate;
         this.exhaustOnSpreadChance = exhaustOnSpreadChance;
         this.spreadAliveChance = spreadAliveChance;
+        this.experienceDropped = experienceDropped;
         setDefaultState(getDefaultState().with(LIVING_STATE, 0));
     }
 
@@ -62,6 +71,14 @@ public class LivingOreBlock extends Block {
 
         world.playSound(null, pos, SoundEvents.BLOCK_CHORUS_FLOWER_GROW, SoundCategory.BLOCKS, 1, 1.5f);
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
+        super.onStacksDropped(state, world, pos, tool, dropExperience);
+        if (dropExperience) {
+            this.dropExperienceWhenMined(world, pos, tool, this.experienceDropped);
+        }
     }
 
     @Override
