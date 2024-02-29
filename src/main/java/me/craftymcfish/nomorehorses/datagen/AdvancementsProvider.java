@@ -13,8 +13,6 @@ class AdvancementsProvider extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
-        //
-        // We will create our custom advancements here...
-        //
+         
     }
 }

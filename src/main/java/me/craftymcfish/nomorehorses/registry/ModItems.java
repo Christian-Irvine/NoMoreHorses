@@ -91,6 +91,9 @@ public class ModItems {
     public static final Item BEETROOT_SOUP_BOTTOMLESS_CHALICE = registerItem("beetroot_soup_bottomless_chalice", new DrinkableChaliceItem(new FabricItemSettings().maxCount(1).food(FoodComponents.BEETROOT_SOUP)));
     public static final Item POTION_BOTTOMLESS_CHALICE = registerItem("potion_bottomless_chalice", new PotionChaliceItem(new FabricItemSettings().maxCount(1)));
 
+    public static final Item BOOST_STONE = registerItem("boost_stone", new BoostAbilityStoneItem(new FabricItemSettings().maxCount(1), 40));
+    public static final Item JUMP_STONE = registerItem("jump_stone", new JumpAbilityStoneItem(new FabricItemSettings().maxCount(1), 20));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
     }

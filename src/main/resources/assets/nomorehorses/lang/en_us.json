@@ -257,5 +257,8 @@
 
   "block.nomorehorses.iron_shingles": "Iron Shingles",
   "block.nomorehorses.iron_shingle_slab": "Iron Shingle Slab",
-  "block.nomorehorses.iron_shingle_stairs": "Iron Shingle Stairs"
+  "block.nomorehorses.iron_shingle_stairs": "Iron Shingle Stairs",
+
+  "item.nomorehorses.boost_stone": "Boost Stone",
+  "item.nomorehorses.jump_stone": "Jump Stone"
 }

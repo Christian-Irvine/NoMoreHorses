@@ -25,6 +25,7 @@
     "nomorehorses:living_emerald_ore",
     "nomorehorses:living_quartz_ore",
     "nomorehorses:living_voidfire_ore",
+    "nomorehorses:living_spore",
     "nomorehorses:white_concrete_slab",
     "nomorehorses:white_concrete_stairs",
     "nomorehorses:gray_concrete_slab",
@@ -70,7 +71,6 @@
     "nomorehorses:iron_shingle_slab",
     "nomorehorses:iron_shingle_stairs",
     "nomorehorses:voidfire_block",
-    "nomorehorses:riftsteel_block",
-    "nomorehorses:living_spore"
+    "nomorehorses:riftsteel_block"
   ]
 }
