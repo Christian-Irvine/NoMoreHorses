@@ -1,0 +1,7 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "nomorehorses:item/ability_stone_template",
+        "layer1": "nomorehorses:item/overlay/jump"
+    }
+}
