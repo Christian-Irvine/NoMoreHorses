@@ -1,0 +1,12 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_ice"
+    }
+  ],
+  "output": {
+    "item": "minecraft:packed_ice",
+    "count": 9
+  }
+}
