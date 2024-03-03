@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "nomorehorses:marble_wall",
+    "nomorehorses:polished_marble_wall",
+    "nomorehorses:marble_brick_wall"
+  ]
+}

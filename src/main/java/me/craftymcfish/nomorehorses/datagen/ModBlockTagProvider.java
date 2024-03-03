@@ -38,6 +38,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_MARBLE_SLAB)
                 .add(ModBlocks.MARBLE_PILLAR)
                 .add(ModBlocks.INFUSED_MARBLE_PILLAR)
+                .add(ModBlocks.MARBLE_WALL)
+                .add(ModBlocks.POLISHED_MARBLE_WALL)
+                .add(ModBlocks.MARBLE_BRICK_WALL)
                 .add(ModBlocks.MACERATOR)
                 .add(ModBlocks.VOIDFIRE_ORE)
                 .add(ModBlocks.CRACKED_END_STONE)
@@ -153,5 +156,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.OLIVE_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.MARBLE_WALL)
+                .add(ModBlocks.POLISHED_MARBLE_WALL)
+                .add(ModBlocks.MARBLE_BRICK_WALL);
     }
 }

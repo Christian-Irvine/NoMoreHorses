@@ -29,14 +29,17 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool marblePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MARBLE);
         marblePool.stairs(ModBlocks.MARBLE_STAIRS);
         marblePool.slab(ModBlocks.MARBLE_SLAB);
+        marblePool.wall(ModBlocks.MARBLE_WALL);
 
         BlockStateModelGenerator.BlockTexturePool polishedMarblePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_MARBLE);
         polishedMarblePool.stairs(ModBlocks.POLISHED_MARBLE_STAIRS);
         polishedMarblePool.slab(ModBlocks.POLISHED_MARBLE_SLAB);
+        polishedMarblePool.wall(ModBlocks.POLISHED_MARBLE_WALL);
 
         BlockStateModelGenerator.BlockTexturePool marbleBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MARBLE_BRICKS);
         marbleBricksPool.stairs(ModBlocks.MARBLE_BRICK_STAIRS);
         marbleBricksPool.slab(ModBlocks.MARBLE_BRICK_SLAB);
+        marbleBricksPool.wall(ModBlocks.MARBLE_BRICK_WALL);
 
         blockStateModelGenerator.registerLog(ModBlocks.MARBLE_PILLAR).log(ModBlocks.MARBLE_PILLAR);
         blockStateModelGenerator.registerLog(ModBlocks.INFUSED_MARBLE_PILLAR).log(ModBlocks.INFUSED_MARBLE_PILLAR);

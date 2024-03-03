@@ -52,12 +52,15 @@ public class ModItemGroups {
                 entries.add(ModBlocks.MARBLE);
                 entries.add(ModBlocks.MARBLE_STAIRS);
                 entries.add(ModBlocks.MARBLE_SLAB);
+                entries.add(ModBlocks.MARBLE_WALL);
                 entries.add(ModBlocks.POLISHED_MARBLE);
                 entries.add(ModBlocks.POLISHED_MARBLE_STAIRS);
                 entries.add(ModBlocks.POLISHED_MARBLE_SLAB);
+                entries.add(ModBlocks.POLISHED_MARBLE_WALL);
                 entries.add(ModBlocks.MARBLE_BRICKS);
                 entries.add(ModBlocks.MARBLE_BRICK_STAIRS);
                 entries.add(ModBlocks.MARBLE_BRICK_SLAB);
+                entries.add(ModBlocks.MARBLE_BRICK_WALL);
                 entries.add(ModBlocks.MARBLE_PILLAR);
                 entries.add(ModBlocks.INFUSED_MARBLE_PILLAR);
 

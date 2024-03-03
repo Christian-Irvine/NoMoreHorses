@@ -57,15 +57,22 @@ public class ModBlocks {
     public static final Block MARBLE_SLAB = registerBlock("marble_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
 
+    public static final Block MARBLE_WALL = registerBlock("marble_wall",
+            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
+
     public static final Block POLISHED_MARBLE_STAIRS = registerBlock("polished_marble_stairs",
             new StairsBlock(ModBlocks.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE).requiresTool()));
     public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE).requiresTool()));
+    public static final Block POLISHED_MARBLE_WALL = registerBlock("polished_marble_wall",
+            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.POLISHED_MARBLE).requiresTool()));
 
     public static final Block MARBLE_BRICK_STAIRS = registerBlock("marble_brick_stairs",
             new StairsBlock(ModBlocks.MARBLE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.MARBLE).requiresTool()));
     public static final Block MARBLE_BRICK_SLAB = registerBlock("marble_brick_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_BRICKS).requiresTool()));
+    public static final Block MARBLE_BRICK_WALL = registerBlock("marble_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.MARBLE_BRICKS).requiresTool()));
 
     public static final Block MACERATOR = registerBlock("macerator",
             new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
