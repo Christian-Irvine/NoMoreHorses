@@ -6,7 +6,7 @@
         {
           "input_predicate": {
             "block": "minecraft:end_stone",
-            "probability": 0.4,
+            "probability": 0.6,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
@@ -19,7 +19,7 @@
         {
           "input_predicate": {
             "block": "minecraft:end_stone",
-            "probability": 0.1,
+            "probability": 0.3,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {

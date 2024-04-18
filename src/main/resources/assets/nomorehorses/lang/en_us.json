@@ -234,7 +234,7 @@
   "item.nomorehorses.beetroot_soup_bottomless_chalice": "Bottomless Chalice of Beetroot Soup",
 
   "item.nomorehorses.potion_bottomless_chalice.effect.awkward": "Bottomless Chalice of Awkwardness",
-  "item.nomorehorses.potion_bottomless_chalice.effect.empty": "Bottomless Chalice of Uncraftableness",
+  "item.nomorehorses.potion_bottomless_chalice.effect.empty": "Bottomless Chalice of Unobtainability",
   "item.nomorehorses.potion_bottomless_chalice.effect.fire_resistance": "Bottomless Chalice of Fire Resistance",
   "item.nomorehorses.potion_bottomless_chalice.effect.harming": "Bottomless Chalice of Harming",
   "item.nomorehorses.potion_bottomless_chalice.effect.healing": "Bottomless Chalice of Healing",
@@ -248,6 +248,7 @@
   "item.nomorehorses.potion_bottomless_chalice.effect.regeneration": "Bottomless Chalice of Regeneration",
   "item.nomorehorses.potion_bottomless_chalice.effect.slow_falling": "Bottomless Chalice of Slow Falling",
   "item.nomorehorses.potion_bottomless_chalice.effect.slowness": "Bottomless Chalice of Slowness",
+  "item.nomorehorses.potion_bottomless_chalice.effect.swiftness": "Bottomless Chalice of Swiftness",
   "item.nomorehorses.potion_bottomless_chalice.effect.strength": "Bottomless Chalice of Swiftness",
   "item.nomorehorses.potion_bottomless_chalice.effect.thickness": "Bottomless Chalice of Thickness",
   "item.nomorehorses.potion_bottomless_chalice.effect.turtle_master": "Bottomless Chalice of The Turtle Master",

@@ -14,6 +14,7 @@ import me.craftymcfish.nomorehorses.screen.ModScreenHandlers;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import me.craftymcfish.nomorehorses.util.ModCustomTrades;
 import me.craftymcfish.nomorehorses.util.ModLootTableModifiers;
+import me.craftymcfish.nomorehorses.world.gen.ModEntityGeneration;
 import me.craftymcfish.nomorehorses.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -75,6 +76,8 @@ public class NoMoreHorses implements ModInitializer {
 
 		ModEffects.registerStatusEffects();
 		ModPotions.registerPotions();
+
+		ModEntityGeneration.addSpawns();
 
 		LOGGER.info("Successfully Removed All Horses!, No More Horses is complete");
 	}

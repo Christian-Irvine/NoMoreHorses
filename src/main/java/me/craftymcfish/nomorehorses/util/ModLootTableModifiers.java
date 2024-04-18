@@ -22,6 +22,11 @@ import java.util.List;
 public class ModLootTableModifiers {
     public static final Identifier FISHING_FISHER_LOOT = new Identifier(NoMoreHorses.MOD_ID, "gameplay/fishing");
     private static final Identifier END_CITY_TREASURE_CHEST = new Identifier("minecraft", "chests/end_city_treasure");
+    private static final Identifier DUNGEON_LOOT_CHEST = new Identifier("minecraft", "chests/simple_dungeon");
+    private static final Identifier RUINED_PORTAL_LOOT_CHEST = new Identifier("minecraft", "chests/ruined_portal");
+    private static final Identifier ANCIENT_CITY_LOOT_CHEST = new Identifier("minecraft", "chests/ancient_city");
+    private static final Identifier WOODLAND_MANSION_LOOT_CHEST = new Identifier("minecraft", "chests/woodland_mansion");
+    private static final Identifier PILLAGER_OUTPOST_LOOT_CHEST = new Identifier("minecraft", "chests/pillager_outpost");
     private static final Identifier SHULKER_ENTITY = new Identifier("minecraft", "entities/shulker");
     private static final Identifier GUARDIAN_ENTITY = new Identifier("minecraft", "entities/guardian");
 
@@ -40,10 +45,76 @@ public class ModLootTableModifiers {
 //        });
 
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (END_CITY_TREASURE_CHEST.equals(id)){
+            if (PILLAGER_OUTPOST_LOOT_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.075f))
+                        .with(ItemEntry.builder(ModItems.JUMP_STONE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (WOODLAND_MANSION_LOOT_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .with(ItemEntry.builder(ModItems.JUMP_STONE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (RUINED_PORTAL_LOOT_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.025f))
+                        .with(ItemEntry.builder(ModItems.EMPTY_BOTTOMLESS_CHALICE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (ANCIENT_CITY_LOOT_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(5.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.5f))
+                        .with(ItemEntry.builder(ModItems.VOIDFIRE_SHARD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (ANCIENT_CITY_LOOT_CHEST.equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
-                        .conditionally(RandomChanceLootCondition.builder(0.025f))
+                        .conditionally(RandomChanceLootCondition.builder(0.35f))
+                        .with(ItemEntry.builder(ModItems.BOOST_STONE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (DUNGEON_LOOT_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f))
+                        .with(ItemEntry.builder(ModItems.EMPTY_BOTTOMLESS_CHALICE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (END_CITY_TREASURE_CHEST.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.075f))
                         .with(ItemEntry.builder(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());

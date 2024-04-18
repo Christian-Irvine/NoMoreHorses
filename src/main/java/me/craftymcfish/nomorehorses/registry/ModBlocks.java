@@ -86,7 +86,7 @@ public class ModBlocks {
     public static final Block STRIPPED_OLIVE_WOOD = registerBlock("stripped_olive_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
     public static final Block OLIVE_LEAVES = registerBlock("olive_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(3f).nonOpaque()));
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f).nonOpaque()));
     public static final Block OLIVE_PLANKS = registerBlock("olive_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(3f)));
 
@@ -119,7 +119,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()));
 
     public static final Block ISLAND_HEART = registerBlock("island_heart",
-            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).requiresTool()));
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(30.0f, 1200.0f).requiresTool()));
     public static final Block RIFTSTEEL_BLOCK = registerBlock("riftsteel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).requiresTool()));
 

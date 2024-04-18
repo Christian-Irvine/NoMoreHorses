@@ -108,19 +108,35 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.IRON_SHINGLE_STAIRS)
 
                 .add(ModBlocks.VOIDFIRE_BLOCK)
-                .add(ModBlocks.RIFTSTEEL_BLOCK);
+                .add(ModBlocks.RIFTSTEEL_BLOCK)
+
+                .add(ModBlocks.ISLAND_HEART);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CHEESE_BLOCK)
                 .add(ModBlocks.CHEESE_STAIRS)
                 .add(ModBlocks.CHEESE_SLAB)
                 .add(ModBlocks.PORK_BLOCK)
+                .add(ModBlocks.OLIVE_LOG)
+                .add(ModBlocks.STRIPPED_OLIVE_LOG)
+                .add(ModBlocks.OLIVE_WOOD)
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD)
+                .add(ModBlocks.OLIVE_PLANKS)
+                .add(ModBlocks.OLIVE_STAIRS)
+                .add(ModBlocks.OLIVE_SLAB)
+                .add(ModBlocks.OLIVE_FENCE)
+                .add(ModBlocks.OLIVE_FENCE_GATE)
+                .add(ModBlocks.OLIVE_BUTTON)
+                .add(ModBlocks.OLIVE_PRESSURE_PLATE)
+                .add(ModBlocks.OLIVE_TRAP_DOOR)
+                .add(ModBlocks.OLIVE_DOOR)
                 .add(ModBlocks.FISHER);
 
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.DENSE_SPONGE)
-                .add(ModBlocks.DENSE_WET_SPONGE);
+                .add(ModBlocks.DENSE_WET_SPONGE)
+                .add(ModBlocks.OLIVE_LEAVES);
 
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
@@ -137,12 +153,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.VOIDFIRE_ORE)
+                .add(ModBlocks.RIFTSTEEL_BLOCK)
                 .add(ModBlocks.ISLAND_HEART);
 
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .add(ModBlocks.GEORGE)
-                .add(ModBlocks.RIFTSTEEL_BLOCK)
                 .add(ModBlocks.LIVING_SPORE);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)

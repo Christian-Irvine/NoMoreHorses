@@ -73,7 +73,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.OLIVE_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_OLIVE_SAPLING);
 
-        addDrop(ModBlocks.OLIVE_LEAVES, leavesDrops(ModBlocks.OLIVE_LEAVES, ModBlocks.OLIVE_SAPLING, 0.005f));
+        addDrop(ModBlocks.OLIVE_LEAVES, leavesDrops(ModBlocks.OLIVE_LEAVES, ModBlocks.OLIVE_SAPLING, 0.05f));
 
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
@@ -163,10 +163,14 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.IRON_SHINGLE_STAIRS);
 
         addDrop(ModBlocks.CRACKED_END_STONE);
+        addDrop(ModBlocks.ISLAND_HEART);
         addDrop(ModBlocks.VOIDFIRE_BLOCK);
         addDrop(ModBlocks.RIFTSTEEL_BLOCK);
 
         addDrop(ModBlocks.LIVING_SPORE);
+
+        addDrop(ModBlocks.FISHER);
+        addDrop(ModBlocks.MACERATOR);
 
         //Custom Drops
         addDrop(ModBlocks.PORK_ORE, fortuneBlockDrops(ModBlocks.PORK_ORE, Items.PORKCHOP, 2, 5));

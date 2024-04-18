@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "nomorehorses:voidfire_ore",
+    "nomorehorses:riftsteel_block",
     "nomorehorses:island_heart"
   ]
 }

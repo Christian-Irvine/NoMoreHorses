@@ -5,6 +5,19 @@
     "nomorehorses:cheese_stairs",
     "nomorehorses:cheese_slab",
     "nomorehorses:pork_block",
+    "nomorehorses:olive_log",
+    "nomorehorses:stripped_olive_log",
+    "nomorehorses:olive_wood",
+    "nomorehorses:stripped_olive_wood",
+    "nomorehorses:olive_planks",
+    "nomorehorses:olive_stairs",
+    "nomorehorses:olive_slab",
+    "nomorehorses:olive_fence",
+    "nomorehorses:olive_fence_gate",
+    "nomorehorses:olive_button",
+    "nomorehorses:olive_pressure_plate",
+    "nomorehorses:olive_trap_door",
+    "nomorehorses:olive_door",
     "nomorehorses:fisher"
   ]
 }
