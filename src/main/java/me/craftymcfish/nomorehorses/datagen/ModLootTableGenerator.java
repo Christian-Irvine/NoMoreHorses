@@ -57,6 +57,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MARBLE_BRICK_SLAB, slabDrops(ModBlocks.MARBLE_BRICK_SLAB));
         addDrop(ModBlocks.MARBLE_BRICK_WALL);
 
+        addDrop(ModBlocks.MARBLE_PILLAR);
+        addDrop(ModBlocks.INFUSED_MARBLE_PILLAR);
+
         addDrop(ModBlocks.OLIVE_LOG);
         addDrop(ModBlocks.OLIVE_WOOD);
         addDrop(ModBlocks.STRIPPED_OLIVE_LOG);

@@ -468,6 +468,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmithingTemplateCopyingRecipe(exporter, ModItems.RIFTSTEEL_UPGRADE_TEMPLATE, Blocks.END_STONE);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.QUARTZ, 4)
+                .input(Items.QUARTZ_BLOCK)
+                .criterion(hasItem(Blocks.QUARTZ_BLOCK), conditionsFromItem(Blocks.QUARTZ_BLOCK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "quartz_from_quartz_block"));
+
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_SWORD), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_SWORD)
                 .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_sword_upgrading"));
@@ -487,6 +492,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_HOE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_HOE)
                 .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_hoe_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_HELMET), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_HELMET)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_helmet_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_CHESTPLATE), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_CHESTPLATE)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_chestplate_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_LEGGINGS), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_LEGGINGS)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_leggings_upgrading"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE), Ingredient.ofItems(Items.DIAMOND_BOOTS), Ingredient.ofItems(ModItems.RIFTSTEEL_CLUMP), RecipeCategory.TOOLS, ModItems.RIFTSTEEL_BOOTS)
+                .criterion(hasItem(ModItems.RIFTSTEEL_CLUMP), conditionsFromItem(ModItems.RIFTSTEEL_CLUMP))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_boots_upgrading"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
                 .pattern(" B ")

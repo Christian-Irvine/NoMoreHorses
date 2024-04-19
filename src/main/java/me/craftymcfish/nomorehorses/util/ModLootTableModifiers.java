@@ -113,8 +113,8 @@ public class ModLootTableModifiers {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if (END_CITY_TREASURE_CHEST.equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(2.0f))
-                        .conditionally(RandomChanceLootCondition.builder(0.075f))
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.06f))
                         .with(ItemEntry.builder(ModItems.RIFTSTEEL_UPGRADE_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());

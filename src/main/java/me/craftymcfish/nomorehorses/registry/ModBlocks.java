@@ -78,17 +78,17 @@ public class ModBlocks {
             new MaceratorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
 
     public static final Block OLIVE_LOG = registerBlock("olive_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(3f)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(2.8f)));
     public static final Block OLIVE_WOOD = registerBlock("olive_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(3f)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(2.8f)));
     public static final Block STRIPPED_OLIVE_LOG = registerBlock("stripped_olive_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(2.8f)));
     public static final Block STRIPPED_OLIVE_WOOD = registerBlock("stripped_olive_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(2.8f)));
     public static final Block OLIVE_LEAVES = registerBlock("olive_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f).nonOpaque()));
     public static final Block OLIVE_PLANKS = registerBlock("olive_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(3f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(2.8f)));
 
     public static final Block OLIVE_STAIRS = registerBlock("olive_stairs",
             new StairsBlock(ModBlocks.OLIVE_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));

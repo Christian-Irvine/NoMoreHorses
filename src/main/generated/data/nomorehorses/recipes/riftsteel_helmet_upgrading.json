@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "nomorehorses:riftsteel_clump"
+  },
+  "base": {
+    "item": "minecraft:diamond_helmet"
+  },
+  "result": {
+    "item": "nomorehorses:riftsteel_helmet"
+  },
+  "template": {
+    "item": "nomorehorses:riftsteel_upgrade_template"
+  }
+}

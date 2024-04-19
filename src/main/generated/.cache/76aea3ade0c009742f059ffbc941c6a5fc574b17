@@ -1,4 +1,4 @@
-// 1.20.2	2024-04-18T14:18:14.8355111	No More Horses/Block Loot Tables
+// 1.20.2	2024-04-19T18:51:44.779414	No More Horses/Block Loot Tables
 f72260c938525e95d75b49acce365802468441b6 data\nomorehorses\loot_tables\blocks\living_coal_ore.json
 4711d0240e5b9f499abc4500324bccc369a999a6 data\nomorehorses\loot_tables\blocks\green_concrete_stairs.json
 0c23b6949b7ef095c9d9e2c4c5feee682538a47b data\nomorehorses\loot_tables\blocks\shulker_shingles.json
@@ -13,6 +13,7 @@ e3b9043be6c3a996331df6d2138f48a3a7e9b944 data\nomorehorses\loot_tables\blocks\po
 77b0ea17b0d53f5a88bc7eb285a4bebd27a89c61 data\nomorehorses\loot_tables\blocks\marble_bricks.json
 d008e7304fe0b0e8186300990dfcd113ccbd93d6 data\nomorehorses\loot_tables\blocks\marble_brick_stairs.json
 55b70f1ae4779dc9ea693c14fb6c2af22a651648 data\nomorehorses\loot_tables\blocks\light_gray_glowstone_lamp.json
+326c196273f6e60d3bfb273c74019681cd55c7a7 data\nomorehorses\loot_tables\blocks\infused_marble_pillar.json
 0c5b0d4c3dcfeeb613de69527a167e8aaba45de0 data\nomorehorses\loot_tables\blocks\yellow_concrete_slab.json
 6311d736dde7783e05bb872e94fc291da051ee59 data\nomorehorses\loot_tables\blocks\marble_slab.json
 59a61fb91ab7939d63f5d7b1df6174d397acca78 data\nomorehorses\loot_tables\blocks\black_concrete_stairs.json
@@ -85,6 +86,7 @@ bc57fc3392f125f60f6e957a37cc615369d504f8 data\nomorehorses\loot_tables\blocks\li
 2047da87bdf7a640e853efbc7fe6ba57f43a8238 data\nomorehorses\loot_tables\blocks\pork_block.json
 86c21288ed39e45b106a78e8dc73faf15b2375d1 data\nomorehorses\loot_tables\blocks\macerator.json
 636a5cc0e7cb4c5e103cdafa78cfd41e74e548b1 data\nomorehorses\loot_tables\blocks\shulker_bricks.json
+1e6ce7f0f14ccd37661a1f91fcc5fa100f34e641 data\nomorehorses\loot_tables\blocks\marble_pillar.json
 159714a096cb4bfabe24c5fc2364ee48cf953165 data\nomorehorses\loot_tables\blocks\olive_button.json
 1906e116990ab621471d43c7b1d188c389f2127a data\nomorehorses\loot_tables\blocks\olive_fence_gate.json
 f378f999c1f22fae60b3fee7ed7ec8f25134de7a data\nomorehorses\loot_tables\blocks\iron_shingles.json
