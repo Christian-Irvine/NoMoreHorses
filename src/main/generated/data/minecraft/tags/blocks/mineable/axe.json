@@ -18,6 +18,17 @@
     "nomorehorses:olive_pressure_plate",
     "nomorehorses:olive_trap_door",
     "nomorehorses:olive_door",
-    "nomorehorses:fisher"
+    "nomorehorses:fisher",
+    "nomorehorses:chorus_log",
+    "nomorehorses:stripped_chorus_log",
+    "nomorehorses:chorus_planks",
+    "nomorehorses:chorus_stairs",
+    "nomorehorses:chorus_slab",
+    "nomorehorses:chorus_fence",
+    "nomorehorses:chorus_fence_gate",
+    "nomorehorses:chorus_door",
+    "nomorehorses:chorus_trap_door",
+    "nomorehorses:chorus_pressure_plate",
+    "nomorehorses:chorus_button"
   ]
 }

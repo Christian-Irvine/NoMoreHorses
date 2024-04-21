@@ -48,11 +48,19 @@ public class NoMoreHorses implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.OLIVE_LOG, ModBlocks.STRIPPED_OLIVE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.OLIVE_WOOD, ModBlocks.STRIPPED_OLIVE_WOOD);
 
+		StrippableBlockRegistry.register(ModBlocks.CHORUS_LOG, ModBlocks.STRIPPED_CHORUS_LOG);
+
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_OLIVE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_OLIVE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_STAIRS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_DOOR, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_TRAP_DOOR, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_FENCE_GATE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_FENCE, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.OLIVE_LEAVES, 30, 60);
 
 		//Register Item Groups

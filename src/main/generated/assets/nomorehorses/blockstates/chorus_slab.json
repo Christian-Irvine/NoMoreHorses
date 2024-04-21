@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nomorehorses:block/chorus_slab"
+    },
+    "type=double": {
+      "model": "nomorehorses:block/chorus_planks"
+    },
+    "type=top": {
+      "model": "nomorehorses:block/chorus_slab_top"
+    }
+  }
+}

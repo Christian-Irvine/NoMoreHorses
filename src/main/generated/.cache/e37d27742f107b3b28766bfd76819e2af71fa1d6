@@ -1,6 +1,6 @@
-// 1.20.2	2024-04-19T18:51:44.7845989	No More Horses/Tags for minecraft:item
+// 1.20.2	2024-04-21T15:03:01.0588046	No More Horses/Tags for minecraft:item
 db2eef93f1a5bd992c114a74649b7bc6c83c4906 data\nomorehorses\tags\items\gluten_food.json
 aebe7ddac65c3cb881835164afaf6796aa05a822 data\minecraft\tags\items\trimmable_armor.json
-ab18fb1507e9b199095a9c33cd720752ea4b6d68 data\minecraft\tags\items\logs_that_burn.json
-e1959b2fdc633bf902e4a0bc93a578998fc6f88d data\minecraft\tags\items\planks.json
+5128d24d835a2e9c1048f3fd54bf986f627bcd1b data\minecraft\tags\items\logs_that_burn.json
+6fb5014f8fd751e000e2d76d0a6971159f5ea767 data\minecraft\tags\items\planks.json
 aa3440a4d513eeb7248fae8da4e787226966ef07 data\minecraft\tags\items\music_discs.json

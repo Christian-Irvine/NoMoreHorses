@@ -85,10 +85,23 @@ public class ModItemGroups {
                 entries.add(ModBlocks.OLIVE_PRESSURE_PLATE);
                 entries.add(ModBlocks.OLIVE_SAPLING);
 
+                entries.add(ModBlocks.CHORUS_LOG);
+                entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
+                entries.add(ModBlocks.CHORUS_PLANKS);
+                entries.add(ModBlocks.CHORUS_STAIRS);
+                entries.add(ModBlocks.CHORUS_SLAB);
+                entries.add(ModBlocks.CHORUS_TRAP_DOOR);
+                entries.add(ModBlocks.CHORUS_DOOR);
+                entries.add(ModBlocks.CHORUS_FENCE);
+                entries.add(ModBlocks.CHORUS_FENCE_GATE);
+                entries.add(ModBlocks.CHORUS_BUTTON);
+                entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
+
                 entries.add(ModBlocks.VOIDFIRE_ORE);
                 entries.add(ModItems.VOIDFIRE_ESSENCE);
                 entries.add(ModItems.VOIDFIRE_SHARD);
                 entries.add(ModBlocks.VOIDFIRE_BLOCK);
+                entries.add(ModBlocks.VOIDFIRE_LAMP);
                 entries.add(ModItems.EYE_OF_THE_VOID);
 
                 entries.add(ModBlocks.CRACKED_END_STONE);

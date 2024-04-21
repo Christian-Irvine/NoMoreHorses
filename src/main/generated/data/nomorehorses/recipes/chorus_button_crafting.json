@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nomorehorses:chorus_planks"
+    }
+  ],
+  "result": {
+    "item": "nomorehorses:chorus_button"
+  }
+}

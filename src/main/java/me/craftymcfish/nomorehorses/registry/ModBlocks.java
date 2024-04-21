@@ -95,10 +95,10 @@ public class ModBlocks {
     public static final Block OLIVE_SLAB = registerBlock("olive_slab",
             new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
     public static final Block OLIVE_BUTTON = registerBlock("olive_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision(), BlockSetType.OAK, 15, true));
+            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision().strength(0.5f), BlockSetType.OAK, 15, true));
     //Blocks.createWoodenButtonBlock(BlockSetType.OAK, new FeatureFlag[0]));
     public static final Block OLIVE_PRESSURE_PLATE = registerBlock("olive_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision(), BlockSetType.OAK));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS).noCollision().strength(0.5f), BlockSetType.OAK));
     public static final Block OLIVE_FENCE = registerBlock("olive_fence",
             new FenceBlock(FabricBlockSettings.copyOf(ModBlocks.OLIVE_PLANKS)));
     public static final Block OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
@@ -114,9 +114,38 @@ public class ModBlocks {
     public static final Block POTTED_OLIVE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, "potted_olive_sapling"),
             new FlowerPotBlock(OLIVE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
+    public static final Block CHORUS_LOG = registerBlock("chorus_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(2.8f)));
+    public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",
+                new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(2.8f)));
+
+    public static final Block CHORUS_PLANKS = registerBlock("chorus_planks",
+                new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(2.8f)));
+    public static final Block CHORUS_STAIRS = registerBlock("chorus_stairs",
+            new StairsBlock(ModBlocks.CHORUS_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS)));
+    public static final Block CHORUS_SLAB = registerBlock("chorus_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS)));
+    public static final Block CHORUS_BUTTON = registerBlock("chorus_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS).noCollision().strength(0.5f), BlockSetType.OAK, 15, true));
+    //Blocks.createWoodenButtonBlock(BlockSetType.OAK, new FeatureFlag[0]));
+    public static final Block CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS).noCollision().strength(0.5f), BlockSetType.OAK));
+    public static final Block CHORUS_FENCE = registerBlock("chorus_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS)));
+    public static final Block CHORUS_FENCE_GATE = registerBlock("chorus_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS), WoodType.OAK));
+    public static final Block CHORUS_DOOR = registerBlock("chorus_door",
+            new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block CHORUS_TRAP_DOOR = registerBlock("chorus_trap_door",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.CHORUS_PLANKS).nonOpaque(), BlockSetType.OAK));
+
+
     public static final Block VOIDFIRE_ORE = registerBlock("voidfire_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).strength(8).requiresTool(), UniformIntProvider.create(4, 8)));
     public static final Block VOIDFIRE_BLOCK = registerBlock("voidfire_block",
             new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block VOIDFIRE_LAMP = registerBlock("voidfire_lamp",
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(15).sounds(BlockSoundGroup.GLASS)));
 
     public static final Block ISLAND_HEART = registerBlock("island_heart",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(30.0f, 1200.0f).requiresTool()));

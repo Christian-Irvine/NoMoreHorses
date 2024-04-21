@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    "V": {
+      "item": "nomorehorses:voidfire_essence"
+    }
+  },
+  "pattern": [
+    "PVP",
+    "VPV",
+    "PVP"
+  ],
+  "result": {
+    "item": "nomorehorses:voidfire_lamp"
+  },
+  "show_notification": true
+}

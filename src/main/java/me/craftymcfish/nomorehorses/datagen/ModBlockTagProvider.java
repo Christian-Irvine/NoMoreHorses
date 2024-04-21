@@ -111,6 +111,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.IRON_SHINGLE_STAIRS)
 
                 .add(ModBlocks.VOIDFIRE_BLOCK)
+                .add(ModBlocks.VOIDFIRE_LAMP)
                 .add(ModBlocks.RIFTSTEEL_BLOCK)
 
                 .add(ModBlocks.ISLAND_HEART);
@@ -133,7 +134,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.OLIVE_PRESSURE_PLATE)
                 .add(ModBlocks.OLIVE_TRAP_DOOR)
                 .add(ModBlocks.OLIVE_DOOR)
-                .add(ModBlocks.FISHER);
+                .add(ModBlocks.FISHER)
+                .add(ModBlocks.CHORUS_LOG)
+                .add(ModBlocks.STRIPPED_CHORUS_LOG)
+                .add(ModBlocks.CHORUS_PLANKS)
+                .add(ModBlocks.CHORUS_STAIRS)
+                .add(ModBlocks.CHORUS_SLAB)
+                .add(ModBlocks.CHORUS_FENCE)
+                .add(ModBlocks.CHORUS_FENCE_GATE)
+                .add(ModBlocks.CHORUS_DOOR)
+                .add(ModBlocks.CHORUS_TRAP_DOOR)
+                .add(ModBlocks.CHORUS_PRESSURE_PLATE)
+                .add(ModBlocks.CHORUS_BUTTON);
 
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
@@ -168,13 +180,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.OLIVE_LOG)
                 .add(ModBlocks.OLIVE_WOOD)
                 .add(ModBlocks.STRIPPED_OLIVE_LOG)
-                .add(ModBlocks.STRIPPED_OLIVE_WOOD);
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD)
+                .add(ModBlocks.CHORUS_LOG)
+                .add(ModBlocks.STRIPPED_CHORUS_LOG);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(ModBlocks.OLIVE_FENCE);
+                .add(ModBlocks.OLIVE_FENCE)
+                .add(ModBlocks.CHORUS_FENCE);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.OLIVE_FENCE_GATE);
+                .add(ModBlocks.OLIVE_FENCE_GATE)
+                .add(ModBlocks.CHORUS_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.MARBLE_WALL)

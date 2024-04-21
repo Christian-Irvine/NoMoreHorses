@@ -78,6 +78,18 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.OLIVE_LEAVES, leavesDrops(ModBlocks.OLIVE_LEAVES, ModBlocks.OLIVE_SAPLING, 0.05f));
 
+        addDrop(ModBlocks.CHORUS_LOG);
+        addDrop(ModBlocks.STRIPPED_CHORUS_LOG);
+        addDrop(ModBlocks.CHORUS_PLANKS);
+        addDrop(ModBlocks.CHORUS_STAIRS);
+        addDrop(ModBlocks.CHORUS_SLAB, slabDrops(ModBlocks.CHORUS_SLAB));
+        addDrop(ModBlocks.CHORUS_DOOR, doorDrops(ModBlocks.CHORUS_DOOR));
+        addDrop(ModBlocks.CHORUS_TRAP_DOOR);
+        addDrop(ModBlocks.CHORUS_FENCE);
+        addDrop(ModBlocks.CHORUS_FENCE_GATE);
+        addDrop(ModBlocks.CHORUS_BUTTON);
+        addDrop(ModBlocks.CHORUS_PRESSURE_PLATE);
+
         addDrop(ModBlocks.DAFFODIL);
         addPottedPlantDrops(ModBlocks.POTTED_DAFFODIL);
 
@@ -168,6 +180,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRACKED_END_STONE);
         addDrop(ModBlocks.ISLAND_HEART);
         addDrop(ModBlocks.VOIDFIRE_BLOCK);
+        addDrop(ModBlocks.VOIDFIRE_LAMP);
         addDrop(ModBlocks.RIFTSTEEL_BLOCK);
 
         addDrop(ModBlocks.LIVING_SPORE);

@@ -52,7 +52,7 @@ public class FisherBlockEntity extends BlockEntity implements ExtendedScreenHand
     //Loot slots are numbers 1-9 inclusive
 
     private int progress = 0;
-    private int maxProgress = 100;
+    private int maxProgress = 1000;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override

@@ -271,6 +271,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLE_SLAB, ModBlocks.SHINGLES, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHINGLE_STAIRS, ModBlocks.SHINGLES);
 
+        //OLIVE WOOD
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
                 .input(ModBlocks.OLIVE_LOG)
@@ -342,6 +343,61 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.OLIVE_PLANKS)
                 .criterion(hasItem(ModBlocks.OLIVE_PLANKS), conditionsFromItem(ModBlocks.OLIVE_PLANKS))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "olive_button_crafting"));
+
+        //CHORUS WOOD
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_LOG, 1)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', Items.CHORUS_FRUIT)
+                .criterion(hasItem(Items.CHORUS_FRUIT), conditionsFromItem(Items.CHORUS_FRUIT))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_log_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS, 2)
+                .input(ModBlocks.CHORUS_LOG)
+                .criterion(hasItem(ModBlocks.CHORUS_LOG), conditionsFromItem(ModBlocks.CHORUS_LOG))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_planks_crafting_from_log"));;
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS, 2)
+                .input(ModBlocks.STRIPPED_CHORUS_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_CHORUS_LOG), conditionsFromItem(ModBlocks.STRIPPED_CHORUS_LOG))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_planks_crafting_from_stripped_log"));
+
+        createStairsRecipe(ModBlocks.CHORUS_STAIRS, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_stairs_crafting"));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_SLAB, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_slab_crafting"));
+
+        createDoorRecipe(ModBlocks.CHORUS_DOOR, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_door_crafting"));
+
+        createTrapdoorRecipe(ModBlocks.CHORUS_TRAP_DOOR, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_trap_door_crafting"));
+
+        createFenceRecipe(ModBlocks.CHORUS_FENCE, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_fence_crafting"));
+
+        createFenceGateRecipe(ModBlocks.CHORUS_FENCE_GATE, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_fence_gate_crafting"));
+
+        createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.CHORUS_PRESSURE_PLATE, Ingredient.ofItems(ModBlocks.CHORUS_PLANKS))
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_pressure_plate_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_BUTTON, 1)
+                .input(ModBlocks.CHORUS_PLANKS)
+                .criterion(hasItem(ModBlocks.CHORUS_PLANKS), conditionsFromItem(ModBlocks.CHORUS_PLANKS))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "chorus_button_crafting"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HELMET, 1)
                 .pattern("CCC")
@@ -745,6 +801,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('V', ModItems.VOIDFIRE_SHARD)
                 .criterion(hasItem(ModItems.VOIDFIRE_SHARD), conditionsFromItem(ModItems.VOIDFIRE_SHARD))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "voidfire_block_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOIDFIRE_LAMP, 1)
+                .pattern("PVP")
+                .pattern("VPV")
+                .pattern("PVP")
+                .input('P', Items.POPPED_CHORUS_FRUIT)
+                .input('V', ModItems.VOIDFIRE_ESSENCE)
+                .criterion(hasItem(Items.POPPED_CHORUS_FRUIT), conditionsFromItem(Items.POPPED_CHORUS_FRUIT))
+                .criterion(hasItem(ModItems.VOIDFIRE_ESSENCE), conditionsFromItem(ModItems.VOIDFIRE_ESSENCE))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "voidfire_lamp_crafting"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VOIDFIRE_SHARD, 9)
                 .input(ModBlocks.VOIDFIRE_BLOCK)

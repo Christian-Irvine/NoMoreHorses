@@ -62,11 +62,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.OLIVE_TRAP_DOOR);
         blockStateModelGenerator.registerTintableCross(ModBlocks.OLIVE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerLog(ModBlocks.CHORUS_LOG).log(ModBlocks.CHORUS_LOG);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CHORUS_LOG).log(ModBlocks.STRIPPED_CHORUS_LOG);
+        BlockStateModelGenerator.BlockTexturePool chorusPlankPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
+        chorusPlankPool.slab(ModBlocks.CHORUS_SLAB);
+        chorusPlankPool.stairs(ModBlocks.CHORUS_STAIRS);
+        chorusPlankPool.fence(ModBlocks.CHORUS_FENCE);
+        chorusPlankPool.fenceGate(ModBlocks.CHORUS_FENCE_GATE);
+        chorusPlankPool.button(ModBlocks.CHORUS_BUTTON);
+        chorusPlankPool.pressurePlate(ModBlocks.CHORUS_PRESSURE_PLATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.CHORUS_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.CHORUS_TRAP_DOOR);
+
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_LAMP);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ISLAND_HEART);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RIFTSTEEL_BLOCK);

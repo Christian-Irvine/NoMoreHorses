@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nomorehorses:chorus_log"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "nomorehorses:chorus_planks"
+  }
+}

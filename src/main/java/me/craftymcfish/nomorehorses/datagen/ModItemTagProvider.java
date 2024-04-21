@@ -30,13 +30,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.OLIVE_PLANKS.asItem());
+                .add(ModBlocks.OLIVE_PLANKS.asItem())
+                .add(ModBlocks.CHORUS_PLANKS.asItem());
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.OLIVE_LOG.asItem())
                 .add(ModBlocks.OLIVE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_OLIVE_LOG.asItem())
-                .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem())
+                .add(ModBlocks.CHORUS_LOG.asItem())
+                .add(ModBlocks.STRIPPED_CHORUS_LOG.asItem());
 
         getOrCreateTagBuilder(ModTags.Items.GLUTEN_FOOD)
                 .add(Items.BREAD)

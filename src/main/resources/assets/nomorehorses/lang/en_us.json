@@ -60,8 +60,21 @@
   "block.nomorehorses.olive_button": "Olive Button",
   "block.nomorehorses.olive_pressure_plate": "Olive Pressure Plate",
   "block.nomorehorses.olive_door": "Olive Door",
-  "block.nomorehorses.olive_trap_door": "Olive Trap Door",
+  "block.nomorehorses.olive_trap_door": "Olive Trapdoor",
   "block.nomorehorses.olive_sapling": "Olive Sapling",
+
+  "block.nomorehorses.chorus_log": "Chorus Log",
+  "block.nomorehorses.stripped_chorus_log": "Stripped Chorus Log",
+  "block.nomorehorses.chorus_planks": "Chorus Planks",
+
+  "block.nomorehorses.chorus_stairs": "Chorus Stairs",
+  "block.nomorehorses.chorus_slab": "Chorus Slab",
+  "block.nomorehorses.chorus_fence": "Chorus Fence",
+  "block.nomorehorses.chorus_fence_gate": "Chorus Fence Gate",
+  "block.nomorehorses.chorus_button": "Chorus Button",
+  "block.nomorehorses.chorus_pressure_plate": "Chorus Pressure Plate",
+  "block.nomorehorses.chorus_door": "Chorus Door",
+  "block.nomorehorses.chorus_trap_door": "Chorus Trapdoor",
 
   "block.nomorehorses.george": "George",
   "block.nomorehorses.daffodil": "Daffodil",
@@ -214,6 +227,7 @@
 
   "block.nomorehorses.riftsteel_block": "Riftsteel Block",
   "block.nomorehorses.voidfire_block": "Voidfire Block",
+  "block.nomorehorses.voidfire_lamp": "Voidfire Lamp",
 
   "item.nomorehorses.chicken_nugget": "Chicken Nugget",
   "item.nomorehorses.dino_nugget": "Dino Nugget",

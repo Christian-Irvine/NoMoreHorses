@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "nomorehorses:olive_fence_gate"
+    "nomorehorses:olive_fence_gate",
+    "nomorehorses:chorus_fence_gate"
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chorus_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:chorus_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:chorus_slab_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chorus_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:chorus_slab_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}
