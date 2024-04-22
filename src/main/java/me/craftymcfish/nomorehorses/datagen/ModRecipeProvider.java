@@ -1068,7 +1068,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COPPER_ORE.asItem(), ModBlocks.LIVING_COPPER_ORE.asItem(), "copper");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_IRON_ORE.asItem(), ModBlocks.LIVING_IRON_ORE.asItem(), "iron");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_GOLD_ORE.asItem(), ModBlocks.LIVING_GOLD_ORE.asItem(), "gold");
-        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_DIAMOND_ORE.asItem(), ModBlocks.LIVING_DIAMOND_ORE.asItem(), "diamond");
+        //offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_DIAMOND_ORE.asItem(), ModBlocks.LIVING_DIAMOND_ORE.asItem(), "diamond");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_LAPIS_ORE.asItem(), ModBlocks.LIVING_LAPIS_ORE.asItem(), "lapis");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_REDSTONE_ORE.asItem(), ModBlocks.LIVING_REDSTONE_ORE.asItem(), "redstone");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_EMERALD_ORE.asItem(), ModBlocks.LIVING_EMERALD_ORE.asItem(), "emerald");
