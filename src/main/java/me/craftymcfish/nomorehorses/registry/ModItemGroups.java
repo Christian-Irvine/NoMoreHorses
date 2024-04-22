@@ -216,7 +216,7 @@ public class ModItemGroups {
                 entries.add(ModItems.BOOST_STONE);
                 entries.add(ModItems.JUMP_STONE);
 
-                entries.add(ModItems.DEHYDRATION_GUN);
+                //entries.add(ModItems.DEHYDRATION_GUN);
             }).build();
 
     //Vanilla Item Groups

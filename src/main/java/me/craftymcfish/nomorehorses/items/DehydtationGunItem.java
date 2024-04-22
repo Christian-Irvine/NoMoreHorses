@@ -26,31 +26,34 @@ public class DehydtationGunItem extends Item {
         super.use(world, user, hand);
 //        if (!world.isClient()) return TypedActionResult.pass(user.getStackInHand(hand));
 
-        MinecraftClient client = MinecraftClient.getInstance();
 
-        double maxReach = 10;
-        float tickDelta = 1F;
-        boolean includeFluids = false;
-
-        HitResult hit = client.cameraEntity.raycast(maxReach, tickDelta, includeFluids);
-
-        switch(hit.getType()) {
-            case MISS:
-                NoMoreHorses.LOGGER.info("Miss");
-                break;
-            case BLOCK:
-                NoMoreHorses.LOGGER.info("Block");
-                break;
-            case ENTITY:
-                NoMoreHorses.LOGGER.info("Entity");
-                EntityHitResult entityHit = (EntityHitResult) hit;
-                Entity entity = entityHit.getEntity();
-                if (entity.isLiving()){
-                    ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING));
-                }
-                break;
-        }
-        return TypedActionResult.success(user.getStackInHand(hand));
+        //Uncomment this when working on it
+        return TypedActionResult.pass(user.getStackInHand(hand));
+//        MinecraftClient client = MinecraftClient.getInstance();
+//
+//        double maxReach = 10;
+//        float tickDelta = 1F;
+//        boolean includeFluids = false;
+//
+//        HitResult hit = client.cameraEntity.raycast(maxReach, tickDelta, includeFluids);
+//
+//        switch(hit.getType()) {
+//            case MISS:
+//                NoMoreHorses.LOGGER.info("Miss");
+//                break;
+//            case BLOCK:
+//                NoMoreHorses.LOGGER.info("Block");
+//                break;
+//            case ENTITY:
+//                NoMoreHorses.LOGGER.info("Entity");
+//                EntityHitResult entityHit = (EntityHitResult) hit;
+//                Entity entity = entityHit.getEntity();
+//                if (entity.isLiving()){
+//                    ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING));
+//                }
+//                break;
+//        }
+//        return TypedActionResult.success(user.getStackInHand(hand));
     }
 
     @Override

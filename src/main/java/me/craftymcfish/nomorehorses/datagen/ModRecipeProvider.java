@@ -37,7 +37,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 200, "pork");
         offerBlasting(exporter, PORK_SMELTABLES, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.7f, 100, "pork");
 
-        offerSmelting(exporter, MONEY_SMELTABLES, RecipeCategory.TOOLS, ModItems.MONEY, 0.4f, 100, "money");
+        //offerSmelting(exporter, MONEY_SMELTABLES, RecipeCategory.TOOLS, ModItems.MONEY, 0.4f, 100, "money");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items.PORKCHOP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PORK_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.CHEESE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHEESE_BLOCK);
@@ -75,24 +75,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"mesh_crafting"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RAW_MONEY, 8)
-                .pattern("PPP")
-                .pattern("PLP")
-                .pattern("PPP")
-                .input('P', Items.PAPER)
-                .input('L', Items.LIME_DYE)
-                .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
-                .criterion(hasItem(Items.LIME_DYE), conditionsFromItem(Items.LIME_DYE))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"raw_money_crafting"));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RAW_MONEY, 8)
+//                .pattern("PPP")
+//                .pattern("PLP")
+//                .pattern("PPP")
+//                .input('P', Items.PAPER)
+//                .input('L', Items.LIME_DYE)
+//                .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
+//                .criterion(hasItem(Items.LIME_DYE), conditionsFromItem(Items.LIME_DYE))
+//                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"raw_money_crafting"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.GEORGE, 1)
-                .pattern("MNM")
+                .pattern("DND")
                 .pattern("EME")
-                .pattern("MNM")
-                .input('M', ModItems.MONEY)
+                .pattern("DND")
+                .input('D', Items.DIAMOND_BLOCK)
                 .input('N', Items.NETHERITE_INGOT)
                 .input('E', Items.EMERALD_BLOCK)
-                .criterion(hasItem(ModItems.MONEY), conditionsFromItem(ModItems.MONEY))
+                .criterion(hasItem(Items.DIAMOND_BLOCK), conditionsFromItem(Items.DIAMOND_BLOCK))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .criterion(hasItem(Items.EMERALD_BLOCK), conditionsFromItem(Items.EMERALD_BLOCK))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"george_crafting"));

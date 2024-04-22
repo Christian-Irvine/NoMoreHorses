@@ -255,7 +255,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHICKEN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DINO_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.DEHYDRATION_GUN, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.DEHYDRATION_GUN, Models.GENERATED);
 
 //        itemModelGenerator.register(ModItems.BOOST_STONE, Models.HANDHELD);
 //        itemModelGenerator.register(ModItems.JUMP_STONE, Models.HANDHELD);

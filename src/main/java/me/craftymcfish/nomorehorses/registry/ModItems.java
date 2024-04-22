@@ -93,7 +93,7 @@ public class ModItems {
 
     public static final Item BOOST_STONE = registerItem("boost_stone", new BoostAbilityStoneItem(new FabricItemSettings().maxCount(1), 40));
     public static final Item JUMP_STONE = registerItem("jump_stone", new JumpAbilityStoneItem(new FabricItemSettings().maxCount(1), 20));
-    public static final Item DEHYDRATION_GUN = registerItem("dehydration_gun", new DehydtationGunItem(new FabricItemSettings().maxCount(1)));
+    //public static final Item DEHYDRATION_GUN = registerItem("dehydration_gun", new DehydtationGunItem(new FabricItemSettings().maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NoMoreHorses.MOD_ID, name), item);
