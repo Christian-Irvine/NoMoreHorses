@@ -1,4 +1,4 @@
-// 1.20.2	2024-04-23T12:24:09.0447667	No More Horses/Block Loot Tables
+// 1.20.2	2024-04-23T16:36:07.3817259	No More Horses/Block Loot Tables
 f72260c938525e95d75b49acce365802468441b6 data\nomorehorses\loot_tables\blocks\living_coal_ore.json
 4711d0240e5b9f499abc4500324bccc369a999a6 data\nomorehorses\loot_tables\blocks\green_concrete_stairs.json
 0c23b6949b7ef095c9d9e2c4c5feee682538a47b data\nomorehorses\loot_tables\blocks\shulker_shingles.json
@@ -40,8 +40,8 @@ e2fb2935f45489da597a813335e273657b156f2b data\nomorehorses\loot_tables\blocks\re
 f21ac2d0d595a4c571dcd8598eb91cf885832173 data\nomorehorses\loot_tables\blocks\dense_wet_sponge.json
 0ea6984bc8727cd47b8776afe2526bb66095900d data\nomorehorses\loot_tables\blocks\lime_concrete_stairs.json
 d2760ae957a1b16577cd1c13b93f538ab0699830 data\nomorehorses\loot_tables\blocks\orange_concrete_stairs.json
-7fe9c1ecaa1c06a9aee1b38e054ecd449b084372 data\nomorehorses\loot_tables\blocks\chorus_log.json
 6932ce0f21327c423c0b22064fa77ef738ef45aa data\nomorehorses\loot_tables\blocks\cyan_glowstone_lamp.json
+7fe9c1ecaa1c06a9aee1b38e054ecd449b084372 data\nomorehorses\loot_tables\blocks\chorus_log.json
 a6010fdc8d0d75dd884dc0176b0a7a985d1499a9 data\nomorehorses\loot_tables\blocks\fisher.json
 276d31f2790c889908e2853805b8ff301fb603bd data\nomorehorses\loot_tables\blocks\cracked_end_stone.json
 54a8188b1ba1999c88d03f18e9bffabdfec2bb7a data\nomorehorses\loot_tables\blocks\light_blue_glowstone_lamp.json
