@@ -154,8 +154,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.OLIVE_LEAVES);
 
 
-        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
-                //.add(ModBlocks.EXAMPLE_BLOCK);
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(ModBlocks.SALT_BLOCK)
+                .add(ModBlocks.PACKED_SALT_BLOCK);
 
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)

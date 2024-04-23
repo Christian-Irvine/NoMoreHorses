@@ -347,6 +347,12 @@ public class ModBlocks {
     public static final Block LIVING_SPORE = registerBlock("living_spore",
             new LivingSporeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).ticksRandomly().luminance(8).sounds(BlockSoundGroup.FROGLIGHT).requiresTool().strength(50.0f, 1200.0f)));
 
+    public static final Block SALT_BLOCK = registerBlock("salt_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SAND)));
+
+    public static final Block PACKED_SALT_BLOCK = registerBlock("packed_salt_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SAND)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(NoMoreHorses.MOD_ID, name), block);

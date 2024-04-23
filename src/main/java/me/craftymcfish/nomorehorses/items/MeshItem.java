@@ -9,6 +9,7 @@ import net.minecraft.block.PowderSnowCauldronBlock;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class MeshItem extends Item {
@@ -28,7 +29,7 @@ public class MeshItem extends Item {
             }
             else {
                 context.getStack().damage(1, context.getPlayer(), playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
-                context.getPlayer().giveItemStack(new ItemStack(ModItems.SALT));
+                context.getPlayer().giveItemStack(new ItemStack(ModItems.SALT, Random.create().nextInt(3) + 1)); //Exclusive upper bound like C#
                 ((LeveledCauldronBlock) block).decrementFluidLevel(world.getBlockState(context.getBlockPos()), world, context.getBlockPos());
             }
 

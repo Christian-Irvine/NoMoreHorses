@@ -87,7 +87,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.GEORGE, 1)
                 .pattern("DND")
-                .pattern("EME")
+                .pattern("EDE")
                 .pattern("DND")
                 .input('D', Items.DIAMOND_BLOCK)
                 .input('N', Items.NETHERITE_INGOT)
@@ -1063,6 +1063,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
                 .criterion(hasItem(ModItems.MESH), conditionsFromItem(ModItems.MESH))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "fisher_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SALT_BLOCK, 1)
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("   ")
+                .input('S', ModItems.SALT)
+                .criterion(hasItem(ModItems.SALT), conditionsFromItem(ModItems.SALT))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "salt_block_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_SALT_BLOCK, 4)
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("   ")
+                .input('S', ModBlocks.SALT_BLOCK)
+                .criterion(hasItem(ModBlocks.SALT_BLOCK), conditionsFromItem(ModBlocks.SALT_BLOCK))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "packed_salt_crafting"));
 
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COAL_ORE.asItem(), ModBlocks.LIVING_COAL_ORE.asItem(), "coal");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COPPER_ORE.asItem(), ModBlocks.LIVING_COPPER_ORE.asItem(), "copper");

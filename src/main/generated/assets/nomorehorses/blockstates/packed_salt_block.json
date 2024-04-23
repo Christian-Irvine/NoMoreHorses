@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nomorehorses:block/packed_salt_block"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_money": {
+    "has_salt_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "nomorehorses:raw_money"
+              "nomorehorses:salt_block"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:money_from_smelting_raw_money"
+        "recipe": "nomorehorses:packed_salt_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_money"
+      "has_salt_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:money_from_smelting_raw_money"
+      "nomorehorses:packed_salt_crafting"
     ]
   },
   "sends_telemetry_event": false

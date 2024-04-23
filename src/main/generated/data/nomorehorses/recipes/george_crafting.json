@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
     "E": {
       "item": "minecraft:emerald_block"
-    },
-    "M": {
-      "item": "nomorehorses:money"
     },
     "N": {
       "item": "minecraft:netherite_ingot"
     }
   },
   "pattern": [
-    "MNM",
-    "EME",
-    "MNM"
+    "DND",
+    "EDE",
+    "DND"
   ],
   "result": {
     "item": "nomorehorses:george"

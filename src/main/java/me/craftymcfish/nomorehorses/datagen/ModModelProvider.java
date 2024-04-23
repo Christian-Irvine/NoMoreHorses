@@ -187,6 +187,9 @@ public class ModModelProvider extends FabricModelProvider {
         ironShinglesPool.slab(ModBlocks.IRON_SHINGLE_SLAB);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIVING_SPORE);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SALT_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PACKED_SALT_BLOCK);
     }
 
     @Override

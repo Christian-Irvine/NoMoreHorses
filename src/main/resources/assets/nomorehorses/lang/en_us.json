@@ -79,6 +79,9 @@
   "block.nomorehorses.george": "George",
   "block.nomorehorses.daffodil": "Daffodil",
 
+  "block.nomorehorses.salt_block": "Salt Block",
+  "block.nomorehorses.packed_salt_block": "Packed Salt Block",
+
   "itemGroup.nomorehorses.no_more_horses": "No More Horses",
 
   "sounds.nomorehorses.george_unhappy": "Unhappy George",

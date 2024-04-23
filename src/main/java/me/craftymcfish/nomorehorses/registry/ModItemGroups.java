@@ -24,6 +24,8 @@ public class ModItemGroups {
                 entries.add(ModBlocks.CHEESE_STAIRS);
                 entries.add(ModBlocks.CHEESE_SLAB);
                 entries.add(ModItems.SALT);
+                entries.add(ModBlocks.SALT_BLOCK);
+                entries.add(ModBlocks.PACKED_SALT_BLOCK);
                 entries.add(ModItems.GRILLED_CHEESE);
                 entries.add(ModItems.CHICKEN_NUGGET);
                 entries.add(ModItems.DINO_NUGGET);

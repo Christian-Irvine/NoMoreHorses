@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "nomorehorses:salt_block",
+    "nomorehorses:packed_salt_block"
+  ]
 }
