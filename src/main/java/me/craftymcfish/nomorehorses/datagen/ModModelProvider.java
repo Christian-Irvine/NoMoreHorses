@@ -255,6 +255,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
 
+        itemModelGenerator.register(ModItems.WANDERING_COLLECTOR_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+
         itemModelGenerator.register(ModItems.CHICKEN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DINO_NUGGET, Models.GENERATED);
 

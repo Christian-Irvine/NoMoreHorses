@@ -6,4 +6,5 @@ import net.minecraft.util.Identifier;
 
 public class ModModelLayers {
     public static final EntityModelLayer SNAIL = new EntityModelLayer(new Identifier(NoMoreHorses.MOD_ID, "snail"), "main");
+    public static final EntityModelLayer WANDERING_COLLECTOR = new EntityModelLayer(new Identifier(NoMoreHorses.MOD_ID, "wandering_collector"), "main");
 }

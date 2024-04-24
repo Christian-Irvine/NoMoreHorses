@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.color.ModColorProvider;
 import me.craftymcfish.nomorehorses.effect.ModEffects;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
+import me.craftymcfish.nomorehorses.entity.custom.WanderingCollectorEntity;
 import me.craftymcfish.nomorehorses.potion.ModPotions;
 import me.craftymcfish.nomorehorses.recipe.ModRecipes;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
@@ -14,6 +15,7 @@ import me.craftymcfish.nomorehorses.screen.ModScreenHandlers;
 import me.craftymcfish.nomorehorses.sound.ModSounds;
 import me.craftymcfish.nomorehorses.util.ModCustomTrades;
 import me.craftymcfish.nomorehorses.util.ModLootTableModifiers;
+import me.craftymcfish.nomorehorses.villager.ModVillagers;
 import me.craftymcfish.nomorehorses.world.gen.ModEntityGeneration;
 import me.craftymcfish.nomorehorses.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -75,10 +77,14 @@ public class NoMoreHorses implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createSnailAttributes());
 
+		FabricDefaultAttributeRegistry.register(ModEntities.WANDERING_COLLECTOR, WanderingCollectorEntity.createMobAttributes());
+
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModRecipes.registerRecipes();
+
+		ModVillagers.registerVillagers();
 
 		ModWorldGeneration.generateModWorldGen();
 

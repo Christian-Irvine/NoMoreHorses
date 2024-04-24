@@ -59,6 +59,7 @@ public class ModItems {
     public static final Item POP_CHAMPAGNE_MUSIC_DISC = registerItem("pop_champagne_music_disc", new MusicDiscItem(14, ModSounds.POP_CHAMPAGNE, new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC), 215));
 
     public static final Item SNAIL_SPAWN_EGG = registerItem("snail_spawn_egg", new SpawnEggItem(ModEntities.SNAIL, 0xcec15f, 0xa6d05d, new FabricItemSettings()));
+    public static final Item WANDERING_COLLECTOR_SPAWN_EGG = registerItem("wandering_collector_spawn_egg", new SpawnEggItem(ModEntities.WANDERING_COLLECTOR, 0x8ee525, 0xaf1bbd, new FabricItemSettings()));
 
     public static final Item VOIDFIRE_ESSENCE = registerItem("voidfire_essence", new Item(new FabricItemSettings()));
     public static final Item VOIDFIRE_SHARD = registerItem("voidfire_shard", new Item(new FabricItemSettings()));

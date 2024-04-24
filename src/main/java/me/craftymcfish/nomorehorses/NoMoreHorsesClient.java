@@ -5,6 +5,8 @@ import me.craftymcfish.nomorehorses.entity.ModEntities;
 import me.craftymcfish.nomorehorses.entity.client.ModModelLayers;
 import me.craftymcfish.nomorehorses.entity.client.SnailModel;
 import me.craftymcfish.nomorehorses.entity.client.SnailRenderer;
+import me.craftymcfish.nomorehorses.entity.client.WanderingCollectorRenderer;
+import me.craftymcfish.nomorehorses.entity.custom.WanderingCollectorEntity;
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.screen.FisherScreen;
 import me.craftymcfish.nomorehorses.screen.MaceratorScreen;
@@ -15,10 +17,13 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.render.entity.model.VillagerResemblingModel;
+import net.minecraft.client.render.model.ModelLoader;
 
 public class NoMoreHorsesClient implements ClientModInitializer {
 
@@ -41,6 +46,9 @@ public class NoMoreHorsesClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.SNAIL, SnailRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SNAIL, SnailModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.WANDERING_COLLECTOR, WanderingCollectorRenderer::new);
+        //EntityModelLayerRegistry.registerModelLayer(ModModelLayers.WANDERING_COLLECTOR, (EntityModelLayerRegistry.TexturedModelDataProvider) TexturedModelData.of(VillagerResemblingModel.getModelData(), 64, 64));
 
         EntityRendererRegistry.register(ModEntities.EYE_OF_THE_VOID, FlyingItemEntityRenderer::new);
 

@@ -101,6 +101,9 @@
   "entity.nomorehorses.snail": "Snail",
   "item.nomorehorses.snail_spawn_egg": "Snail Spawn Egg",
 
+  "entity.nomorehorses.wandering_collector": "Wandering Collector",
+  "item.nomorehorses.wandering_collector_spawn_egg": "Wandering Collector Spawn Egg",
+
   "block.nomorehorses.macerator": "Macerator",
 
   "block.nomorehorses.fisher": "Fisher",

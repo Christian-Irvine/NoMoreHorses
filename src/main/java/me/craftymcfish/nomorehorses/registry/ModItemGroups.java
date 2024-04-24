@@ -67,6 +67,7 @@ public class ModItemGroups {
                 entries.add(ModBlocks.INFUSED_MARBLE_PILLAR);
 
                 entries.add(ModItems.SNAIL_SPAWN_EGG);
+                entries.add(ModItems.WANDERING_COLLECTOR_SPAWN_EGG);
 
                 entries.add(ModBlocks.MACERATOR);
                 entries.add(ModBlocks.FISHER);

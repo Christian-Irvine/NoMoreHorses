@@ -4,6 +4,7 @@ import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.entity.custom.BurntCroissantEntity;
 import me.craftymcfish.nomorehorses.entity.custom.EyeOfTheVoidEntity;
 import me.craftymcfish.nomorehorses.entity.custom.SnailEntity;
+import me.craftymcfish.nomorehorses.entity.custom.WanderingCollectorEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -27,4 +28,9 @@ public class ModEntities {
             new Identifier(NoMoreHorses.MOD_ID, "burnt_croissant_entity"),
             FabricEntityTypeBuilder.<BurntCroissantEntity>create(SpawnGroup.MISC, BurntCroissantEntity::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
+    public static final EntityType<WanderingCollectorEntity> WANDERING_COLLECTOR = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(NoMoreHorses.MOD_ID, "wandering_collector"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WanderingCollectorEntity::new)
+                    .dimensions(EntityDimensions.fixed(1, 2f)).build());
 }
