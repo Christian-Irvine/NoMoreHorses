@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:moss_block"
+    },
+    "O": {
+      "item": "minecraft:deepslate_diamond_ore"
+    },
+    "S": {
+      "item": "nomorehorses:living_spore"
+    }
+  },
+  "pattern": [
+    "OMO",
+    "MSM",
+    "OMO"
+  ],
+  "result": {
+    "item": "nomorehorses:living_diamond_ore"
+  },
+  "show_notification": true
+}

@@ -75,16 +75,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"mesh_crafting"));
 
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RAW_MONEY, 8)
-//                .pattern("PPP")
-//                .pattern("PLP")
-//                .pattern("PPP")
-//                .input('P', Items.PAPER)
-//                .input('L', Items.LIME_DYE)
-//                .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
-//                .criterion(hasItem(Items.LIME_DYE), conditionsFromItem(Items.LIME_DYE))
-//                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"raw_money_crafting"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.GEORGE, 1)
                 .pattern("DND")
                 .pattern("EDE")
@@ -1046,8 +1036,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("CCC")
                 .input('C', ItemTags.STONE_CRAFTING_MATERIALS)
                 .input('P', Blocks.PISTON)
-                //.input('S', Blocks.SMOOTH_STONE)
-                //.criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
                 .criterion(hasItem(Blocks.COBBLESTONE), conditionsFromItem(Blocks.COBBLESTONE))
                 .criterion(hasItem(Blocks.COBBLED_DEEPSLATE), conditionsFromItem(Blocks.COBBLED_DEEPSLATE))
                 .criterion(hasItem(Blocks.PISTON), conditionsFromItem(Blocks.PISTON))
@@ -1084,7 +1072,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_COPPER_ORE.asItem(), ModBlocks.LIVING_COPPER_ORE.asItem(), "copper");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_IRON_ORE.asItem(), ModBlocks.LIVING_IRON_ORE.asItem(), "iron");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_GOLD_ORE.asItem(), ModBlocks.LIVING_GOLD_ORE.asItem(), "gold");
-        //offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_DIAMOND_ORE.asItem(), ModBlocks.LIVING_DIAMOND_ORE.asItem(), "diamond");
+        offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_DIAMOND_ORE.asItem(), ModBlocks.LIVING_DIAMOND_ORE.asItem(), "diamond");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_LAPIS_ORE.asItem(), ModBlocks.LIVING_LAPIS_ORE.asItem(), "lapis");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_REDSTONE_ORE.asItem(), ModBlocks.LIVING_REDSTONE_ORE.asItem(), "redstone");
         offerLivingRecipe(exporter, RecipeCategory.MISC, Blocks.DEEPSLATE_EMERALD_ORE.asItem(), ModBlocks.LIVING_EMERALD_ORE.asItem(), "emerald");
