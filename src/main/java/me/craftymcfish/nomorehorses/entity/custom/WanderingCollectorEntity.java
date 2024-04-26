@@ -106,7 +106,7 @@ public class WanderingCollectorEntity extends MerchantEntity {
             return;
         }
         TradeOfferList tradeOfferList = this.getOffers();
-        this.fillRecipesFromPool(tradeOfferList, factorys, 5);
+        this.fillRecipesFromPool(tradeOfferList, factorys, 9);
         int i = this.random.nextInt(factorys2.length);
         TradeOffers.Factory factory = factorys2[i];
         TradeOffer tradeOffer = factory.create(this, this.random);

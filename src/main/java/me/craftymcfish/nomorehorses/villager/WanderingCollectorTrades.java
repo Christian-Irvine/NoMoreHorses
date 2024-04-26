@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.block.Block;
@@ -446,6 +447,33 @@ public class WanderingCollectorTrades {
                     buyItemFactory(Items.BAMBOO_PLANKS, 16, 1),
                     buyItemFactory(Items.STRIPPED_BAMBOO_BLOCK, 16, 1),
                     buyItemFactory(Items.STRIPPED_BAMBOO_BLOCK, 16, 1),
+
+                    //NoMoreHorses Items
+                    buyItemFactory(ModBlocks.MARBLE.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.POLISHED_MARBLE.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.MARBLE_BRICKS.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.MARBLE_PILLAR.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.INFUSED_MARBLE_PILLAR.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.CHORUS_LOG.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.STRIPPED_CHORUS_LOG.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.CHORUS_PLANKS.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.OLIVE_LOG.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.OLIVE_WOOD.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.STRIPPED_OLIVE_LOG.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.STRIPPED_OLIVE_WOOD.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.SALT_BLOCK.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.PACKED_SALT_BLOCK.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.PORK_BLOCK.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.CHEESE_BLOCK.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.IRON_SHINGLES.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.SHINGLES.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.SHULKER_SHINGLES.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.SHULKER_BRICKS.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.VOIDFIRE_BLOCK.asItem(), 16, 1),
+                    buyItemFactory(ModBlocks.VOIDFIRE_LAMP.asItem(), 16, 1),
+
+                    buyItemFactory(ModBlocks.MACERATOR.asItem(), 1, 1),
+                    buyItemFactory(ModBlocks.FISHER.asItem(), 1, 1),
             },
             2, new TradeOffers.Factory[]{
                     buyItemFactory(Items.EMERALD_ORE, 1, 1),

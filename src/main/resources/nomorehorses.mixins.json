@@ -5,7 +5,9 @@
 	"mixins": [
 		"BrewingRecipeRegistryMixin",
 		"MixinLivingEntity",
-		"MinecraftServerMixin"
+		"MinecraftServerMixin",
+		"ServerWorldMixin",
+		"ServerWorldAccessor"
 	],
 	"client": [
 		"NoMoreHorsesMixin",

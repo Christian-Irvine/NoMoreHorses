@@ -6,11 +6,13 @@ package me.craftymcfish.nomorehorses.spawning;
 import java.util.Optional;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
+import me.craftymcfish.nomorehorses.entity.ModEntities;
+import me.craftymcfish.nomorehorses.entity.custom.WanderingCollectorEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SpawnRestriction;
-import net.minecraft.entity.passive.TraderLlamaEntity;
-import net.minecraft.entity.passive.WanderingTraderEntity;
+import net.minecraft.entity.passive.CamelEntity;
+import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -38,12 +40,13 @@ public class WanderingCollectorManager
     private int spawnChance;
 
     public WanderingCollectorManager(ServerWorldProperties properties) {
+        NoMoreHorses.LOGGER.info("COLLECTOR CONSTRUCTOR");
         this.properties = properties;
-        this.spawnTimer = 20; //1200;
-        this.spawnDelay = 20; //properties.getWanderingTraderSpawnDelay();
+        this.spawnTimer = 600; //1200;
+        this.spawnDelay = properties.getWanderingTraderSpawnDelay() / 2;
         this.spawnChance = properties.getWanderingTraderSpawnChance();
         if (this.spawnDelay == 0 && this.spawnChance == 0) {
-            this.spawnDelay = 20; //24000;
+            this.spawnDelay = 12000; //24000;
             properties.setWanderingTraderSpawnDelay(this.spawnDelay);
             this.spawnChance = 25;
             properties.setWanderingTraderSpawnChance(this.spawnChance);
@@ -52,25 +55,23 @@ public class WanderingCollectorManager
 
     @Override
     public int spawn(ServerWorld world, boolean spawnMonsters, boolean spawnAnimals) {
-        NoMoreHorses.LOGGER.info("Spawn");
-
         if (!world.getGameRules().getBoolean(GameRules.DO_TRADER_SPAWNING)) {
             return 0;
         }
 
-        NoMoreHorses.LOGGER.info(spawnTimer + ", " + spawnDelay);
+        //NoMoreHorses.LOGGER.info(spawnTimer + ", " + spawnDelay);
 
         if (--this.spawnTimer > 0) {
             return 0;
         }
 
-        this.spawnTimer = 20; //1200;
+        this.spawnTimer = 600; //1200;
         this.spawnDelay -= 1200;
         this.properties.setWanderingTraderSpawnDelay(this.spawnDelay);
         if (this.spawnDelay > 0) {
             return 0;
         }
-        this.spawnDelay =  20;//24000;
+        this.spawnDelay =  12000;//24000;
         if (!world.getGameRules().getBoolean(GameRules.DO_MOB_SPAWNING)) {
             return 0;
         }
@@ -105,31 +106,31 @@ public class WanderingCollectorManager
             if (world.getBiome(blockPos3).isIn(BiomeTags.WITHOUT_WANDERING_TRADER_SPAWNS)) {
                 return false;
             }
-            WanderingTraderEntity wanderingTraderEntity = EntityType.WANDERING_TRADER.spawn(world, blockPos3, SpawnReason.EVENT);
-            if (wanderingTraderEntity != null) {
-                for (int j = 0; j < 2; ++j) {
-                    this.spawnLlama(world, wanderingTraderEntity, 4);
+            WanderingCollectorEntity wanderingCollectorEntity = ModEntities.WANDERING_COLLECTOR.spawn(world, blockPos3, SpawnReason.EVENT);
+            if (wanderingCollectorEntity != null) {
+                for (int j = 0; j < 1; ++j) {
+                    this.spawnFollowerAnimal(world, wanderingCollectorEntity, 4);
                 }
-                this.properties.setWanderingTraderId(wanderingTraderEntity.getUuid());
-                wanderingTraderEntity.setDespawnDelay(48000);
-                wanderingTraderEntity.setWanderTarget(blockPos2);
-                wanderingTraderEntity.setPositionTarget(blockPos2, 16);
+                this.properties.setWanderingTraderId(wanderingCollectorEntity.getUuid());
+                wanderingCollectorEntity.setDespawnDelay(48000);
+                wanderingCollectorEntity.setWanderTarget(blockPos2);
+                wanderingCollectorEntity.setPositionTarget(blockPos2, 16);
                 return true;
             }
         }
         return false;
     }
 
-    private void spawnLlama(ServerWorld world, WanderingTraderEntity wanderingTrader, int range) {
-        BlockPos blockPos = this.getNearbySpawnPos(world, wanderingTrader.getBlockPos(), range);
+    private void spawnFollowerAnimal(ServerWorld world, WanderingCollectorEntity wanderingCollector, int range) {
+        BlockPos blockPos = this.getNearbySpawnPos(world, wanderingCollector.getBlockPos(), range);
         if (blockPos == null) {
             return;
         }
-        TraderLlamaEntity traderLlamaEntity = EntityType.TRADER_LLAMA.spawn(world, blockPos, SpawnReason.EVENT);
-        if (traderLlamaEntity == null) {
+        CamelEntity camelEntity = EntityType.CAMEL.spawn(world, blockPos, SpawnReason.EVENT);
+        if (camelEntity == null) {
             return;
         }
-        traderLlamaEntity.attachLeash(wanderingTrader, true);
+        camelEntity.attachLeash(wanderingCollector, true);
     }
 
     @Nullable

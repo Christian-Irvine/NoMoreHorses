@@ -28,10 +28,22 @@ import java.util.*;
 
 @Mixin(MinecraftServer.class)
 abstract class MinecraftServerMixin {
-    @Inject(method = "createWorlds", at = @At(value = "INVOKE", target = "Lcom/google/common/collect/ImmutableList;of()Lcom/google/common/collect/ImmutableList;", shift = At.Shift.AFTER))
+    @Inject(method = "createWorlds", at = @At(value = "INVOKE", target = "Lnet/minecraft/registry/Registry;get(Lnet/minecraft/registry/RegistryKey;)Ljava/lang/Object;", shift = At.Shift.AFTER)) //Lcom/google/common/collect/ImmutableList;of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     private void addToSpawnerListInject(WorldGenerationProgressListener worldGenerationProgressListener, CallbackInfo ci, @Local LocalRef<List<Spawner>> listLocalRef, @Local ServerWorldProperties serverWorldProperties){
         ArrayList<Spawner> list = new ArrayList<Spawner>(listLocalRef.get());
         list.add(new WanderingCollectorManager(serverWorldProperties));
         listLocalRef.set(list);
     }
+
+
+//    @Inject(method = "createWorlds", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;<init>(Lnet/minecraft/server/MinecraftServer;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/storage/LevelStorage$Session;Lnet/minecraft/world/level/ServerWorldProperties;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/dimension/DimensionOptions;Lnet/minecraft/server/WorldGenerationProgressListener;ZJLjava/util/List;ZLnet/minecraft/util/math/random/RandomSequencesState;)V")) //"Lcom/google/common/collect/ImmutableList;of()Lcom/google/common/collect/ImmutableList;"
+//    private void spawnerLogger(WorldGenerationProgressListener worldGenerationProgressListener, CallbackInfo ci, @Local LocalRef<List<Spawner>> listLocalRef, @Local ServerWorldProperties serverWorldProperties){
+//        ArrayList<Spawner> list = new ArrayList<Spawner>(listLocalRef.get());
+//
+//        NoMoreHorses.LOGGER.info("Post Adding To List");
+//        for (Spawner element : list) {
+//            NoMoreHorses.LOGGER.info(element.toString());
+//        }
+//        NoMoreHorses.LOGGER.info("---------------------");
+//    }
 }
