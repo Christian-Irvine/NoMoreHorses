@@ -3,6 +3,7 @@
  */
 package me.craftymcfish.nomorehorses.spawning;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
@@ -11,6 +12,7 @@ import me.craftymcfish.nomorehorses.entity.custom.WanderingCollectorEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.CamelEntity;
 import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.registry.tag.BiomeTags;
@@ -38,9 +40,9 @@ public class WanderingCollectorManager
     private int spawnTimer;
     private int spawnDelay;
     private int spawnChance;
+    private ServerPlayerEntity lastPickedPlayer;
 
     public WanderingCollectorManager(ServerWorldProperties properties) {
-        NoMoreHorses.LOGGER.info("COLLECTOR CONSTRUCTOR");
         this.properties = properties;
         this.spawnTimer = 600; //1200;
         this.spawnDelay = properties.getWanderingTraderSpawnDelay() / 2;
@@ -55,7 +57,7 @@ public class WanderingCollectorManager
 
     @Override
     public int spawn(ServerWorld world, boolean spawnMonsters, boolean spawnAnimals) {
-        if (!world.getGameRules().getBoolean(GameRules.DO_TRADER_SPAWNING)) {
+        if (!world.getGameRules().getBoolean(NoMoreHorses.DO_COLLECTOR_SPAWNING)) {
             return 0;
         }
 
@@ -89,7 +91,36 @@ public class WanderingCollectorManager
     }
 
     private boolean trySpawn(ServerWorld world) {
-        ServerPlayerEntity playerEntity = world.getRandomAlivePlayer();
+        ServerPlayerEntity playerEntity = null;
+
+        int pickPlayerAttempts = 5;
+
+        if (lastPickedPlayer != null){
+            if (!lastPickedPlayer.isDisconnected()) {
+                for (int tries = 0; tries < pickPlayerAttempts; tries++) {
+                    ServerPlayerEntity newPlayer = world.getRandomAlivePlayer();
+                    if (newPlayer != lastPickedPlayer) {
+                        playerEntity = newPlayer;
+                        break;
+                    }
+                }
+                if (playerEntity == null) {
+                    return false;
+                }
+            }
+            else {
+                playerEntity = world.getRandomAlivePlayer();
+            }
+        }
+        else {
+             playerEntity = world.getRandomAlivePlayer();
+        }
+
+        lastPickedPlayer = playerEntity;
+
+
+
+
         if (playerEntity == null) {
             return true;
         }
@@ -130,6 +161,11 @@ public class WanderingCollectorManager
         if (camelEntity == null) {
             return;
         }
+
+        ArrayList<MobEntity> followerAnimals = new ArrayList<>();
+        followerAnimals.add(camelEntity);
+        wanderingCollector.addFollowerAnimals(followerAnimals);
+
         camelEntity.attachLeash(wanderingCollector, true);
     }
 

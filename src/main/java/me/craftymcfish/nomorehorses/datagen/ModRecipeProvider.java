@@ -448,15 +448,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_axe_crafting_left"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_AXE, 1)
-                .pattern(" CC")
-                .pattern(" SC")
-                .pattern(" S ")
-                .input('C', Items.COPPER_INGOT)
-                .input('S', Items.STICK)
-                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_axe_crafting_right"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_SHOVEL, 1)
                 .pattern(" C ")
                 .pattern(" S ")
@@ -472,17 +463,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" S ")
                 .input('C', Items.COPPER_INGOT)
                 .input('S', Items.STICK)
+                .group("copper_hoe")
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_hoe_crafting_left"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HOE, 1)
-                .pattern(" CC")
-                .pattern(" S ")
-                .pattern(" S ")
-                .input('C', Items.COPPER_INGOT)
-                .input('S', Items.STICK)
-                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "copper_hoe_crafting_right"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE, 1)
                 .input(ModBlocks.DAFFODIL)
@@ -556,36 +539,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "riftsteel_boots_upgrading"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
-                .pattern(" B ")
-                .pattern(" B ")
-                .pattern(" B ")
-                .input('B', Items.BREAD)
-                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting_vertical"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
                 .pattern("   ")
                 .pattern("BBB")
                 .pattern("   ")
                 .input('B', Items.BREAD)
+                .group("baguette")
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting_horizontal"));
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
-                .pattern("B  ")
-                .pattern(" B ")
-                .pattern("  B")
-                .input('B', Items.BREAD)
-                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting_diagonal_left"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 1)
-                .pattern("  B")
-                .pattern(" B ")
-                .pattern("B  ")
-                .input('B', Items.BREAD)
-                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting_diagonal_right"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 16)
+                .pattern("   ")
+                .pattern("L  ")
+                .pattern("L  ")
+                .input('L', ItemTags.LOGS)
+                .criterion(hasItem(Blocks.OAK_LOG), conditionsFromItem(Blocks.OAK_LOG))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "sticks_from_log"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DENSE_SPONGE, 1)
                 .pattern("SS ")

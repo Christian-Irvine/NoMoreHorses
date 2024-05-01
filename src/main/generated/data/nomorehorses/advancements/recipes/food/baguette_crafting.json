@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nomorehorses:baguette_crafting_horizontal"
+        "recipe": "nomorehorses:baguette_crafting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nomorehorses:baguette_crafting_horizontal"
+      "nomorehorses:baguette_crafting"
     ]
   },
   "sends_telemetry_event": false

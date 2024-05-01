@@ -37,6 +37,7 @@ public class NoMoreHorses implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final GameRules.Key<GameRules.BooleanRule> EXHAUST_LIVING_ORES = registerBooleanGameRule("exhaustLivingOres", GameRules.Category.UPDATES, true);
+	public static final GameRules.Key<GameRules.BooleanRule> DO_COLLECTOR_SPAWNING = registerBooleanGameRule("doCollectorSpawning", GameRules.Category.UPDATES, true);
 
 	//final is a const
 

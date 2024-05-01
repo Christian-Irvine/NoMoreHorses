@@ -5,6 +5,7 @@ import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.villager.WanderingCollectorTrades;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.*;
@@ -35,12 +36,15 @@ import net.minecraft.world.World;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.List;
 
 public class WanderingCollectorEntity extends MerchantEntity {
     @Nullable
     private BlockPos wanderTarget;
     private int despawnDelay;
+    private ArrayList<MobEntity> followerAnimals;
 
     public WanderingCollectorEntity(EntityType<? extends MerchantEntity> entityType, World world) {
         super(entityType, world);
@@ -98,6 +102,10 @@ public class WanderingCollectorEntity extends MerchantEntity {
         return super.interactMob(player, hand);
     }
 
+    public void addFollowerAnimals(ArrayList<MobEntity> newFollowerAnimals) {
+        followerAnimals.addAll(newFollowerAnimals);
+    }
+
     @Override
     protected void fillRecipes() {
         TradeOffers.Factory[] factorys = (TradeOffers.Factory[])WanderingCollectorTrades.WANDERING_COLLECTOR_TRADES.get(1);
@@ -106,7 +114,7 @@ public class WanderingCollectorEntity extends MerchantEntity {
             return;
         }
         TradeOfferList tradeOfferList = this.getOffers();
-        this.fillRecipesFromPool(tradeOfferList, factorys, 9);
+        this.fillRecipesFromPool(tradeOfferList, factorys, 7);
         int i = this.random.nextInt(factorys2.length);
         TradeOffers.Factory factory = factorys2[i];
         TradeOffer tradeOffer = factory.create(this, this.random);
@@ -203,6 +211,11 @@ public class WanderingCollectorEntity extends MerchantEntity {
 
     private void tickDespawnDelay() {
         if (this.despawnDelay > 0 && !this.hasCustomer() && --this.despawnDelay == 0) {
+            for(MobEntity followerAnimal : followerAnimals) {
+                if (followerAnimal.getHoldingEntity() == this) {
+                    followerAnimal.discard();
+                }
+            }
             this.discard();
         }
     }

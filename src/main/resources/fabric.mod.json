@@ -3,7 +3,7 @@
 	"id": "nomorehorses",
 	"version": "${version}",
 	"name": "No More Horses",
-	"description": "No More Horses aims to get rid of all those nasty horses, as well as adding some nice game changers.",
+	"description": "No More Horses does what it says, it adds no more horses. However, it does add a bunch of vanilla plus features to play with!",
 	"authors": [
 		"CraftyMCFish"
 	],
@@ -30,7 +30,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.4",
-		"minecraft": "~1.20.1",
+		"minecraft": "~1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

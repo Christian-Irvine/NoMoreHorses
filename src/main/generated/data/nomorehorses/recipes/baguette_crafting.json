@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "baguette",
   "key": {
     "B": {
       "item": "minecraft:bread"
     }
   },
   "pattern": [
-    "  B",
-    " B ",
-    "B  "
+    "   ",
+    "BBB",
+    "   "
   ],
   "result": {
     "item": "nomorehorses:baguette"

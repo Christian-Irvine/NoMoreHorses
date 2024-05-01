@@ -14,10 +14,10 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
     public static final Item CHEESE = registerItem("cheese",
-            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).build()))); //new FabricItemSettings()
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()))); //new FabricItemSettings()
     public static final Item SALT = registerItem("salt", new SaltItem());
     public static final Item BAGUETTE = registerItem("baguette",
-            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(15).saturationModifier(1.8f).build())));
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(15).saturationModifier(0.6f).build())));
     public static final Item BURNT_BAGUETTE = registerItem("burnt_baguette", new BurntBaguetteItem(ModToolMaterial.BAGUETTE, 4, -2.4f, new FabricItemSettings()));
     //public static final Item BURNT_CROISSANT = registerItem("burnt_croissant", new BurntCroissantItem(new FabricItemSettings()));
 
@@ -27,7 +27,7 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().snack().hunger(2).saturationModifier(0.2f).build())));
 
     public static final Item GRILLED_CHEESE = registerItem("grilled_cheese",
-            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build())));
+            new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).build())));
 
     public static final Item SEA_SPONGE = registerItem("sea_sponge", new Item(new FabricItemSettings()));
 

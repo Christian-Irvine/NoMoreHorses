@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:bread"
+    "L": {
+      "tag": "minecraft:logs"
     }
   },
   "pattern": [
-    "B  ",
-    " B ",
-    "  B"
+    "   ",
+    "L  ",
+    "L  "
   ],
   "result": {
+    "count": 16,
     "item": "nomorehorses:baguette"
   },
   "show_notification": true
