@@ -48,6 +48,7 @@ public class WanderingCollectorEntity extends MerchantEntity {
 
     public WanderingCollectorEntity(EntityType<? extends MerchantEntity> entityType, World world) {
         super(entityType, world);
+        followerAnimals = new ArrayList<>();
     }
 
     @Override

@@ -35,17 +35,11 @@ import org.jetbrains.annotations.Nullable;
 public class WanderingCollectorManager
         implements Spawner {
 
-    private class WanderingCollectorPlayerSpawnWeight {
-        public PlayerEntity player;
-        public int weight;
-    }
-
     private final Random random = Random.create();
     private final ServerWorldProperties properties;
     private int spawnTimer;
     private int spawnDelay;
     private int spawnChance;
-    private ServerPlayerEntity lastPickedPlayer;
 
     private int defaultPlayerSpawnWeight = 15;
     private int weightIncreasePerOnlineMiss = 10;
@@ -58,7 +52,7 @@ public class WanderingCollectorManager
         this.spawnDelay = properties.getWanderingTraderSpawnDelay() / 2;
         this.spawnChance = properties.getWanderingTraderSpawnChance();
         if (this.spawnDelay == 0 && this.spawnChance == 0) {
-            this.spawnDelay = 12000; //24000;
+            this.spawnDelay = 6000; //24000;
             properties.setWanderingTraderSpawnDelay(this.spawnDelay);
             this.spawnChance = 25;
             properties.setWanderingTraderSpawnChance(this.spawnChance);
@@ -105,8 +99,10 @@ public class WanderingCollectorManager
     }
 
     private boolean trySpawn(ServerWorld world) {
+        //NoMoreHorses.LOGGER.info("Trying To Spawn!");
+
+
         ServerPlayerEntity playerEntity = pickValidPlayerEntity(world);
-        lastPickedPlayer = playerEntity;
 //        int pickPlayerAttempts = 5;
 //
 //        if (lastPickedPlayer != null){
@@ -132,6 +128,7 @@ public class WanderingCollectorManager
         if (playerEntity == null) {
             return true;
         }
+        //NoMoreHorses.LOGGER.info("Player Picked!");
 
         if (this.random.nextInt(10) != 0) {
             return false;
@@ -187,6 +184,8 @@ public class WanderingCollectorManager
             }
         }
 
+        //NoMoreHorses.LOGGER.info("Weights is empty:" + String.valueOf(playerWeights.isEmpty()));
+
         if (playerWeights.isEmpty()) return null;
 
         return selectPlayerFromPlayerWeights(totalWeight);
@@ -196,13 +195,21 @@ public class WanderingCollectorManager
         int pickedNumber = random.nextInt(totalWeight + 1);
         int weightCount = 0;
 
+        //NoMoreHorses.LOGGER.info("Max Weight:" + totalWeight);
+        //NoMoreHorses.LOGGER.info("Picked Number:" + pickedNumber);
+
         for (Map.Entry<ServerPlayerEntity, Integer> entry : playerWeights.entrySet()) {
             weightCount += entry.getValue();
 
-            if (weightCount <= pickedNumber) {
+            //NoMoreHorses.LOGGER.info("Weight Count:" + weightCount);
+
+            if (pickedNumber <= weightCount) {
+                //NoMoreHorses.LOGGER.info("Hey Hey! we picked one!");
                 return entry.getKey();
             }
         }
+
+        //NoMoreHorses.LOGGER.info("Oh God! its null!!!");
 
         return null;
     }
