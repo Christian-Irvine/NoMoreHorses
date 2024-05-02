@@ -547,13 +547,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "baguette_crafting"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BAGUETTE, 16)
-                .pattern("   ")
-                .pattern("L  ")
-                .pattern("L  ")
-                .input('L', ItemTags.LOGS)
-                .criterion(hasItem(Blocks.OAK_LOG), conditionsFromItem(Blocks.OAK_LOG))
-                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "sticks_from_log"));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Items.STICK, 16)
+//                .pattern("   ")
+//                .pattern("L  ")
+//                .pattern("L  ")
+//                .input('L', ItemTags.LOGS)
+//                .criterion(hasItem(Blocks.OAK_LOG), conditionsFromItem(Blocks.OAK_LOG))
+//                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID, "sticks_from_log"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DENSE_SPONGE, 1)
                 .pattern("SS ")

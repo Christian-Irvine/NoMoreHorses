@@ -3,8 +3,7 @@
  */
 package me.craftymcfish.nomorehorses.spawning;
 
-import java.util.ArrayList;
-import java.util.Optional;
+import java.util.*;
 
 import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.entity.ModEntities;
@@ -15,6 +14,7 @@ import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.CamelEntity;
 import net.minecraft.entity.passive.HorseEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -35,12 +35,22 @@ import org.jetbrains.annotations.Nullable;
 public class WanderingCollectorManager
         implements Spawner {
 
+    private class WanderingCollectorPlayerSpawnWeight {
+        public PlayerEntity player;
+        public int weight;
+    }
+
     private final Random random = Random.create();
     private final ServerWorldProperties properties;
     private int spawnTimer;
     private int spawnDelay;
     private int spawnChance;
     private ServerPlayerEntity lastPickedPlayer;
+
+    private int defaultPlayerSpawnWeight = 15;
+    private int weightIncreasePerOnlineMiss = 10;
+    //private ArrayList<WanderingCollectorPlayerSpawnWeight> playerWeights;
+    private HashMap<ServerPlayerEntity, Integer> playerWeights = new HashMap<>();
 
     public WanderingCollectorManager(ServerWorldProperties properties) {
         this.properties = properties;
@@ -57,6 +67,10 @@ public class WanderingCollectorManager
 
     @Override
     public int spawn(ServerWorld world, boolean spawnMonsters, boolean spawnAnimals) {
+        int overworldPlayerMultiplier = world.getPlayers().size();
+
+        if (overworldPlayerMultiplier <= 0) return 0;
+
         if (!world.getGameRules().getBoolean(NoMoreHorses.DO_COLLECTOR_SPAWNING)) {
             return 0;
         }
@@ -67,13 +81,13 @@ public class WanderingCollectorManager
             return 0;
         }
 
-        this.spawnTimer = 600; //1200;
+        this.spawnTimer = 600 / overworldPlayerMultiplier; //1200;
         this.spawnDelay -= 1200;
         this.properties.setWanderingTraderSpawnDelay(this.spawnDelay);
         if (this.spawnDelay > 0) {
             return 0;
         }
-        this.spawnDelay =  12000;//24000;
+        this.spawnDelay =  12000  / overworldPlayerMultiplier;;//24000;
         if (!world.getGameRules().getBoolean(GameRules.DO_MOB_SPAWNING)) {
             return 0;
         }
@@ -91,39 +105,34 @@ public class WanderingCollectorManager
     }
 
     private boolean trySpawn(ServerWorld world) {
-        ServerPlayerEntity playerEntity = null;
-
-        int pickPlayerAttempts = 5;
-
-        if (lastPickedPlayer != null){
-            if (!lastPickedPlayer.isDisconnected()) {
-                for (int tries = 0; tries < pickPlayerAttempts; tries++) {
-                    ServerPlayerEntity newPlayer = world.getRandomAlivePlayer();
-                    if (newPlayer != lastPickedPlayer) {
-                        playerEntity = newPlayer;
-                        break;
-                    }
-                }
-                if (playerEntity == null) {
-                    return false;
-                }
-            }
-            else {
-                playerEntity = world.getRandomAlivePlayer();
-            }
-        }
-        else {
-             playerEntity = world.getRandomAlivePlayer();
-        }
-
+        ServerPlayerEntity playerEntity = pickValidPlayerEntity(world);
         lastPickedPlayer = playerEntity;
-
-
-
-
+//        int pickPlayerAttempts = 5;
+//
+//        if (lastPickedPlayer != null){
+//            if (!lastPickedPlayer.isDisconnected()) {
+//                for (int tries = 0; tries < pickPlayerAttempts; tries++) {
+//                    ServerPlayerEntity newPlayer = world.getRandomAlivePlayer();
+//                    if (newPlayer != lastPickedPlayer) {
+//                        playerEntity = newPlayer;
+//                        break;
+//                    }
+//                }
+//                if (playerEntity == null) {
+//                    return false;
+//                }
+//            }
+//            else {
+//                playerEntity = world.getRandomAlivePlayer();
+//            }
+//        }
+//        else {
+//             playerEntity = world.getRandomAlivePlayer();
+//        }
         if (playerEntity == null) {
             return true;
         }
+
         if (this.random.nextInt(10) != 0) {
             return false;
         }
@@ -138,6 +147,7 @@ public class WanderingCollectorManager
                 return false;
             }
             WanderingCollectorEntity wanderingCollectorEntity = ModEntities.WANDERING_COLLECTOR.spawn(world, blockPos3, SpawnReason.EVENT);
+
             if (wanderingCollectorEntity != null) {
                 for (int j = 0; j < 1; ++j) {
                     this.spawnFollowerAnimal(world, wanderingCollectorEntity, 4);
@@ -146,10 +156,66 @@ public class WanderingCollectorManager
                 wanderingCollectorEntity.setDespawnDelay(48000);
                 wanderingCollectorEntity.setWanderTarget(blockPos2);
                 wanderingCollectorEntity.setPositionTarget(blockPos2, 16);
+
+                updatePlayerWeightRates(playerEntity);
+
                 return true;
             }
         }
         return false;
+    }
+
+    private ServerPlayerEntity pickValidPlayerEntity(ServerWorld world) {
+        List<ServerPlayerEntity> overworldPlayers = world.getPlayers();
+
+        //Adding new players to hashmap
+        for (ServerPlayerEntity player : overworldPlayers) {
+            if (!playerWeights.containsKey(player)) {
+                playerWeights.put(player, defaultPlayerSpawnWeight);
+            }
+        }
+
+        int totalWeight = 0;
+
+        for (Map.Entry<ServerPlayerEntity, Integer> entry : playerWeights.entrySet()) {
+            ServerPlayerEntity player = entry.getKey();
+            if (player.isDisconnected()) {
+                playerWeights.remove(player);
+            }
+            else {
+                totalWeight += entry.getValue();
+            }
+        }
+
+        if (playerWeights.isEmpty()) return null;
+
+        return selectPlayerFromPlayerWeights(totalWeight);
+    }
+
+    private ServerPlayerEntity selectPlayerFromPlayerWeights(int totalWeight) {
+        int pickedNumber = random.nextInt(totalWeight + 1);
+        int weightCount = 0;
+
+        for (Map.Entry<ServerPlayerEntity, Integer> entry : playerWeights.entrySet()) {
+            weightCount += entry.getValue();
+
+            if (weightCount <= pickedNumber) {
+                return entry.getKey();
+            }
+        }
+
+        return null;
+    }
+
+    private void updatePlayerWeightRates(ServerPlayerEntity pickedPlayer) {
+        for (Map.Entry<ServerPlayerEntity, Integer> entry : playerWeights.entrySet()) {
+            if (entry.getKey() != pickedPlayer) {
+                playerWeights.put(entry.getKey(), playerWeights.get(entry.getKey()) + weightIncreasePerOnlineMiss);
+            }
+            else {
+                playerWeights.put(entry.getKey(), defaultPlayerSpawnWeight);
+            }
+        }
     }
 
     private void spawnFollowerAnimal(ServerWorld world, WanderingCollectorEntity wanderingCollector, int range) {
