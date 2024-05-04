@@ -15,7 +15,7 @@ public class GlutenDamageEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (!entity.getWorld().isClient()) {
-            entity.damage(entity.getDamageSources().magic(), 2.0f);
+            entity.damage(entity.getDamageSources().magic(), 2.0f * (amplifier + 1));
         }
 
         super.applyUpdateEffect(entity, amplifier);

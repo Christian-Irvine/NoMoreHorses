@@ -20,7 +20,8 @@ public class BurntBaguetteItem extends SwordItem {
         if (!attacker.getWorld().isClient()) {
             if (target.hasStatusEffect(ModEffects.GLUTEN_FREE)) {
                 //target.damage(target.getDamageSources().magic(), 8);
-                target.addStatusEffect(new StatusEffectInstance(ModEffects.GLUTEN_DAMAGE, 80, 0));
+                int amplifier = target.getStatusEffect(ModEffects.GLUTEN_FREE).getAmplifier();
+                target.addStatusEffect(new StatusEffectInstance(ModEffects.GLUTEN_DAMAGE, 80, amplifier));
             }
             NoMoreHorses.LOGGER.info(String.valueOf(target.getHealth()));
         }

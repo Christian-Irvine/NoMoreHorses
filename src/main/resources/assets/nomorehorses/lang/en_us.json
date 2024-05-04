@@ -142,8 +142,13 @@
   "item.minecraft.splash_potion.effect.gluten_free_potion_long": "Splash Potion of Gluten Free",
   "item.minecraft.lingering_potion.effect.gluten_free_potion_long": "Lingering Potion of Gluten Free",
 
+  "item.minecraft.potion.effect.gluten_free_potion_strong": "Potion of Gluten Free",
+  "item.minecraft.splash_potion.effect.gluten_free_potion_strong": "Splash Potion of Gluten Free",
+  "item.minecraft.lingering_potion.effect.gluten_free_potion_strong": "Lingering Potion of Gluten Free",
+
   "item.minecraft.tipped_arrow.effect.gluten_free_potion": "Arrow of Gluten Free",
   "item.minecraft.tipped_arrow.effect.gluten_free_potion_long": "Arrow of Gluten Free",
+  "item.minecraft.tipped_arrow.effect.gluten_free_potion_strong": "Arrow of Gluten Free",
 
   "item.nomorehorses.rotten_leather": "Rotten Leather",
 

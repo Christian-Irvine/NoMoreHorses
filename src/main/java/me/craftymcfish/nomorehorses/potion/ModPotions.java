@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 public class ModPotions {
     public static Potion GLUTEN_FREE_POTION;
     public static Potion GLUTEN_FREE_POTION_LONG;
+    private static Potion GLUTEN_FREE_POTION_STRONG;
 
     public static Potion registerPotion(String name, StatusEffect effect, int duration, int amplifier) {
         return Registry.register(Registries.POTION, new Identifier(NoMoreHorses.MOD_ID, name),
@@ -25,6 +26,7 @@ public class ModPotions {
     public static void registerPotions() {
         GLUTEN_FREE_POTION = registerPotion("gluten_free_potion", ModEffects.GLUTEN_FREE, 3600, 0);
         GLUTEN_FREE_POTION_LONG = registerPotion("gluten_free_potion_long", ModEffects.GLUTEN_FREE, 9600, 0);
+        GLUTEN_FREE_POTION_STRONG = registerPotion("gluten_free_potion_strong", ModEffects.GLUTEN_FREE, 1800, 1);
 
         registerPotionRecipes();
     }
@@ -32,5 +34,6 @@ public class ModPotions {
     private static void registerPotionRecipes() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.BAGUETTE, ModPotions.GLUTEN_FREE_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.GLUTEN_FREE_POTION, Items.REDSTONE, ModPotions.GLUTEN_FREE_POTION_LONG);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.GLUTEN_FREE_POTION, Items.GLOWSTONE_DUST, ModPotions.GLUTEN_FREE_POTION_STRONG);
     }
 }

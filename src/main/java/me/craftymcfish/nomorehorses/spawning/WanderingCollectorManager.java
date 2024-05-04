@@ -13,8 +13,6 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.CamelEntity;
-import net.minecraft.entity.passive.HorseEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -41,9 +39,8 @@ public class WanderingCollectorManager
     private int spawnDelay;
     private int spawnChance;
 
-    private int defaultPlayerSpawnWeight = 15;
-    private int weightIncreasePerOnlineMiss = 10;
-    //private ArrayList<WanderingCollectorPlayerSpawnWeight> playerWeights;
+    private final int defaultPlayerSpawnWeight = 15;
+    private final int weightIncreasePerOnlineMiss = 10;
     private HashMap<ServerPlayerEntity, Integer> playerWeights = new HashMap<>();
 
     public WanderingCollectorManager(ServerWorldProperties properties) {
@@ -52,7 +49,7 @@ public class WanderingCollectorManager
         this.spawnDelay = properties.getWanderingTraderSpawnDelay() / 2;
         this.spawnChance = properties.getWanderingTraderSpawnChance();
         if (this.spawnDelay == 0 && this.spawnChance == 0) {
-            this.spawnDelay = 6000; //24000;
+            this.spawnDelay = 12000; //24000;
             properties.setWanderingTraderSpawnDelay(this.spawnDelay);
             this.spawnChance = 25;
             properties.setWanderingTraderSpawnChance(this.spawnChance);
@@ -61,13 +58,15 @@ public class WanderingCollectorManager
 
     @Override
     public int spawn(ServerWorld world, boolean spawnMonsters, boolean spawnAnimals) {
-        int overworldPlayerMultiplier = world.getPlayers().size();
-
-        if (overworldPlayerMultiplier <= 0) return 0;
-
         if (!world.getGameRules().getBoolean(NoMoreHorses.DO_COLLECTOR_SPAWNING)) {
             return 0;
         }
+
+        //Make this bigger for each player to have a greater effect on spawning
+        float multiplier = 3;
+        int overworldPlayerDivisor = (int) playerSpawnDivisor(world.getPlayers().size(), multiplier);
+
+        if (overworldPlayerDivisor <= 0) return 0;
 
         //NoMoreHorses.LOGGER.info(spawnTimer + ", " + spawnDelay);
 
@@ -75,13 +74,13 @@ public class WanderingCollectorManager
             return 0;
         }
 
-        this.spawnTimer = 600 / overworldPlayerMultiplier; //1200;
+        this.spawnTimer = 1200 / overworldPlayerDivisor; //1200;
         this.spawnDelay -= 1200;
         this.properties.setWanderingTraderSpawnDelay(this.spawnDelay);
         if (this.spawnDelay > 0) {
             return 0;
         }
-        this.spawnDelay =  12000  / overworldPlayerMultiplier;;//24000;
+        this.spawnDelay =  12000; // / overworldPlayerDivisor;//24000;
         if (!world.getGameRules().getBoolean(GameRules.DO_MOB_SPAWNING)) {
             return 0;
         }
@@ -96,6 +95,11 @@ public class WanderingCollectorManager
             return 1;
         }
         return 0;
+    }
+
+    private float playerSpawnDivisor(float playerCount, float multiplier) {
+
+        return (float) (Math.log(playerCount + 0.5f) * multiplier);
     }
 
     private boolean trySpawn(ServerWorld world) {
@@ -174,15 +178,29 @@ public class WanderingCollectorManager
 
         int totalWeight = 0;
 
+        if (playerWeights.isEmpty()) return null;
+
+        ArrayList<ServerPlayerEntity> playerSetToRemove = new ArrayList<>();
+
+        //NoMoreHorses.LOGGER.info("Valid Player Weights Count: " + playerSet.size());
+
         for (Map.Entry<ServerPlayerEntity, Integer> entry : playerWeights.entrySet()) {
             ServerPlayerEntity player = entry.getKey();
+            //NoMoreHorses.LOGGER.info("Player Name In playerSet loop" + player.getName());
             if (player.isDisconnected()) {
-                playerWeights.remove(player);
+                //playerWeights.remove(player);
+                playerSetToRemove.add(player);
             }
             else {
                 totalWeight += entry.getValue();
             }
         }
+
+        for (ServerPlayerEntity serverPlayerEntity : playerSetToRemove) {
+            playerWeights.remove(serverPlayerEntity);
+        }
+
+        //NoMoreHorses.LOGGER.info("Loop finished successfully");
 
         //NoMoreHorses.LOGGER.info("Weights is empty:" + String.valueOf(playerWeights.isEmpty()));
 
