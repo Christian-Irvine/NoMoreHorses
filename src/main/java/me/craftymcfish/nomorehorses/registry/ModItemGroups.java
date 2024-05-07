@@ -36,7 +36,14 @@ public class ModItemGroups {
                 entries.add(ModBlocks.PORK_ORE);
                 entries.add(ModBlocks.DEEPSLATE_PORK_ORE);
                 entries.add(ModItems.RAW_MONEY);
+                entries.add(ModBlocks.MONEY_SACK);
                 entries.add(ModItems.MONEY);
+                entries.add(ModItems.MONEY_2);
+                entries.add(ModItems.MONEY_4);
+                entries.add(ModItems.MONEY_8);
+                entries.add(ModItems.MONEY_16);
+                entries.add(ModItems.MONEY_32);
+                entries.add(ModItems.MONEY_64);
                 entries.add(ModBlocks.GEORGE);
                 entries.add(ModItems.COPPER_SWORD);
                 entries.add(ModItems.COPPER_PICKAXE);

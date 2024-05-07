@@ -63,7 +63,7 @@ public class WanderingCollectorManager
         }
 
         //Make this bigger for each player to have a greater effect on spawning
-        float multiplier = 3;
+        float multiplier = 4;
         int overworldPlayerDivisor = (int) playerSpawnDivisor(world.getPlayers().size(), multiplier);
 
         if (overworldPlayerDivisor <= 0) return 0;

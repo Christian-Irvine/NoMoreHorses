@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "nomorehorses:block/money_sack_bottom",
+    "east": "nomorehorses:block/money_sack_side",
+    "north": "nomorehorses:block/money_sack_side",
+    "particle": "nomorehorses:block/money_sack_side",
+    "south": "nomorehorses:block/money_sack_side",
+    "up": "nomorehorses:block/money_sack_top",
+    "west": "nomorehorses:block/money_sack_side"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_money_8": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nomorehorses:money_8"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nomorehorses:money_4_split_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_money_8"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nomorehorses:money_4_split_crafting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -29,6 +29,8 @@ public class ModBlocks {
 
     public static final Block GEORGE = registerBlock("george", new GeorgeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(ModSounds.GEORGE_SOUNDS).requiresTool()));
 
+    public static final Block MONEY_SACK = registerBlock("money_sack", new PillarBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).strength(0.5f).sounds(BlockSoundGroup.GRASS)));
+
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.FROGLIGHT)));
     public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",
             new StairsBlock(ModBlocks.CHEESE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(ModBlocks.CHEESE_BLOCK)));

@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
         blockStateModelGenerator.registerLog(ModBlocks.PORK_BLOCK).log(ModBlocks.PORK_BLOCK);
+        //blockStateModelGenerator.registerCube(ModBlocks.MONEY_SACK);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_PORK_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PORK_ORE);
@@ -200,6 +201,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MONEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MONEY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_2, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_4, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_8, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_16, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_32, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MONEY_64, Models.GENERATED);
         itemModelGenerator.register(ModItems.MESH, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.BAGUETTE, Models.GENERATED);

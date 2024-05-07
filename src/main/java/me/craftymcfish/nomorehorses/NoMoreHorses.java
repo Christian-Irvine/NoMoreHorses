@@ -73,7 +73,13 @@ public class NoMoreHorses implements ModInitializer {
 		ModCustomTrades.registerCustomTrades();
 		ModSounds.registerSounds();
 
-		FuelRegistry.INSTANCE.add(ModItems.MONEY, 800);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY, 100);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_2, 200);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_4, 400);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_8, 800);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_16, 1600);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_32, 3200);
+		FuelRegistry.INSTANCE.add(ModItems.MONEY_64, 6400);
 		LOGGER.info("Successfully Registered Fuel Items");
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createSnailAttributes());

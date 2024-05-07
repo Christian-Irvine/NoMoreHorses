@@ -57,6 +57,89 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmelting(exporter, List.of(ModBlocks.DENSE_WET_SPONGE), RecipeCategory.MISC, ModBlocks.DENSE_SPONGE, 1f, 50, "dense_sponge");
 
+        //Money
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY, 2)
+                .input(ModItems.MONEY_2)
+                .criterion(hasItem(ModItems.MONEY_2), conditionsFromItem(ModItems.MONEY_2))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_split_crafting"));
+
+        //Money 2
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_2, 1)
+                .input(ModItems.MONEY)
+                .input(ModItems.MONEY)
+                .criterion(hasItem(ModItems.MONEY), conditionsFromItem(ModItems.MONEY))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_2_combine_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_2, 2)
+                .input(ModItems.MONEY_4)
+                .criterion(hasItem(ModItems.MONEY_4), conditionsFromItem(ModItems.MONEY_4))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_2_split_crafting"));
+
+        //Money 4
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_4, 1)
+                .input(ModItems.MONEY_2)
+                .input(ModItems.MONEY_2)
+                .criterion(hasItem(ModItems.MONEY_2), conditionsFromItem(ModItems.MONEY_2))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_4_combine_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_4, 2)
+                .input(ModItems.MONEY_8)
+                .criterion(hasItem(ModItems.MONEY_8), conditionsFromItem(ModItems.MONEY_8))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_4_split_crafting"));
+
+        //Money 8
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_8, 1)
+                .input(ModItems.MONEY_4)
+                .input(ModItems.MONEY_4)
+                .criterion(hasItem(ModItems.MONEY_4), conditionsFromItem(ModItems.MONEY_4))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_8_combine_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_8, 2)
+                .input(ModItems.MONEY_16)
+                .criterion(hasItem(ModItems.MONEY_16), conditionsFromItem(ModItems.MONEY_16))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_8_split_crafting"));
+
+        //Money 16
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_16, 1)
+                .input(ModItems.MONEY_8)
+                .input(ModItems.MONEY_8)
+                .criterion(hasItem(ModItems.MONEY_8), conditionsFromItem(ModItems.MONEY_8))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_16_combine_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_16, 2)
+                .input(ModItems.MONEY_32)
+                .criterion(hasItem(ModItems.MONEY_32), conditionsFromItem(ModItems.MONEY_32))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_16_split_crafting"));
+
+        //Money 32
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_32, 1)
+                .input(ModItems.MONEY_16)
+                .input(ModItems.MONEY_16)
+                .criterion(hasItem(ModItems.MONEY_16), conditionsFromItem(ModItems.MONEY_16))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_32_combine_crafting"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_32, 2)
+                .input(ModItems.MONEY_64)
+                .criterion(hasItem(ModItems.MONEY_64), conditionsFromItem(ModItems.MONEY_64))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_32_split_crafting"));
+
+        //Money 64
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MONEY_64, 1)
+                .input(ModItems.MONEY_32)
+                .input(ModItems.MONEY_32)
+                .criterion(hasItem(ModItems.MONEY_32), conditionsFromItem(ModItems.MONEY_32))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_64_combine_crafting"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MONEY_SACK, 1)
+                .pattern("WMW")
+                .pattern("WMW")
+                .pattern("WWW")
+                .input('W', ItemTags.WOOL)
+                .input('M', ModItems.MONEY_4)
+                .criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+                .criterion(hasItem(ModItems.MONEY_4), conditionsFromItem(ModItems.MONEY_4))
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_sack_crafting"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROTTEN_LEATHER, 1)
                 .input(Items.ROTTEN_FLESH)
                 .input(Items.ROTTEN_FLESH)

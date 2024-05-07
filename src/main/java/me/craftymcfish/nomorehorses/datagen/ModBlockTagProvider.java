@@ -151,6 +151,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.DENSE_SPONGE)
                 .add(ModBlocks.DENSE_WET_SPONGE)
+                .add(ModBlocks.MONEY_SACK)
                 .add(ModBlocks.OLIVE_LEAVES);
 
 

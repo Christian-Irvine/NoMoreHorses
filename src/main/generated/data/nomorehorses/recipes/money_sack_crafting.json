@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "nomorehorses:money_4"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    "WMW",
+    "WMW",
+    "WWW"
+  ],
+  "result": {
+    "item": "nomorehorses:money_sack"
+  },
+  "show_notification": true
+}

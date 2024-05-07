@@ -35,6 +35,19 @@ public class ModItems {
 
     public static final Item MONEY = registerItem("money",
             new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(4).saturationModifier(0f).build())));
+    public static final Item MONEY_2 = registerItem("money_2",
+            new Item(new Item.Settings().maxCount(64)));
+    public static final Item MONEY_4 = registerItem("money_4",
+            new Item(new Item.Settings().maxCount(64)));
+    public static final Item MONEY_8 = registerItem("money_8",
+            new Item(new Item.Settings().maxCount(64)));
+    public static final Item MONEY_16 = registerItem("money_16",
+            new Item(new Item.Settings().maxCount(64)));
+    public static final Item MONEY_32 = registerItem("money_32",
+            new Item(new Item.Settings().maxCount(64)));
+    public static final Item MONEY_64 = registerItem("money_64",
+            new Item(new Item.Settings().maxCount(64)));
+
     public static final Item RAW_MONEY = registerItem("raw_money", new Item(new Item.Settings().maxCount(64)));
 
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().maxCount(64).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
