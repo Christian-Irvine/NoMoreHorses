@@ -90,7 +90,7 @@ public class PistonBlockMixin {
 
     @Unique
     private void breakBlock(World world, BlockPos blockToBreak) {
-        world.playSound(null, blockToBreak, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1, 1f);
+        world.playSound(null, blockToBreak, SoundEvents.BLOCK_ANVIL_BREAK, SoundCategory.BLOCKS, 1, 1f);
         world.breakBlock(blockToBreak, true);
     }
 
@@ -116,7 +116,7 @@ public class PistonBlockMixin {
         BlockState casing = world.getBlockState(casingPos);
 
         //Play damaging sound
-        world.playSound(null, casingPos, SoundEvents.BLOCK_ANVIL_BREAK, SoundCategory.BLOCKS, 1, 1f);
+        world.playSound(null, casingPos, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1, 1f);
 
         if (casing.isIn(ModTags.Blocks.HEAVY_CASING_BLOCKS)) {
             HeavyCasingBlock casingBlock = (HeavyCasingBlock) casing.getBlock();
