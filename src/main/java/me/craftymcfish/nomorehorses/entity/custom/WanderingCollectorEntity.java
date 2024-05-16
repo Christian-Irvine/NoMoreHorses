@@ -211,6 +211,8 @@ public class WanderingCollectorEntity extends MerchantEntity {
     }
 
     private void tickDespawnDelay() {
+        if (hasCustomName()) return;
+
         if (this.despawnDelay > 0 && !this.hasCustomer() && --this.despawnDelay == 0) {
             for(MobEntity followerAnimal : followerAnimals) {
                 if (followerAnimal.getHoldingEntity() == this) {

@@ -80,12 +80,12 @@ public class PistonBlockMixin {
     @Inject(method = "tryMove", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;get(Lnet/minecraft/state/property/Property;)Ljava/lang/Comparable;", ordinal = 2, shift = At.Shift.AFTER))
     public void retractPiston(World world, BlockPos posFrom, BlockState state, CallbackInfo ci, @Local Direction direction) {
         triedToBreakBlock = false;
-        NoMoreHorses.LOGGER.info("triedToBreakBlock set to false");
+        //NoMoreHorses.LOGGER.info("triedToBreakBlock set to false");
     }
 
     @Unique void pistonMoves() {
         triedToBreakBlock = true;
-        NoMoreHorses.LOGGER.info("triedToBreakBlock set to true");
+        //NoMoreHorses.LOGGER.info("triedToBreakBlock set to true");
     }
 
     @Unique
@@ -123,7 +123,7 @@ public class PistonBlockMixin {
             casingBlock.damageCasingBlock(world, casingPos);
         }
         else {
-            NoMoreHorses.LOGGER.info("Wuh oh not working its not a casing here its a ... " + casing.getBlock());
+            NoMoreHorses.LOGGER.info("Wuh oh not working its not a casing here its a  " + casing.getBlock());
         }
     }
 }
