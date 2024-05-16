@@ -1,21 +1,22 @@
 {
-	"required": true,
-	"package": "me.craftymcfish.nomorehorses.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"BrewingRecipeRegistryMixin",
-		"MixinLivingEntity",
-		"MinecraftServerMixin",
-		"ServerWorldMixin",
-		"ServerWorldAccessor"
-	],
-	"client": [
-		"NoMoreHorsesMixin",
-		"ItemRendererAccessor",
-		"ItemRendererMixin",
-		"ModelLoaderMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "me.craftymcfish.nomorehorses.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BrewingRecipeRegistryMixin",
+    "MinecraftServerMixin",
+    "MixinLivingEntity",
+    "PistonBlockMixin",
+    "ServerWorldAccessor",
+    "ServerWorldMixin"
+  ],
+  "client": [
+    "ItemRendererAccessor",
+    "ItemRendererMixin",
+    "ModelLoaderMixin",
+    "NoMoreHorsesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

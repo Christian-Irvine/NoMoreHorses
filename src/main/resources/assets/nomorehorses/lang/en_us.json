@@ -19,6 +19,11 @@
   "item.nomorehorses.strawberry": "Strawberry",
   "item.nomorehorses.strawberry_seeds": "Strawberry Seeds",
 
+  "block.nomorehorses.heavy_casing": "Heavy Casing",
+  "block.nomorehorses.chipped_heavy_casing": "Chipped Heavy Casing",
+  "block.nomorehorses.damaged_heavy_casing": "Damaged Heavy Casing",
+
+
   "item.nomorehorses.copper_sword": "Copper Sword",
   "item.nomorehorses.copper_pickaxe": "Copper Pickaxe",
   "item.nomorehorses.copper_axe": "Copper Axe",

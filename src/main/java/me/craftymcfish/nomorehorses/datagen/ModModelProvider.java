@@ -78,6 +78,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAFFODIL, ModBlocks.POTTED_DAFFODIL, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HEAVY_CASING);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHIPPED_HEAVY_CASING);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DAMAGED_HEAVY_CASING);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOIDFIRE_LAMP);

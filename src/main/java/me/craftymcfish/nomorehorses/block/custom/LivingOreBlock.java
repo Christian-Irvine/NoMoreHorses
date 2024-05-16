@@ -56,10 +56,9 @@ public class LivingOreBlock extends Block {
         if (world.isClient()) return ActionResult.PASS;
         if (state == getDefaultState().with(LIVING_STATE, 1)) return ActionResult.PASS;
 
-        NoMoreHorses.LOGGER.info(String.valueOf(igniterPredicate.test(player.getStackInHand(hand).getItem())));
+        //NoMoreHorses.LOGGER.info(String.valueOf(igniterPredicate.test(player.getStackInHand(hand).getItem())));
 
         if (!igniterPredicate.test(player.getStackInHand(hand).getItem())) {
-            //igniterPredicate.
             return ActionResult.PASS;
         }
 

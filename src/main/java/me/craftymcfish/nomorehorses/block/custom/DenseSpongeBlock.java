@@ -28,6 +28,8 @@ public class DenseSpongeBlock extends Block {
         this.update(world, pos);
     }
 
+
+
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         this.update(world, pos);

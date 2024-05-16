@@ -1,9 +1,11 @@
 package me.craftymcfish.nomorehorses.datagen;
 
 import me.craftymcfish.nomorehorses.registry.ModBlocks;
+import me.craftymcfish.nomorehorses.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -25,6 +27,34 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 //        getOrCreateTagBuilder(ModTags.Blocks.EXAMPLE_TAG_HERE)
 //                .add(ModBlocks.EXAMPLE_BLOCK);
 //                .forceAddTag(BlockTags.EXAMPLE_TAG) e.g EMERALD_ORES
+
+        getOrCreateTagBuilder(ModTags.Blocks.HEAVY_CASING_BLOCKS)
+                .add(ModBlocks.HEAVY_CASING)
+                .add(ModBlocks.CHIPPED_HEAVY_CASING)
+                .add(ModBlocks.DAMAGED_HEAVY_CASING);
+
+        getOrCreateTagBuilder(ModTags.Blocks.HEAVY_CASING_BREAKABLE_BLOCKS)
+                .add(ModBlocks.LIVING_DIAMOND_ORE)
+                .add(ModBlocks.LIVING_GOLD_ORE)
+                .add(ModBlocks.LIVING_IRON_ORE)
+                .add(ModBlocks.LIVING_COPPER_ORE)
+                .add(ModBlocks.LIVING_LAPIS_ORE)
+                .add(ModBlocks.LIVING_REDSTONE_ORE)
+                .add(ModBlocks.LIVING_COAL_ORE)
+                .add(ModBlocks.LIVING_EMERALD_ORE)
+                .add(ModBlocks.LIVING_QUARTZ_ORE)
+                .add(ModBlocks.LIVING_VOIDFIRE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.HEAVY_CASING_SUPPORT_BLOCKS)
+                .add(Blocks.OBSIDIAN)
+                .add(Blocks.CRYING_OBSIDIAN)
+                .add(Blocks.RESPAWN_ANCHOR)
+                .add(Blocks.REINFORCED_DEEPSLATE)
+                .add(Blocks.BEDROCK)
+                .add(Blocks.ANCIENT_DEBRIS)
+                .add(Blocks.NETHERITE_BLOCK)
+                .add(ModBlocks.RIFTSTEEL_BLOCK);
+
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.PORK_ORE)
@@ -93,6 +123,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_CONCRETE_STAIRS)
                 .add(ModBlocks.BROWN_CONCRETE_SLAB)
                 .add(ModBlocks.BROWN_CONCRETE_STAIRS)
+
+                .add(ModBlocks.HEAVY_CASING)
+                .add(ModBlocks.CHIPPED_HEAVY_CASING)
+                .add(ModBlocks.DAMAGED_HEAVY_CASING)
 
                 .add(ModBlocks.SHULKER_SHINGLES)
                 .add(ModBlocks.SHULKER_SHINGLE_SLAB)
@@ -165,7 +199,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_PORK_ORE);
 
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.HEAVY_CASING)
+                .add(ModBlocks.CHIPPED_HEAVY_CASING)
+                .add(ModBlocks.DAMAGED_HEAVY_CASING);
 
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)

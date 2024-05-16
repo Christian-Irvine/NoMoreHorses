@@ -1,0 +1,12 @@
+{
+  "type": "nomorehorses:macerator",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "output": {
+    "item": "minecraft:string",
+    "count": 4
+  }
+}

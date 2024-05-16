@@ -29,6 +29,10 @@ public class ModBlocks {
 
     public static final Block GEORGE = registerBlock("george", new GeorgeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(ModSounds.GEORGE_SOUNDS).requiresTool()));
 
+    public static final Block HEAVY_CASING = registerBlock("heavy_casing", new HeavyCasingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.NETHERITE).strength(50.0f, 1200.0f).requiresTool()));
+    public static final Block CHIPPED_HEAVY_CASING = registerBlock("chipped_heavy_casing", new HeavyCasingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.NETHERITE).strength(25.0f, 1200.0f).requiresTool()));
+    public static final Block DAMAGED_HEAVY_CASING = registerBlock("damaged_heavy_casing", new HeavyCasingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.NETHERITE).strength(25.0f, 1200.0f).requiresTool()));
+
     public static final Block MONEY_SACK = registerBlock("money_sack", new PillarBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).strength(0.5f).sounds(BlockSoundGroup.GRASS)));
 
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.FROGLIGHT)));

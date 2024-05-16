@@ -205,7 +205,7 @@ public class WanderingCollectorTrades {
                     buyItemFactory(Items.TRIPWIRE_HOOK, 4, 1),
                     buyItemFactory(Items.FLOWER_POT, 4, 1),
                     buyItemFactory(Items.WITHER_SKELETON_SKULL, 1, 4),
-                    buyItemFactory(Items.DRAGON_HEAD, 1, 8),
+                    buyItemFactory(Items.DRAGON_HEAD, 1, 4),
                     buyItemFactory(Items.ANVIL, 1, 1),
                     buyItemFactory(Items.COMPARATOR, 2, 1),
                     buyItemFactory(Items.DAYLIGHT_DETECTOR, 4, 1),

@@ -45,6 +45,9 @@ public class ModItemGroups {
                 entries.add(ModItems.MONEY_32);
                 entries.add(ModItems.MONEY_64);
                 entries.add(ModBlocks.GEORGE);
+                entries.add(ModBlocks.HEAVY_CASING);
+                entries.add(ModBlocks.CHIPPED_HEAVY_CASING);
+                entries.add(ModBlocks.DAMAGED_HEAVY_CASING);
                 entries.add(ModItems.COPPER_SWORD);
                 entries.add(ModItems.COPPER_PICKAXE);
                 entries.add(ModItems.COPPER_AXE);

@@ -23,6 +23,10 @@ public class BoostAbilityStoneItem extends AbilityStoneItem{
         float l = MathHelper.cos(f * ((float)Math.PI / 180)) * MathHelper.cos(g * ((float)Math.PI / 180));
         float m = MathHelper.sqrt(h * h + k * k + l * l);
         float n = 3.0f * ((1.0f + boostLevel) / 4.0f);
+
+        //This line removes velocity
+        playerEntity.setVelocity(0, playerEntity.getVelocity().y, 0);
+
         playerEntity.addVelocity(h *= n / m, k *= n / m, l *= n / m);
         playerEntity.useRiptide(20);
         if (playerEntity.isOnGround()) {

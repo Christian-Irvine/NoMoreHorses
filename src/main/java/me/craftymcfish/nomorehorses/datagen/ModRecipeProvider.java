@@ -130,6 +130,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.MONEY_32), conditionsFromItem(ModItems.MONEY_32))
                 .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"money_64_combine_crafting"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.HEAVY_CASING, 1)
+                .pattern("III")
+                .pattern("IHI")
+                .pattern("III")
+                .input('I', Blocks.IRON_BLOCK)
+                .input('H', Items.NETHERITE_INGOT) //Replace with heavy core in 1.21
+                .criterion(hasItem(Blocks.IRON_BLOCK), conditionsFromItem(Blocks.IRON_BLOCK))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT)) //Replace with heavy core in 1.21
+                .offerTo(exporter, new Identifier(NoMoreHorses.MOD_ID,"heavy_casing_crafting"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.MONEY_SACK, 1)
                 .pattern("WMW")
                 .pattern("WMW")
