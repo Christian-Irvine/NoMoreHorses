@@ -1,9 +1,12 @@
 package me.craftymcfish.nomorehorses.block.custom.entity;
 
+import com.google.common.collect.ImmutableList;
 import me.craftymcfish.nomorehorses.NoMoreHorses;
 import me.craftymcfish.nomorehorses.recipe.MaceratorRecipe;
+import me.craftymcfish.nomorehorses.registry.ModBlocks;
 import me.craftymcfish.nomorehorses.registry.ModItems;
 import me.craftymcfish.nomorehorses.screen.MaceratorScreenHandler;
+import me.craftymcfish.nomorehorses.sound.ModSounds;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -20,12 +23,16 @@ import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import oshi.annotation.concurrent.Immutable;
 
 import javax.crypto.Mac;
 import javax.swing.text.html.Option;
@@ -41,7 +48,10 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     private int progress = 0;
     private int maxProgress = 120;
     private int fuel = 0;
-    private int maxFuel = 200;
+    private int maxFuel = 960;
+    private int soundCooldown = 0;
+    private int maxSoundCooldown = 38;
+
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
         public int get(int index) {
@@ -141,6 +151,11 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
+        if (!world.getBlockState(pos).get(Properties.LIT)) {
+            soundCooldown = 0;
+        }
+
+
         if (world.isClient()){
             return;
         }
@@ -154,28 +169,6 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
                 this.checkStepInCraft(world, pos, state);
             }
         }
-
-
-//        if (isOutputSlotEmptyOrRecievable()) {
-//            if(this.hasRecipe()) {
-//                if(this.hasFuelLevel()){
-//                    makeStepInCraft(world, pos, state);
-//                }
-//                else {
-//                    if (this.hasFuelItem()){
-//                        this.useFuelItem();
-//                        this.makeStepInCraft(world, pos, state);
-//                    }
-//                }
-//            }
-//            else {
-//                this.resetProgress();
-//            }
-//        }
-//        else {
-//            this.resetProgress();
-//            markDirty(world, pos, state);
-//        }
     }
 
     private void checkStepInCraft(World world, BlockPos pos, BlockState state) {
@@ -184,6 +177,7 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
                 makeStepInCraft(world, pos, state);
             }
             else {
+                world.setBlockState(pos, state.with(Properties.LIT, false));
                 resetProgress();
             }
         }
@@ -194,6 +188,13 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private void useFuelItem() {
+        if (getStack(FUEL_SLOT).getItem() == ModItems.VOIDFIRE_SHARD) {
+            maxFuel = 960;
+        }
+        else if (getStack(FUEL_SLOT).getItem() == ModBlocks.VOIDFIRE_BLOCK.asItem()) {
+            maxFuel = 9000;
+        }
+
         fuel = maxFuel;
         this.setStack(FUEL_SLOT, new ItemStack(getStack(FUEL_SLOT).getItem(), getStack(FUEL_SLOT).getCount() - 1));
     }
@@ -203,7 +204,7 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private boolean hasFuelItem() {
-        return getStack(FUEL_SLOT).getItem() == ModItems.VOIDFIRE_SHARD;
+        return getStack(FUEL_SLOT).getItem() == ModItems.VOIDFIRE_SHARD || getStack(FUEL_SLOT).getItem() == ModBlocks.VOIDFIRE_BLOCK.asItem();
     }
 
     private boolean hasFuelLevel() {
@@ -247,6 +248,14 @@ public class MaceratorBlockEntity extends BlockEntity implements ExtendedScreenH
     }
 
     private void makeStepInCraft(World world, BlockPos pos, BlockState state) {
+        if (this.soundCooldown <= 0) {
+            world.playSound(null, pos, ModSounds.MACERATOR_MACERATING, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            this.soundCooldown = maxSoundCooldown;
+        }
+
+        this.soundCooldown -= 1;
+
+        world.setBlockState(pos, state.with(Properties.LIT, true));
         this.increaseCraftProgress();
         this.useFuelLevel();
         markDirty(world, pos, state);

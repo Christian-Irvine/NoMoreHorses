@@ -26,6 +26,7 @@ public class ModSounds {
 
     public static final SoundEvent SNAIL_HURT = registerSoundEvent("snail_hurt");
     public static final SoundEvent SNAIL_DEATH = registerSoundEvent("snail_death");
+    public static final SoundEvent MACERATOR_MACERATING = registerSoundEvent("macerator_macerating");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(NoMoreHorses.MOD_ID, name);

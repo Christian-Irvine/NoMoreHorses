@@ -17,6 +17,12 @@
       "nomorehorses:snail_death"
     ]
   },
+  "macerator_macerating" : {
+    "subtitle": "sounds.nomorehorses.macerator_macerating",
+    "sounds": [
+      "nomorehorses:macerator_macerating"
+    ]
+  },
   "luv_or_somethin" : {
     "sounds": [
       {
